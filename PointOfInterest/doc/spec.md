@@ -21,22 +21,22 @@ A JSON Schema corresponding to this data model can be found
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: URL
+    -   Attribute type: Property. URL
     -   Optional
 
 -   `dateModified` : Last update timestamp of this entity.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `dateCreated` : Entity's creation timestamp.
 
-    -   Attribute type: [DateTime](https://schema.org/DateTime)
+    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
     -   Read-Only. Automatically generated.
 
 -   `source` : A sequence of characters giving the source of the entity data.
 
-    -   Attribute type: [Text](https://schema.org/Text) or
+    -   Attribute type: Property. [Text](https://schema.org/Text) or
         [URL](https://schema.org/URL)
     -   Optional
 
@@ -60,7 +60,7 @@ A JSON Schema corresponding to this data model can be found
 -   `location` : Location of the point of interest represented by a GeoJSON
     geometry, usually a `Point`.
 
-    -   Attribute type: `geo:json`.
+    -   Attribute type: Property. `geo:json`.
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
     -   Mandatory if `address` is not defined.
@@ -73,7 +73,7 @@ A JSON Schema corresponding to this data model can be found
 
 -   `category` : Category of this point of interest.
 
-    -   Attribute type: List of [Text](https://schema.org/Text)
+    -   Attribute type: Property. List of [Text](https://schema.org/Text)
     -   Allowed values: Those defined by the
         [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json)
         together with the extended categories described by the present
@@ -90,7 +90,7 @@ A JSON Schema corresponding to this data model can be found
 -   `refSeeAlso` : Reference to one or more related entities that may provide
     extra, specific information about this point of interest.
 
-    -   Attribute type: List of References
+    -   Attribute type: Property. List of References
     -   Optional
 
 ## Extended POI Categories
@@ -165,6 +165,56 @@ Sample uses simplified representation for data consumers `?options=keyValues`
     },
     "source": "http://www.tourspain.es",
     "refSeeAlso": ["Beach-A-Concha-123456"]
+}
+```
+
+### LD Example
+
+Sample uses the NGSI-LD representation
+
+```json
+{
+    "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",
+    "type": "PointOfInterest",
+    "category": {
+        "type": "Property",
+        "value": ["113"]
+    },
+    "description": {
+        "type": "Property",
+        "value": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda."
+    },
+    "refSeeAlso": {
+        "type": "Relationship",
+        "object": ["urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"]
+    },
+    "source": {
+        "type": "Property",
+        "value": "http://www.tourspain.es"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [-8.768460000000001, 42.60214472222222]
+        }
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressCountry": "ES",
+            "addressLocality": "Vilagarc\u00eda de Arousa",
+            "type": "PostalAddress"
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Playa de a Concha"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
 }
 ```
 

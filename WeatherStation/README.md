@@ -1,46 +1,48 @@
 # Point Of Interest - Weather Stations
 
-This folder contains code to generate a set of POIs which correspond to the
-[Weather Stations](https://jmcanterafonseca.cartodb.com/viz/e7ccc6c6-9e5b-11e5-a595-0ef7f98ade21/map)
-owned by the Spanish Meteorological Agency ([AEMET](http://aemet.es)).
+This folder contains the following scripts:
 
-Here you can find the following files:
+-   `harvesters/spain/spain_weather_stations.py` - Performs data harvesting
+    using AEMET's data site as the origin and Orion Context Broker as the
+    destination. It also prepares a configuration file for other harvesters.
 
--   `stations-normalized-wgs84.csv`. This is a list of weather stations owned by
-    AEMET which provide automated readings.
--   `stations.py` This is the Python code that was used to generate the former
-    file from an
-    [Excel Sheet](http://datosclima.es/Aemet2013/Archivos/ListadoEstaciones2016-02.xlsx)
-    downloaded.
--   `aemet-st.js`. This script loads all the weather stations to Orion Context
-    Broker.
+The list of weather stations in Spain provided by
+[Spanish National Meteorology Agency](http://aemet.es), the list of Spain
+municipalities provided by
+[The National Statistics Institute](http://ine.es/en/).
+
+Please check data licenses at the original data sources before using this data
+in an application.
+
+## Public instance
+
+You can read about public instance offering information about weather stations
+[here](../../gsma.md).
+
+## Example of use
 
 ```bash
-curl http://130.206.83.68:1027/v2/entities?type=PointOfInterest&q=category:WeatherStation
+curl -X GET \
+  'https://streams.lab.fiware.org/v2/entities?id=WeatherStation-ES-C929I&options=keyValues' \
+  -H 'fiware-service: poi'| python -m json.tool
 ```
 
 ```json
-{
-    "category": "WeatherStation",
-    "location": {
-        "type": "Point",
-        "coordinates": [-7.684722222222222, 43.78611111111111]
-    },
-    "name": "Estaca de Bares",
-    "postalAddress": {
-        "addressCountry": "ES",
-        "addressLocality": "Mañón",
-        "addressRegion": "A Coruña"
-    },
-    "source": "http://aemet.es",
-    "type": "PointOfInterest",
-    "id": "WeatherStation-ES-1351"
-}
-```
-
-If you want to know the Weather Stations close to a certain location, for
-instance Santander (Spain), you can issue a GET request like
-
-```text
-http://130.206.83.68:1027/v2/entities?type=PointOfInterest&q=category:WeatherStation&georel=near;maxDistance=10000&coords=43.4275,-3.8224
+[
+    {
+        "address": {
+            "addressCountry": "ES",
+            "addressLocality": "Hierro Aeropuerto",
+            "addressRegion": "Santa Cruz de Tenerife"
+        },
+        "category": ["WeatherStation"],
+        "id": "WeatherStation-ES-C929I",
+        "location": {
+            "coordinates": [-17.8889, 27.8189],
+            "type": "Point"
+        },
+        "source": "http://www.aemet.es",
+        "type": "PointOfInterest"
+    }
+]
 ```

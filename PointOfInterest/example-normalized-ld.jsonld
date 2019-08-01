@@ -1,0 +1,50 @@
+{
+    "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",
+    "type": "PointOfInterest",
+    "category": {
+        "type": "Property",
+        "value": [
+            "113"
+        ]
+    },
+    "description": {
+        "type": "Property",
+        "value": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda."
+    },
+    "refSeeAlso": {
+        "type": "Relationship",
+        "object": [
+            "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"
+        ]
+    },
+    "source": {
+        "type": "Property",
+        "value": "http://www.tourspain.es"
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -8.768460000000001,
+                42.60214472222222
+            ]
+        }
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressCountry": "ES",
+            "addressLocality": "Vilagarc\u00eda de Arousa",
+            "type": "PostalAddress"
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Playa de a Concha"
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.lab.fiware.org/ld/context"
+    ]
+}
