@@ -5,19 +5,19 @@
 
 These data models allow to model points of interest and related entity types:
 
--   [PointOfInterest](../PointOfInterest/doc/spec.md) : A harmonised geographic
+-   [PointOfInterest](./PointOfInterest/doc/spec.md) : A harmonised geographic
     description of a point of interest. According to
     [Wikipedia](https://en.wikipedia.org/wiki/Point_of_interest) a point of
     interest, or POI, is a specific point location that someone may find useful
     or interesting.
 
--   [Beach](../Beach/doc/spec.md) : A harmonised description of a beach.
+-   [Beach](./Beach/doc/spec.md) : A harmonised description of a beach.
     [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:natural%3Dbeach)
     defines it as a loose geological landform along the coast or along another
     body of water consisting of sand, gravel, shingle, pebbles, cobblestones or
     sometimes shell fragments, etc.
 
--   [Museum](../Museum/doc/spec.md) : A harmonised description of a museum.
+-   [Museum](./Museum/doc/spec.md) : A harmonised description of a museum.
     [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dmuseum)
     defines it as an institution which has exhibitions on scientific,
     historical, cultural topics. Typically open to the public as a tourist
