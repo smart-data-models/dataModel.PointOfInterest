@@ -21,7 +21,7 @@ A JSON Schema corresponding to this data model can be found
 -   `dataProvider` : Specifies the URL to information about the provider of this
     information
 
-    -   Attribute type: Property. URL
+    -   Attribute type: Property. [URL](https://schema.org/URL)
     -   Optional
 
 -   `dateModified` : Last update timestamp of this entity.
@@ -42,31 +42,36 @@ A JSON Schema corresponding to this data model can be found
 
 -   `name` : Name of this point of interest.
 
-    -   Normative References: [https://schema.org/name](https://schema.org/name)
+    -   Attribute type: Property. [Text](https://schema.org/Text)
+    -   Normative References:
+        `https://uri.etsi.org/ngsi-ld/name` equivalent to [name](https://schema.org/name)
     -   Mandatory
 
 -   `alternateName` : Alternative name for this point of interest.
 
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Normative References:
         [https://schema.org/alternateName](https://schema.org/alternateName)
     -   Optional
 
 -   `description` : Description of this point of interest.
 
+    -   Attribute type: Property. [Text](https://schema.org/Text)
     -   Normative References:
-        [https://schema.org/description](https://schema.org/description)
+        `https://uri.etsi.org/ngsi-ld/description` equivalent to [description](https://schema.org/description)
     -   Optional
 
 -   `location` : Location of the point of interest represented by a GeoJSON
     geometry, usually a `Point`.
 
-    -   Attribute type: Property. `geo:json`.
+    -   Attribute type: GeoProperty. `geo:json`.
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
     -   Mandatory if `address` is not defined.
 
 -   `address` : Civic address of this point of interest.
 
+    -   Attribute type: Property. [Address](https://schema.org/address)
     -   Normative References:
         [https://schema.org/address](https://schema.org/address)
     -   Mandatory if `location` is not present.
