@@ -19,10 +19,10 @@
       "required": ["id", "type", "category", "name"]
     },
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/GSMA-Commons"
     },
     {
-      "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
+      "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/Location-Commons"
     },
     {
       "properties": {
@@ -46,7 +46,7 @@
           "items": {
             "anyOf": [
               {
-                "$ref": "https://fiware.github.io/dataModels/common-schema.json#/definitions/EntityIdentifierType"
+                "$ref": "https://smart-data-models.github.io/dataModels/common-schema.json#/definitions/EntityIdentifierType"
               }
             ]
           }
