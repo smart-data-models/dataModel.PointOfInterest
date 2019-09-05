@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$id": "https://smart-data-models.github.io/dataModels/specs/PointOfInterest/PointOfInterest/schema.json",
-  "title": "GSMA / FIWARE - Point of Interest schema",
+  "title": "- Point of Interest schema",
   "description": "A point of interest",
   "type": "object",
   "allOf": [
