@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
   "$id": "https://smart-data-models.github.io/dataModels/specs/PointOfInterest/Museum/schema.json",
-  "title": "FIWARE - Museum schema",
+  "title": " - Museum schema",
   "description": "A museum",
   "type": "object",
   "allOf": [
