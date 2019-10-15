@@ -12,7 +12,7 @@ and the members of the
 ## Data Model
 
 A JSON Schema corresponding to this data model can be found
-[here](http://fiware.github.io/dataModels/specs/PointOfInterest/PointOfInterest/schema.json)
+[here](http://fiware.github.io/data-models/specs/PointOfInterest/PointOfInterest/schema.json)
 
 -   `id` : Unique identifier.
 

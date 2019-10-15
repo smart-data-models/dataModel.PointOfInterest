@@ -15,7 +15,7 @@ inspired the development of this data model.
 ## Data Model
 
 A JSON Schema corresponding to this data model can be found
-[here](http://fiware.github.io/dataModels/specs/PointOfInterest/Beach/schema.json).
+[here](http://fiware.github.io/data-models/specs/PointOfInterest/Beach/schema.json).
 This entity type has been designed as an extension of
 [https://schema.org/Beach](https://schema.org/Beach) so that any property
 specified by schema.org and which domain is `https://schema.org/Beach` can be

@@ -15,7 +15,7 @@ inspired the development of this data model.
 ## Data Model
 
 A JSON Schema corresponding to this data model can be found
-[here](http://fiware.github.io/dataModels/specs/PointOfInterest/Museum/schema.json).
+[here](http://fiware.github.io/data-models/specs/PointOfInterest/Museum/schema.json).
 This entity type has been designed as an extension of
 [https://schema.org/Museum](https://schema.org/Museum) so that any property
 specified by schema.org and which domain is `https://schema.org/Museum` can be
