@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://smart-data-models.github.io/data-models/specs/PointOfInterest/Museum/schema.json",
+  "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/schema.json",
   "title": " - Museum schema",
   "description": "A museum",
   "type": "object",
