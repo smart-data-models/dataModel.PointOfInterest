@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
+  "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json",
   "title": "- Point of Interest schema",
   "description": "A point of interest",
