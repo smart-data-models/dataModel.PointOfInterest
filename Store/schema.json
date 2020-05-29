@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://gitlab.com/synchronicity-iot/synchronicity-data-models/raw/master/PointOfInterest/Store/schema.json",
+  "title": "SynchroniCity - Point of Interest Store schema",
+  "description": "A point of interest store",
+  "type": "object",
+  "allOf": [
+    { "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons" },
+    { "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons" },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Store"
+          ],
+          "description": "NGSI Entity type"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string",
+          "format": "uri"
+        },
+        "currenciesAccepted": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "AED", "AFN", "ALL", "AMD", "ANG", "AOA", "ARS", "AUD", "AWG", "AZN", "BAM", "BBD", "BDT", "BGN", "BHD", "BIF", "BMD", "BND", "BOB", "BOV", "BRL", "BSD", "BTN", "BWP", "BYN", "BZD", "CAD", "CDF", "CHE", "CHF", "CHW", "CLF", "CLP", "CNY", "COP", "COU", "CRC", "CUC", "CUP", "CVE", "CZK", "DJF", "DKK", "DOP", "DZD", "EGP", "ERN", "ETB", "EUR", "FJD", "FKP", "GBP", "GEL", "GHS", "GIP", "GMD", "GNF", "GTQ", "GYD", "HKD", "HNL", "HRK", "HTG", "HUF", "IDR", "ILS", "INR", "IQD", "IRR", "ISK", "JMD", "JOD", "JPY", "KES", "KGS", "KHR", "KMF", "KPW", "KRW", "KWD", "KYD", "KZT", "LAK", "LBP", "LKR", "LRD", "LSL", "LYD", "MAD", "MDL", "MGA", "MKD", "MMK", "MNT", "MOP", "MRU", "MUR", "MVR", "MWK", "MXN", "MXV", "MYR", "MZN", "NAD", "NGN", "NIO", "NOK", "NPR", "NZD", "OMR", "PAB", "PEN", "PGK", "PHP", "PKR", "PLN", "PYG", "QAR", "RON", "RSD", "RUB", "RWF", "SAR", "SBD", "SCR", "SDG", "SEK", "SGD", "SHP", "SLL", "SOS", "SRD", "SSP", "STN", "SVC", "SYP", "SZL", "THB", "TJS", "TMT", "TND", "TOP", "TRY", "TTD", "TWD", "TZS", "UAH", "UGX", "USD", "USN", "UYI", "UYU", "UYW", "UZS", "VES", "VND", "VUV", "WST", "XAF", "XAG", "XAU", "XBA", "XBB", "XBC", "XBD", "XCD", "XDR", "XOF", "XPD", "XPF", "XPT", "XSU", "XTS", "XUA", "XXX", "YER", "ZAR", "ZMW", "ZWL"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "paymentAccepted": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "openingHoursSpecification": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "opens": {
+                "type": "string",
+                "pattern": "[0-9]{2}:[0-9]{2}"
+              },
+              "closes": {
+                "type": "string",
+                "pattern": "[0-9]{2}:[0-9]{2}"
+              },
+              "dayOfWeek": {
+                "type": "string",
+                "enum": [
+                  "Friday",
+                  "Monday",
+                  "PublicHolidays",
+                  "Saturday",
+                  "Sunday",
+                  "Thursday",
+                  "Tuesday",
+                  "Wednesday"  
+                ]
+              }
+            }
+          },
+          "minItems": 1
+        },
+        "logo": {
+          "type": "string",
+          "format": "uri"
+        },
+        "telephone": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "AutoPartsStore",
+            "BikeStore",
+            "BookStore",
+            "ClothingStore",
+            "ComputerStore",
+            "ConvenienceStore",
+            "DepartmentStore",
+            "ElectronicsStore",
+            "Florist",
+            "FurnitureStore",
+            "GardenStore",
+            "GroceryStore",
+            "HardwareStore",
+            "HobbyShop",
+            "HomeGoodsStore",
+            "JewelryStore",
+            "LiquorStore",
+            "MensClothingStore",
+            "MobilePhoneStore",
+            "MovieRentalStore",
+            "MusicStore",
+            "OfficeEquipmentStore",
+            "OutletStore",
+            "PawnShop",
+            "PetStore",
+            "ShoeStore",
+            "SportingGoodsStore",
+            "TireShop",
+            "ToyStore",
+            "WholesaleStore"
+          ]
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "name",
+    "description"
+  ],
+  "anyOf": [
+    { "required": ["location"]},
+    { "required": ["address"]}
+  ]
+}
