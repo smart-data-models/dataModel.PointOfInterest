@@ -5,14 +5,9 @@ components:
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/Beach/schema.yaml#/Beach"
 info: 
   description: |
-    This repository is going to be archived (Jan-2020) and subsequent works will be carried out in [Smart data models]
-    (https://github.com/smart-data-models) repositories. Further questions on migration. alberto.abella@fiware.org
-    As an alternative or extension to traditional interactive points (shopping malls, museums, airports, etc.), a Smart Point of Interaction use technologies such as Bluetooth Low Energy or Wi-Fi to bring new interactions to user's devices (smartphones, wearables, etc.).
-
-    A smart point of interaction is composed mainly by two entities: "Smart Point of Interaction": defines an
-    interactive point which provides information, entertainment or co-creation tools to citizens.
-    Optionally it can reference a related smart city asset with enriched interaction provided by this technology.
-    "Smart Spot": a set of resources related to a physical device and the technology to provide a Smart Point of Interaction.
+    This entity contains a harmonised geographic description of a beach. It is used in applications that use
+    spatial data and is applicable to Tourism, Environment, and Smart City vertical segments and related IoT
+    applications. Special thanks to TURESPAÑA who provided some examples which inspired the development of this data model
   title: Beach
   version: "1.0.0"
 openapi: "3.0.0"
