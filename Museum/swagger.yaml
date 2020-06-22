@@ -1,7 +1,7 @@
 --- 
 components: 
   schemas: 
-    Beach: 
+    Museum: 
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/Museum/schema.yaml#/Museum"
 info: 
   description: |
