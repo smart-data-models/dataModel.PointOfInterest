@@ -1,0 +1,11 @@
+keyPerformanceIndicator:
+  required:
+    - id
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: |
+    This entity contains a harmonised geographic description of a museum. It is used in applications that use
+    spatial data and is applicable to Tourism, Cultural, and Smart City vertical segments and related IoT applications.
+    Special thanks to TURESPAÑA who provided some examples which inspired the development of this data model.
