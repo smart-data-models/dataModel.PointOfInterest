@@ -1,0 +1,14 @@
+Beach:
+  required:
+    - id
+  allOf:
+    - $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+  type: object
+  description: |
+    PointOfInterest : A harmonised geographic description of a point of interest. According to Wikipedia a
+    point of interest, or POI, is a specific point location that someone may find useful or interesting.
+
+    Beach : A harmonised description of a beach. OpenStreetMap defines it as a loose geological landform
+    along the coast or along another body of water consisting of sand, gravel, shingle, pebbles, cobblestones
+    or sometimes shell fragments, etc.
