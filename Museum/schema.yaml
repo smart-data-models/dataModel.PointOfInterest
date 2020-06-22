@@ -1,4 +1,4 @@
-keyPerformanceIndicator:
+Museum:
   required:
     - id
   allOf:
