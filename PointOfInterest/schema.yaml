@@ -1,6 +1,8 @@
 PointOfInterest:
   required:
     - id
+    - type
+    - category
   allOf:
     - $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
@@ -10,3 +12,93 @@ PointOfInterest:
     that use spatial data and is applicable to Automotive, Environment, Industry and Smart City vertical segments and
     related IoT applications. This data model has been created in cooperation with the GSMA and the members of the
     IoT Big Data Project.
+  properties:
+    address:
+      "$ref": https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: https://schema.org/Text
+      type: string
+      description: 'Alternative name for this point of interest.'
+    areaServed:
+      x-ngsi:
+        type: Property
+        model: https://schema.org/Text
+      type: string
+      description: ''
+    category:
+      x-ngsi:
+        type: Property
+      type: array
+      description: |
+        Category of this point of interest.
+        
+        Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json)
+        together with the extended categories described by the present
+        specification (see below). For instance the value `113` corresponds to
+        beaches, and the value `311` corresponds to museums.
+
+        ## Extended POI Categories
+
+        | Category | Description                |
+        | :------- | :------------------------- |
+        | `1478`   | `Public drinking fountain` |
+        | `1479`   | `Public toilet`            |
+        | `1480`   | `Registry office`          |
+
+      items:
+        type: string
+    contactPoint:
+      x-ngsi:
+        type: Property
+        model: https://schema.org/contactPoint
+      type: object
+      description: 'Contact point of this point of interest.'
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: https://schema.org/URL
+      type: string
+      format: uri
+      description: 'Specifies the URL to information about the provider of this information'
+    description:
+      "$ref": https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    location:
+      "$ref": https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    name:
+      "$ref": https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        anyOf:
+        - type: string
+          minLength: 1
+          maxLength: 256
+          pattern: "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+        - type: string
+          format: uri
+    refSeeAlso:
+      x-ngsi:
+        type: Relationship
+        model: https://schema.org/URL
+      type: array
+      description: 'Reference to one or more related entities that may provide extra, specific information about this point of interest.'
+      items:
+        anyOf:
+        - anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
+          - type: string
+            format: uri
+    source:
+      x-ngsi:
+        type: Property
+        model: ['https://schema.org/Text', 'https://schema.org/URL']
+      type: string
+      description: 'A sequence of characters giving the source of the entity data.'
