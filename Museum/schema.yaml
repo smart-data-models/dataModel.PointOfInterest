@@ -113,10 +113,8 @@ Museum:
         minItems: 1
         uniqueItems: true
     contactPoint:
-      x-ngsi:
-        type: Property
-      type: object
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/contactPoint
     dataProvider:
       x-ngsi:
         type: Property

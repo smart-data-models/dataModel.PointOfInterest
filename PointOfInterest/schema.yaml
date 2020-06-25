@@ -50,11 +50,8 @@ PointOfInterest:
       items:
         type: string
     contactPoint:
-      x-ngsi:
-        type: Property
-        model: https://schema.org/contactPoint
-      type: object
-      description: 'Contact point of this point of interest.'
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/contactPoint
     dataProvider:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
