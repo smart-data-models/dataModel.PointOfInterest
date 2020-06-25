@@ -56,50 +56,24 @@ PointOfInterest:
       type: object
       description: 'Contact point of this point of interest.'
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: https://schema.org/URL
-      type: string
-      format: uri
-      description: 'Specifies the URL to information about the provider of this information'
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
     description:
-      "$ref": https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
     location:
-      "$ref": https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
     name:
-      "$ref": https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items:
-        anyOf:
-        - type: string
-          minLength: 1
-          maxLength: 256
-          pattern: "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-        - type: string
-          format: uri
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
     refSeeAlso:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL
-      type: array
-      description: 'Reference to one or more related entities that may provide extra, specific information about this point of interest.'
-      items:
-        anyOf:
-        - anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
-          - type: string
-            format: uri
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/refSeeAlso
     source:
-      x-ngsi:
-        type: Property
-        model: ['https://schema.org/Text', 'https://schema.org/URL']
-      type: string
-      description: 'A sequence of characters giving the source of the entity data.'
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
