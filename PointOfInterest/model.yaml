@@ -5,7 +5,7 @@ PointOfInterest:
     - category
   allOf:
     - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
   type: object
   description: |
     This entity contains a harmonised geographic description of a Point of Interest. This entity is used in applications
@@ -14,7 +14,7 @@ PointOfInterest:
     IoT Big Data Project.
   properties:
     address:
-      "$ref": https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+      "$ref": https://smart-data-models.github.io/data-models/schema.org.yaml#/address
     alternateName:
       x-ngsi:
         type: Property
@@ -34,7 +34,7 @@ PointOfInterest:
       description: |
         Category of this point of interest.
         
-        Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json)
+        Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/categories/factual_taxonomy.json)
         together with the extended categories described by the present
         specification (see below). For instance the value `113` corresponds to
         beaches, and the value `311` corresponds to museums.
@@ -51,26 +51,26 @@ PointOfInterest:
         type: string
     contactPoint:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/contactPoint
+        https://smart-data-models.github.io/data-models/schema.org.yaml#/contactPoint
     dataProvider:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
     description:
     description:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
     location:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
     name:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     refSeeAlso:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/refSeeAlso
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/refSeeAlso
     source:
       $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source

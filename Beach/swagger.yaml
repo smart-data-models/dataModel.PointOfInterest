@@ -2,7 +2,7 @@
 components: 
   schemas: 
     Beach: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/Beach/schema.yaml#/Beach"
+      $ref: "https://smart-data-models.github.io/dataModel.PointOfInterest/Beach/model.yaml#/Beach"
 info: 
   description: |
     This entity contains a harmonised geographic description of a beach. It is used in applications that use
@@ -36,12 +36,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/Beach/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInterest/Beach/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/Beach/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInterest/Beach/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

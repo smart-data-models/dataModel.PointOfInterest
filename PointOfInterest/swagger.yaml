@@ -2,7 +2,7 @@
 components: 
   schemas: 
     PointOfInterest: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/PointOfInterest/schema.yaml#/PointOfInterest"
+      $ref: "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/model.yaml#/PointOfInterest"
 info: 
   description: |
     This entity contains a harmonised geographic description of a museum. It is used in applications that use
@@ -36,12 +36,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/PointOfInterest/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/PointOfInterest/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
