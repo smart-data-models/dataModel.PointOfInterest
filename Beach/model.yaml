@@ -21,7 +21,7 @@ Beach:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Describes how to get to this beach'
       items:
         type: string
         enum:
@@ -42,7 +42,7 @@ Beach:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Type of beach according to different criteria.'
       items:
         type: string
         enum:
@@ -65,7 +65,7 @@ Beach:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: ' Describes different facilities offered by this beach.'
       items:
         type: string
         enum:
@@ -86,7 +86,7 @@ Beach:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Length of this beach.'
     location:
       $ref: >-
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
@@ -98,7 +98,7 @@ Beach:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: ' Typical occupation rate of this beach.'
     owner:
       $ref: >-
         https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
@@ -112,4 +112,4 @@ Beach:
       x-ngsi:
         type: Property
       type: number
-      description: ''
+      description: 'Width of this beach'
