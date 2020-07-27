@@ -251,4 +251,4 @@ Museum:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Tourist area at which this museum is located. Precise semantics might depend on the application or target country or region. For instance Costa del Sol.'
