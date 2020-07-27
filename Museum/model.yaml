@@ -31,14 +31,14 @@ Museum:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Corresponds to the art period(s) of the exhibitions made by this museum.'
       items:
         type: string
     buildingType:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Type of building that hosts the museum.'
       items:
         type: string
         enum:
@@ -129,7 +129,7 @@ Museum:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Describes different facilities offered by this museum.'
       items:
         type: string
         enum:
@@ -150,7 +150,7 @@ Museum:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Main featured artist(s) at this museum.'
       items:
         anyOf:
           - &ref_0
@@ -176,7 +176,7 @@ Museum:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Type of museum according to the exhibited content.'
       items:
         type: string
         enum:
@@ -226,7 +226,7 @@ Museum:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Opening hours specification for this museum.'
       items:
         properties:
           opens:
