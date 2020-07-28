@@ -15,7 +15,7 @@ inspired the development of this data model.
 ## Data Model
 
 A JSON Schema corresponding to this data model can be found
-[here](http://fiware.github.io/data-models/specs/PointOfInterest/Museum/schema.json).
+[here](https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/schema.json).
 This entity type has been designed as an extension of
 [https://schema.org/Museum](https://schema.org/Museum) so that any property
 specified by schema.org and which domain is `https://schema.org/Museum` can be
@@ -31,14 +31,6 @@ used by applications.
     -   Attribute type: Property. [URL](https://schema.org/URL)
     -   Optional
 
--   `dateModified` : Last update timestamp of this entity.
-
-    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
-    -   Read-Only. Automatically generated.
-
--   `dateCreated` : Entity's creation timestamp.
-    -   Attribute type: Property. [DateTime](https://schema.org/DateTime)
-    -   Read-Only. Automatically generated.
 -   `source` : A sequence of characters giving the source of the entity data.
     -   Attribute type: Property. [Text](https://schema.org/Text) or
         [URL](https://schema.org/URL)
@@ -60,18 +52,20 @@ used by applications.
     -   Normative References:
         `https://uri.etsi.org/ngsi-ld/description` equivalent to [description](https://schema.org/description)
     -   Optional
-
 -   `location` : Location of this museum represented by a GeoJSON geometry,
     usually a `Point` or a `Polygon`.
+    
     -   Attribute type: GeoProperty. `geo:json`.
     -   Normative References:
         [https://tools.ietf.org/html/rfc7946](https://tools.ietf.org/html/rfc7946)
     -   Mandatory if `address` is not defined.
 -   `address` : Address of this museum.
+
     -   Normative References:
         [https://schema.org/address](https://schema.org/address)
     -   Mandatory if `location` is not present.
 -   `museumType` : Type of museum according to the exhibited content.
+
     -   Attribute type: Property. List of [Text](https://schema.org/Text)
     -   Allowed values: (`appliedArts`, `scienceAndTechnology`, `fineArts`,
         `music`, `history`, `sacredArt`, `archaeology`, `specials`,

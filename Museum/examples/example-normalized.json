@@ -1,50 +1,6 @@
 {
   "id": "Museum-Barcelona-MACBA-1234",
   "type": "Museum",
-  "alternateName": {
-    "value": "MACBA"
-  },
-  "openingHoursSpecification": {
-    "value": [
-      {
-        "dayOfWeek": "Mo, Wed, Thu, Fr",
-        "closes": "19:30",
-        "opens": "11:00"
-      },
-      {
-        "dayOfWeek": "Sat",
-        "closes": "21:00",
-        "opens": "10:00"
-      },
-      {
-        "dayOfWeek": "Sun",
-        "closes": "15:00",
-        "opens": "10:00"
-      }
-    ]
-  },
-  "description": {
-    "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."
-  },
-  "source": {
-    "value": "http://www.tourspain.es"
-  },
-  "artPeriod": {
-    "value": ["contemporary"]
-  },
-  "museumType": {
-    "value": ["fineArts"]
-  },
-  "facilities": {
-    "value": ["shop", "cloakRoom", "guidedTour"]
-  },
-  "location": {
-    "type": "geo:json",
-    "value": {
-      "type": "Point",
-      "coordinates": [2.1668771521199393, 41.38302235796602]
-    }
-  },
   "address": {
     "type": "PostalAddress",
     "value": {
@@ -53,10 +9,85 @@
       "streetAddress": "Plaza Dels \u00c0ngels, 1"
     }
   },
-  "touristArea": {
-    "value": "Barcelona-Capital"
+  "alternateName": {
+    "value": "MACBA"
+  },
+  "artPeriod": {
+    "value": [
+      "contemporary"
+    ]
+  },
+  "description": {
+    "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."
+  },
+  "facilities": {
+    "value": [
+      "shop",
+      "cloakRoom",
+      "guidedTour"
+    ]
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        2.1668771521199393,
+        41.38302235796602
+      ]
+    }
+  },
+  "museumType": {
+    "value": [
+      "fineArts"
+    ]
   },
   "name": {
     "value": "Museo de Arte Contemporaneo de Barcelona"
+  },
+  "openingHoursSpecification": {
+    "value": [
+      {
+        "dayOfWeek": "Monday",
+        "closes": "19:30:00",
+        "opens": "11:00:00"
+      },
+      {
+        "dayOfWeek": "Tuesday",
+        "closes": "19:30:00",
+        "opens": "11:00:00"
+      },
+      {
+        "dayOfWeek": "Wednesday",
+        "closes": "19:30:00",
+        "opens": "11:00:00"
+      },
+      {
+        "dayOfWeek": "Thurday",
+        "closes": "19:30:00",
+        "opens": "11:00:00"
+      },
+      {
+        "dayOfWeek": "Friday",
+        "closes": "19:30:00",
+        "opens": "11:00:00"
+      },
+      {
+        "dayOfWeek": "Saturday",
+        "closes": "21:00:00",
+        "opens": "10:00:00"
+      },
+      {
+        "dayOfWeek": "Sunday",
+        "closes": "15:00:00",
+        "opens": "10:00:00"
+      }
+    ]
+  },
+  "source": {
+    "value": "http://www.tourspain.es"
+  },
+  "touristArea": {
+    "value": "Barcelona-Capital"
   }
 }
