@@ -1,33 +1,26 @@
-[![Status badge](https://img.shields.io/badge/status-draft-red.svg)](RELEASE_NOTES)
-[![Build badge](https://img.shields.io/travis/smart-data-models/dataModel.PointOfInterest.svg "Travis build status")](https://travis-ci.org/smart-data-models/dataModel.PointOfInterest/)
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-# Point of interest data models.
+# dataModel.PointOfInterest
 
-These data models allow to model points of interest and related entity types:
 
--   [`PointOfInterest`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/swagger.yaml) : A harmonised geographic
-    description of a point of interest. According to
-    [Wikipedia](https://en.wikipedia.org/wiki/Point_of_interest) a point of
-    interest, or POI, is a specific point location that someone may find useful
-    or interesting.
+The following entity types are available:
+- [Beach](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Beach/README.md). This entity contains a harmonised geographic description of a beach. It is used in applications that use
+spatial data and is applicable to Tourism, Environment, and Smart City vertical segments and related IoT
+applications. Special thanks to TURESPAÑA who provided some examples which inspired the development of this data model
 
--   [`Beach`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInterest/Beach/swagger.yaml) : A harmonised description of a beach.
-    [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:natural%3Dbeach)
-    defines it as a loose geological landform along the coast or along another
-    body of water consisting of sand, gravel, shingle, pebbles, cobblestones or
-    sometimes shell fragments, etc.
 
--   [`Museum`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/swagger.yaml) : A harmonised description of a museum.
-    [OpenStreetMap](http://wiki.openstreetmap.org/wiki/Tag:tourism%3Dmuseum)
-    defines it as an institution which has exhibitions on scientific,
-    historical, cultural topics. Typically open to the public as a tourist
-    attraction. May be more heavily involved in acquiring, conserving or
-    researching such topics.
+- [Museum](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Museum/README.md). This entity contains a harmonised geographic description of a museum. It is used in applications that use
+spatial data and is applicable to Tourism, Cultural, and Smart City vertical segments and related IoT applications.
+Special thanks to TURESPAÑA who provided some examples which inspired the development of this data model.
 
--   [TouristInformationCenter](https://schema.org/TouristInformationCenter). A
-    tourist information center which serves as an information source for
-    tourists, travellers and visitors. It can be represented by an entity of
-    type `PointOfInterest` which category is equal to `439`. Another option is
-    to use the schema.org `TouristInformationCenter` entity type and include
-    those properties which domain is `PointOfInterest` and/or properties which
-    domain is `http://schema.org/TouristInformationCenter`.
+
+- [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/README.md). This entity contains a harmonised geographic description of a Point of Interest. This entity is used in applications
+that use spatial data and is applicable to Automotive, Environment, Industry and Smart City vertical segments and
+related IoT applications. This data model has been created in cooperation with the GSMA and the members of the
+IoT Big Data Project.
+
+
+
+[Link](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
+
+You can raise an [issue](https://github.com/smart-data-models/dataModel.PointOfInterest/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.PointOfInterest/pulls) on existing data models
+
+
