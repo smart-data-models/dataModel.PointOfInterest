@@ -7,14 +7,16 @@ that use spatial data and is applicable to Automotive, Environment, Industry and
 related IoT applications. This data model has been created in cooperation with the GSMA and the members of the
 IoT Big Data Project.
 
+### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/swagger.yaml)
 
 Link to the [specification](https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/doc/spec.md)
+### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/examples/example.json) (keyvalues) for NGSI v2
 
 Link to the [example](https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/examples/example-normalized.json) (normalized) for NGSI-V2
+### Contribution
 
-
- if you have any issue on this data model you can raise an issue or contribute with a PR
+ If you have any issue on this data model you can raise an [issue](https://github.com/smart-data-models/dataModel.PointOfInterest/issues)  or contribute with a [PR](https://github.com/smart-data-models/dataModel.PointOfInterest/pulls)
