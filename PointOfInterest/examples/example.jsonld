@@ -1,0 +1,16 @@
+{"@context": ["https://schema.lab.fiware.org/ld/context",
+              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],
+ "address": {"addressCountry": "ES",
+             "addressLocality": "Vilagarcía de Arousa",
+             "type": "PostalAddress"},
+ "category": ["113"],
+ "description": "La Playa de A Concha se presenta como una continuación de la "
+                "Playa de Compostela, una de las más frecuentadas de "
+                "Vilagarcía.",
+ "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",
+ "location": {"coordinates": [-8.768460000000001, 42.60214472222222],
+              "type": "Point"},
+ "name": "Playa de a Concha",
+ "refSeeAlso": ["urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"],
+ "source": "http://www.tourspain.es",
+ "type": "PointOfInterest"}
