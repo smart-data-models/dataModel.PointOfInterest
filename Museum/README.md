@@ -10,7 +10,7 @@ Special thanks to TURESPAÑA who provided some examples which inspired the devel
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/swagger.yaml)
 
-Link to the [specification](https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/doc/spec.md)
+Link to the [specification](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Museum/doc/spec.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/examples/example.json) (keyvalues) for NGSI v2
