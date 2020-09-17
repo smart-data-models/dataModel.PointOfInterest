@@ -20,10 +20,12 @@ related IoT applications. This data model has been created in cooperation with t
 IoT Big Data Project.
 
 
+- [Store](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Store/README.md). A point of interest store
+
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/CONTRIBUTORS.yaml) to the 5 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/CONTRIBUTORS.yaml) to the 10 current contributors of the data models of this Subject.
 
 
 ### Contribution
