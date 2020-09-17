@@ -1,7 +1,11 @@
 # Store
 
 ## Description 
+
+A point of interest store
 ### Specification
+
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInterest/Store/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Store/doc/spec.md)
 ### Examples
