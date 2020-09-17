@@ -30,12 +30,12 @@ Store:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Category of the store'
     currenciesAccepted:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: 'Currencies accepted in this store. It uses ISO 4217 currency format (e.g. USD, EUR) '
       items:
         type: string
         enum:
@@ -223,7 +223,7 @@ Store:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Specifies the URL to information about the provider of this information'
     description:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
@@ -232,14 +232,14 @@ Store:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'The email address of this store.'
       format: email
     image:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'pointing to an image of this store.'
       format: uri
     location:
       $ref: >-
@@ -249,7 +249,7 @@ Store:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'An associated logo for this store.'
       format: uri
     name:
       $ref: >-
@@ -287,23 +287,13 @@ Store:
             type: string
             format: date-time
     owner:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ''
-      items:
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: >-
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     paymentAccepted:
       x-ngsi:
         type: Property
       type: array
-      description: ''
+      description: ' Payment method accepted in this store.'
       items:
         type: string
     source:
@@ -311,17 +301,17 @@ Store:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'Specifies the URL to the source of this data (either organization or where relevant more specific source)'
     telephone:
       x-ngsi:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: ''
+      description: 'The telephone number of this store.'
     url:
       x-ngsi:
         type: Property
         model: 'https://schema.org/URL'
       type: string
-      description: ''
+      description: 'Website with information about the store.'
       format: uri
