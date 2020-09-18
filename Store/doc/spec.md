@@ -8,7 +8,7 @@ Store
     - currenciesAccepted
   - type: "object"  
    - allOf:
-      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/common-schema.yaml#Common"
+      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#Common"
 
   - description: > 
     ## Description 
@@ -36,13 +36,13 @@ Store
       - x-ngsi:
         - type: "Property"
         - model: "https://schema.org/address"
-      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/common-schema.yaml#Address"
+      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#Address"
 
     - location: 
       - x-ngsi:
         - type: "Property"
         - model: "https://tools.ietf.org/html/rfc7946"
-      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/common-schema.yaml#Geometry" 
+      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#Geometry" 
 
     - name: 
       - x-ngsi:
