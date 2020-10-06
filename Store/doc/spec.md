@@ -36,13 +36,13 @@ Store
       - x-ngsi:
         - type: "Property"
         - model: "https://schema.org/address"
-      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#Address"
+      - $ref: "https://smart-data-models.github.io/data-models/schema.org.yaml#/address"
 
     - location: 
       - x-ngsi:
         - type: "Property"
         - model: "https://tools.ietf.org/html/rfc7946"
-      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#Geometry" 
+      - $ref: "https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#location" 
 
     - name: 
       - x-ngsi:
