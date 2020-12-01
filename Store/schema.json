@@ -286,17 +286,5 @@
     "type",
     "name",
     "description"
-  ],
-  "anyOf": [
-    {
-      "required": [
-        "location"
-      ]
-    },
-    {
-      "required": [
-        "address"
-      ]
-    }
   ]
 }
