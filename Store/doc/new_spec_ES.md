@@ -1,15 +1,20 @@
 Entidad: Tienda  
 ===============  
 Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
-Descripción global: **Una tienda de puntos de interés**  
+Descripción global: **Esta entidad modela tiendas/tiendas en la ciudad.  
 
 ## Lista de propiedades  
 
-`address`: La dirección postal.  `alternateName`: Un nombre alternativo para este artículo  `areaServed`: La zona geográfica donde se presta un servicio o se ofrece un artículo.  `category`:   `currenciesAccepted`:   `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  `description`:   `email`:   `id`:   `image`:   `location`:   `logo`:   `name`:   `openingHoursSpecification`:   `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  `paymentAccepted`:   `seeAlso`:   `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  `telephone`:   `type`: NGSI Tipo de entidad  `url`:   ## Modelo de datos Descripción de las propiedades  
-Ordenados alfabéticamente  
-```yaml  
+- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica donde se presta un servicio o se ofrece un artículo.  - `category`: Categoría de la tienda. Enum:'AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Floristería,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,Joyería,Licorería,Ropa para hombre,Teléfono móvil,PelículaAlquiler,Música,Equipamiento de oficina,OutletStore,Casa de empeño,PetStore,Zapatería,SportingGoodsStore,Tienda de neumáticos,Juguetería,Venta al por mayor'.  - `currenciesAccepted`: Enum:AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Monedas aceptadas en esta tienda. Utiliza el formato de moneda ISO 4217 (por ejemplo, USD, EUR)  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Esta será normalmente asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `email`: La dirección de correo electrónico de esta tienda.  - `id`:   - `location`:   - `logo`: Un logo asociado para esta tienda.  - `name`: El nombre de este artículo.  - `openingHoursSpecification`: Propiedad.Un valor estructurado que proporciona información sobre los horarios de apertura de un lugar o un determinado servicio dentro de un lugar.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `paymentAccepted`: Método de pago aceptado en esta tienda.  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `telephone`: El número de teléfono de esta tienda.  - `type`: Tipo de entidad NGSI. Tiene que ser Store  - `url`: Sitio web con información sobre la tienda.    
+Propiedades requeridas  
+- `description`  - `id`  - `name`  - `type`    
+El modelo se basa en el definido por [Schema.org](https://schema.org/Store). En particular, el modelo contiene un subconjunto de las propiedades definidas en el mencionado enlace, y una lista de categorías de tiendas, que pueden ser posteriormente especializadas como Tipos concretos (véase [https://schema.org/Store](https://schema.org/Store)).  
+## Modelo de datos Descripción de las propiedades  
+Ordenados alfabéticamente (haga clic para ver los detalles)  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 Store:    
-  description: 'A point of interest store'    
+  description: 'This entity Type models stores/shops in the city.'    
   properties:    
     address:    
       description: 'The mailing address.'    
@@ -36,6 +41,7 @@ Store:
       description: 'The geographic area where a service or offered item is provided.'    
       type: Property    
     category:    
+      description: 'Category of the store. Enum:''AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,JewelryStore,LiquorStore,MensClothingStore,MobilePhoneStore,MovieRentalStore,MusicStore,OfficeEquipmentStore,OutletStore,PawnShop,PetStore,ShoeStore,SportingGoodsStore,TireShop,ToyStore,WholesaleStore'''    
       enum:    
         - AutoPartsStore    
         - BikeStore    
@@ -67,8 +73,11 @@ Store:
         - TireShop    
         - ToyStore    
         - WholesaleStore    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     currenciesAccepted:    
+      description: 'Enum:''AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Currencies accepted in this store. It uses ISO 4217 currency format (e.g. USD, EUR)'    
       items:    
         enum:    
           - AED    
@@ -252,8 +261,10 @@ Store:
           - ZWL    
         type: string    
       minItems: 1    
-      type: array    
+      type: Property    
       uniqueItems: true    
+      x-ngsi:    
+        model: https://es.wikipedia.org/wiki/ISO_4217    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -266,10 +277,14 @@ Store:
       format: date-time    
       type: Property    
     description:    
-      type: string    
+      description: 'A description of this item'    
+      type: Property    
     email:    
+      description: 'The email address of this store.'    
       format: email    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     id:    
       anyOf: &store_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -280,9 +295,6 @@ Store:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
-    image:    
-      format: uri    
-      type: string    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -431,12 +443,16 @@ Store:
           type: object    
       title: 'GeoJSON Geometry'    
     logo:    
+      description: 'An associated logo for this store. '    
       format: uri    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/URL    
     name:    
-      type: string    
+      description: 'The name of this item.'    
+      type: Property    
     openingHoursSpecification:    
-      description: ""    
+      description: 'Property.A structured value providing information about the opening hours of a place or a certain service inside a place.'    
       items:    
         properties:    
           closes:    
@@ -463,17 +479,21 @@ Store:
             format: date-time    
             type: string    
       minItems: 1    
-      type: 'Property.A structured value providing information about the opening hours of a place or a certain service inside a place.'    
+      type: array    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *store_-_properties_-_owner_-_items_-_anyof    
       type: Property    
     paymentAccepted:    
+      description: 'Payment method accepted in this store.'    
       items:    
         type: string    
-      type: array    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -482,19 +502,26 @@ Store:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     telephone:    
-      type: string    
+      description: 'The telephone number of this store.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be Store'    
       enum:    
         - Store    
-      type: string    
+      type: Property    
     url:    
+      description: 'Website with information about the store.'    
       format: uri    
-      type: string    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/URL    
   required:    
     - id    
     - type    
@@ -502,6 +529,9 @@ Store:
     - description    
   type: object    
 ```  
+</details>    
+## Ejemplo de cargas útiles  
+#### Almacenar los valores clave de NGSI V2 Ejemplo  
 Aquí hay un ejemplo de una tienda en formato JSON como valores clave. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
@@ -560,7 +590,8 @@ Store:
   "category": "GroceryStore"  
 }  
 ```  
-Aquí hay un ejemplo de una tienda en formato JSON como normalizado. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores clave" y devuelve los datos de contexto de una entidad individual.  
+#### Almacenar NGSI V2 normalizado Ejemplo  
+Aquí hay un ejemplo de una tienda en formato JSON como normalizado. Esto es compatible con NGSI V2 cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Store:santander:COM4111",  
@@ -660,7 +691,8 @@ Store:
   }  
 }  
 ```  
-Aquí hay un ejemplo de una tienda en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+#### Almacenar valores clave NGSI-LD Ejemplo  
+Aquí hay un ejemplo de una tienda en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se usa "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "@context": [  
@@ -722,6 +754,7 @@ Store:
   "category": "GroceryStore"  
 }  
 ```  
+#### Almacenar NGSI-LD normalizado Ejemplo  
 Aquí hay un ejemplo de una tienda en formato JSON-LD como normalizado. Esto es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
