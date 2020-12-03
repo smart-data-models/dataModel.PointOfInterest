@@ -1,5 +1,5 @@
 Store:
-  description: 'A point of interest store'
+  description: 'This entity Type models stores/shops in the city.'
   properties:
     address:
       description: 'The mailing address.'
@@ -26,6 +26,7 @@ Store:
       description: 'The geographic area where a service or offered item is provided.'
       type: Property
     category:
+      description: 'Category of the store. Enum:''AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,JewelryStore,LiquorStore,MensClothingStore,MobilePhoneStore,MovieRentalStore,MusicStore,OfficeEquipmentStore,OutletStore,PawnShop,PetStore,ShoeStore,SportingGoodsStore,TireShop,ToyStore,WholesaleStore'''
       enum:
         - AutoPartsStore
         - BikeStore
@@ -57,8 +58,11 @@ Store:
         - TireShop
         - ToyStore
         - WholesaleStore
-      type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     currenciesAccepted:
+      description: 'Enum:''AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Currencies accepted in this store. It uses ISO 4217 currency format (e.g. USD, EUR)'
       items:
         enum:
           - AED
@@ -242,8 +246,10 @@ Store:
           - ZWL
         type: string
       minItems: 1
-      type: array
+      type: Property
       uniqueItems: true
+      x-ngsi:
+        model: https://es.wikipedia.org/wiki/ISO_4217
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
       type: Property
@@ -256,10 +262,14 @@ Store:
       format: date-time
       type: Property
     description:
-      type: string
+      description: 'A description of this item'
+      type: Property
     email:
+      description: 'The email address of this store.'
       format: email
-      type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     id:
       anyOf: &store_-_properties_-_owner_-_items_-_anyof
         - description: 'Property. Identifier format of any NGSI entity'
@@ -270,9 +280,6 @@ Store:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
-    image:
-      format: uri
-      type: string
     location:
       $id: https://geojson.org/schema/Geometry.json
       $schema: "http://json-schema.org/draft-07/schema#"
@@ -421,12 +428,16 @@ Store:
           type: object
       title: 'GeoJSON Geometry'
     logo:
+      description: 'An associated logo for this store. '
       format: uri
-      type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/URL
     name:
-      type: string
+      description: 'The name of this item.'
+      type: Property
     openingHoursSpecification:
-      description: ""
+      description: 'Property.A structured value providing information about the opening hours of a place or a certain service inside a place.'
       items:
         properties:
           closes:
@@ -453,17 +464,21 @@ Store:
             format: date-time
             type: string
       minItems: 1
-      type: 'Property.A structured value providing information about the opening hours of a place or a certain service inside a place.'
+      type: array
     owner:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *store_-_properties_-_owner_-_items_-_anyof
       type: Property
     paymentAccepted:
+      description: 'Payment method accepted in this store.'
       items:
         type: string
-      type: array
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
             - format: uri
@@ -472,19 +487,26 @@ Store:
           type: array
         - format: uri
           type: string
+      type: Property
     source:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
       type: Property
     telephone:
-      type: string
+      description: 'The telephone number of this store.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     type:
-      description: 'NGSI Entity type'
+      description: 'NGSI Entity type. It has to be Store'
       enum:
         - Store
-      type: string
+      type: Property
     url:
+      description: 'Website with information about the store.'
       format: uri
-      type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/URL
   required:
     - id
     - type
