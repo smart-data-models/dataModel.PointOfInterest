@@ -3,7 +3,7 @@
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/Beach/schema.json",
   "title": " - Beach schema",
-  "description": "A beach",
+  "description": "This entity contains a harmonised geographic description of a beach.",
   "type": "object",
   "allOf": [
     {
@@ -16,16 +16,21 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["Beach"],
-          "description": "NGSI Entity type"
+          "enum": [
+            "Beach"
+          ],
+          "description": "Property. NGSI Entity type. It has to be Beach"
         },
         "width": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/width'.Width of this beach. Units:'meter'"
         },
         "length": {
-          "type": "number"
+          "type": "number",
+          "description": "Property. Model:'https://schema.org/length'. Length of this beach. Units:'meter'"
         },
         "beachType": {
+          "description": "Property. Model:'https://schema.org/Text'. Type of beach according to different criteria. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. Or any other value needed by an application.",
           "type": "array",
           "items": {
             "type": "string",
@@ -45,11 +50,17 @@
           "uniqueItems": true
         },
         "occupationRate": {
+          "description": "Property. Model:'https://schema.org/Text'. Typical occupation rate of this beach. Enum:'low, medium, high'",
           "type": "string",
-          "enum": ["high", "medium", "low"]
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
         },
         "facilities": {
           "type": "array",
+          "description": "Property. Model:'https://schema.org/Text'. Describes different facilities offered by this beach. Enum:'promenade, showers, cleaningServices, lifeGuard, sunshadeRental, sunLoungerRental, waterCraftRental, toilets, touristOffice, litterBins, telephone,surfPracticeArea, accessforDisabled'",
           "items": {
             "type": "string",
             "enum": [
@@ -73,25 +84,33 @@
         },
         "accessType": {
           "type": "array",
+          "description": "Property. Model:'https://schema.org/Text'. Enum:'privateVehicle, boat, onFoot, publicTransport'. Describes how to get to this beach.",
           "items": {
             "type": "string",
-            "enum": ["privateVehicle", "boat", "onFoot", "publicTransport"]
+            "enum": [
+              "privateVehicle",
+              "boat",
+              "onFoot",
+              "publicTransport"
+            ]
           },
           "minItems": 1,
           "uniqueItems": true
         },
         "refSeeAlso": {
           "type": "array",
+          "description": "Property. Model:'https://schema.org/URL'. List of references to one or more related entities.",
           "items": {
-            "anyOf": [
-              {
-                "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
-              }
-            ]
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
           }
         }
       }
     }
   ],
-  "required": ["id", "type", "location", "name"]
+  "required": [
+    "id",
+    "type",
+    "location",
+    "name"
+  ]
 }

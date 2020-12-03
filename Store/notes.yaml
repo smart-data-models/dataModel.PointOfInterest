@@ -1,0 +1,5 @@
+notesHeader:
+   The model is based on the one defined by [Schema.org](https://schema.org/Store). In particular, the model contains a subset of the properties defined in the mentioned link, and a list of store categories, that can be afterwards specialized as concrete Types (see [https://schema.org/Store](https://schema.org/Store)).
+notesMiddle:
+
+notesFooter:

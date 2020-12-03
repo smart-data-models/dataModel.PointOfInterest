@@ -1,0 +1,6 @@
+notesHeader:
+  It is used in applications that use spatial data and is applicable to Tourism, Environment, and Smart City vertical segments and related IoT applications. Special thanks to [TURESPAÑA](https://www.tourspain.es/en-us) who provided some examples which  inspired the development of this data model.
+notesMiddle:
+  This entity type has been designed as an extension of [https://schema.org/Beach](https://schema.org/Beach) so that any property specified by schema.org and which domain is `https://schema.org/Beach` can be used by applications.
+
+notesFooter:

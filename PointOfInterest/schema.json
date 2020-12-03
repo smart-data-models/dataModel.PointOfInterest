@@ -3,22 +3,9 @@
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json",
   "title": "- Point of Interest schema",
-  "description": "A point of interest",
+  "description": "This entity contains a harmonised geographic description of a Point of Interest",
   "type": "object",
   "allOf": [
-    {
-      "anyOf": [
-        {
-          "required": ["location"]
-        },
-        {
-          "required": ["address"]
-        }
-      ]
-    },
-    {
-      "required": ["id", "type", "category", "name"]
-    },
     {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
     },
@@ -29,30 +16,43 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["PointOfInterest"],
-          "description": "NGSI Entity type"
+          "enum": [
+            "PointOfInterest"
+          ],
+          "description": "Property. NGSI Entity type. It has to be PointOfInterest"
         },
         "category": {
           "type": "array",
+          "description": "Property. Model:'https://schema.org/Text'. Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.",
           "items": {
             "type": "string"
           },
           "minItems": 1
         },
         "contactPoint": {
-          "type": "object"
+          "type": "object",
+          "description": "Property. Model:'https://schema.org/ContactPoint'. Contact point for the museum."
         },
         "refSeeAlso": {
           "type": "array",
+          "description": "Property. Model:'https://schema.org/URL'. List of references to one or more related entities.",
           "items": {
             "anyOf": [
               {
                 "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
               }
             ]
-          }
+          },
+          "minItems": 1,
+          "uniqueItems": true
         }
       }
     }
+  ],
+  "required": [
+    "id",
+    "type",
+    "category",
+    "name"
   ]
 }
