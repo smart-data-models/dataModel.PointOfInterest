@@ -23,7 +23,7 @@
         },
         "width": {
           "type": "number",
-          "description": "Property. Model:'https://schema.org/width'.Width of this beach. Units:'meter'"
+          "description": "Property. Model:'https://schema.org/width'. Width of this beach. Units:'meter'"
         },
         "length": {
           "type": "number",
