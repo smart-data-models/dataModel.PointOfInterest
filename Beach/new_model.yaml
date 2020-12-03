@@ -306,7 +306,7 @@ Beach:
       type: Property
       x-ngsi:
         model: https://schema.org/width
-        units: meter
+        units: meter.
   required:
     - id
     - type
