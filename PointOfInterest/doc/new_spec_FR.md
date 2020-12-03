@@ -1,16 +1,20 @@
 Entité : PointOfInterest  
 ========================  
 Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
-Description globale : **Un point d'intérêt**  
+Description globale : **Cette entité contient une description géographique harmonisée d'un point d'intérêt**  
 
 ## Liste des biens  
 
-- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `category`:   - `contactPoint`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`:   - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refSeeAlso`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  ## Modèle de données description des biens  
+- `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `category`: Catégorie de ce point d'intérêt. Valeurs autorisées : Celles définies par la [taxonomie factuelle] (https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) ainsi que les catégories étendues décrites par la spécification. Par exemple, la valeur "113" correspond aux plages, et la valeur "311" aux musées.  - `contactPoint`: Point de contact pour le musée.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `id`:   - `location`:   - `name`: Le nom de cet article.  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refSeeAlso`: Liste des références à une ou plusieurs entités liées.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de PointOfInterest    
+Propriétés requises  
+- `category`  - `id`  - `name`  - `type`    
+Cette entité est utilisée dans des applications qui utilisent des données spatiales et s'applique aux segments verticaux de l'automobile, de l'environnement, de l'industrie et des villes intelligentes ainsi qu'aux applications IdO connexes. Ce modèle de données a été créé en coopération avec la GSMA et les membres du [IoT Big Data Project] (http://www.gsma.com/iot/iot-big-data/).  
+## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PointOfInterest:    
-  description: 'A point of interest'    
+  description: 'This entity contains a harmonised geographic description of a Point of Interest'    
   properties:    
     address:    
       description: 'The mailing address.'    
@@ -37,12 +41,18 @@ PointOfInterest:
       description: 'The geographic area where a service or offered item is provided.'    
       type: Property    
     category:    
+      description: 'Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.'    
       items:    
         type: string    
       minItems: 1    
-      type: array    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     contactPoint:    
-      type: object    
+      description: 'Contact point for the museum.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/ContactPoint    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -223,11 +233,17 @@ PointOfInterest:
         anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof    
       type: Property    
     refSeeAlso:    
+      description: 'List of references to one or more related entities.'    
       items:    
         anyOf:    
           - anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof    
-      type: array    
+      minItems: 1    
+      type: Property    
+      uniqueItems: true    
+      x-ngsi:    
+        model: https://schema.org/URL    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -236,15 +252,20 @@ PointOfInterest:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be PointOfInterest'    
       enum:    
         - PointOfInterest    
-      type: string    
-  required: []    
+      type: Property    
+  required:    
+    - id    
+    - type    
+    - category    
+    - name    
   type: object    
 ```  
 </details>    
@@ -271,7 +292,7 @@ PointOfInterest:
 }  
 ```  
 #### PointOfInterest NGSI V2 normalisé Exemple  
-Voici un exemple de PointOfInterest au format JSON tel que normalisé. Il est compatible avec NGSI V2 lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de PointOfInterest au format JSON tel que normalisé. Ce format est compatible avec la version 2 du NGSI lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "PointOfInterest-A-Concha-123456",  
@@ -309,7 +330,7 @@ PointOfInterest:
 }  
 ```  
 #### PointOfInterest NGSI-LD valeurs clés Exemple  
-Voici un exemple de PointOfInterest au format JSON-LD comme valeurs clés. Il est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de PointOfInterest au format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
