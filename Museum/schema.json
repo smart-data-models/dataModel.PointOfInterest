@@ -198,8 +198,8 @@
         },
         "featuredArtist": {
           "type": "array",
+          "description": "Property. Model:'https://schema.org/Person'. Main featured artist(s) at this museum.",
           "items": {
-            "description": "Property. Model:'https://schema.org/Person'. Main featured artist(s) at this museum.",
             "anyOf": [
               {
                 "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
@@ -217,7 +217,8 @@
            "description": "Property. Model:'https://schema.org/ContactPoint'. Contact point for the museum."
         },
         "touristArea": {
-          "type": "string"
+          "type": "string",
+           "description": "Property. Model:'https://schema.org/Text'. Tourist area at which this museum is located. Precise semantics might depend on the application or target country or region. For instance `Costa del Sol`."
         },
         "openingHoursSpecification": {
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons"
