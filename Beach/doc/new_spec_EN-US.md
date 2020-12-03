@@ -317,10 +317,10 @@ Beach:
         - Beach    
       type: Property    
     width:    
-      description: ""    
+      description: 'Width of this beach'    
       type: Property    
       x-ngsi:    
-        model: 'https://schema.org/width.Width of this beach'    
+        model: https://schema.org/width    
         units: meter    
   required:    
     - id    
