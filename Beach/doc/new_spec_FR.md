@@ -1,18 +1,23 @@
 Entité : Plage  
 ==============  
 Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
-Description globale : **Une plage**  
+Description globale : **Cette entité contient une description géographique harmonisée d'une plage.**  
 
 ## Liste des biens  
 
-- `accessType`:   - `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `beachType`:   - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `facilities`:   - `id`:   - `length`:   - `location`:   - `name`: Le nom de cet article.  - `occupationRate`:   - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refSeeAlso`:   - `seeAlso`:   - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: NGSI Type d'entité  - `width`:   ## Modèle de données description des biens  
+- `accessType`: Enum : "véhicule privé, bateau, à pied, transport public". Décrit comment se rendre à cette plage.  - `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `beachType`: Type de plage selon différents critères. Enum : "sable blanc, urbaine, isolée, eaux calmes, drapeau bleu, qualité Q, vagues fortes, venteuse, sable noir". Ou toute autre valeur requise par une application.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `facilities`: Décrit les différents services offerts par cette plage. Enum : "promenade, douches, nettoyageServices, LifeGuard, location de parasols, location de chaises longues, location d'embarcations, toilettes, office du tourisme, poubelles, téléphone, zone de pratique de surf, accès pour les personnes handicapées".  - `id`:   - `length`: Longueur de cette plage  - `location`:   - `name`: Le nom de cet article.  - `occupationRate`: Taux d'occupation typique de cette plage. Enum : "faible, moyen, élevé  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refSeeAlso`: Liste des références à une ou plusieurs entités liées.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de Beach  - `width`: Largeur de cette plage    
+Propriétés requises  
+- `id`  - `location`  - `name`  - `type`    
+Il est utilisé dans des applications qui utilisent des données spatiales et est applicable aux segments verticaux du tourisme, de l'environnement et des villes intelligentes ainsi qu'aux applications IdO connexes. Nous remercions tout particulièrement [TURESPAÑA] (https://www.tourspain.es/en-us) qui a fourni quelques exemples qui ont inspiré le développement de ce modèle de données.  
+## Modèle de données description des biens  
 Classement par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Beach:    
-  description: 'A beach'    
+  description: 'This entity contains a harmonised geographic description of a beach.'    
   properties:    
     accessType:    
+      description: 'Enum:''privateVehicle, boat, onFoot, publicTransport''. Describes how to get to this beach.'    
       items:    
         enum:    
           - privateVehicle    
@@ -21,8 +26,10 @@ Beach:
           - publicTransport    
         type: string    
       minItems: 1    
-      type: array    
+      type: Property    
       uniqueItems: true    
+      x-ngsi:    
+        model: https://schema.org/Text    
     address:    
       description: 'The mailing address.'    
       properties:    
@@ -48,6 +55,7 @@ Beach:
       description: 'The geographic area where a service or offered item is provided.'    
       type: Property    
     beachType:    
+      description: 'Type of beach according to different criteria. Enum:''whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand''. Or any other value needed by an application.'    
       items:    
         enum:    
           - whiteSand    
@@ -63,6 +71,8 @@ Beach:
       minItems: 1    
       type: array    
       uniqueItems: true    
+      x-ngsi:    
+        model: https://schema.org/Text    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
@@ -78,6 +88,7 @@ Beach:
       description: 'A description of this item'    
       type: Property    
     facilities:    
+      description: 'Describes different facilities offered by this beach. Enum:''promenade, showers, cleaningServices, lifeGuard, sunshadeRental, sunLoungerRental, waterCraftRental, toilets, touristOffice, litterBins, telephone,surfPracticeArea, accessforDisabled'''    
       items:    
         enum:    
           - promenade    
@@ -95,8 +106,10 @@ Beach:
           - accessforDisabled    
         type: string    
       minItems: 1    
-      type: array    
+      type: Property    
       uniqueItems: true    
+      x-ngsi:    
+        model: https://schema.org/Text    
     id:    
       anyOf: &beach_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -108,7 +121,11 @@ Beach:
           format: uri    
           type: string    
     length:    
-      type: number    
+      description: 'Length of this beach'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/length    
+        units: meter    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -260,22 +277,28 @@ Beach:
       description: 'The name of this item.'    
       type: Property    
     occupationRate:    
+      description: 'Typical occupation rate of this beach. Enum:''low, medium, high'''    
       enum:    
         - high    
         - medium    
         - low    
       type: string    
+      x-ngsi:    
+        model: https://schema.org/Text    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *beach_-_properties_-_owner_-_items_-_anyof    
       type: Property    
     refSeeAlso:    
+      description: 'List of references to one or more related entities.'    
       items:    
-        anyOf:    
-          - anyOf: *beach_-_properties_-_owner_-_items_-_anyof    
-      type: array    
+        anyOf: *beach_-_properties_-_owner_-_items_-_anyof    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/URL    
     seeAlso:    
+      description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
             - format: uri    
@@ -284,16 +307,21 @@ Beach:
           type: array    
         - format: uri    
           type: string    
+      type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     type:    
-      description: 'NGSI Entity type'    
+      description: 'NGSI Entity type. It has to be Beach'    
       enum:    
         - Beach    
-      type: string    
+      type: Property    
     width:    
-      type: number    
+      description: 'Width of this beach'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/width    
+        units: meter    
   required:    
     - id    
     - type    
@@ -302,6 +330,7 @@ Beach:
   type: object    
 ```  
 </details>    
+Ce type d'entité a été conçu comme une extension de [https://schema.org/Beach](https://schema.org/Beach) afin que toute propriété spécifiée par schema.org et dont le domaine est `https://schema.org/Beach` puisse être utilisée par des applications.  
 ## Exemples de charges utiles  
 #### Exemple de valeurs clés de l'INSG V2 pour les plages  
 Voici un exemple de plage en format JSON comme valeurs clés. Il est compatible avec NGSI V2 lorsque l'on utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
@@ -329,7 +358,7 @@ Beach:
 }  
 ```  
 #### Plage NGSI V2 normalisée Exemple  
-Voici un exemple de plage en format JSON normalisé. Il est compatible avec NGSI V2 lorsque l'on utilise "options=valeurs clés" et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de plage en format JSON normalisé. Ce format est compatible avec NGSI V2 lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {  
   "id": "Beach-A-Concha-123456",  
@@ -378,7 +407,7 @@ Beach:
 }  
 ```  
 #### Exemple de valeurs clés de l'INSG-LD pour la plage  
-Voici un exemple de plage en format JSON-LD comme valeurs clés. Ce format est compatible avec le format JSON-LD lorsqu'il n'utilise pas d'options et renvoie les données de contexte d'une entité individuelle.  
+Voici un exemple de plage en format JSON-LD comme valeurs clés. Il est compatible avec le format NGSI-LD lorsqu'il utilise "options=keyValues" et renvoie les données de contexte d'une entité individuelle.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
