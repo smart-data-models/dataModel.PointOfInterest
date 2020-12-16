@@ -5,26 +5,35 @@ PointOfInterest:
       description: 'The mailing address.'
       properties:
         addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
           type: string
         addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
           type: string
         areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
           type: string
         postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
           type: string
       type: Property
     alternateName:
       description: 'An alternative name for this item'
       type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided.'
+      description: 'The geographic area where a service or offered item is provided'
       type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     category:
       description: 'Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.'
       items:
@@ -62,6 +71,8 @@ PointOfInterest:
         - description: 'Property. Identifier format of any NGSI entity'
           format: uri
           type: string
+      description: 'Unique identifier of the entity'
+      type: Property
     location:
       $id: https://geojson.org/schema/Geometry.json
       $schema: "http://json-schema.org/draft-07/schema#"
@@ -216,12 +227,14 @@ PointOfInterest:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
       type: Property
     refSeeAlso:
       description: 'List of references to one or more related entities.'
       items:
         anyOf:
           - anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof
+            description: 'Property. Unique identifier of the entity'
       minItems: 1
       type: Property
       uniqueItems: true
