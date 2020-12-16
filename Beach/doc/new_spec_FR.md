@@ -1,11 +1,11 @@
 Entité : Plage  
 ==============  
-Cette spécification est une **version temporelle**. Elle est générée automatiquement à partir des propriétés documentées décrites dans le schema.json condensé dans le fichier `model.yaml`. Un fichier temporaire `nouveau_modèle.yaml` a été créé dans chaque modèle de données pour éviter d'avoir un impact sur les scripts existants. Ainsi, la spécification sera incomplète tant que le fichier schema.json n'est pas mis à jour au nouveau format (documentation des propriétés). Une fois mis à jour, le fichier `model.yaml` (`nouveau_model.yaml`) doit être mis à jour également (automatiquement) . Plus d'informations dans ce [lien](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Tant qu'il s'agit d'un format provisoire, tout [feedback est le bienvenu dans ce formulaire](https://smartdatamodels.org/index.php/submit-an-issue-2/) en choisissant l'option "Feedback sur la nouvelle spécification".  
+[Licence ouverte](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Beach/LICENSE.md)  
 Description globale : **Cette entité contient une description géographique harmonisée d'une plage.**  
 
 ## Liste des biens  
 
-- `accessType`: Enum : "véhicule privé, bateau, à pied, transport public". Décrit comment se rendre à cette plage.  - `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni.  - `beachType`: Type de plage selon différents critères. Enum : "sable blanc, urbaine, isolée, eaux calmes, drapeau bleu, qualité Q, vagues fortes, venteuse, sable noir". Ou toute autre valeur requise par une application.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `facilities`: Décrit les différents services offerts par cette plage. Enum : "promenade, douches, nettoyageServices, LifeGuard, location de parasols, location de chaises longues, location d'embarcations, toilettes, office du tourisme, poubelles, téléphone, zone de pratique de surf, accès pour les personnes handicapées".  - `id`:   - `length`: Longueur de cette plage  - `location`:   - `name`: Le nom de cet article.  - `occupationRate`: Taux d'occupation typique de cette plage. Enum : "faible, moyen, élevé  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refSeeAlso`: Liste des références à une ou plusieurs entités liées.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de Beach  - `width`: Largeur de cette plage    
+- `accessType`: Enum : "véhicule privé, bateau, à pied, transport public". Décrit comment se rendre à cette plage.  - `address`: L'adresse postale.  - `alternateName`: Un autre nom pour cet article  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `beachType`: Type de plage selon différents critères. Enum : "sable blanc, urbaine, isolée, eaux calmes, drapeau bleu, qualité Q, vagues fortes, venteuse, sable noir". Ou toute autre valeur requise par une application.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il est généralement attribué par la plate-forme de stockage.  - `description`: Une description de cet article  - `facilities`: Décrit les différents services offerts par cette plage. Enum : "promenade, douches, nettoyageServices, LifeGuard, location de parasols, location de chaises longues, location d'embarcations, toilettes, office du tourisme, poubelles, téléphone, zone de pratique de surf, accès pour les personnes handicapées".  - `id`: Identifiant unique de l'entité  - `length`: Longueur de cette plage  - `location`:   - `name`: Le nom de cet article.  - `occupationRate`: Taux d'occupation typique de cette plage. Enum : "faible, moyen, élevé  - `owner`: Une liste contenant une séquence de caractères codés en JSON faisant référence aux Ids uniques du ou des propriétaires  - `refSeeAlso`: Liste des références à une ou plusieurs entités liées.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur le sujet  - `source`: Une séquence de caractères donnant comme URL la source originale des données de l'entité. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source, ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de Beach  - `width`: Largeur de cette plage    
 Propriétés requises  
 - `id`  - `location`  - `name`  - `type`    
 Il est utilisé dans des applications qui utilisent des données spatiales et est applicable aux segments verticaux du tourisme, de l'environnement et des villes intelligentes ainsi qu'aux applications IdO connexes. Nous remercions tout particulièrement [TURESPAÑA] (https://www.tourspain.es/en-us) qui a fourni quelques exemples qui ont inspiré le développement de ce modèle de données.  
@@ -34,26 +34,35 @@ Beach:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     beachType:    
       description: 'Type of beach according to different criteria. Enum:''whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand''. Or any other value needed by an application.'    
       items:    
@@ -120,6 +129,8 @@ Beach:
         - description: 'Property. Identifier format of any NGSI entity'    
           format: uri    
           type: string    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     length:    
       description: 'Length of this beach'    
       type: Property    
@@ -289,11 +300,13 @@ Beach:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *beach_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refSeeAlso:    
       description: 'List of references to one or more related entities.'    
       items:    
         anyOf: *beach_-_properties_-_owner_-_items_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/URL    
@@ -321,7 +334,7 @@ Beach:
       type: Property    
       x-ngsi:    
         model: https://schema.org/width    
-        units: meter    
+        units: meter.    
   required:    
     - id    
     - type    
