@@ -1,11 +1,11 @@
 Entidad: Museo  
 ==============  
-Esta especificación es una **versión temporal**. Se genera automáticamente a partir de las propiedades documentadas descritas en el schema.json condensadas en el archivo `model.yaml`. Se ha creado un archivo temporal `nuevo_modelo.yaml` en cada modelo de datos para evitar el impacto en los scripts existentes. Por lo tanto, la especificación estará incompleta mientras el schema.json no se actualice al nuevo formato (documentando las propiedades). Una vez actualizado el `modelo.yaml` (`nuevo_modelo.yaml`) necesita ser actualizado también (automáticamente) . Más información en este [link](https://github.com/smart-data-models/data-models/blob/master/specs/warning_message_new_spec.md). Mientras sea un formato provisional cualquier [feedback es bienvenido en este formulario](https://smartdatamodels.org/index.php/submit-an-issue-2/) eligiendo la opción `Feedback on the new specification`.  
+[Licencia abierta](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Museum/LICENSE.md)  
 Descripción global: **Un museo...  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica donde se presta un servicio o se ofrece un artículo.  - `artPeriod`: Valores permitidos:-Los definidos por [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).-Cualquier otro valor extendido que necesite una aplicación y que no esté descrito por el recurso anterior.  - `buildingType`: El tipo de edificio que alberga el museo. Enum:Lugar prehistórico, acrópolis, alcazaba, acueducto, alcázar, anfiteatro, arco, arquitectura polular, basílica, carretera, capilla, cartuja, casa noble, residencia, castillo, castro, catacumbas, catedral, claustro, convento, cueva prehistórica, dolmen, edificio de oficinas, casa, edificio industrial, edificio militar, ermita, fortaleza, grupos escultóricos, iglesia, jardín, mercado de pescado, masía, masía fortificada, minarete, monasterio, monolito, muros, necrópolis, menhir, mansión, palacio, panteón, pazo, pirámide, puente, puerta, arcada, área amurallada, santuario, tumba, sinagoga, taulas, talayots, navetas, teatro, templo, manantial, torre, Sitio arqueológico, universidad, cementerio, templo fortificado, ingeniería civil, plaza, seminario, plaza de toros, edificio público, ciudad, cuevas y minas turísticas, catedral, mezquita, circo, cementerio...  - `contactPoint`: Punto de contacto para el museo.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `facilities`: Describe las diferentes facilidades que ofrece este museo. Enum:'ascensor, cafetería, tienda, auditorio, sala de conferencias, audioguía, sala de camuflaje, para discapacitados, para bebés, visita guiada, restaurante, rampa, reservación'. o cualquier otro valor que requiera una solicitud.  - `featuredArtist`: Los principales artistas de este museo.  - `historicalPeriod`: Un intervalo de tiempo ISO8601. Por ejemplo 1920/1940. El segundo elemento del intervalo puede dejarse vacío para denotar "hasta ahora". Una lista de años separada por comas, por ejemplo 1620,1625,1718.       - Un siglo, representado por un patrón de años, por ejemplo 19xx correspondería al siglo XX. Y 196x correspondería a la década de los sesenta.  - `id`:   - `location`:   - `museumType`: Tipo de museo según el contenido expuesto. Enum:Artes aplicadas, ciencia y tecnología, bellas artes, música, historia, arte sacro, arqueología, especialidades, artes decorativas, literatura, medicina y farmacia, transporte marítimo, militar, cera, artes populares y tradiciones, numismática, unesco, cerámica, artes suntuarias, Ciencia natural, prehistórica, etnología, ferrocarril, minería, textil, escultura, multidisciplinar, pintura, paleontología, arte moderno, temática, arquitectura, casa museo, museo catedralicio, museo diocesano, universitario, arte contemporáneo, toreo". Otra posible fuente para los tipos de museo no contemplados anteriormente es [Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum).  - `name`: El nombre de este artículo.  - `openingHoursSpecification`: Todos los elementos de fecha y hora en los modelos de datos, a menos que se indique explícitamente, cumplen con la norma ISO 8601  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `refSeeAlso`: Lista de referencias a una o más entidades conexas.  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `touristArea`: Zona turística en la que se encuentra este museo. La semántica precisa podría depender de la aplicación o del país o región de destino. Por ejemplo, "Costa del Sol".  - `type`: Tipo de entidad NGSI. Tiene que ser Museo    
+- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `artPeriod`: Valores permitidos:-Los definidos por [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).-Cualquier otro valor extendido que necesite una aplicación y que no esté descrito por el recurso anterior.  - `buildingType`: El tipo de edificio que alberga el museo. Enum:Lugar prehistórico, acrópolis, alcazaba, acueducto, alcázar, anfiteatro, arco, arquitectura polular, basílica, carretera, capilla, cartuja, casa noble, residencia, castillo, castro, catacumbas, catedral, claustro, convento, cueva prehistórica, dolmen, edificio de oficinas, casa, edificio industrial, edificio militar, ermita, fortaleza, grupos escultóricos, iglesia, jardín, mercado de pescado, masía, masía fortificada, minarete, monasterio, monolito, muros, necrópolis, menhir, mansión, palacio, panteón, pazo, pirámide, puente, puerta, arcada, área amurallada, santuario, tumba, sinagoga, taulas, talayots, navetas, teatro, templo, manantial, torre, Sitio arqueológico, universidad, cementerio, templo fortificado, ingeniería civil, plaza, seminario, plaza de toros, edificio público, ciudad, cuevas y minas turísticas, catedral, mezquita, circo, cementerio...  - `contactPoint`: Punto de contacto para el museo.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `facilities`: Describe las diferentes facilidades que ofrece este museo. Enum:'ascensor, cafetería, tienda, auditorio, sala de conferencias, audioguía, sala de camuflaje, para discapacitados, para bebés, visita guiada, restaurante, rampa, reservación'. o cualquier otro valor que requiera una solicitud.  - `featuredArtist`: Los principales artistas de este museo.  - `historicalPeriod`: Un intervalo de tiempo ISO8601. Por ejemplo 1920/1940. El segundo elemento del intervalo puede dejarse vacío para denotar "hasta ahora". Una lista de años separada por comas, por ejemplo 1620,1625,1718.       - Un siglo, representado por un patrón de años, por ejemplo 19xx correspondería al siglo XX. Y 196x correspondería a la década de los sesenta.  - `id`: Identificador único de la entidad  - `location`:   - `museumType`: Tipo de museo según el contenido expuesto. Enum:Artes aplicadas, ciencia y tecnología, bellas artes, música, historia, arte sacro, arqueología, especialidades, artes decorativas, literatura, medicina y farmacia, transporte marítimo, militar, cera, artes populares y tradiciones, numismática, unesco, cerámica, artes suntuarias, Ciencia natural, prehistórica, etnología, ferrocarril, minería, textil, escultura, multidisciplinar, pintura, paleontología, arte moderno, temática, arquitectura, casa museo, museo catedralicio, museo diocesano, universitario, arte contemporáneo, toreo". Otra posible fuente para los tipos de museo no contemplados anteriormente es [Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum).  - `name`: El nombre de este artículo.  - `openingHoursSpecification`: Todos los elementos de fecha y hora en los modelos de datos, a menos que se indique explícitamente, cumplen con la norma ISO 8601  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `refSeeAlso`: Lista de referencias a una o más entidades conexas.  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `touristArea`: Zona turística en la que se encuentra este museo. La semántica precisa podría depender de la aplicación o del país o región de destino. Por ejemplo, "Costa del Sol".  - `type`: Tipo de entidad NGSI. Tiene que ser Museo    
 Propiedades requeridas  
 - `id`  - `location`  - `name`  - `type`    
 Esta entidad contiene una descripción geográfica armonizada de un museo. Se utiliza en aplicaciones que utilizan datos espaciales y es aplicable a los segmentos verticales de Turismo, Cultura y Ciudad Inteligente y a las aplicaciones de IO relacionadas. Agradecimientos especiales a [TURESPAÑA](https://www.tourspain.es/en-us) que proporcionó algunos ejemplos que inspiraron el desarrollo de este modelo de datos.  
@@ -20,26 +20,35 @@ Museum:
       description: 'The mailing address.'    
       properties:    
         addressCountry:    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         addressLocality:    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
           type: string    
         addressRegion:    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
           type: string    
         areaServed:    
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
           type: string    
         postOfficeBoxNumber:    
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         postalCode:    
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
           type: string    
         streetAddress:    
+          description: 'Property. The street address. Model:''https://schema.org/Text'''    
           type: string    
       type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided.'    
+      description: 'The geographic area where a service or offered item is provided'    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     artPeriod:    
       description: 'Allowed values:-Those defined by    [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).- Any other extended value needed by an application and not described by the above resource.'    
       items:    
@@ -174,6 +183,7 @@ Museum:
       x-ngsi:    
         model: https://schema.org/Text    
     featuredArtist:    
+      description: 'Main featured artist(s) at this museum.'    
       items:    
         anyOf:    
           - anyOf: &museum_-_properties_-_id_-_anyof    
@@ -185,11 +195,13 @@ Museum:
               - description: 'Property. Identifier format of any NGSI entity'    
                 format: uri    
                 type: string    
+            description: 'Property. Unique identifier of the entity'    
           - type: string    
-        description: 'Property. Model:''https://schema.org/Person''. Main featured artist(s) at this museum.'    
       minItems: 1    
-      type: array    
+      type: Property    
       uniqueItems: true    
+      x-ngsi:    
+        model: https://schema.org/Person    
     historicalPeriod:    
       description: 'An ISO8601 time interval. For example 1920/1940. The second element of the interval can be left empty to denote ''till now''. A comma separated list of years, for instance 1620,1625,1718.       -   A century, represented by a year pattern, for instance 19xx would correspond to the twentieth century. And 196x would correspond to the sixties decade.'    
       items:    
@@ -201,6 +213,8 @@ Museum:
         model: https://schema.org/Text    
     id:    
       anyOf: *museum_-_properties_-_id_-_anyof    
+      description: 'Unique identifier of the entity'    
+      type: Property    
     location:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
@@ -404,7 +418,7 @@ Museum:
       description: 'All date-time elements in data models unless explicitly stated are ISO 8601 compliant'    
       properties:    
         openingHoursSpecification:    
-          description: 'Property.A structured value providing information about the opening hours of a place or a certain service inside a place.'    
+          description: 'Property. A structured value providing information about the opening hours of a place or a certain service inside a place.'    
           items:    
             properties:    
               closes:    
@@ -437,12 +451,14 @@ Museum:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *museum_-_properties_-_id_-_anyof    
+        description: 'Property. Unique identifier of the entity'    
       type: Property    
     refSeeAlso:    
       description: 'List of references to one or more related entities.'    
       items:    
         anyOf:    
           - anyOf: *museum_-_properties_-_id_-_anyof    
+            description: 'Property. Unique identifier of the entity'    
       minItems: 1    
       type: Property    
       uniqueItems: true    
@@ -463,7 +479,10 @@ Museum:
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
       type: Property    
     touristArea:    
-      type: string    
+      description: 'Tourist area at which this museum is located. Precise semantics might depend on the application or target country or region. For instance `Costa del Sol`.'    
+      type: Property    
+      x-ngsi:    
+        model: https://schema.org/Text    
     type:    
       description: 'NGSI Entity type. It has to be Museum'    
       enum:    

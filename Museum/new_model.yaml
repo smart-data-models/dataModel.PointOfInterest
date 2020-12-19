@@ -5,26 +5,35 @@ Museum:
       description: 'The mailing address.'
       properties:
         addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
           type: string
         addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
           type: string
         areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
           type: string
         postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
           type: string
         streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
           type: string
       type: Property
     alternateName:
       description: 'An alternative name for this item'
       type: Property
     areaServed:
-      description: 'The geographic area where a service or offered item is provided.'
+      description: 'The geographic area where a service or offered item is provided'
       type: Property
+      x-ngsi:
+        model: https://schema.org/Text
     artPeriod:
       description: 'Allowed values:-Those defined by    [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).- Any other extended value needed by an application and not described by the above resource.'
       items:
@@ -171,6 +180,7 @@ Museum:
               - description: 'Property. Identifier format of any NGSI entity'
                 format: uri
                 type: string
+            description: 'Property. Unique identifier of the entity'
           - type: string
       minItems: 1
       type: Property
@@ -188,6 +198,8 @@ Museum:
         model: https://schema.org/Text
     id:
       anyOf: *museum_-_properties_-_id_-_anyof
+      description: 'Unique identifier of the entity'
+      type: Property
     location:
       $id: https://geojson.org/schema/Geometry.json
       $schema: "http://json-schema.org/draft-07/schema#"
@@ -391,7 +403,7 @@ Museum:
       description: 'All date-time elements in data models unless explicitly stated are ISO 8601 compliant'
       properties:
         openingHoursSpecification:
-          description: 'Property.A structured value providing information about the opening hours of a place or a certain service inside a place.'
+          description: 'Property. A structured value providing information about the opening hours of a place or a certain service inside a place.'
           items:
             properties:
               closes:
@@ -424,12 +436,14 @@ Museum:
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
       items:
         anyOf: *museum_-_properties_-_id_-_anyof
+        description: 'Property. Unique identifier of the entity'
       type: Property
     refSeeAlso:
       description: 'List of references to one or more related entities.'
       items:
         anyOf:
           - anyOf: *museum_-_properties_-_id_-_anyof
+            description: 'Property. Unique identifier of the entity'
       minItems: 1
       type: Property
       uniqueItems: true
