@@ -105,8 +105,8 @@
           "uniqueItems": true
         },
         "artPeriod": {
-          "description": "Property. Model:'https://schema.org/Text'.Corresponds to the art period(s) of the exhibitions made by this museum. Allowed values:-Those defined by    [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).- Any other extended value needed by an application and not described by the above resource.",
           "type": "array",
+          "description": "Property. Model:'https://schema.org/Text'.Corresponds to the art period(s) of the exhibitions made by this museum. Allowed values:-Those defined by [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).- Any other extended value needed by an application and not described by the above resource.",
           "items": {
             "type": "string"
           },
@@ -221,7 +221,7 @@
            "description": "Property. Model:'https://schema.org/Text'. Tourist area at which this museum is located. Precise semantics might depend on the application or target country or region. For instance `Costa del Sol`."
         },
         "openingHoursSpecification": {
-          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons"
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
         },
         "refSeeAlso": {
           "type": "array",
