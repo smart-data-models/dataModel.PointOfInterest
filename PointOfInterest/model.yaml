@@ -1,80 +1,267 @@
----
-# Copyright (c) 2020 Contributors to Smart-Data-Models
-# see https://github.com/smart-data-models/dataModel.PointOfInterest
-
 PointOfInterest:
+  description: 'This entity contains a harmonised geographic description of a Point of Interest'
+  properties:
+    address:
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
+          type: string
+        addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          type: string
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          type: string
+        postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          type: string
+      type: Property
+    alternateName:
+      description: 'An alternative name for this item'
+      type: Property
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    category:
+      description: 'Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.'
+      items:
+        type: string
+      minItems: 1
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    contactPoint:
+      description: 'Contact point for the museum.'
+      type: Property
+      x-ngsi:
+        model: https://schema.org/ContactPoint
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    description:
+      description: 'A description of this item'
+      type: Property
+    id:
+      anyOf: &pointofinterest_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      type: Property
+    location:
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
+    name:
+      description: 'The name of this item.'
+      type: Property
+    owner:
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
+    refSeeAlso:
+      description: 'List of references to one or more related entities.'
+      items:
+        anyOf:
+          - anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof
+            description: 'Property. Unique identifier of the entity'
+      minItems: 1
+      type: Property
+      uniqueItems: true
+      x-ngsi:
+        model: https://schema.org/URL
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
+    source:
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
+    type:
+      description: 'NGSI Entity type. It has to be PointOfInterest'
+      enum:
+        - PointOfInterest
+      type: Property
   required:
     - id
     - type
     - category
-  allOf:
-    - $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/Common
+    - name
   type: object
-  description: |
-    This entity contains a harmonised geographic description of a Point of Interest. This entity is used in applications
-    that use spatial data and is applicable to Automotive, Environment, Industry and Smart City vertical segments and
-    related IoT applications. This data model has been created in cooperation with the GSMA and the members of the
-    IoT Big Data Project.
-  properties:
-    address:
-      "$ref": https://smart-data-models.github.io/data-models/schema.org.yaml#/address
-    alternateName:
-      x-ngsi:
-        type: Property
-        model: https://schema.org/Text
-      type: string
-      description: 'Alternative name for this point of interest.'
-    areaServed:
-      x-ngsi:
-        type: Property
-        model: https://schema.org/Text
-      type: string
-      description: ''
-    category:
-      x-ngsi:
-        type: Property
-      type: array
-      description: |
-        Category of this point of interest.
-        
-        Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/categories/factual_taxonomy.json)
-        together with the extended categories described by the present
-        specification (see below). For instance the value `113` corresponds to
-        beaches, and the value `311` corresponds to museums.
-
-        ## Extended POI Categories
-
-        | Category | Description                |
-        | :------- | :------------------------- |
-        | `1478`   | `Public drinking fountain` |
-        | `1479`   | `Public toilet`            |
-        | `1480`   | `Registry office`          |
-
-      items:
-        type: string
-    contactPoint:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/schema.org.yaml#/contactPoint
-    dataProvider:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/dataProvider
-    description:
-    description:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/description
-    location:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/location
-    name:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
-    owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
-    refSeeAlso:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/refSeeAlso
-    source:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/source
