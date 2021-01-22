@@ -2,7 +2,7 @@
 
 ## Description 
 
-A point of interest store
+This entity Type models stores/shops in the city.
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInterest/Store/swagger.yaml)
