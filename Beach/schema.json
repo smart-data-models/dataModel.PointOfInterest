@@ -51,12 +51,18 @@
         },
         "occupationRate": {
           "type": "string",
-          "description": "Property. Model:'https://schema.org/Text'. Typical occupation rate of this beach. Enum:'low, medium, high'",
+          "description": "Property. Model:'https://schema.org/Text'. Typical occupation rate of this beach. Enum:'low, medium, high, none'",
           "enum": [
             "high",
             "medium",
-            "low"
+            "low",
+            "none"
           ]
+        },
+        "peopleOccupancy": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Model:'https://schema.org/Number'. People's presence at the location"
         },
         "facilities": {
           "type": "array",
