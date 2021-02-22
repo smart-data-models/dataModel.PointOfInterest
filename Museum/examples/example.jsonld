@@ -6,8 +6,7 @@
              "type": "PostalAddress"},
  "alternateName": "MACBA",
  "artPeriod": ["contemporary"],
- "description": "The MACBA was designed by the American architect Richard "
-                "Meier and inaugurated in 1995.",
+ "description": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995.",
  "facilities": ["shop", "cloakRoom", "guidedTour"],
  "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",
  "location": {"coordinates": [2.1668771521199393, 41.38302235796602],

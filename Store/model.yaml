@@ -1,43 +1,78 @@
 Store:
-  required:
-    - id
-    - type
-    - name
-    - description
-  allOf:
-    - $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
-  type: object
-  description: A point of interest store
+  description: 'This entity Type models stores/shops in the city.'
   properties:
     address:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+      description: 'The mailing address.'
+      properties:
+        addressCountry:
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        addressLocality:
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''
+          type: string
+        addressRegion:
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''
+          type: string
+        areaServed:
+          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''
+          type: string
+        postOfficeBoxNumber:
+          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        postalCode:
+          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''
+          type: string
+        streetAddress:
+          description: 'Property. The street address. Model:''https://schema.org/Text'''
+          type: string
+      type: Property
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      description: 'An alternative name for this item'
+      type: Property
     areaServed:
+      description: 'The geographic area where a service or offered item is provided'
+      type: Property
       x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+        model: https://schema.org/Text
     category:
+      description: 'Category of the store. Enum:''AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,JewelryStore,LiquorStore,MensClothingStore,MobilePhoneStore,MovieRentalStore,MusicStore,OfficeEquipmentStore,OutletStore,PawnShop,PetStore,ShoeStore,SportingGoodsStore,TireShop,ToyStore,WholesaleStore'''
+      enum:
+        - AutoPartsStore
+        - BikeStore
+        - BookStore
+        - ClothingStore
+        - ComputerStore
+        - ConvenienceStore
+        - DepartmentStore
+        - ElectronicsStore
+        - Florist
+        - FurnitureStore
+        - GardenStore
+        - GroceryStore
+        - HardwareStore
+        - HobbyShop
+        - HomeGoodsStore
+        - JewelryStore
+        - LiquorStore
+        - MensClothingStore
+        - MobilePhoneStore
+        - MovieRentalStore
+        - MusicStore
+        - OfficeEquipmentStore
+        - OutletStore
+        - PawnShop
+        - PetStore
+        - ShoeStore
+        - SportingGoodsStore
+        - TireShop
+        - ToyStore
+        - WholesaleStore
+      type: Property
       x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Category of the store'
+        model: https://schema.org/Text
     currenciesAccepted:
-      x-ngsi:
-        type: Property
-      type: array
-      description: 'Currencies accepted in this store. It uses ISO 4217 currency format (e.g. USD, EUR) '
+      description: 'Enum:''AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Currencies accepted in this store. It uses ISO 4217 currency format (e.g. USD, EUR)'
       items:
-        type: string
         enum:
           - AED
           - AFN
@@ -218,59 +253,208 @@ Store:
           - ZAR
           - ZMW
           - ZWL
+        type: string
+      minItems: 1
+      type: Property
+      uniqueItems: true
+      x-ngsi:
+        model: https://es.wikipedia.org/wiki/ISO_4217
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Specifies the URL to information about the provider of this information'
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: Property
     description:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+      description: 'A description of this item'
+      type: Property
     email:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
       description: 'The email address of this store.'
       format: email
-    image:
+      type: Property
       x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: 'pointing to an image of this store.'
-      format: uri
+        model: https://schema.org/Text
+    id:
+      anyOf: &store_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      type: Property
     location:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+      $id: https://geojson.org/schema/Geometry.json
+      $schema: "http://json-schema.org/draft-07/schema#"
+      oneOf:
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                type: number
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - Point
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Point'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              minItems: 2
+              type: array
+            type:
+              enum:
+                - LineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON LineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 4
+                type: array
+              type: array
+            type:
+              enum:
+                - Polygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON Polygon'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  type: number
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPoint
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPoint'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    type: number
+                  minItems: 2
+                  type: array
+                minItems: 2
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiLineString
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiLineString'
+          type: object
+        - properties:
+            bbox:
+              items:
+                type: number
+              minItems: 4
+              type: array
+            coordinates:
+              items:
+                items:
+                  items:
+                    items:
+                      type: number
+                    minItems: 2
+                    type: array
+                  minItems: 4
+                  type: array
+                type: array
+              type: array
+            type:
+              enum:
+                - MultiPolygon
+              type: string
+          required:
+            - type
+            - coordinates
+          title: 'GeoJSON MultiPolygon'
+          type: object
+      title: 'GeoJSON Geometry'
     logo:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
-      description: 'An associated logo for this store.'
+      description: 'An associated logo for this store. '
       format: uri
-    name:
-      $ref: >-
-        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
-    openingHoursSpecification:
+      type: Property
       x-ngsi:
-        type: Property
-      type: array
-      description: >-
-        A structured value providing information about the opening hours of a
-        place or a certain service inside a place.
+        model: https://schema.org/URL
+    name:
+      description: 'The name of this item.'
+      type: Property
+    openingHoursSpecification:
+      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place.'
       items:
         properties:
-          opens:
-            type: string
-            format: time
           closes:
-            type: string
             format: time
-          dayOfWeek:
             type: string
+          dayOfWeek:
             enum:
               - Monday
               - Tuesday
@@ -280,38 +464,64 @@ Store:
               - Saturday
               - Sunday
               - PublicHolidays
+            type: string
+          opens:
+            format: time
+            type: string
           validFrom:
-            type: string
             format: date-time
+            type: string
           validThrough:
-            type: string
             format: date-time
+            type: string
+      minItems: 1
+      type: Property
     owner:
-      $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
+      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'
+      items:
+        anyOf: *store_-_properties_-_owner_-_items_-_anyof
+        description: 'Property. Unique identifier of the entity'
+      type: Property
     paymentAccepted:
-      x-ngsi:
-        type: Property
-      type: array
-      description: ' Payment method accepted in this store.'
+      description: 'Payment method accepted in this store.'
       items:
         type: string
+      type: Property
+      x-ngsi:
+        model: https://schema.org/Text
+    seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
+      oneOf:
+        - items:
+            - format: uri
+              type: string
+          minItems: 1
+          type: array
+        - format: uri
+          type: string
+      type: Property
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: 'Specifies the URL to the source of this data (either organization or where relevant more specific source)'
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      type: Property
     telephone:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
       description: 'The telephone number of this store.'
-    url:
+      type: Property
       x-ngsi:
-        type: Property
-        model: 'https://schema.org/URL'
-      type: string
+        model: https://schema.org/Text
+    type:
+      description: 'NGSI Entity type. It has to be Store'
+      enum:
+        - Store
+      type: Property
+    url:
       description: 'Website with information about the store.'
       format: uri
+      type: Property
+      x-ngsi:
+        model: https://schema.org/URL
+  required:
+    - id
+    - type
+    - name
+    - description
+  type: object
