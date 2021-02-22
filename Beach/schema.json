@@ -62,7 +62,7 @@
         "peopleOccupancy": {
           "type": "number",
           "minimum": 0,
-          "description": "Model:'https://schema.org/Number'. People's presence at the location"
+          "description": "Model:'https://schema.org/Number'. Amount of people at the location"
         },
         "facilities": {
           "type": "array",
