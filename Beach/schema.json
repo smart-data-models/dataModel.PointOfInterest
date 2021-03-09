@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema#",
   "$schemaVersion": "0.0",
   "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/Beach/schema.json",
-  "title": " - Beach schema",
+  "title": " Smart Data Models- Beach schema",
   "description": "This entity contains a harmonised geographic description of a beach.",
   "type": "object",
   "allOf": [
@@ -11,6 +11,9 @@
     },
     {
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/dateObserved"
     },
     {
       "properties": {
