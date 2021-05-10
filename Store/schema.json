@@ -1,7 +1,8 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://github.com/smart-data-models/dataModel.PointOfInterest/Store/schema.json",
-    "title": "SynchroniCity - Point of Interest Store schema",
+    "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/Store/schema.json",
+    "$schemaVersion": "0.0.1",
+    "title": "Smart Data Models - Point of Interest Store schema",
     "description": "This entity Type models stores/shops in the city.",
     "type": "object",
     "allOf": [
@@ -283,6 +284,5 @@
         "type",
         "name",
         "description"
-    ],
-    "$schemaVersion": "0.0.1"
+    ]
 }
