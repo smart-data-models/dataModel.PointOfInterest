@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.0.2",
     "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/Beach/schema.json",
     "title": " Smart Data Models- Beach schema",
     "description": "This entity contains a harmonised geographic description of a beach.",
@@ -67,7 +67,7 @@
                 "peopleOccupancy": {
                     "type": "number",
                     "minimum": 0,
-                    "description": "Model:'https://schema.org/Number'. Amount of people at the location"
+                    "description": "Property. Model:'https://schema.org/Number'. Amount of people at the location"
                 },
                 "facilities": {
                     "type": "array",
