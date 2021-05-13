@@ -1,17 +1,17 @@
-Entité : Beach  
-==============  
-[Licence ouverte] (https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Beach/LICENSE.md)  
-[document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Description globale : **Cette entité contient une description géographique harmonisée d'une plage.**  
+Entität: Strand  
+===============  
+[Offene Lizenz](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Beach/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Globale Beschreibung: **Diese Einheit enthält eine harmonisierte geografische Beschreibung eines Strandes.**  
 
-## Liste des propriétés  
+## Liste der Eigenschaften  
 
-- `accessType`: Enum : 'privateVehicle, boat, onFoot, publicTransport'. Décrit comment se rendre sur cette plage.  - `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `beachType`: Type de plage selon différents critères. Enum : 'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. Ou toute autre valeur requise par une application.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `facilities`: Décrit les différentes installations offertes par cette plage. Enum : 'promenade, douches, services de nettoyage, lifeguard, location de parasols, location de chaises longues, location de bateaux, toilettes, office du tourisme, poubelles, téléphone, zone de pratique du surf, accès pour les handicapés'.  - `id`: Identifiant unique de l'entité  - `length`: Longueur de cette plage  - `location`:   - `name`: Le nom de cet élément.  - `occupationRate`: Taux d'occupation typique de cette plage. Enum : 'low, medium, high, none' (faible, moyen, élevé, aucun)  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `peopleOccupancy`: Nombre de personnes présentes sur le site  - `refSeeAlso`: Liste de références à une ou plusieurs entités connexes.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit être Beach  - `width`: Largeur de cette plage    
-Propriétés requises  
+- `accessType`: Enum:'privateVehicle, boat, onFoot, publicTransport'. Beschreibt, wie Sie zu diesem Strand gelangen.  - `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `beachType`: Art des Strandes nach verschiedenen Kriterien. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. Oder jeder andere Wert, der von einer Anwendung benötigt wird.  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `facilities`: Beschreibt die verschiedenen Einrichtungen, die dieser Strand bietet. Enum:'Promenade, Duschen, Reinigungsservice, LifeGuard, Sonnenschirmverleih, Liegestuhlverleih, Wasserfahrzeugverleih, Toiletten, TouristOffice, Abfallbehälter, Telefon, SurfPracticeArea, Behindertengerecht'  - `id`: Eindeutiger Bezeichner der Entität  - `length`: Länge dieses Strandes  - `location`:   - `name`: Der Name dieses Elements.  - `occupationRate`: Typische Belegungsrate dieses Strandes. Enum:'niedrig, mittel, hoch, keine'  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `peopleOccupancy`: Anzahl der Personen am Standort  - `refSeeAlso`: Liste der Verweise auf eine oder mehrere verwandte Entitäten.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `type`: NGSI Entity-Typ. Es muss Strand sein  - `width`: Breite dieses Strandes    
+Erforderliche Eigenschaften  
 - `id`  - `location`  - `name`  - `type`    
-Il est utilisé dans les applications qui utilisent des données spatiales et s'applique aux segments verticaux du tourisme, de l'environnement et des villes intelligentes, ainsi qu'aux applications IoT connexes. Nous remercions tout particulièrement [TURESPAÑA] (https://www.tourspain.es/en-us) qui a fourni quelques exemples qui ont inspiré le développement de ce modèle de données.  
-## Description des propriétés du modèle de données  
-Classés par ordre alphabétique (cliquez pour plus de détails)  
+Es wird in Anwendungen verwendet, die räumliche Daten nutzen, und ist in den vertikalen Segmenten Tourismus, Umwelt und Smart City sowie in verwandten IoT-Anwendungen anwendbar. Besonderer Dank geht an [TURESPAÑA](https://www.tourspain.es/en-us), die einige Beispiele zur Verfügung gestellt hat, die die Entwicklung dieses Datenmodells inspiriert haben.  
+## Datenmodell Beschreibung der Eigenschaften  
+Alphabetisch sortiert (für Details anklicken)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Beach:    
@@ -350,10 +350,10 @@ Beach:
   type: object    
 ```  
 </details>    
-Ce type d'entité a été conçu comme une extension de [https://schema.org/Beach](https://schema.org/Beach) afin que toute propriété spécifiée par schema.org et dont le domaine est `https://schema.org/Beach` puisse être utilisée par les applications.  
-## Exemples de charges utiles  
-#### Beach NGSI-v2 valeurs-clés Exemple  
-Voici un exemple d'une plage au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Dieser Entitätstyp wurde als Erweiterung von [https://schema.org/Beach](https://schema.org/Beach) entworfen, so dass jede von schema.org spezifizierte Eigenschaft, deren Domain `https://schema.org/Beach` ist, von Anwendungen verwendet werden kann.  
+## Beispiel-Nutzlasten  
+#### Strand NGSI-v2-Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für einen Strand im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Beach-A-Concha-123456",  
@@ -377,8 +377,8 @@ Beach:
   "source": "http://www.tourspain.es"  
 }  
 ```  
-#### Beach NGSI-v2 normalisé Exemple  
-Voici un exemple d'une plage au format JSON-LD telle que normalisée. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### Strand NGSI-v2 normalisiert Beispiel  
+Hier ist ein Beispiel für einen Strand im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "Beach-A-Concha-123456",  
@@ -426,8 +426,8 @@ Beach:
   }  
 }  
 ```  
-#### Beach Valeurs-clés NGSI-LD Exemple  
-Voici un exemple d'une plage au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+#### Strand NGSI-LD-Schlüsselwerte Beispiel  
+Hier ist ein Beispiel für einen Strand im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
@@ -505,8 +505,8 @@ Beach:
   ]  
 }  
 ```  
-#### Beach NGSI-LD normalisé Exemple  
-Voici un exemple d'une plage au format JSON-LD telle que normalisée. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+#### Strand NGSI-LD normalisiert Beispiel  
+Hier ist ein Beispiel für einen Strand im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "@context": [  

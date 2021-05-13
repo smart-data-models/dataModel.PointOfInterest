@@ -1,6 +1,7 @@
 Entity: Beach  
 =============  
 [Open License](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Beach/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity contains a harmonised geographic description of a beach.**  
 
 ## List of properties  
@@ -42,14 +43,11 @@ Beach:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''    
-          type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
@@ -308,7 +306,7 @@ Beach:
     peopleOccupancy:    
       description: 'Amount of people at the location'    
       minimum: 0    
-      type: number    
+      type: Property    
       x-ngsi:    
         model: https://schema.org/Number    
     refSeeAlso:    
@@ -323,8 +321,8 @@ Beach:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -354,8 +352,8 @@ Beach:
 </details>    
 This entity type has been designed as an extension of [https://schema.org/Beach](https://schema.org/Beach) so that any property specified by schema.org and which domain is `https://schema.org/Beach` can be used by applications.  
 ## Example payloads    
-#### Beach NGSI V2 key-values Example    
-Here is an example of a Beach in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### Beach NGSI-v2 key-values Example    
+Here is an example of a Beach in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "Beach-A-Concha-123456",  
@@ -379,8 +377,8 @@ Beach:
   "source": "http://www.tourspain.es"  
 }  
 ```  
-#### Beach NGSI V2 normalized Example    
-Here is an example of a Beach in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### Beach NGSI-v2 normalized Example    
+Here is an example of a Beach in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "Beach-A-Concha-123456",  
@@ -431,101 +429,125 @@ Beach:
 #### Beach NGSI-LD key-values Example    
 Here is an example of a Beach in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "accessType": ["privateVehicle", "onFoot", "publicTransport"],  
- "address": {"addressCountry": "ES",  
-             "addressLocality": "VilagarcÃ­a de Arousa",  
-             "type": "PostalAddress"},  
- "beachType": ["whiteSand", "urban", "calmWaters"],  
- "description": "La Playa de A Concha se presenta .....",  
- "facilities": ["promenade", "showers", "cleaningServices", "lifeGuard"],  
- "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
- "length": 450,  
- "location": {"coordinates": [-8.768460000000001, 42.60214472222222],  
-              "type": "Point"},  
- "name": "Playa de a Concha",  
- "occupationRate": "high",  
- "source": "http://www.tourspain.es",  
- "type": "Beach",  
- "width": 51}  
+{  
+  "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
+  "type": "Beach",  
+  "description": {  
+    "type": "Property",  
+    "value": "La Playa de A Concha se presenta ....."  
+  },  
+  "width": {  
+    "type": "Property",  
+    "value": 51  
+  },  
+  "accessType": {  
+    "type": "Property",  
+    "value": [  
+      "privateVehicle",  
+      "onFoot",  
+      "publicTransport"  
+    ]  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.768460000000001,  
+        42.60214472222222  
+      ]  
+    }  
+  },  
+  "facilities": {  
+    "type": "Property",  
+    "value": [  
+      "promenade",  
+      "showers",  
+      "cleaningServices",  
+      "lifeGuard"  
+    ]  
+  },  
+  "length": {  
+    "type": "Property",  
+    "value": 450  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.tourspain.es"  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "ES",  
+      "addressLocality": "Vilagarc\u00eda de Arousa",  
+      "type": "PostalAddress"  
+    }  
+  },  
+  "beachType": {  
+    "type": "Property",  
+    "value": [  
+      "whiteSand",  
+      "urban",  
+      "calmWaters"  
+    ]  
+  },  
+  "occupationRate": {  
+    "type": "Property",  
+    "value": "high"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Playa de a Concha"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### Beach NGSI-LD normalized Example    
 Here is an example of a Beach in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
-    "type": "Beach",  
-    "description": {  
-        "type": "Property",  
-        "value": "La Playa de A Concha se presenta ....."  
-    },  
-    "width": {  
-        "type": "Property",  
-        "value": 51  
-    },  
-    "accessType": {  
-        "type": "Property",  
-        "value": [  
-            "privateVehicle",  
-            "onFoot",  
-            "publicTransport"  
-        ]  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -8.768460000000001,  
-                42.60214472222222  
-            ]  
-        }  
-    },  
-    "facilities": {  
-        "type": "Property",  
-        "value": [  
-            "promenade",  
-            "showers",  
-            "cleaningServices",  
-            "lifeGuard"  
-        ]  
-    },  
-    "length": {  
-        "type": "Property",  
-        "value": 450  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "http://www.tourspain.es"  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "ES",  
-            "addressLocality": "VilagarcÃ­a de Arousa",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "beachType": {  
-        "type": "Property",  
-        "value": [  
-            "whiteSand",  
-            "urban",  
-            "calmWaters"  
-        ]  
-    },  
-    "occupationRate": {  
-        "type": "Property",  
-        "value": "high"  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Playa de a Concha"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "accessType": [  
+    "privateVehicle",  
+    "onFoot",  
+    "publicTransport"  
+  ],  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Vilagarc\u00eda de Arousa",  
+    "type": "PostalAddress"  
+  },  
+  "beachType": [  
+    "whiteSand",  
+    "urban",  
+    "calmWaters"  
+  ],  
+  "description": "La Playa de A Concha se presenta .....",  
+  "facilities": [  
+    "promenade",  
+    "showers",  
+    "cleaningServices",  
+    "lifeGuard"  
+  ],  
+  "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
+  "length": 450,  
+  "location": {  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
+    ],  
+    "type": "Point"  
+  },  
+  "name": "Playa de a Concha",  
+  "occupationRate": "high",  
+  "source": "http://www.tourspain.es",  
+  "type": "Beach",  
+  "width": 51  
 }  
 ```  
