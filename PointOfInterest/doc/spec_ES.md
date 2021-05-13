@@ -1,15 +1,16 @@
 Entidad: PointOfInterest  
 ========================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md)  
-Descripción global: **Esta entidad contiene una descripción geográfica armonizada de un punto de interés**  
+[documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descripción global: **Esta entidad contiene una descripción geográfica armonizada de un Punto de Interés**  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal.  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Categoría de este punto de interés. Valores permitidos: Los definidos por la [Taxonomía de hechos](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) junto con las categorías extendidas descritas por la especificación. Por ejemplo, el valor "113" corresponde a las playas, y el valor "311" corresponde a los museos.  - `contactPoint`: Punto de contacto para el museo.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Sello de tiempo de creación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `dateModified`: Sello de tiempo de la última modificación de la entidad. Normalmente será asignado por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificados JSON que hace referencia a los Ids únicos de los propietarios  - `refSeeAlso`: Lista de referencias a una o más entidades conexas.  - `seeAlso`: lista de uri que apunta a recursos adicionales sobre el tema  - `source`: Una secuencia de caracteres que da como URL la fuente original de los datos de la entidad. Se recomienda que sea el nombre de dominio completamente calificado del proveedor de la fuente, o la URL del objeto fuente.  - `type`: Tipo de entidad NGSI. Tiene que ser PointOfInterest    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Categoría de este punto de interés. Valores permitidos: Los definidos por la [Taxonomía factual](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) junto con las categorías extendidas descritas por la especificación. Por ejemplo, el valor `113` corresponde a playas, y el valor `311` corresponde a museos.  - `contactPoint`: Punto de contacto del museo.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refSeeAlso`: Lista de referencias a una o más entidades relacionadas.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser PointOfInterest    
 Propiedades requeridas  
 - `category`  - `id`  - `name`  - `type`    
-Esta entidad se utiliza en aplicaciones que utilizan datos espaciales y es aplicable a los segmentos verticales de Automoción, Medio Ambiente, Industria y Ciudades Inteligentes y a las aplicaciones de IO relacionadas. Este modelo de datos ha sido creado en cooperación con el GSMA y los miembros del [Proyecto de Grandes Datos de IO] (http://www.gsma.com/iot/iot-big-data/).  
-## Modelo de datos Descripción de las propiedades  
+Esta entidad se usa en aplicaciones que utilizan datos espaciales y es aplicable a los segmentos verticales de Automoción, Medio Ambiente, Industria y Ciudades Inteligentes y a las aplicaciones de IoT relacionadas. Este modelo de datos ha sido creado en colaboración con la GSMA y los miembros del [IoT Big Data Project](http://www.gsma.com/iot/iot-big-data/).  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -17,30 +18,29 @@ PointOfInterest:
   description: 'This entity contains a harmonised geographic description of a Point of Interest'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
@@ -259,8 +259,8 @@ PointOfInterest:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -282,9 +282,9 @@ PointOfInterest:
   type: object    
 ```  
 </details>    
-## Ejemplo de cargas útiles  
-#### PointOfInterest NGSI V2 key-values Example  
-Aquí hay un ejemplo de un Punto de Interés en formato JSON como valores clave. Esto es compatible con NGSI V2 cuando se utiliza "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
+## Ejemplo de carga útil  
+#### PointOfInterest NGSI-v2 key-values Ejemplo  
+Aquí hay un ejemplo de un PointOfInterest en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "PointOfInterest-A-Concha-123456",  
@@ -295,39 +295,56 @@ PointOfInterest:
     "addressCountry": "ES",  
     "addressLocality": "Vilagarcía de Arousa"  
   },  
-  "category": ["113"],  
+  "category": [  
+    "113"  
+  ],  
   "location": {  
     "type": "Point",  
-    "coordinates": [-8.768460000000001, 42.60214472222222]  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
+    ]  
   },  
   "source": "http://www.tourspain.es",  
-  "refSeeAlso": ["Beach-A-Concha-123456"]  
+  "refSeeAlso": [  
+    "Beach-A-Concha-123456"  
+  ]  
 }  
 ```  
-#### PointOfInterest NGSI V2 normalizado Ejemplo  
-Aquí hay un ejemplo de un Punto de Interés en formato JSON como normalizado. Es compatible con NGSI V2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+#### PointOfInterest NGSI-v2 normalizado Ejemplo  
+Este es un ejemplo de un PointOfInterest en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
   "id": "PointOfInterest-A-Concha-123456",  
   "type": "PointOfInterest",  
   "category": {  
-    "value": ["113"]  
+    "type": "array",  
+    "value": [  
+      "113"  
+    ]  
   },  
   "description": {  
+    "type": "Text",  
     "value": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda."  
   },  
   "refSeeAlso": {  
-    "type": "Relationship",  
-    "value": ["Beach-A-Concha-123456"]  
+    "type": "array",  
+    "value": [  
+      "Beach-A-Concha-123456"  
+    ]  
   },  
   "source": {  
+    "type": "Text",  
     "value": "http://www.tourspain.es"  
   },  
   "location": {  
     "type": "geo:json",  
     "value": {  
       "type": "Point",  
-      "coordinates": [-8.768460000000001, 42.60214472222222]  
+      "coordinates": [  
+        -8.768460000000001,  
+        42.60214472222222  
+      ]  
     }  
   },  
   "address": {  
@@ -338,81 +355,93 @@ PointOfInterest:
     }  
   },  
   "name": {  
+    "type": "Text",  
     "value": "Playa de a Concha"  
   }  
 }  
 ```  
-#### Punto de Interés NGSI-LD valores clave Ejemplo  
-Aquí hay un ejemplo de un Punto de Interés en formato JSON-LD como valores clave. Esto es compatible con NGSI-LD cuando se usa "opciones=valores-clave" y devuelve los datos de contexto de una entidad individual.  
-```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "address": {"addressCountry": "ES",  
-             "addressLocality": "Vilagarcía de Arousa",  
-             "type": "PostalAddress"},  
- "category": ["113"],  
- "description": "La Playa de A Concha se presenta como una continuación de la "  
-                "Playa de Compostela, una de las más frecuentadas de "  
-                "Vilagarcía.",  
- "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
- "location": {"coordinates": [-8.768460000000001, 42.60214472222222],  
-              "type": "Point"},  
- "name": "Playa de a Concha",  
- "refSeeAlso": ["urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"],  
- "source": "http://www.tourspain.es",  
- "type": "PointOfInterest"}  
-```  
-#### Punto de Interés NGSI-LD normalizado Ejemplo  
-Aquí hay un ejemplo de un Punto de Interés en formato JSON-LD como normalizado. Este es compatible con NGSI-LD cuando no se usan opciones y devuelve los datos de contexto de una entidad individual.  
+#### PointOfInterest NGSI-LD key-values Ejemplo  
+Aquí hay un ejemplo de un PointOfInterest en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
-    "type": "PointOfInterest",  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "113"  
-        ]  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "La Playa de A Concha se presenta como una continuación de la Playa de Compostela, una de las más frecuentadas de Vilagarcía."  
-    },  
-    "refSeeAlso": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
-        ]  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "http://www.tourspain.es"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -8.768460000000001,  
-                42.60214472222222  
-            ]  
-        }  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "ES",  
-            "addressLocality": "Vilagarcía de Arousa",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Playa de a Concha"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
+  "type": "PointOfInterest",  
+  "category": [  
+    "113"  
+  ],  
+  "description": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda.",  
+  "refSeeAlso": [  
+    "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
+  ],  
+  "source": "http://www.tourspain.es",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
     ]  
+  },  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Vilagarc\u00eda de Arousa"  
+  },  
+  "name": "Playa de a Concha",  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
+```  
+#### PointOfInterest NGSI-LD normalizado Ejemplo  
+Este es un ejemplo de un PointOfInterest en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
+  "type": "PointOfInterest",  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "ES",  
+      "addressLocality": "Vilagarc\u00eda de Arousa"  
+    }  
+  },  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "113"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda."  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.768460000000001,  
+        42.60214472222222  
+      ]  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Playa de a Concha"  
+  },  
+  "refSeeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
+    ]  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.tourspain.es"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
 }  
 ```  
