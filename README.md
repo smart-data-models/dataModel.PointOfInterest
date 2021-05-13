@@ -6,6 +6,12 @@
 The following entity types are available:
 - [Beach](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Beach/README.md). This entity contains a harmonised geographic description of a beach.
 
+- [Museum](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Museum/README.md). A museum
+
+- [PointOfInterest](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/README.md). This entity contains a harmonised geographic description of a Point of Interest
+
+- [Store](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Store/README.md). This entity Type models stores/shops in the city.
+
 
 
 ### Contributors
