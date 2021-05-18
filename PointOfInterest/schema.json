@@ -30,7 +30,7 @@
                     "minItems": 1
                 },
                 "contactPoint": {
-                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons"
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
                 },
                 "refSeeAlso": {
                     "type": "array",
