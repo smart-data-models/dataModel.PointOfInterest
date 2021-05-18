@@ -6,7 +6,7 @@ Entité : PointOfInterest
 
 ## Liste des propriétés  
 
-- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Catégorie de ce point d'intérêt. Valeurs autorisées : Celles définies par la [Taxonomie factuelle] (https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) ainsi que les catégories étendues décrites par la spécification. Par exemple, la valeur `113` correspond aux plages, et la valeur `311` correspond aux musées.  - `contactPoint`: Point de contact pour le musée.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refSeeAlso`: Liste de références à une ou plusieurs entités connexes.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de PointOfInterest    
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `category`: Catégorie de ce point d'intérêt. Valeurs autorisées : Celles définies par la [Taxonomie factuelle] (https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) ainsi que les catégories étendues décrites par la spécification. Par exemple, la valeur `113` correspond aux plages, et la valeur `311` correspond aux musées.  - `contactPoint`: Tous les éléments de contact dans les modèles de données, sauf si cela est explicitement indiqué conformément à schema.org.  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`:   - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `refSeeAlso`: Liste de références à une ou plusieurs entités connexes.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'élément  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `type`: Type d'entité NGSI. Il doit s'agir de PointOfInterest    
 Propriétés requises  
 - `category`  - `id`  - `name`  - `type`    
 Cette entité est utilisée dans les applications qui utilisent des données spatiales et s'applique aux segments verticaux de l'automobile, de l'environnement, de l'industrie et de la ville intelligente, ainsi qu'aux applications IoT connexes. Ce modèle de données a été créé en coopération avec la GSMA et les membres du [IoT Big Data Project] (http://www.gsma.com/iot/iot-big-data/).  
@@ -58,10 +58,26 @@ PointOfInterest:
       x-ngsi:    
         model: https://schema.org/Text    
     contactPoint:    
-      description: 'Contact point for the museum.'    
+      description: 'All contact elements in data models unless explicitly stated according to schema.org'    
+      properties:    
+        contactPoint:    
+          description: 'Property. Model:''https://schema.org/ContactPoint''. The details to contact with the item.'    
+          properties:    
+            contactType:    
+              type: string    
+            email:    
+              description: 'Property. Email address of owner.'    
+              format: idn-email    
+              type: string    
+            name:    
+              type: string    
+            telephone:    
+              type: string    
+            url:    
+              format: uri    
+              type: string    
+          type: object    
       type: Property    
-      x-ngsi:    
-        model: https://schema.org/ContactPoint    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
       type: Property    
