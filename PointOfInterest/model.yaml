@@ -42,26 +42,24 @@ PointOfInterest:
       x-ngsi:
         model: https://schema.org/Text
     contactPoint:
-      description: 'All contact elements in data models unless explicitly stated according to schema.org'
+      description: 'The details to contact with the item.'
       properties:
-        contactPoint:
-          description: 'Property. Model:''https://schema.org/ContactPoint''. The details to contact with the item.'
-          properties:
-            contactType:
-              type: string
-            email:
-              description: 'Property. Email address of owner.'
-              format: idn-email
-              type: string
-            name:
-              type: string
-            telephone:
-              type: string
-            url:
-              format: uri
-              type: string
-          type: object
+        contactType:
+          type: string
+        email:
+          description: 'Property. Email address of owner.'
+          format: idn-email
+          type: string
+        name:
+          type: string
+        telephone:
+          type: string
+        url:
+          format: uri
+          type: string
       type: Property
+      x-ngsi:
+        model: https://schema.org/ContactPoint
     dataProvider:
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'
       type: Property
