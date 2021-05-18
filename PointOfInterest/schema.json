@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.1.0",
     "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json",
     "title": "- Point of Interest schema",
     "description": "This entity contains a harmonised geographic description of a Point of Interest",
@@ -30,8 +30,7 @@
                     "minItems": 1
                 },
                 "contactPoint": {
-                    "type": "object",
-                    "description": "Property. Model:'https://schema.org/ContactPoint'. Contact point for the museum."
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons"
                 },
                 "refSeeAlso": {
                     "type": "array",
