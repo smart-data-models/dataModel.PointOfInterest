@@ -6,7 +6,7 @@ Entidad: Playa
 
 ## Lista de propiedades  
 
-- `accessType`: Enum:'vehículo privado, barco, a pie, transporte público'. Describe cómo llegar a esta playa.  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `beachType`: Tipo de playa según diferentes criterios. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. O cualquier otro valor que necesite una aplicación.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `facilities`: Describe las diferentes instalaciones que ofrece esta playa. Enum:'paseo marítimo, duchas, servicios de limpieza, salvavidas, alquiler de sombrillas, alquiler de tumbonas, alquiler de embarcaciones, aseos, oficina de turismo, papeleras, teléfono, zona de práctica de surf, acceso para discapacitados'  - `id`: Identificador único de la entidad  - `length`: Longitud de esta playa  - `location`:   - `name`: El nombre de este artículo.  - `occupationRate`: Tasa de ocupación típica de esta playa. Enum:'bajo, medio, alto, ninguno'  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `peopleOccupancy`: Cantidad de personas en el lugar  - `refSeeAlso`: Lista de referencias a una o más entidades relacionadas.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser Beach  - `width`: Anchura de esta playa    
+- `accessType`: Enum:'vehículo privado, barco, a pie, transporte público'. Describe cómo llegar a esta playa.  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `beachType`: Tipo de playa según diferentes criterios. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. O cualquier otro valor que necesite una aplicación.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `facilities`: Describe las diferentes instalaciones que ofrece esta playa. Enum:'paseo marítimo, duchas, servicios de limpieza, salvavidas, alquiler de sombrillas, alquiler de tumbonas, alquiler de embarcaciones, aseos, oficina de turismo, papeleras, teléfono, zona de práctica de surf, acceso para discapacitados'  - `id`: Identificador único de la entidad  - `length`: Longitud de esta playa  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `occupationRate`: Tasa de ocupación típica de esta playa. Enum:'bajo, medio, alto, ninguno'  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `peopleOccupancy`: Cantidad de personas en el lugar  - `refSeeAlso`: Lista de referencias a una o más entidades relacionadas.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser Beach  - `width`: Anchura de esta playa    
 Propiedades requeridas  
 - `id`  - `location`  - `name`  - `type`    
 Se usa en aplicaciones que utilizan datos espaciales y es aplicable a los segmentos verticales de Turismo, Medio Ambiente y Ciudades Inteligentes y a las aplicaciones de IoT relacionadas. Un agradecimiento especial a [TURESPAÑA](https://www.tourspain.es/en-us) que proporcionó algunos ejemplos que inspiraron el desarrollo de este modelo de datos.  
@@ -138,10 +138,10 @@ Beach:
         model: https://schema.org/length    
         units: meter    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -161,7 +161,8 @@ Beach:
             - coordinates    
           title: 'GeoJSON Point'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -184,7 +185,8 @@ Beach:
             - coordinates    
           title: 'GeoJSON LineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -209,7 +211,8 @@ Beach:
             - coordinates    
           title: 'GeoJSON Polygon'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -231,7 +234,8 @@ Beach:
             - coordinates    
           title: 'GeoJSON MultiPoint'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -256,7 +260,8 @@ Beach:
             - coordinates    
           title: 'GeoJSON MultiLineString'    
           type: object    
-        - properties:    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
             bbox:    
               items:    
                 type: number    
@@ -283,7 +288,7 @@ Beach:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      title: 'GeoJSON Geometry'    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
