@@ -4,5 +4,6 @@
     "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/Store/schema.json",
     "$schemaVersion": "0.0.1",
     "title": "Smart Data Models - Point of Interest Store schema",
-    "description": "This entity Type models stores/shops in the city."
+    "description": "This entity Type models stores/shops in the city.",
+    "type": "object"
 }
