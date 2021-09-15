@@ -279,5 +279,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "name",
+        "description"
     ]
 }
