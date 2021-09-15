@@ -239,5 +239,11 @@
                 }
             }
         }
+    ],
+    "required": [
+        "id",
+        "type",
+        "location",
+        "name"
     ]
 }
