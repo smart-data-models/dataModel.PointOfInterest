@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/schema.json",
     "title": " - Museum schema",
-    "description": "A museum"
+    "description": "A museum",
+    "type": "object"
 }
