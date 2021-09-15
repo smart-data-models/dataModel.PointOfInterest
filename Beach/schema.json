@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.2",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/Beach/schema.json",
-    "title": " Smart Data Models- Beach schema"
+    "title": " Smart Data Models- Beach schema",
+    "description": "This entity contains a harmonised geographic description of a beach."
 }
