@@ -6,10 +6,10 @@ Entidad: PointOfInterest
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Categoría de este punto de interés. Valores permitidos: Los definidos por la [Taxonomía factual](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) junto con las categorías extendidas descritas por la especificación. Por ejemplo, el valor `113` corresponde a playas, y el valor `311` corresponde a museos.  - `contactPoint`: Los datos para contactar con el artículo.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refSeeAlso`: Lista de referencias a una o más entidades relacionadas.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser PointOfInterest    
+- `additionalInfoURL`: URL en la que se puede obtener información adicional del tema  - `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `category`: Categoría de este punto de interés. Valores permitidos: Los definidos por la [Taxonomía factual](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) junto con las categorías extendidas descritas por la especificación. Por ejemplo, el valor `113` corresponde a playas, y el valor `311` corresponde a museos.  - `contactPoint`: Los datos para contactar con el artículo.  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refSeeAlso`: Lista de referencias a una o más entidades relacionadas.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser PointOfInterest  - `wardId`: ID del pabellón de la entidad correspondiente a esta observación.  - `zoneId`: ID de zona de la entidad correspondiente a esta observación.  - `zoneName`: Nombre de zona de la entidad correspondiente a esta observación.    
 Propiedades requeridas  
 - `category`  - `id`  - `name`  - `type`    
-Esta entidad se usa en aplicaciones que utilizan datos espaciales y es aplicable a los segmentos verticales de Automoción, Medio Ambiente, Industria y Ciudades Inteligentes y a las aplicaciones de IoT relacionadas. Este modelo de datos ha sido creado en colaboración con la GSMA y los miembros del [IoT Big Data Project](http://www.gsma.com/iot/iot-big-data/).  
+Esta entidad se usa en aplicaciones que utilizan datos espaciales y es aplicable a los segmentos verticales de Automoción, Medio Ambiente, Industria y Ciudades Inteligentes y a las aplicaciones de IoT relacionadas. Este modelo de datos ha sido creado en colaboración con la GSMA y los miembros del [IoT Big Data Project](http://www.gsma.com/iot/iot-big-data/). Creado con contribuciones del proyecto IUDX.  
 ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -17,6 +17,19 @@ Entidad: PointOfInterest
 PointOfInterest:    
   description: 'This entity contains a harmonised geographic description of a Point of Interest'    
   properties:    
+    additionalInfoURL:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'URL from which additional information of the subject can be obtained'    
+      x-ngsi:    
+        type: Relationship    
     address:    
       description: 'The mailing address'    
       properties:    
@@ -38,58 +51,76 @@ PointOfInterest:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.'    
       items:    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     contactPoint:    
       description: 'The details to contact with the item.'    
       properties:    
         contactType:    
+          description: 'Property. Contact type of this item.'    
           type: string    
         email:    
           description: 'Property. Email address of owner.'    
           format: idn-email    
           type: string    
         name:    
+          description: 'Property. The name of this item.'    
           type: string    
         telephone:    
+          description: 'Property. Telephone of this contact.'    
           type: string    
         url:    
+          description: 'Property. URL which provides a description or further information about this item.'    
           format: uri    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/ContactPoint    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     id:    
       anyOf: &pointofinterest_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -101,7 +132,8 @@ PointOfInterest:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -253,16 +285,21 @@ PointOfInterest:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     refSeeAlso:    
       description: 'List of references to one or more related entities.'    
       items:    
@@ -270,10 +307,11 @@ PointOfInterest:
           - anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof    
             description: 'Property. Unique identifier of the entity'    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -284,21 +322,47 @@ PointOfInterest:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be PointOfInterest'    
       enum:    
         - PointOfInterest    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    wardId:    
+      description: 'Ward ID of the entity corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    zoneId:    
+      description: 'Zone ID of the entity corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    zoneName:    
+      description: 'Zone name of the entity corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
     - category    
     - name    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json    
+  x-model-tags: IUDX    
+  x-version: 0.2.0    
 ```  
 </details>    
 ## Ejemplo de carga útil  
@@ -306,7 +370,7 @@ PointOfInterest:
 Aquí hay un ejemplo de un PointOfInterest en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 ```json  
 {  
-  "id": "PointOfInterest-A-Concha-123456",  
+  "id": "urn:ngsi-ld:PointOfInterest-A-Concha-123456",  
   "type": "PointOfInterest",  
   "name": "Playa de a Concha",  
   "description": "La Playa de A Concha se presenta como una continuación de la Playa de Compostela, una de las más frecuentadas de Vilagarcía.",  
@@ -327,7 +391,11 @@ PointOfInterest:
   "source": "http://www.tourspain.es",  
   "refSeeAlso": [  
     "Beach-A-Concha-123456"  
-  ]  
+  ],  
+  "wardId": "",  
+  "zoneId": "",  
+  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
+  "zoneName": ""  
 }  
 ```  
 #### PointOfInterest NGSI-v2 normalizado Ejemplo  
@@ -344,7 +412,7 @@ PointOfInterest:
   },  
   "description": {  
     "type": "Text",  
-    "value": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda."  
+    "value": "La Playa de A Concha se presenta como una continuaciin de la Playa de Compostela, una de las mis frecuentadas de Vilagarcia."  
   },  
   "refSeeAlso": {  
     "type": "array",  
@@ -370,12 +438,28 @@ PointOfInterest:
     "type": "PostalAddress",  
     "value": {  
       "addressCountry": "ES",  
-      "addressLocality": "Vilagarc\u00eda de Arousa"  
+      "addressLocality": "Vilagarcia de Arousa"  
     }  
   },  
   "name": {  
     "type": "Text",  
     "value": "Playa de a Concha"  
+  },  
+  "wardId": {  
+    "type": "Text",  
+    "value": ""  
+  },  
+  "zoneId": {  
+    "type": "Text",  
+    "value": ""  
+  },  
+  "additionalInfoURL": {  
+    "type": "Relationship",  
+    "value": "urn:ngsi-ld:Point:34E4:A234"  
+  },  
+  "zoneName": {  
+    "type": "Text",  
+    "value": ""  
   }  
 }  
 ```  
@@ -388,7 +472,7 @@ PointOfInterest:
   "category": [  
     "113"  
   ],  
-  "description": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda.",  
+  "description": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia.",  
   "refSeeAlso": [  
     "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
   ],  
@@ -402,9 +486,13 @@ PointOfInterest:
   },  
   "address": {  
     "addressCountry": "ES",  
-    "addressLocality": "Vilagarc\u00eda de Arousa"  
+    "addressLocality": "Vilagarcia de Arousa"  
   },  
   "name": "Playa de a Concha",  
+  "wardId": "",  
+  "zoneId": "",  
+  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
+  "zoneName": "",  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
@@ -421,7 +509,7 @@ PointOfInterest:
     "type": "Property",  
     "value": {  
       "addressCountry": "ES",  
-      "addressLocality": "Vilagarc\u00eda de Arousa"  
+      "addressLocality": "Vilagarcia de Arousa"  
     }  
   },  
   "category": {  
@@ -432,7 +520,7 @@ PointOfInterest:
   },  
   "description": {  
     "type": "Property",  
-    "value": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda."  
+    "value": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia."  
   },  
   "location": {  
     "type": "GeoProperty",  
@@ -457,6 +545,22 @@ PointOfInterest:
   "source": {  
     "type": "Property",  
     "value": "http://www.tourspain.es"  
+  },  
+   "wardId": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "zoneId": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "additionalInfoURL": {  
+    "type": "Relationship",  
+    "value": "urn:ngsi-ld:Point:34E4:A234"  
+  },  
+  "zoneName": {  
+    "type": "Property",  
+    "value": ""  
   },  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
