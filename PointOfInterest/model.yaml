@@ -1,6 +1,19 @@
 PointOfInterest:
   description: 'This entity contains a harmonised geographic description of a Point of Interest'
   properties:
+    additionalInfoURL:
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'URL from which additional information of the subject can be obtained'
+      x-ngsi:
+        type: Relationship
     address:
       description: 'The mailing address'
       properties:
@@ -307,6 +320,21 @@ PointOfInterest:
       type: string
       x-ngsi:
         type: Property
+    wardId:
+      description: 'Ward ID of the entity corresponding to this observation.'
+      type: string
+      x-ngsi:
+        type: Property
+    zoneId:
+      description: 'Zone ID of the entity corresponding to this observation.'
+      type: string
+      x-ngsi:
+        type: Property
+    zoneName:
+      description: 'Zone name of the entity corresponding to this observation.'
+      type: string
+      x-ngsi:
+        type: Property
   required:
     - id
     - type
@@ -317,5 +345,5 @@ PointOfInterest:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json
-  x-model-tags: ""
-  x-version: 0.1.0
+  x-model-tags: IUDX
+  x-version: 0.2.0
