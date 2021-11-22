@@ -6,10 +6,10 @@
 
 ## プロパティのリスト  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: このポイントオブインタレストのカテゴリー。許容される値Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json)で定義されているものと、仕様書で記述されている拡張カテゴリです。例えば、値`113`はビーチに対応し、値`311`はミュージアムに対応します。  - `contactPoint`: アイテムの連絡先です。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refSeeAlso`: 1つまたは複数の関連するエンティティへの参照のリスト。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSIのEntityタイプ。PointOfInterestである必要があります。    
+- `additionalInfoURL`: 対象者の追加情報が得られるURL  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: このポイントオブインタレストのカテゴリー。許容される値Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json)で定義されているものと、仕様書で記述されている拡張カテゴリです。例えば、値`113`はビーチに対応し、値`311`はミュージアムに対応します。  - `contactPoint`: アイテムの連絡先です。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refSeeAlso`: 1つまたは複数の関連するエンティティへの参照のリスト。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSIのEntityタイプ。PointOfInterestである必要があります。  - `wardId`: この観測に対応するエンティティのワードID。  - `zoneId`: この観測に対応するエンティティのゾーンID。  - `zoneName`: この観測に対応するエンティティのゾーン名。    
 必須項目  
 - `category`  - `id`  - `name`  - `type`    
-このエンティティは、空間データを使用するアプリケーションで使用され、自動車、環境、産業、スマートシティの垂直セグメントと関連するIoTアプリケーションに適用されます。本データモデルは、GSMAおよび[IoT Big Data Project](http://www.gsma.com/iot/iot-big-data/)のメンバーの協力を得て作成されました。  
+このエンティティは、空間データを使用するアプリケーションで使用され、自動車、環境、産業、スマートシティの垂直セグメントと関連するIoTアプリケーションに適用されます。このデータモデルは、GSMAおよび[IoT Big Data Project](http://www.gsma.com/iot/iot-big-data/)のメンバーの協力を得て作成されました。IUDXプロジェクトの貢献により作成されました。  
 ## データモデルによるプロパティの記述  
 アルファベット順（クリックすると詳細が表示されます）  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -17,6 +17,19 @@
 PointOfInterest:    
   description: 'This entity contains a harmonised geographic description of a Point of Interest'    
   properties:    
+    additionalInfoURL:    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'URL from which additional information of the subject can be obtained'    
+      x-ngsi:    
+        type: Relationship    
     address:    
       description: 'The mailing address'    
       properties:    
@@ -323,6 +336,21 @@ PointOfInterest:
       type: string    
       x-ngsi:    
         type: Property    
+    wardId:    
+      description: 'Ward ID of the entity corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    zoneId:    
+      description: 'Zone ID of the entity corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    zoneName:    
+      description: 'Zone name of the entity corresponding to this observation.'    
+      type: string    
+      x-ngsi:    
+        type: Property    
   required:    
     - id    
     - type    
@@ -333,8 +361,8 @@ PointOfInterest:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json    
-  x-model-tags: ""    
-  x-version: 0.1.0    
+  x-model-tags: IUDX    
+  x-version: 0.2.0    
 ```  
 </details>    
 ## ペイロードの例  
@@ -342,7 +370,7 @@ PointOfInterest:
 Key-ValuesとしてJSON-LD形式のPointOfInterestの例を示します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "id": "PointOfInterest-A-Concha-123456",  
+  "id": "urn:ngsi-ld:PointOfInterest-A-Concha-123456",  
   "type": "PointOfInterest",  
   "name": "Playa de a Concha",  
   "description": "La Playa de A Concha se presenta como una continuación de la Playa de Compostela, una de las más frecuentadas de Vilagarcía.",  
@@ -363,7 +391,11 @@ PointOfInterest:
   "source": "http://www.tourspain.es",  
   "refSeeAlso": [  
     "Beach-A-Concha-123456"  
-  ]  
+  ],  
+  "wardId": "",  
+  "zoneId": "",  
+  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
+  "zoneName": ""  
 }  
 ```  
 #### PointOfInterest NGSI-v2の正規化例  
@@ -380,7 +412,7 @@ PointOfInterest:
   },  
   "description": {  
     "type": "Text",  
-    "value": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda."  
+    "value": "La Playa de A Concha se presenta como una continuaciin de la Playa de Compostela, una de las mis frecuentadas de Vilagarcia."  
   },  
   "refSeeAlso": {  
     "type": "array",  
@@ -406,12 +438,28 @@ PointOfInterest:
     "type": "PostalAddress",  
     "value": {  
       "addressCountry": "ES",  
-      "addressLocality": "Vilagarc\u00eda de Arousa"  
+      "addressLocality": "Vilagarcia de Arousa"  
     }  
   },  
   "name": {  
     "type": "Text",  
     "value": "Playa de a Concha"  
+  },  
+  "wardId": {  
+    "type": "Text",  
+    "value": ""  
+  },  
+  "zoneId": {  
+    "type": "Text",  
+    "value": ""  
+  },  
+  "additionalInfoURL": {  
+    "type": "Relationship",  
+    "value": "urn:ngsi-ld:Point:34E4:A234"  
+  },  
+  "zoneName": {  
+    "type": "Text",  
+    "value": ""  
   }  
 }  
 ```  
@@ -424,7 +472,7 @@ PointOfInterest:
   "category": [  
     "113"  
   ],  
-  "description": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda.",  
+  "description": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia.",  
   "refSeeAlso": [  
     "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
   ],  
@@ -438,9 +486,13 @@ PointOfInterest:
   },  
   "address": {  
     "addressCountry": "ES",  
-    "addressLocality": "Vilagarc\u00eda de Arousa"  
+    "addressLocality": "Vilagarcia de Arousa"  
   },  
   "name": "Playa de a Concha",  
+  "wardId": "",  
+  "zoneId": "",  
+  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
+  "zoneName": "",  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
@@ -457,7 +509,7 @@ PointOfInterest:
     "type": "Property",  
     "value": {  
       "addressCountry": "ES",  
-      "addressLocality": "Vilagarc\u00eda de Arousa"  
+      "addressLocality": "Vilagarcia de Arousa"  
     }  
   },  
   "category": {  
@@ -468,7 +520,7 @@ PointOfInterest:
   },  
   "description": {  
     "type": "Property",  
-    "value": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda."  
+    "value": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia."  
   },  
   "location": {  
     "type": "GeoProperty",  
@@ -493,6 +545,22 @@ PointOfInterest:
   "source": {  
     "type": "Property",  
     "value": "http://www.tourspain.es"  
+  },  
+   "wardId": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "zoneId": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "additionalInfoURL": {  
+    "type": "Relationship",  
+    "value": "urn:ngsi-ld:Point:34E4:A234"  
+  },  
+  "zoneName": {  
+    "type": "Property",  
+    "value": ""  
   },  
   "@context": [  
     "https://smartdatamodels.org/context.jsonld",  
