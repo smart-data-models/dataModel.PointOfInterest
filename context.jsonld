@@ -1,6 +1,7 @@
 {
     "@context": {
         "accessType": "https://smartdatamodels.org/dataModel.PointOfInterest/accessType",
+        "additionalInfoURL": "https://smartdatamodels.org/dataModel.PointOfInterest/additionalInfoURL",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
@@ -37,6 +38,9 @@
         "touristArea": "https://smartdatamodels.org/dataModel.PointOfInterest/touristArea",
         "type": "@type",
         "url": "https://smartdatamodels.org/dataModel.PointOfInterest/url",
-        "width": "https://smartdatamodels.org/dataModel.PointOfInterest/width"
+        "wardId": "https://smartdatamodels.org/dataModel.PointOfInterest/wardId",
+        "width": "https://smartdatamodels.org/dataModel.PointOfInterest/width",
+        "zoneId": "https://smartdatamodels.org/dataModel.PointOfInterest/zoneId",
+        "zoneName": "https://smartdatamodels.org/dataModel.PointOfInterest/zoneName"
     }
 }
