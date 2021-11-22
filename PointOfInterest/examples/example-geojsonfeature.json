@@ -13,7 +13,7 @@
     "category": [
       "113"
     ],
-    "description": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda.",
+    "description": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia.",
     "refSeeAlso": [
       "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"
     ],
@@ -27,9 +27,13 @@
     },
     "address": {
       "addressCountry": "ES",
-      "addressLocality": "Vilagarc\u00eda de Arousa"
+      "addressLocality": "Vilagarcia de Arousa"
     },
     "name": "Playa de a Concha",
+    "wardId": "",
+  "zoneId": "",
+  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",
+  "zoneName": "",
     "@context": [
       "https://smartdatamodels.org/context.jsonld",
       "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"

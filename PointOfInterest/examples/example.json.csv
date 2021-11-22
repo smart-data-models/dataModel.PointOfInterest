@@ -1,2 +1,0 @@
-"id_", "type_", "name_", "description_", "address__addressCountry_", "address__addressLocality_", "category__0_", "location__type_", "location__coordinates__0_", "location__coordinates__1_", "source_", "refSeeAlso__0_"
-"PointOfInterest-A-Concha-123456", "PointOfInterest", "Playa de a Concha", "La Playa de A Concha se presenta como una continuación de la Playa de Compostela, una de las más frecuentadas de Vilagarcía.", "ES", "Vilagarcía de Arousa", "113", "Point", "-8.768460000000001", "42.60214472222222", "http://www.tourspain.es", "Beach-A-Concha-123456"

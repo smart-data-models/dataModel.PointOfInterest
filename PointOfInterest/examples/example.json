@@ -1,5 +1,5 @@
 {
-  "id": "PointOfInterest-A-Concha-123456",
+  "id": "urn:ngsi-ld:PointOfInterest-A-Concha-123456",
   "type": "PointOfInterest",
   "name": "Playa de a Concha",
   "description": "La Playa de A Concha se presenta como una continuación de la Playa de Compostela, una de las más frecuentadas de Vilagarcía.",
@@ -20,5 +20,9 @@
   "source": "http://www.tourspain.es",
   "refSeeAlso": [
     "Beach-A-Concha-123456"
-  ]
+  ],
+  "wardId": "",
+  "zoneId": "",
+  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",
+  "zoneName": ""
 }
