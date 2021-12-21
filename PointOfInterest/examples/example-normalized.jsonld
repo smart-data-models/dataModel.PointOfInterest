@@ -1,65 +1,64 @@
 {
-  "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",
-  "type": "PointOfInterest",
-  "address": {
-    "type": "Property",
-    "value": {
-      "addressCountry": "ES",
-      "addressLocality": "Vilagarcia de Arousa"
-    }
-  },
-  "category": {
-    "type": "Property",
-    "value": [
-      "113"
+    "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",
+    "type": "PointOfInterest",
+    "additionalInfoURL": {
+        "type": "Relationship",
+        "value": "urn:ngsi-ld:Point:34E4:A234"
+    },
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressCountry": "ES",
+            "addressLocality": "Vilagarcia de Arousa"
+        }
+    },
+    "category": {
+        "type": "Property",
+        "value": [
+            "113"
+        ]
+    },
+    "description": {
+        "type": "Property",
+        "value": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia."
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                -8.768460000000001,
+                42.60214472222222
+            ]
+        }
+    },
+    "name": {
+        "type": "Property",
+        "value": "Playa de a Concha"
+    },
+    "refSeeAlso": {
+        "type": "Property",
+        "value": [
+            "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"
+        ]
+    },
+    "source": {
+        "type": "Property",
+        "value": "http://www.tourspain.es"
+    },
+    "wardId": {
+        "type": "Property",
+        "value": ""
+    },
+    "zoneId": {
+        "type": "Property",
+        "value": ""
+    },
+    "zoneName": {
+        "type": "Property",
+        "value": ""
+    },
+    "@context": [
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
     ]
-  },
-  "description": {
-    "type": "Property",
-    "value": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia."
-  },
-  "location": {
-    "type": "GeoProperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        -8.768460000000001,
-        42.60214472222222
-      ]
-    }
-  },
-  "name": {
-    "type": "Property",
-    "value": "Playa de a Concha"
-  },
-  "refSeeAlso": {
-    "type": "Property",
-    "value": [
-      "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"
-    ]
-  },
-  "source": {
-    "type": "Property",
-    "value": "http://www.tourspain.es"
-  },
-   "wardId": {
-    "type": "Property",
-    "value": ""
-  },
-  "zoneId": {
-    "type": "Property",
-    "value": ""
-  },
-  "additionalInfoURL": {
-    "type": "Relationship",
-    "value": "urn:ngsi-ld:Point:34E4:A234"
-  },
-  "zoneName": {
-    "type": "Property",
-    "value": ""
-  },
-  "@context": [
-    "https://smartdatamodels.org/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
 }
