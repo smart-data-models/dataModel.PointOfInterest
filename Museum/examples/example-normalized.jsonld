@@ -1,74 +1,74 @@
 {
-  "@context": [
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ],
-  "address": {
-    "addressCountry": "ES",
-    "addressLocality": "Barcelona",
-    "streetAddress": "Plaza Dels \u00c0ngels, 1",
-    "type": "PostalAddress"
-  },
-  "alternateName": "MACBA",
-  "artPeriod": [
-    "contemporary"
-  ],
-  "description": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995.",
-  "facilities": [
-    "shop",
-    "cloakRoom",
-    "guidedTour"
-  ],
-  "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",
-  "location": {
-    "coordinates": [
-      2.1668771521199393,
-      41.38302235796602
+    "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",
+    "type": "Museum",
+    "address": {
+        "addressCountry": "ES",
+        "addressLocality": "Barcelona",
+        "streetAddress": "Plaza Dels \u00c0ngels, 1",
+        "type": "PostalAddress"
+    },
+    "alternateName": "MACBA",
+    "artPeriod": [
+        "contemporary"
     ],
-    "type": "Point"
-  },
-  "museumType": [
-    "fineArts"
-  ],
-  "name": "Museo de Arte Contemporaneo de Barcelona",
-  "openingHoursSpecification": [
-    {
-      "closes": "19:30:00",
-      "dayOfWeek": "Monday",
-      "opens": "11:00:00"
+    "description": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995.",
+    "facilities": [
+        "shop",
+        "cloakRoom",
+        "guidedTour"
+    ],
+    "location": {
+        "coordinates": [
+            2.1668771521199393,
+            41.38302235796602
+        ],
+        "type": "Point"
     },
-    {
-      "closes": "19:30:00",
-      "dayOfWeek": "Tuesday",
-      "opens": "11:00:00"
-    },
-    {
-      "closes": "19:30:00",
-      "dayOfWeek": "Wednesday",
-      "opens": "11:00:00"
-    },
-    {
-      "closes": "19:30:00",
-      "dayOfWeek": "Thurday",
-      "opens": "11:00:00"
-    },
-    {
-      "closes": "19:30:00",
-      "dayOfWeek": "Friday",
-      "opens": "11:00:00"
-    },
-    {
-      "closes": "21:00:00",
-      "dayOfWeek": "Saturday",
-      "opens": "10:00:00"
-    },
-    {
-      "closes": "15:00:00",
-      "dayOfWeek": "Sunday",
-      "opens": "10:00:00"
-    }
-  ],
-  "source": "http://www.tourspain.es",
-  "touristArea": "Barcelona-Capital",
-  "type": "Museum"
+    "museumType": [
+        "fineArts"
+    ],
+    "name": "Museo de Arte Contemporaneo de Barcelona",
+    "openingHoursSpecification": [
+        {
+            "closes": "19:30:00",
+            "dayOfWeek": "Monday",
+            "opens": "11:00:00"
+        },
+        {
+            "closes": "19:30:00",
+            "dayOfWeek": "Tuesday",
+            "opens": "11:00:00"
+        },
+        {
+            "closes": "19:30:00",
+            "dayOfWeek": "Wednesday",
+            "opens": "11:00:00"
+        },
+        {
+            "closes": "19:30:00",
+            "dayOfWeek": "Thurday",
+            "opens": "11:00:00"
+        },
+        {
+            "closes": "19:30:00",
+            "dayOfWeek": "Friday",
+            "opens": "11:00:00"
+        },
+        {
+            "closes": "21:00:00",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00:00"
+        },
+        {
+            "closes": "15:00:00",
+            "dayOfWeek": "Sunday",
+            "opens": "10:00:00"
+        }
+    ],
+    "source": "http://www.tourspain.es",
+    "touristArea": "Barcelona-Capital",
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
 }
