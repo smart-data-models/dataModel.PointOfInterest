@@ -1,107 +1,108 @@
 {
-  "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",
-  "type": "Museum",
-  "address": {
-    "type": "Property",
-    "value": {
-      "addressCountry": "ES",
-      "addressLocality": "Barcelona",
-      "streetAddress": "Plaza Dels \u00c0ngels, 1",
-      "type": "PostalAddress"
-    }
-  },
-  "alternateName": {
-    "type": "Property",
-    "value": "MACBA"
-  },
-  "artPeriod": {
-    "type": "Property",
-    "value": [
-      "contemporary"
+    "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",
+    "type": "Museum",
+    "address": {
+        "type": "Property",
+        "value": {
+            "addressCountry": "ES",
+            "addressLocality": "Barcelona",
+            "streetAddress": "Plaza Dels \u00c0ngels, 1",
+            "type": "PostalAddress"
+        }
+    },
+    "alternateName": {
+        "type": "Property",
+        "value": "MACBA"
+    },
+    "artPeriod": {
+        "type": "Property",
+        "value": [
+            "contemporary"
+        ]
+    },
+    "description": {
+        "type": "Property",
+        "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."
+    },
+    "facilities": {
+        "type": "Property",
+        "value": [
+            "shop",
+            "cloakRoom",
+            "guidedTour"
+        ]
+    },
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                2.1668771521199393,
+                41.38302235796602
+            ]
+        }
+    },
+    "museumType": {
+        "type": "Property",
+        "value": [
+            "fineArts"
+        ]
+    },
+    "name": {
+        "type": "Property",
+        "value": "Museo de Arte Contemporaneo de Barcelona"
+    },
+    "openingHoursSpecification": {
+        "type": "Property",
+        "value": [
+            {
+                "dayOfWeek": "Monday",
+                "closes": "19:30:00",
+                "opens": "11:00:00"
+            },
+            {
+                "dayOfWeek": "Tuesday",
+                "closes": "19:30:00",
+                "opens": "11:00:00"
+            },
+            {
+                "dayOfWeek": "Wednesday",
+                "closes": "19:30:00",
+                "opens": "11:00:00"
+            },
+            {
+                "dayOfWeek": "Thurday",
+                "closes": "19:30:00",
+                "opens": "11:00:00"
+            },
+            {
+                "dayOfWeek": "Friday",
+                "closes": "19:30:00",
+                "opens": "11:00:00"
+            },
+            {
+                "dayOfWeek": "Saturday",
+                "closes": "21:00:00",
+                "opens": "10:00:00"
+            },
+            {
+                "dayOfWeek": "Sunday",
+                "closes": "15:00:00",
+                "opens": "10:00:00"
+            }
+        ]
+    },
+    "source": {
+        "type": "Property",
+        "value": "http://www.tourspain.es"
+    },
+    "touristArea": {
+        "type": "Property",
+        "value": "Barcelona-Capital"
+    },
+    "@context": [
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
     ]
-  },
-  "description": {
-    "type": "Property",
-    "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."
-  },
-  "facilities": {
-    "type": "Property",
-    "value": [
-      "shop",
-      "cloakRoom",
-      "guidedTour"
-    ]
-  },
-  "location": {
-    "type": "GeoProperty",
-    "value": {
-      "type": "Point",
-      "coordinates": [
-        2.1668771521199393,
-        41.38302235796602
-      ]
-    }
-  },
-  "museumType": {
-    "type": "Property",
-    "value": [
-      "fineArts"
-    ]
-  },
-  "name": {
-    "type": "Property",
-    "value": "Museo de Arte Contemporaneo de Barcelona"
-  },
-  "openingHoursSpecification": {
-    "type": "Property",
-    "value": [
-      {
-        "dayOfWeek": "Monday",
-        "closes": "19:30:00",
-        "opens": "11:00:00"
-      },
-      {
-        "dayOfWeek": "Tuesday",
-        "closes": "19:30:00",
-        "opens": "11:00:00"
-      },
-      {
-        "dayOfWeek": "Wednesday",
-        "closes": "19:30:00",
-        "opens": "11:00:00"
-      },
-      {
-        "dayOfWeek": "Thurday",
-        "closes": "19:30:00",
-        "opens": "11:00:00"
-      },
-      {
-        "dayOfWeek": "Friday",
-        "closes": "19:30:00",
-        "opens": "11:00:00"
-      },
-      {
-        "dayOfWeek": "Saturday",
-        "closes": "21:00:00",
-        "opens": "10:00:00"
-      },
-      {
-        "dayOfWeek": "Sunday",
-        "closes": "15:00:00",
-        "opens": "10:00:00"
-      }
-    ]
-  },
-  "source": {
-    "type": "Property",
-    "value": "http://www.tourspain.es"
-  },
-  "touristArea": {
-    "type": "Property",
-    "value": "Barcelona-Capital"
-  },
-  "@context": [
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-  ]
 }
