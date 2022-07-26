@@ -1,17 +1,19 @@
-エンティティ店舗  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティ店舗  
 ========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Store/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**このエンティティは、都市内のモデルの店舗/ショップをタイプします。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**このエンティティは、都市にある店舗/ショップをモデル化しています。  
+バージョン: 0.0.1  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `category`: ストアのカテゴリーです。Enumです。'AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,宝石店、酒店、紳士服店、携帯電話店、映画レンタル店、音楽店、事務機器店、アウトレット店、質屋、ペットショップ、靴店、スポーツ用品店、タイヤ店、玩具店、卸売店'  - `currenciesAccepted`: Enum:'aed, afn, all, amd, ang, aoa, ars, aud, awg, azn, bam, bbd, bdt, bgn, bhd, bif, bmd, bnd, bob, bov, brl, bsd,btn, bwp, byn, bzd, cad, cdf, che, chf, chw, clf, clp, cny, cop, cou, crc, cuc, cup, cve, czk, djf, dkk, dop,dzd、EGP、ern、etb、eur、fjd、fkp、gbp、gel、ghs、gip、gmd、gnf、gtq、gyd、hkd、hnl、hrk、htg、huf、idr、ils、inr,iqd, irr, isk, jmd, jod, jpy, kes, kgs, khr, kmf, kpw, krw, kwd, kyd, kzt, lak, lbp, lkr, lrd, lsl, lyd, mad,mdl、 mga、 mkd、 mmk、 mnt、 mop、 mru、 mur、 mvr、 mwk、 mxn、 mxv、 myr、 mzn、 nad、 ngn、 nio、 nok、 npr、 nzd、 omr、 pab、 pen,pgk, php, pkr, pln, pyg, qar, ron, rsd, rub, rwf, sar, sbd, scr, sdg, sek, sgd, shp, sll, sos, srd, ssp, stn,svc, syp, szl, thb, tjs, tmt, tnd, top, try, ttd, twd, tzs, uah, ugx, usd, usn, uyi, uyu, uyw, uzs, ves, vnd, vuv,wst, xaf, xag, xau, xba, xbb, xbc, xbd, xcd, xdr, xof, xpd, xpf, xpt, xsu, xts, xua, xxx, yer, zar, zmw, zwl.この店舗で使用できる通貨ISO 4217の通貨フォーマットを使用しています（例：USD、EUR）。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `email`: 当店のメールアドレスです。  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `logo`: このお店に関連するロゴです。  - `name`: このアイテムの名前です。  - `openingHoursSpecification`: 場所の営業時間や、場所にある特定のサービスに関する情報を提供する構造化された値  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `paymentAccepted`: 当店でご利用いただけるお支払い方法です。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `telephone`: このお店の電話番号です。  - `type`: NGSI エンティティタイプ。ストアでなければならない。  - `url`: お店の情報が掲載されているサイト    
-必須項目  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `category`: 店舗のカテゴリ。Enumです。'AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,ジュエリーストア、リカーストア、メンズウェアストア、携帯電話ストア、映画レンタルストア、ミュージックストア、オフィス用品ストア、アウトレットストア、質屋、ペットストア、靴屋、スポーツ用品店、タイヤショップ、おもちゃ屋、卸売店''  - `currenciesAccepted`: Enum:'aed, afn, all, amd, ang, aoa, ars, aud, awg, azn, bam, bbd, bdt, bgn, bhd, bif, bmd, bnd, bob, bov, brl, bsd.B, B, BTn, Bwp, Bn, Bzd,btn、bwp、byn、bzd、cad、cdf、che、chf、chw、clf、clp、cny、cop、cou、crc、cuc、cup、cve、czk、djf、dkk、dop,dzd、egp、ern、etb、eur、fjd、fkp、gbp、gel、ghs、gip、gmd、gnf、gtq、gyd、hkd、hnl、hrk、htg、huf、iDR、inr.、ir、ir、inr,iqd、irr、isk、jmd、jod、jpy、kes、kgs、khr、kmf、kpw、krw、kwd、kyd、kzt、lak、lbp、lkr、lrd、lsl、lyd、mad,MDL、MGA、MKD、MMK、MNT、MOP、MRU、MUR、MVR、MWK、MXN、MXV、MYR、MZN、NAD、NN、NIO、NOK、NR、NZD、OMR、PAB、PEN。pgk、php、pkr、pln、pyg、qar、ron、rsd、rub、rwf、sar、sbd、scr、sdg、sgd、shp、sll、sos、srd、ssp、stn.svc、syp、sp、sn,svc, syp, szl, thb, tjs, tmt, tnd, top, try, ttd, twd, tzs, uah, ugx, usd, usn, uyi, uyu, uyw, uzs, ves, vnd, vuv,wst, xaf, xag, xau, xba, xbb, xbc, xbd, xcd, xdr, xof, xpd, xpf, xpt, xsu, xts, xua, xxx, yer, zar, zmw, zwl.このストアで利用可能な通貨ISO 4217の通貨形式を使用しています（例：USD、EUR)  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `email`: 当店のメールアドレスです。  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `logo`: 当店の関連ロゴです。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `paymentAccepted`: 当店でご利用いただけるお支払い方法です。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `telephone`: 当店の電話番号です。  - `type`: NGSI エンティティタイプ。これはStoreでなければなりません。  - `url`: お店の情報を掲載したウェブサイト。    
+必要なプロパティ  
 - `description`  - `id`  - `name`  - `type`    
-このモデルは、[Schema.org](https://schema.org/Store)で定義されたものに基づいています。特に、このモデルには、前述のリンクで定義されたプロパティのサブセットと、具体的なタイプとして後から特化できるストアカテゴリのリストが含まれています（[https://schema.org/Store](https://schema.org/Store)参照）。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+このモデルは [Schema.org](https://schema.org/Store) で定義されたものをベースにしています。特に、このモデルは、前述のリンクで定義されているプロパティのサブセットと、ストアカテゴリのリストを含んでおり、これらは後に具体的なTypeとして特化することができます([https://schema.org/Store](https://schema.org/Store)を参照)。  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Store:    
@@ -493,27 +495,58 @@ Store:
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
+        type: object    
       minItems: 1    
       type: array    
       x-ngsi:    
@@ -587,8 +620,8 @@ Store:
 ```  
 </details>    
 ## ペイロードの例  
-#### Store NGSI-v2 key-values 例  
-Key-ValuesとしてJSON-LD形式のStoreの例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### NGSI-v2鍵の保存例  
+ここでは、StoreをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Store:santander:COM4111",  
@@ -646,8 +679,8 @@ Store:
   "category": "GroceryStore"  
 }  
 ```  
-#### Store NGSI-v2の正規化例  
-ここでは、正規化されたJSON-LD形式のStoreの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### NGSI-v2 正規化されたものを格納 例  
+以下は、StoreをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
   "id": "urn:ngsi-ld:Store:santander:COM4111",  
@@ -747,172 +780,173 @@ Store:
   }  
 }  
 ```  
-#### Store NGSI-LD key-values 例  
-ここでは、JSON-LD形式のStoreをkey-valuesにした例を紹介します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### NGSI-LDのキー値を格納する 例  
+ここでは、StoreをJSON-LD形式でkey-valuesとした場合の例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:Store:santander:COM4111",  
-  "type": "Store",  
-  "source": {  
-    "type": "Text",  
-    "value": "https://api.smartsantander.eu/"  
-  },  
-  "dataProvider": {  
-    "type": "Text",  
-    "value": "http://www.smartsantander.eu/"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.8077562,  
-        43.4628255  
-      ]  
-    }  
-  },  
-  "name": {  
-    "type": "Text",  
-    "value": "MARTA KAUFMANN"  
-  },  
-  "description": {  
-    "type": "Text",  
-    "value": "Cosmetica natural fabricada en Santander."  
-  },  
-  "image": {  
-    "type": "Text",  
-    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"  
-  },  
-  "currenciesAccepted": {  
-    "type": "StructuredValue",  
-    "value": [  
-      "EUR"  
+    "id": "urn:ngsi-ld:Store:santander:COM4111",  
+    "type": "Store",  
+    "category": {  
+        "type": "Text",  
+        "value": "GroceryStore"  
+    },  
+    "currenciesAccepted": {  
+        "type": "StructuredValue",  
+        "value": [  
+            "EUR"  
+        ]  
+    },  
+    "dataProvider": {  
+        "type": "Text",  
+        "value": "http://www.smartsantander.eu/"  
+    },  
+    "description": {  
+        "type": "Text",  
+        "value": "Cosmetica natural fabricada en Santander."  
+    },  
+    "email": {  
+        "type": "Text",  
+        "value": "email@example.com"  
+    },  
+    "image": {  
+        "type": "Text",  
+        "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.8077562,  
+                43.4628255  
+            ]  
+        }  
+    },  
+    "logo": {  
+        "type": "Text",  
+        "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"  
+    },  
+    "name": {  
+        "type": "Text",  
+        "value": "MARTA KAUFMANN"  
+    },  
+    "openingHoursSpecification": {  
+        "type": "StructuredValue",  
+        "value": [  
+            {  
+                "opens": "00:02:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Monday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Tuesday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Wednesday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Thursday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Friday"  
+            }  
+        ]  
+    },  
+    "paymentAccepted:": {  
+        "type": "StructuredValue",  
+        "value": [  
+            "cash",  
+            "paypal"  
+        ]  
+    },  
+    "source": {  
+        "type": "Text",  
+        "value": "https://api.smartsantander.eu/"  
+    },  
+    "telephone": {  
+        "type": "Text",  
+        "value": "(+34) 942 123 123"  
+    },  
+    "url": {  
+        "type": "Text",  
+        "value": "https://exampleStoreUrl.com"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
-  },  
-  "paymentAccepted:": {  
-    "type": "StructuredValue",  
-    "value": [  
-      "cash",  
-      "paypal"  
-    ]  
-  },  
-  "openingHoursSpecification": {  
-    "type": "StructuredValue",  
-    "value": [  
-      {  
-        "opens": "00:02:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Monday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Tuesday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Wednesday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Thursday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Friday"  
-      }  
-    ]  
-  },  
-  "logo": {  
-    "type": "Text",  
-    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"  
-  },  
-  "telephone": {  
-    "type": "Text",  
-    "value": "(+34) 942 123 123"  
-  },  
-  "email": {  
-    "type": "Text",  
-    "value": "email@example.com"  
-  },  
-  "url": {  
-    "type": "Text",  
-    "value": "https://exampleStoreUrl.com"  
-  },  
-  "category": {  
-    "type": "Text",  
-    "value": "GroceryStore"  
-  }  
 }  
 ```  
-#### Store NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のStoreの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### NGSI-LDを正規化して保存する 例  
+以下は、StoreをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:Store:santander:COM4111",  
-  "type": "Store",  
-  "source": "https://api.smartsantander.eu/",  
-  "dataProvider": "http://www.smartsantander.eu/",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -3.8077562,  
-      43.4628255  
+    "id": "urn:ngsi-ld:Store:santander:COM4111",  
+    "type": "Store",  
+    "category": "GroceryStore",  
+    "currenciesAccepted": [  
+        "EUR"  
+    ],  
+    "dataProvider": "http://www.smartsantander.eu/",  
+    "description": "Cosmetica natural fabricada en Santander.",  
+    "email": "email@example.com",  
+    "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -3.8077562,  
+            43.4628255  
+        ]  
+    },  
+    "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",  
+    "name": "MARTA KAUFMANN",  
+    "openingHoursSpecification": [  
+        {  
+            "opens": "00:02:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Monday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Tuesday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Wednesday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Thursday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Friday"  
+        }  
+    ],  
+    "paymentAccepted:": [  
+        "cash",  
+        "paypal"  
+    ],  
+    "source": "https://api.smartsantander.eu/",  
+    "telephone": "(+34) 942 123 123",  
+    "url": "https://exampleStoreUrl.com",  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "name": "MARTA KAUFMANN",  
-  "description": "Cosmetica natural fabricada en Santander.",  
-  "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",  
-  "currenciesAccepted": [  
-    "EUR"  
-  ],  
-  "paymentAccepted:": [  
-    "cash",  
-    "paypal"  
-  ],  
-  "openingHoursSpecification": [  
-    {  
-      "opens": "00:02:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Monday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Tuesday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Wednesday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Thursday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Friday"  
-    }  
-  ],  
-  "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",  
-  "telephone": "(+34) 942 123 123",  
-  "email": "email@example.com",  
-  "url": "https://exampleStoreUrl.com",  
-  "category": "GroceryStore"  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
