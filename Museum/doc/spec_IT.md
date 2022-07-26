@@ -1,16 +1,18 @@
-Entità: Museo  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: Museo  
 =============  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Museum/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Descrizione globale: **Un museo**  
+versione: 0.0.1  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `artPeriod`: Valori consentiti:- Quelli definiti da [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).- Qualsiasi altro valore esteso necessario a un'applicazione e non descritto dalla risorsa precedente.  - `buildingType`: Tipo di edificio che ospita il museo. Enum:'luogo preistorico, acropoli, alcazaba, acquedotto, alcazar, anfiteatro, arco, architettura polare, basilica, strada, cappella, cartuja, casa nobile, residenza, castello, castro, catacombe, cattedrale, chiostro, convento, grotta preistorica, dolmen, officeBuilding, houseBuilding, industrialBuilding, militaryBuilding, hermitage, fortress, sculpturalGroups, church, garden, fishMarket, masia, masiaFortificada, minaret, monastero, monolite, mura, necropoli, menhir, palazzo, palazzo, pantheon, pazo, piramide, ponte, porta, porticato, area murata, santuario, tomba, sinagoga, taulasTalayotsNavetas, theathre, tempio, sorgente, torre, sito archeologico, università, cimitero, tempio fortificato, ingegneria civile, piazza, seminario, arena per la corrida, edificio pubblico, città, grotte e miniere turistiche, pro-cattedrale, moschea, circo, tumulo funerario".  - `contactPoint`: Punto di contatto per il museo.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `facilities`: Descrive diversi servizi offerti da questo museo. Enum:'ascensore, caffetteria, negozio, auditorio, sala conferenze, audioguida, guardaroba, per disabili, per bambini, visita guidata, ristorante, rampa, prenotazione'. o qualsiasi altro valore necessario per un'applicazione.  - `featuredArtist`: Artista/i principale/i in evidenza in questo museo.  - `historicalPeriod`: Un intervallo di tempo ISO8601. Per esempio 1920/1940. Il secondo elemento dell'intervallo può essere lasciato vuoto per indicare "fino ad ora". Un elenco di anni separati da virgole, per esempio 1620,1625,1718.       - Un secolo, rappresentato da un modello di anno, per esempio 19xx corrisponderebbe al ventesimo secolo. E 196x corrisponderebbe al decennio degli anni sessanta.  - `id`: Identificatore unico dell'entità  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `museumType`: Tipo di museo secondo il contenuto esposto. Enum:'arti applicate, scienza e tecnologia, belle arti, musica, storia, arte sacra, archeologia, speciali, arti decorative, letteratura, medicina e farmacia, marittima, trasporti, militare, cera, arti popolari e tradizioni, numismatica, unesco, ceramica, arti suntuarie, scienze naturali, preistorica, etnologia, ferroviaria, mineraria, tessile, scultura, multidisciplinare, pittura, paleontologia, arte moderna, tematica, architettura, casa-museo, museo della cattedrale, museo diocesano, universitario, arte contemporanea, corrida". Un'altra possibile fonte per i tipi di museo non coperti sopra è [Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum).  - `name`: Il nome di questo articolo.  - `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un certo servizio all'interno di un luogo  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `refSeeAlso`: Elenco di riferimenti a una o più entità correlate.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `touristArea`: Zona turistica in cui si trova questo museo. La semantica precisa potrebbe dipendere dall'applicazione o dal paese o regione di destinazione. Per esempio `Costa del Sol`.  - `type`: Tipo di entità NGSI. Deve essere Museo    
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `artPeriod`: Valori ammessi:- Quelli definiti da [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).- Qualsiasi altro valore esteso necessario a un'applicazione e non descritto dalla risorsa di cui sopra.  - `buildingType`: Tipo di edificio che ospita il museo. Enum:'luogo preistorico, acropoli, alcazaba, acquedotto, alcazar, anfiteatro, arco, architettura polulare, basilica, strada, cappella, cartuja, casa nobiliare, residenza, castello, castro, catacombe, cattedrale, chiostro, convento, grotta preistorica, dolmen, edificio per uffici, edificio per abitazioni, edificio industriale, edificio militare, eremo, fortezza, gruppi scultorei, chiesa, giardino, mercato del pesce, masia, masiaFortificada, minareto, monastero, monolite, mura, necropoli, menhir, palazzo, pantheon, pazo, piramide, ponte, porta, porticato, area murata, santuario, tomba, sinagoga, taulasTalayotsNavetas, theathre, tempio, sorgente, torre, sito archeologico, università, cimitero, tempio fortificato, ingegneria civile, piazza, seminario, arena per corride, edificio pubblico, città, grotte e miniere turistiche, cattedrale, moschea, circo, tumulo".  - `contactPoint`: Punto di contatto per il museo.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `facilities`: Descrive le diverse strutture offerte da questo museo. Enum:'ascensore, caffetteria, negozio, auditorium, sala conferenze, audioguida, guardaroba, per disabili, per bambini, visita guidata, ristorante, rampa, prenotazione'. o qualsiasi altro valore necessario a un'applicazione.  - `featuredArtist`: Principali artisti presenti in questo museo.  - `historicalPeriod`: Un intervallo di tempo ISO8601. Ad esempio 1920/1940. Il secondo elemento dell'intervallo può essere lasciato vuoto per indicare "fino ad ora". Un elenco di anni separati da virgole, ad esempio 1620,1625,1718.       - Un secolo, rappresentato da un modello di anno, ad esempio 19xx corrisponderebbe al ventesimo secolo. E 196x corrisponderebbe al decennio degli anni Sessanta.  - `id`: Identificatore univoco dell'entità  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `museumType`: Tipo di museo in base al contenuto esposto. Enum:'arti applicate, scienza e tecnologia, belle arti, musica, storia, arte sacra, archeologia, specialità, arti decorative, letteratura, medicina e farmacia, marittimo, trasporti, militare, cera, arti popolari e tradizioni, numismatico, unesco, ceramica, arti suntuarie, scienze naturali, preistoria, etnologia, ferrovie, miniere, tessile, scultura, multidisciplinare, pittura, paleontologia, arte moderna, tematica, architettura, casa-museo, museo della cattedrale, museo diocesano, universitario, arte contemporanea, corrida". Un'altra possibile fonte per i tipi di museo non coperti sopra è [Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum).  - `name`: Il nome di questo elemento.  - `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `refSeeAlso`: Elenco di riferimenti a una o più entità correlate.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `touristArea`: Area turistica in cui si trova il museo. La semantica precisa può dipendere dall'applicazione o dal paese o dalla regione di destinazione. Ad esempio, `Costa del Sol`.  - `type`: Tipo di entità NGSI. Deve essere Museo    
 Proprietà richieste  
 - `id`  - `location`  - `name`  - `type`    
-Questa entità contiene una descrizione geografica armonizzata di un museo. Si usa in applicazioni che utilizzano dati spaziali ed è applicabile ai segmenti verticali Turismo, Cultura e Smart City e alle relative applicazioni IoT. Un ringraziamento speciale a [TURESPAÑA](https://www.tourspain.es/en-us) che ha fornito alcuni esempi che hanno ispirato lo sviluppo di questo modello di dati.  
-## Descrizione del modello di dati delle proprietà  
+Questa entità contiene una descrizione geografica armonizzata di un museo. È utilizzata in applicazioni che utilizzano dati spaziali ed è applicabile ai segmenti verticali del turismo, della cultura e delle smart city e alle relative applicazioni IoT. Un ringraziamento speciale a [TURESPAÑA] (https://www.tourspain.es/en-us) che ha fornito alcuni esempi che hanno ispirato lo sviluppo di questo modello di dati.  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -448,27 +450,58 @@ Museum:
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
+        type: object    
       minItems: 1    
       type: array    
       x-ngsi:    
@@ -538,10 +571,10 @@ Museum:
   x-version: 0.0.1    
 ```  
 </details>    
-Questo tipo di entità è stato progettato come estensione di [https://schema.org/Museum](https://schema.org/Museum) in modo che qualsiasi proprietà specificata da schema.org e il cui dominio è `https://schema.org/Museum` possa essere usata dalle applicazioni.  
-## Esempio di payloads  
-#### Museo NGSI-v2 valori chiave Esempio  
-Ecco un esempio di un Museo in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Questo tipo di entità è stato progettato come estensione di [https://schema.org/Museum](https://schema.org/Museum), in modo che qualsiasi proprietà specificata da schema.org e il cui dominio è `https://schema.org/Museum` possa essere utilizzata dalle applicazioni.  
+## Esempi di payload  
+#### Museo NGSI-v2 valori-chiave Esempio  
+Ecco un esempio di Museo in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Museum-Barcelona-MACBA-1234",  
@@ -614,7 +647,7 @@ Museum:
 }  
 ```  
 #### Museo NGSI-v2 normalizzato Esempio  
-Ecco un esempio di un Museo in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di Museo in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
   "id": "Museum-Barcelona-MACBA-1234",  
@@ -711,192 +744,193 @@ Museum:
 }  
 ```  
 #### Museo NGSI-LD valori-chiave Esempio  
-Ecco un esempio di un Museo in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di Museo in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
-  "type": "Museum",  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "ES",  
-      "addressLocality": "Barcelona",  
-      "streetAddress": "Plaza Dels \u00c0ngels, 1",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "MACBA"  
-  },  
-  "artPeriod": {  
-    "type": "Property",  
-    "value": [  
-      "contemporary"  
+    "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
+    "type": "Museum",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "ES",  
+            "addressLocality": "Barcelona",  
+            "streetAddress": "Plaza Dels \u00c0ngels, 1",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "MACBA"  
+    },  
+    "artPeriod": {  
+        "type": "Property",  
+        "value": [  
+            "contemporary"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."  
+    },  
+    "facilities": {  
+        "type": "Property",  
+        "value": [  
+            "shop",  
+            "cloakRoom",  
+            "guidedTour"  
+        ]  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                2.1668771521199393,  
+                41.38302235796602  
+            ]  
+        }  
+    },  
+    "museumType": {  
+        "type": "Property",  
+        "value": [  
+            "fineArts"  
+        ]  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Museo de Arte Contemporaneo de Barcelona"  
+    },  
+    "openingHoursSpecification": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "dayOfWeek": "Monday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Tuesday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Wednesday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Thurday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Friday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Saturday",  
+                "closes": "21:00:00",  
+                "opens": "10:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Sunday",  
+                "closes": "15:00:00",  
+                "opens": "10:00:00"  
+            }  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.tourspain.es"  
+    },  
+    "touristArea": {  
+        "type": "Property",  
+        "value": "Barcelona-Capital"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."  
-  },  
-  "facilities": {  
-    "type": "Property",  
-    "value": [  
-      "shop",  
-      "cloakRoom",  
-      "guidedTour"  
-    ]  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        2.1668771521199393,  
-        41.38302235796602  
-      ]  
-    }  
-  },  
-  "museumType": {  
-    "type": "Property",  
-    "value": [  
-      "fineArts"  
-    ]  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Museo de Arte Contemporaneo de Barcelona"  
-  },  
-  "openingHoursSpecification": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "dayOfWeek": "Monday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Tuesday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Wednesday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Thurday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Friday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Saturday",  
-        "closes": "21:00:00",  
-        "opens": "10:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Sunday",  
-        "closes": "15:00:00",  
-        "opens": "10:00:00"  
-      }  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.tourspain.es"  
-  },  
-  "touristArea": {  
-    "type": "Property",  
-    "value": "Barcelona-Capital"  
-  },  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
 #### Museo NGSI-LD normalizzato Esempio  
-Ecco un esempio di un Museo in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di Museo in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
 ```json  
 {  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Barcelona",  
-    "streetAddress": "Plaza Dels \u00c0ngels, 1",  
-    "type": "PostalAddress"  
-  },  
-  "alternateName": "MACBA",  
-  "artPeriod": [  
-    "contemporary"  
-  ],  
-  "description": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995.",  
-  "facilities": [  
-    "shop",  
-    "cloakRoom",  
-    "guidedTour"  
-  ],  
-  "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
-  "location": {  
-    "coordinates": [  
-      2.1668771521199393,  
-      41.38302235796602  
+    "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
+    "type": "Museum",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Barcelona",  
+        "streetAddress": "Plaza Dels \u00c0ngels, 1",  
+        "type": "PostalAddress"  
+    },  
+    "alternateName": "MACBA",  
+    "artPeriod": [  
+        "contemporary"  
     ],  
-    "type": "Point"  
-  },  
-  "museumType": [  
-    "fineArts"  
-  ],  
-  "name": "Museo de Arte Contemporaneo de Barcelona",  
-  "openingHoursSpecification": [  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Monday",  
-      "opens": "11:00:00"  
+    "description": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995.",  
+    "facilities": [  
+        "shop",  
+        "cloakRoom",  
+        "guidedTour"  
+    ],  
+    "location": {  
+        "coordinates": [  
+            2.1668771521199393,  
+            41.38302235796602  
+        ],  
+        "type": "Point"  
     },  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Tuesday",  
-      "opens": "11:00:00"  
-    },  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Wednesday",  
-      "opens": "11:00:00"  
-    },  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Thurday",  
-      "opens": "11:00:00"  
-    },  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Friday",  
-      "opens": "11:00:00"  
-    },  
-    {  
-      "closes": "21:00:00",  
-      "dayOfWeek": "Saturday",  
-      "opens": "10:00:00"  
-    },  
-    {  
-      "closes": "15:00:00",  
-      "dayOfWeek": "Sunday",  
-      "opens": "10:00:00"  
-    }  
-  ],  
-  "source": "http://www.tourspain.es",  
-  "touristArea": "Barcelona-Capital",  
-  "type": "Museum"  
+    "museumType": [  
+        "fineArts"  
+    ],  
+    "name": "Museo de Arte Contemporaneo de Barcelona",  
+    "openingHoursSpecification": [  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Monday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Tuesday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Wednesday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Thurday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Friday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "21:00:00",  
+            "dayOfWeek": "Saturday",  
+            "opens": "10:00:00"  
+        },  
+        {  
+            "closes": "15:00:00",  
+            "dayOfWeek": "Sunday",  
+            "opens": "10:00:00"  
+        }  
+    ],  
+    "source": "http://www.tourspain.es",  
+    "touristArea": "Barcelona-Capital",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
