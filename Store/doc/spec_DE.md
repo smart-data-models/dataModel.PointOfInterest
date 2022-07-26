@@ -1,12 +1,14 @@
-Entität: Store  
-==============  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entität: Shop  
+=============  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Store/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **Dieser Entitätstyp modelliert Läden/Geschäfte in der Stadt.**  
+Version: 0.0.1  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie des Geschäfts. Enum:'AutoErsatzteilLaden,FahrradLaden,BuchLaden,BekleidungsLaden,ComputerLaden,ConvenienceLaden,KaufhausLaden,ElektronikLaden,Blumenladen,MöbelLaden,GartenLaden,LebensmittelLaden,EisenwarenLaden,HobbyLaden,HaushaltswarenLaden,Juweliergeschäft,Spirituosengeschäft,Herrenbekleidungsgeschäft,HandyGeschäft,FilmVerleih,Musikgeschäft,BüroEinrichtung,OutletGeschäft,Pfandhaus,Tiergeschäft,Schuhgeschäft,Sportgeschäft,Reifengeschäft,Spielzeuggeschäft,Großhandel'  - `currenciesAccepted`: Enum:'AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. In diesem Geschäft akzeptierte Währungen. Es wird das Währungsformat ISO 4217 verwendet (z. B. USD, EUR)  - `dataProvider`: Eine Folge von Zeichen, die den Anbieter der harmonisierten Dateneinheit identifiziert.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `email`: Die E-Mail Adresse dieses Geschäfts.  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `logo`: Ein zugehöriges Logo für diesen Laden.  - `name`: Der Name dieses Elements.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einen bestimmten Dienst innerhalb eines Ortes liefert  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Ids der Eigentümer verweist  - `paymentAccepted`: In diesem Geschäft akzeptierte Zahlungsmethode.  - `seeAlso`: Liste von uri, die auf zusätzliche Ressourcen über das Element verweist  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL zum Quellobjekt.  - `telephone`: Die Telefonnummer dieser Filiale.  - `type`: NGSI Entity-Typ. Es muss Store sein  - `url`: Website mit Informationen über den Laden.    
+- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `category`: Kategorie des Geschäfts. Enum:'AutoErsatzteilLaden,FahrradLaden,BuchLaden,BekleidungsLaden,ComputerLaden,Verbrauchermarkt,Kaufhaus,ElektronikLaden,Blumenladen,MöbelLaden,GartenLaden,LebensmittelLaden,EisenwarenLaden,HobbyLaden,HaushaltswarenLaden,Juweliergeschäft,Spirituosengeschäft,Herrenbekleidungsgeschäft,HandyGeschäft,Filmverleih,Musikgeschäft,Büroausstattungsgeschäft,OutletGeschäft,Pfandleihhaus,Tiergeschäft,Schuhgeschäft,Sportgeschäft,Reifengeschäft,Spielzeuggeschäft,Großhandelsgeschäft'  - `currenciesAccepted`: Enum:'AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. In diesem Geschäft akzeptierte Währungen. Es wird das Währungsformat ISO 4217 verwendet (z. B. USD, EUR)  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `email`: Die E-Mail Adresse dieses Geschäfts.  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `logo`: Ein zugehöriges Logo für dieses Geschäft.  - `name`: Der Name dieses Artikels.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `paymentAccepted`: In diesem Geschäft akzeptierte Zahlungsarten.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `telephone`: Die Telefonnummer dieses Geschäfts.  - `type`: NGSI-Entitätstyp. Es muss Store sein  - `url`: Website mit Informationen über den Laden.    
 Erforderliche Eigenschaften  
 - `description`  - `id`  - `name`  - `type`    
 Das Modell basiert auf dem von [Schema.org](https://schema.org/Store) definierten Modell. Insbesondere enthält das Modell eine Teilmenge der in dem genannten Link definierten Eigenschaften und eine Liste von Speicherkategorien, die anschließend als konkrete Typen spezialisiert werden können (siehe [https://schema.org/Store](https://schema.org/Store)).  
@@ -38,17 +40,21 @@ Store:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
-      type: Property    
+      type: object    
       x-ngsi:    
         model: https://schema.org/address    
+        type: Property    
     alternateName:    
       description: 'An alternative name for this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     areaServed:    
       description: 'The geographic area where a service or offered item is provided'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     category:    
       description: 'Category of the store. Enum:''AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,JewelryStore,LiquorStore,MensClothingStore,MobilePhoneStore,MovieRentalStore,MusicStore,OfficeEquipmentStore,OutletStore,PawnShop,PetStore,ShoeStore,SportingGoodsStore,TireShop,ToyStore,WholesaleStore'''    
       enum:    
@@ -82,9 +88,10 @@ Store:
         - TireShop    
         - ToyStore    
         - WholesaleStore    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     currenciesAccepted:    
       description: 'Enum:''AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Currencies accepted in this store. It uses ISO 4217 currency format (e.g. USD, EUR)'    
       items:    
@@ -270,30 +277,40 @@ Store:
           - ZWL    
         type: string    
       minItems: 1    
-      type: Property    
+      type: array    
       uniqueItems: true    
       x-ngsi:    
         model: https://es.wikipedia.org/wiki/ISO_4217    
+        type: Property    
     dataProvider:    
       description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateCreated:    
       description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     dateModified:    
       description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
       format: date-time    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     description:    
       description: 'A description of this item'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     email:    
       description: 'The email address of this store.'    
       format: email    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     id:    
       anyOf: &store_-_properties_-_owner_-_items_-_anyof    
         - description: 'Property. Identifier format of any NGSI entity'    
@@ -305,7 +322,8 @@ Store:
           format: uri    
           type: string    
       description: 'Unique identifier of the entity'    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
@@ -457,60 +475,99 @@ Store:
             - coordinates    
           title: 'GeoJSON MultiPolygon'    
           type: object    
-      type: Geoproperty    
+      x-ngsi:    
+        type: Geoproperty    
     logo:    
       description: 'An associated logo for this store. '    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
     name:    
       description: 'The name of this item.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     openingHoursSpecification:    
       description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'    
       items:    
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
+        type: object    
       minItems: 1    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/openingHoursSpecification    
+        type: Property    
     owner:    
       description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
       items:    
         anyOf: *store_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
-      type: Property    
+      type: array    
+      x-ngsi:    
+        type: Property    
     paymentAccepted:    
       description: 'Payment method accepted in this store.'    
       items:    
         type: string    
-      type: Property    
+      type: array    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
@@ -521,37 +578,50 @@ Store:
           type: array    
         - format: uri    
           type: string    
-      type: Property    
+      x-ngsi:    
+        type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     telephone:    
       description: 'The telephone number of this store.'    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/Text    
+        type: Property    
     type:    
       description: 'NGSI Entity type. It has to be Store'    
       enum:    
         - Store    
-      type: Property    
+      type: string    
+      x-ngsi:    
+        type: Property    
     url:    
       description: 'Website with information about the store.'    
       format: uri    
-      type: Property    
+      type: string    
       x-ngsi:    
         model: https://schema.org/URL    
+        type: Property    
   required:    
     - id    
     - type    
     - name    
     - description    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Store/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/Store/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Beispiel-Nutzlasten  
 #### NGSI-v2-Schlüsselwerte speichern Beispiel  
-Hier ist ein Beispiel für einen Store im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-v2 bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen Store im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
   "id": "urn:ngsi-ld:Store:santander:COM4111",  
@@ -609,7 +679,7 @@ Store:
   "category": "GroceryStore"  
 }  
 ```  
-#### Speicher NGSI-v2 normalisiert Beispiel  
+#### Store NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für einen Store im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
@@ -711,171 +781,172 @@ Store:
 }  
 ```  
 #### NGSI-LD-Schlüsselwerte speichern Beispiel  
-Hier ist ein Beispiel für einen Store im JSON-LD-Format als Key-Values. Dies ist kompatibel mit NGSI-LD bei Verwendung von `options=keyValues` und liefert die Kontextdaten einer einzelnen Entität.  
+Hier ist ein Beispiel für einen Store im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:Store:santander:COM4111",  
-  "type": "Store",  
-  "source": {  
-    "type": "Text",  
-    "value": "https://api.smartsantander.eu/"  
-  },  
-  "dataProvider": {  
-    "type": "Text",  
-    "value": "http://www.smartsantander.eu/"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.8077562,  
-        43.4628255  
-      ]  
-    }  
-  },  
-  "name": {  
-    "type": "Text",  
-    "value": "MARTA KAUFMANN"  
-  },  
-  "description": {  
-    "type": "Text",  
-    "value": "Cosmetica natural fabricada en Santander."  
-  },  
-  "image": {  
-    "type": "Text",  
-    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"  
-  },  
-  "currenciesAccepted": {  
-    "type": "StructuredValue",  
-    "value": [  
-      "EUR"  
+    "id": "urn:ngsi-ld:Store:santander:COM4111",  
+    "type": "Store",  
+    "category": {  
+        "type": "Text",  
+        "value": "GroceryStore"  
+    },  
+    "currenciesAccepted": {  
+        "type": "StructuredValue",  
+        "value": [  
+            "EUR"  
+        ]  
+    },  
+    "dataProvider": {  
+        "type": "Text",  
+        "value": "http://www.smartsantander.eu/"  
+    },  
+    "description": {  
+        "type": "Text",  
+        "value": "Cosmetica natural fabricada en Santander."  
+    },  
+    "email": {  
+        "type": "Text",  
+        "value": "email@example.com"  
+    },  
+    "image": {  
+        "type": "Text",  
+        "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.8077562,  
+                43.4628255  
+            ]  
+        }  
+    },  
+    "logo": {  
+        "type": "Text",  
+        "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"  
+    },  
+    "name": {  
+        "type": "Text",  
+        "value": "MARTA KAUFMANN"  
+    },  
+    "openingHoursSpecification": {  
+        "type": "StructuredValue",  
+        "value": [  
+            {  
+                "opens": "00:02:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Monday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Tuesday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Wednesday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Thursday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Friday"  
+            }  
+        ]  
+    },  
+    "paymentAccepted:": {  
+        "type": "StructuredValue",  
+        "value": [  
+            "cash",  
+            "paypal"  
+        ]  
+    },  
+    "source": {  
+        "type": "Text",  
+        "value": "https://api.smartsantander.eu/"  
+    },  
+    "telephone": {  
+        "type": "Text",  
+        "value": "(+34) 942 123 123"  
+    },  
+    "url": {  
+        "type": "Text",  
+        "value": "https://exampleStoreUrl.com"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
-  },  
-  "paymentAccepted:": {  
-    "type": "StructuredValue",  
-    "value": [  
-      "cash",  
-      "paypal"  
-    ]  
-  },  
-  "openingHoursSpecification": {  
-    "type": "StructuredValue",  
-    "value": [  
-      {  
-        "opens": "00:02:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Monday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Tuesday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Wednesday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Thursday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Friday"  
-      }  
-    ]  
-  },  
-  "logo": {  
-    "type": "Text",  
-    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"  
-  },  
-  "telephone": {  
-    "type": "Text",  
-    "value": "(+34) 942 123 123"  
-  },  
-  "email": {  
-    "type": "Text",  
-    "value": "email@example.com"  
-  },  
-  "url": {  
-    "type": "Text",  
-    "value": "https://exampleStoreUrl.com"  
-  },  
-  "category": {  
-    "type": "Text",  
-    "value": "GroceryStore"  
-  }  
 }  
 ```  
-#### Speicher NGSI-LD normalisiert Beispiel  
+#### NGSI-LD normalisiert speichern Beispiel  
 Hier ist ein Beispiel für einen Store im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:Store:santander:COM4111",  
-  "type": "Store",  
-  "source": "https://api.smartsantander.eu/",  
-  "dataProvider": "http://www.smartsantander.eu/",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -3.8077562,  
-      43.4628255  
+    "id": "urn:ngsi-ld:Store:santander:COM4111",  
+    "type": "Store",  
+    "category": "GroceryStore",  
+    "currenciesAccepted": [  
+        "EUR"  
+    ],  
+    "dataProvider": "http://www.smartsantander.eu/",  
+    "description": "Cosmetica natural fabricada en Santander.",  
+    "email": "email@example.com",  
+    "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -3.8077562,  
+            43.4628255  
+        ]  
+    },  
+    "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",  
+    "name": "MARTA KAUFMANN",  
+    "openingHoursSpecification": [  
+        {  
+            "opens": "00:02:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Monday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Tuesday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Wednesday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Thursday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Friday"  
+        }  
+    ],  
+    "paymentAccepted:": [  
+        "cash",  
+        "paypal"  
+    ],  
+    "source": "https://api.smartsantander.eu/",  
+    "telephone": "(+34) 942 123 123",  
+    "url": "https://exampleStoreUrl.com",  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "name": "MARTA KAUFMANN",  
-  "description": "Cosmetica natural fabricada en Santander.",  
-  "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",  
-  "currenciesAccepted": [  
-    "EUR"  
-  ],  
-  "paymentAccepted:": [  
-    "cash",  
-    "paypal"  
-  ],  
-  "openingHoursSpecification": [  
-    {  
-      "opens": "00:02:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Monday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Tuesday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Wednesday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Thursday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Friday"  
-    }  
-  ],  
-  "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",  
-  "telephone": "(+34) 942 123 123",  
-  "email": "email@example.com",  
-  "url": "https://exampleStoreUrl.com",  
-  "category": "GroceryStore"  
 }  
 ```  
-Siehe [FAQ 10](https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
