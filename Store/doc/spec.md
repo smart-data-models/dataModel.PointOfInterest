@@ -1,8 +1,10 @@
-Entity: Store  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Store  
 =============  
 [Open License](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Store/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **This entity Type models stores/shops in the city.**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -493,27 +495,58 @@ Store:
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
+        type: object    
       minItems: 1    
       type: array    
       x-ngsi:    
@@ -578,6 +611,12 @@ Store:
     - name    
     - description    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Store/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/Store/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
@@ -745,168 +784,169 @@ Store:
 Here is an example of a Store in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:Store:santander:COM4111",  
-  "type": "Store",  
-  "source": {  
-    "type": "Text",  
-    "value": "https://api.smartsantander.eu/"  
-  },  
-  "dataProvider": {  
-    "type": "Text",  
-    "value": "http://www.smartsantander.eu/"  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -3.8077562,  
-        43.4628255  
-      ]  
-    }  
-  },  
-  "name": {  
-    "type": "Text",  
-    "value": "MARTA KAUFMANN"  
-  },  
-  "description": {  
-    "type": "Text",  
-    "value": "Cosmetica natural fabricada en Santander."  
-  },  
-  "image": {  
-    "type": "Text",  
-    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"  
-  },  
-  "currenciesAccepted": {  
-    "type": "StructuredValue",  
-    "value": [  
-      "EUR"  
+    "id": "urn:ngsi-ld:Store:santander:COM4111",  
+    "type": "Store",  
+    "category": {  
+        "type": "Text",  
+        "value": "GroceryStore"  
+    },  
+    "currenciesAccepted": {  
+        "type": "StructuredValue",  
+        "value": [  
+            "EUR"  
+        ]  
+    },  
+    "dataProvider": {  
+        "type": "Text",  
+        "value": "http://www.smartsantander.eu/"  
+    },  
+    "description": {  
+        "type": "Text",  
+        "value": "Cosmetica natural fabricada en Santander."  
+    },  
+    "email": {  
+        "type": "Text",  
+        "value": "email@example.com"  
+    },  
+    "image": {  
+        "type": "Text",  
+        "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -3.8077562,  
+                43.4628255  
+            ]  
+        }  
+    },  
+    "logo": {  
+        "type": "Text",  
+        "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"  
+    },  
+    "name": {  
+        "type": "Text",  
+        "value": "MARTA KAUFMANN"  
+    },  
+    "openingHoursSpecification": {  
+        "type": "StructuredValue",  
+        "value": [  
+            {  
+                "opens": "00:02:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Monday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Tuesday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Wednesday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Thursday"  
+            },  
+            {  
+                "opens": "00:01:00",  
+                "closes": "23:59:00",  
+                "dayOfWeek": "Friday"  
+            }  
+        ]  
+    },  
+    "paymentAccepted:": {  
+        "type": "StructuredValue",  
+        "value": [  
+            "cash",  
+            "paypal"  
+        ]  
+    },  
+    "source": {  
+        "type": "Text",  
+        "value": "https://api.smartsantander.eu/"  
+    },  
+    "telephone": {  
+        "type": "Text",  
+        "value": "(+34) 942 123 123"  
+    },  
+    "url": {  
+        "type": "Text",  
+        "value": "https://exampleStoreUrl.com"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
-  },  
-  "paymentAccepted:": {  
-    "type": "StructuredValue",  
-    "value": [  
-      "cash",  
-      "paypal"  
-    ]  
-  },  
-  "openingHoursSpecification": {  
-    "type": "StructuredValue",  
-    "value": [  
-      {  
-        "opens": "00:02:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Monday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Tuesday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Wednesday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Thursday"  
-      },  
-      {  
-        "opens": "00:01:00",  
-        "closes": "23:59:00",  
-        "dayOfWeek": "Friday"  
-      }  
-    ]  
-  },  
-  "logo": {  
-    "type": "Text",  
-    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"  
-  },  
-  "telephone": {  
-    "type": "Text",  
-    "value": "(+34) 942 123 123"  
-  },  
-  "email": {  
-    "type": "Text",  
-    "value": "email@example.com"  
-  },  
-  "url": {  
-    "type": "Text",  
-    "value": "https://exampleStoreUrl.com"  
-  },  
-  "category": {  
-    "type": "Text",  
-    "value": "GroceryStore"  
-  }  
 }  
 ```  
 #### Store NGSI-LD normalized Example    
 Here is an example of a Store in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://smart-data-models.github.io/data-models/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "id": "urn:ngsi-ld:Store:santander:COM4111",  
-  "type": "Store",  
-  "source": "https://api.smartsantander.eu/",  
-  "dataProvider": "http://www.smartsantander.eu/",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -3.8077562,  
-      43.4628255  
+    "id": "urn:ngsi-ld:Store:santander:COM4111",  
+    "type": "Store",  
+    "category": "GroceryStore",  
+    "currenciesAccepted": [  
+        "EUR"  
+    ],  
+    "dataProvider": "http://www.smartsantander.eu/",  
+    "description": "Cosmetica natural fabricada en Santander.",  
+    "email": "email@example.com",  
+    "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -3.8077562,  
+            43.4628255  
+        ]  
+    },  
+    "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",  
+    "name": "MARTA KAUFMANN",  
+    "openingHoursSpecification": [  
+        {  
+            "opens": "00:02:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Monday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Tuesday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Wednesday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Thursday"  
+        },  
+        {  
+            "opens": "00:01:00",  
+            "closes": "23:59:00",  
+            "dayOfWeek": "Friday"  
+        }  
+    ],  
+    "paymentAccepted:": [  
+        "cash",  
+        "paypal"  
+    ],  
+    "source": "https://api.smartsantander.eu/",  
+    "telephone": "(+34) 942 123 123",  
+    "url": "https://exampleStoreUrl.com",  
+    "@context": [  
+        "https://smart-data-models.github.io/data-models/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
     ]  
-  },  
-  "name": "MARTA KAUFMANN",  
-  "description": "Cosmetica natural fabricada en Santander.",  
-  "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",  
-  "currenciesAccepted": [  
-    "EUR"  
-  ],  
-  "paymentAccepted:": [  
-    "cash",  
-    "paypal"  
-  ],  
-  "openingHoursSpecification": [  
-    {  
-      "opens": "00:02:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Monday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Tuesday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Wednesday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Thursday"  
-    },  
-    {  
-      "opens": "00:01:00",  
-      "closes": "23:59:00",  
-      "dayOfWeek": "Friday"  
-    }  
-  ],  
-  "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",  
-  "telephone": "(+34) 942 123 123",  
-  "email": "email@example.com",  
-  "url": "https://exampleStoreUrl.com",  
-  "category": "GroceryStore"  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
