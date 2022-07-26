@@ -1,8 +1,10 @@
-Entity: Museum  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: Museum  
 ==============  
 [Open License](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Museum/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **A museum**  
+version: 0.0.1  
 
 ## List of properties  
 
@@ -448,27 +450,58 @@ Museum:
         properties:    
           closes:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           dayOfWeek:    
-            enum:    
-              - Monday    
-              - Tuesday    
-              - Wednesday    
-              - Thursday    
-              - Friday    
-              - Saturday    
-              - Sunday    
-              - PublicHolidays    
+            anyOf:    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - Monday    
+                  - Tuesday    
+                  - Wednesday    
+                  - Thursday    
+                  - Friday    
+                  - Saturday    
+                  - Sunday    
+                  - PublicHolidays    
+                type: string    
+              - description: 'Property. Array of days of the week.'    
+                enum:    
+                  - https://schema.org/Monday    
+                  - https://schema.org/Tuesday    
+                  - https://schema.org/Wednesday    
+                  - https://schema.org/Thursday    
+                  - https://schema.org/Friday    
+                  - https://schema.org/Saturday    
+                  - https://schema.org/Sunday    
+                  - https://schema.org/PublicHolidays    
+                type: string    
+            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
             type: string    
           opens:    
             format: time    
+            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
           validFrom:    
-            format: date-time    
-            type: string    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
           validThrough:    
-            format: date-time    
+            anyOf:    
+              - description: 'Property. Model:''http://schema.org/Date.'    
+                format: date    
+                type: string    
+              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                format: date-time    
+                type: string    
+            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
             type: string    
+        type: object    
       minItems: 1    
       type: array    
       x-ngsi:    
@@ -530,6 +563,12 @@ Museum:
     - location    
     - name    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Museum/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.1    
 ```  
 </details>    
 This entity type has been designed as an extension of [https://schema.org/Museum](https://schema.org/Museum) so that any property specified by schema.org and which domain is `https://schema.org/Museum` can be used by applications.  
@@ -708,189 +747,190 @@ Museum:
 Here is an example of a Museum in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
-  "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
-  "type": "Museum",  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "ES",  
-      "addressLocality": "Barcelona",  
-      "streetAddress": "Plaza Dels \u00c0ngels, 1",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "alternateName": {  
-    "type": "Property",  
-    "value": "MACBA"  
-  },  
-  "artPeriod": {  
-    "type": "Property",  
-    "value": [  
-      "contemporary"  
+    "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
+    "type": "Museum",  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "ES",  
+            "addressLocality": "Barcelona",  
+            "streetAddress": "Plaza Dels \u00c0ngels, 1",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "alternateName": {  
+        "type": "Property",  
+        "value": "MACBA"  
+    },  
+    "artPeriod": {  
+        "type": "Property",  
+        "value": [  
+            "contemporary"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."  
+    },  
+    "facilities": {  
+        "type": "Property",  
+        "value": [  
+            "shop",  
+            "cloakRoom",  
+            "guidedTour"  
+        ]  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                2.1668771521199393,  
+                41.38302235796602  
+            ]  
+        }  
+    },  
+    "museumType": {  
+        "type": "Property",  
+        "value": [  
+            "fineArts"  
+        ]  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Museo de Arte Contemporaneo de Barcelona"  
+    },  
+    "openingHoursSpecification": {  
+        "type": "Property",  
+        "value": [  
+            {  
+                "dayOfWeek": "Monday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Tuesday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Wednesday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Thurday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Friday",  
+                "closes": "19:30:00",  
+                "opens": "11:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Saturday",  
+                "closes": "21:00:00",  
+                "opens": "10:00:00"  
+            },  
+            {  
+                "dayOfWeek": "Sunday",  
+                "closes": "15:00:00",  
+                "opens": "10:00:00"  
+            }  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.tourspain.es"  
+    },  
+    "touristArea": {  
+        "type": "Property",  
+        "value": "Barcelona-Capital"  
+    },  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."  
-  },  
-  "facilities": {  
-    "type": "Property",  
-    "value": [  
-      "shop",  
-      "cloakRoom",  
-      "guidedTour"  
-    ]  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        2.1668771521199393,  
-        41.38302235796602  
-      ]  
-    }  
-  },  
-  "museumType": {  
-    "type": "Property",  
-    "value": [  
-      "fineArts"  
-    ]  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Museo de Arte Contemporaneo de Barcelona"  
-  },  
-  "openingHoursSpecification": {  
-    "type": "Property",  
-    "value": [  
-      {  
-        "dayOfWeek": "Monday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Tuesday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Wednesday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Thurday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Friday",  
-        "closes": "19:30:00",  
-        "opens": "11:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Saturday",  
-        "closes": "21:00:00",  
-        "opens": "10:00:00"  
-      },  
-      {  
-        "dayOfWeek": "Sunday",  
-        "closes": "15:00:00",  
-        "opens": "10:00:00"  
-      }  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.tourspain.es"  
-  },  
-  "touristArea": {  
-    "type": "Property",  
-    "value": "Barcelona-Capital"  
-  },  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
 #### Museum NGSI-LD normalized Example    
 Here is an example of a Museum in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-  "@context": [  
-    "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Barcelona",  
-    "streetAddress": "Plaza Dels \u00c0ngels, 1",  
-    "type": "PostalAddress"  
-  },  
-  "alternateName": "MACBA",  
-  "artPeriod": [  
-    "contemporary"  
-  ],  
-  "description": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995.",  
-  "facilities": [  
-    "shop",  
-    "cloakRoom",  
-    "guidedTour"  
-  ],  
-  "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
-  "location": {  
-    "coordinates": [  
-      2.1668771521199393,  
-      41.38302235796602  
+    "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
+    "type": "Museum",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Barcelona",  
+        "streetAddress": "Plaza Dels \u00c0ngels, 1",  
+        "type": "PostalAddress"  
+    },  
+    "alternateName": "MACBA",  
+    "artPeriod": [  
+        "contemporary"  
     ],  
-    "type": "Point"  
-  },  
-  "museumType": [  
-    "fineArts"  
-  ],  
-  "name": "Museo de Arte Contemporaneo de Barcelona",  
-  "openingHoursSpecification": [  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Monday",  
-      "opens": "11:00:00"  
+    "description": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995.",  
+    "facilities": [  
+        "shop",  
+        "cloakRoom",  
+        "guidedTour"  
+    ],  
+    "location": {  
+        "coordinates": [  
+            2.1668771521199393,  
+            41.38302235796602  
+        ],  
+        "type": "Point"  
     },  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Tuesday",  
-      "opens": "11:00:00"  
-    },  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Wednesday",  
-      "opens": "11:00:00"  
-    },  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Thurday",  
-      "opens": "11:00:00"  
-    },  
-    {  
-      "closes": "19:30:00",  
-      "dayOfWeek": "Friday",  
-      "opens": "11:00:00"  
-    },  
-    {  
-      "closes": "21:00:00",  
-      "dayOfWeek": "Saturday",  
-      "opens": "10:00:00"  
-    },  
-    {  
-      "closes": "15:00:00",  
-      "dayOfWeek": "Sunday",  
-      "opens": "10:00:00"  
-    }  
-  ],  
-  "source": "http://www.tourspain.es",  
-  "touristArea": "Barcelona-Capital",  
-  "type": "Museum"  
+    "museumType": [  
+        "fineArts"  
+    ],  
+    "name": "Museo de Arte Contemporaneo de Barcelona",  
+    "openingHoursSpecification": [  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Monday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Tuesday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Wednesday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Thurday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "19:30:00",  
+            "dayOfWeek": "Friday",  
+            "opens": "11:00:00"  
+        },  
+        {  
+            "closes": "21:00:00",  
+            "dayOfWeek": "Saturday",  
+            "opens": "10:00:00"  
+        },  
+        {  
+            "closes": "15:00:00",  
+            "dayOfWeek": "Sunday",  
+            "opens": "10:00:00"  
+        }  
+    ],  
+    "source": "http://www.tourspain.es",  
+    "touristArea": "Barcelona-Capital",  
+    "@context": [  
+        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+    ]  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
