@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entità: Negozio  
-===============  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Store/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descrizione globale: **Questa entità Tipo modella i negozi/esercizi della città.**  
 versione: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `category`: Categoria del negozio. Enum:AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodstore,Negozio di gioielli, negozio di liquori, negozio di abbigliamento maschile, negozio di telefoni cellulari, negozio di film, negozio di musica, negozio di articoli per ufficio, negozio di outlet, negozio di pegni, negozio di animali, negozio di scarpe, negozio di articoli sportivi, negozio di pneumatici, negozio di giocattoli, negozio all'ingrosso".  - `currenciesAccepted`: Enum:'AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Valute accettate in questo negozio. Utilizza il formato di valuta ISO 4217 (ad es. USD, EUR).  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `email`: L'indirizzo e-mail di questo negozio.  - `id`: Identificatore univoco dell'entità  - `location`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `logo`: Un logo associato per questo negozio.  - `name`: Il nome di questo elemento.  - `openingHoursSpecification`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `paymentAccepted`: Metodo di pagamento accettato in questo negozio.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `telephone`: Il numero di telefono di questo negozio.  - `type`: Tipo di entità NGSI. Deve essere Store  - `url`: Sito web con informazioni sul negozio.    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: Categoria del negozio. Enum:AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodstore,Negozio di gioielli, negozio di liquori, negozio di abbigliamento maschile, negozio di telefoni cellulari, negozio di film, negozio di musica, negozio di articoli per ufficio, negozio di outlet, negozio di pegni, negozio di animali, negozio di scarpe, negozio di articoli sportivi, negozio di pneumatici, negozio di giocattoli, negozio all'ingrosso".  . Model: [https://schema.org/Text](https://schema.org/Text)- `currenciesAccepted[array]`: Enum:'AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Valute accettate in questo negozio. Utilizza il formato di valuta ISO 4217 (ad es. USD, EUR).  . Model: [https://es.wikipedia.org/wiki/ISO_4217](https://es.wikipedia.org/wiki/ISO_4217)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `email[string]`: L'indirizzo e-mail di questo negozio.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `logo[string]`: Un logo associato per questo negozio.  . Model: [https://schema.org/URL](https://schema.org/URL)- `name[string]`: Il nome di questo elemento.  - `openingHoursSpecification[array]`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `paymentAccepted[array]`: Metodo di pagamento accettato in questo negozio.  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `telephone[string]`: Il numero di telefono di questo negozio.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo di entità NGSI. Deve essere Store  - `url[string]`: Sito web con informazioni sul negozio.  . Model: [https://schema.org/URL](https://schema.org/URL)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `description`  - `id`  - `name`  - `type`    
+- `description`  - `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Il modello è basato su quello definito da [Schema.org](https://schema.org/Store). In particolare, il modello contiene un sottoinsieme delle proprietà definite nel link citato e un elenco di categorie di negozi, che possono essere successivamente specializzate come tipi concreti (vedere [https://schema.org/Store](https://schema.org/Store)).  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Store:    
@@ -619,9 +632,14 @@ Store:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Esempi di payload  
 #### Memorizzare i valori chiave NGSI-v2 Esempio  
 Ecco un esempio di Store in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Store:santander:COM4111",  
@@ -679,8 +697,10 @@ Store:
   "category": "GroceryStore"  
 }  
 ```  
+</details>  
 #### Store NGSI-v2 normalizzato Esempio  
 Ecco un esempio di Store in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:Store:santander:COM4111",  
@@ -780,8 +800,10 @@ Store:
   }  
 }  
 ```  
+</details>  
 #### Memorizzare i valori chiave NGSI-LD Esempio  
 Ecco un esempio di Store in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Store:santander:COM4111",  
@@ -886,8 +908,10 @@ Store:
     ]  
 }  
 ```  
+</details>  
 #### Memorizzazione NGSI-LD normalizzata Esempio  
 Ecco un esempio di Store in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Store:santander:COM4111",  
@@ -945,8 +969,17 @@ Store:
     "url": "https://exampleStoreUrl.com",  
     "@context": [  
         "https://smart-data-models.github.io/data-models/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
