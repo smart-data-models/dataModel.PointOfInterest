@@ -1,17 +1,32 @@
-エンティティビーチ  
-=========  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティビーチ  
+=========<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Beach/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述。**このエンティティは、ビーチの調和のとれた地理的記述を含んでいます。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述。**このエンティティは、ビーチの調和された地理的な説明を含んでいます。  
+バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `accessType`: Enum:'privateVehicle, boat, onFoot, publicTransport'.このビーチへの行き方を説明します。  - `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `beachType`: さまざまな基準によるビーチのタイプ。Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'.または、アプリケーションが必要とするその他の値。  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `facilities`: このビーチで提供されている様々な施設について説明しています。Enum:'遊歩道、シャワー、清掃サービス、ライフガード、日除けのレンタル、サンラウンジャーのレンタル、水上バイクのレンタル、トイレ、ツーリストオフィス、ゴミ箱、電話、サーフィン練習場、障害者のための施設'  - `id`: エンティティのユニークな識別子  - `length`: このビーチの長さ  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `occupationRate`: このビーチの典型的な占有率。Enum:'低、中、高、なし'  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `peopleOccupancy`: その場所にいる人の数  - `refSeeAlso`: 1つまたは複数の関連するエンティティへの参照のリスト。  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。それはBeachでなければならない。  - `width`: このビーチの幅    
-必須項目  
-- `id`  - `location`  - `name`  - `type`    
-空間データを使用するアプリケーションで使用され、観光、環境、スマートシティの垂直セグメントと関連するIoTアプリケーションに適用されます。このデータモデルの開発にインスピレーションを与えたいくつかの例を提供してくれた[TURESPAÑA](https://www.tourspain.es/en-us)に特に感謝します。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます）  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `accessType[array]`: Enum:'privateVehicle, boat, onFoot, publicTransport'（自家用車、ボート、徒歩、公共交通機関）。このビーチへの行き方を記述します。  . Model: [https://schema.org/Text](https://schema.org/Text)- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `beachType[array]`: 異なる基準によるビーチのタイプ。Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'（白砂、都市、孤立、穏やかな水、青旗、Q品質、強い波、強風、黒砂）。または、アプリケーションで必要とされるその他の値。  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `facilities[array]`: このビーチが提供するさまざまな施設について説明します。Enum:'遊歩道、シャワー、清掃サービス、ライフガード、日除けレンタル、サンラウンジャーレンタル、水上クラフトレンタル、トイレ、観光案内所、ゴミ箱、電話、サーフィン練習場、障害者用アクセス'  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: エンティティの一意な識別子  - `length[number]`: このビーチの長さ  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `occupationRate[string]`: このビーチの典型的な占有率。Enum:'low, medium, high, none'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `peopleOccupancy[number]`: 撮影場所での人数  . Model: [https://schema.org/Number](https://schema.org/Number)- `refSeeAlso[array]`: 1つまたは複数の関連するエンティティへの参照のリスト。  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entityタイプ。ビーチである必要があります。  - `width[number]`: このビーチの幅  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+空間データを使用するアプリケーションで使用され、観光、環境、スマートシティの垂直セグメントと関連するIoTアプリケーションに適用されます。このデータモデルの開発のきっかけとなったいくつかの例を提供してくれた[TURESPAÑA](https://www.tourspain.es/en-us)に特別な謝意を表します。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Beach:    
@@ -392,10 +407,15 @@ Beach:
   x-version: 0.0.2    
 ```  
 </details>    
-このエンティティタイプは、[https://schema.org/Beach](https://schema.org/Beach)の拡張として設計されており、schema.orgで指定され、ドメインが`https://schema.org/Beach`であるプロパティをアプリケーションで使用できるようになっています。  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+このエンティティタイプは、schema.org で指定され、ドメインが `https://schema.org/Beach` である任意のプロパティをアプリケーションで使用できるように、[https://schema.org/Beach](英語) の拡張として設計されている。  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### ビーチNGSI-v2のキーバリューの例  
-ここでは、Beachをkey-valuesとしてJSON-LD形式で出力した例を紹介します。これは`options=keyValues`を使った場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### Beach NGSI-v2キーバリューの例  
+以下はBeachをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Beach-A-Concha-123456",  
@@ -419,8 +439,10 @@ Beach:
   "source": "http://www.tourspain.es"  
 }  
 ```  
-#### ビーチNGSI-v2の正規化例  
-正規化されたJSON-LD形式のBeachの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ビーチ NGSI-v2 正規化例  
+以下は、BeachをJSON-LD形式で正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Beach-A-Concha-123456",  
@@ -468,129 +490,141 @@ Beach:
   }  
 }  
 ```  
-#### ビーチNGSI-LDのキーバリューの例  
-ここでは、Beachをkey-valuesとしてJSON-LD形式で表現した例を紹介します。これは`options=keyValues`を使った場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### Beach NGSI-LDのキー値例  
+ここではBeachをJSON-LD形式でkey-valuesとした例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
-  "type": "Beach",  
-  "description": {  
-    "type": "Property",  
-    "value": "La Playa de A Concha se presenta ....."  
-  },  
-  "width": {  
-    "type": "Property",  
-    "value": 51  
-  },  
-  "accessType": {  
-    "type": "Property",  
-    "value": [  
-      "privateVehicle",  
-      "onFoot",  
-      "publicTransport"  
+    "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
+    "type": "Beach",  
+    "accessType": {  
+        "type": "Property",  
+        "value": [  
+            "privateVehicle",  
+            "onFoot",  
+            "publicTransport"  
+        ]  
+    },  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "ES",  
+            "addressLocality": "Vilagarc\u00eda de Arousa",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "beachType": {  
+        "type": "Property",  
+        "value": [  
+            "whiteSand",  
+            "urban",  
+            "calmWaters"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "La Playa de A Concha se presenta ....."  
+    },  
+    "facilities": {  
+        "type": "Property",  
+        "value": [  
+            "promenade",  
+            "showers",  
+            "cleaningServices",  
+            "lifeGuard"  
+        ]  
+    },  
+    "length": {  
+        "type": "Property",  
+        "value": 450  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.768460000000001,  
+                42.60214472222222  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Playa de a Concha"  
+    },  
+    "occupationRate": {  
+        "type": "Property",  
+        "value": "high"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.tourspain.es"  
+    },  
+    "width": {  
+        "type": "Property",  
+        "value": 51  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.768460000000001,  
-        42.60214472222222  
-      ]  
-    }  
-  },  
-  "facilities": {  
-    "type": "Property",  
-    "value": [  
-      "promenade",  
-      "showers",  
-      "cleaningServices",  
-      "lifeGuard"  
-    ]  
-  },  
-  "length": {  
-    "type": "Property",  
-    "value": 450  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.tourspain.es"  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "ES",  
-      "addressLocality": "Vilagarc\u00eda de Arousa",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "beachType": {  
-    "type": "Property",  
-    "value": [  
-      "whiteSand",  
-      "urban",  
-      "calmWaters"  
-    ]  
-  },  
-  "occupationRate": {  
-    "type": "Property",  
-    "value": "high"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Playa de a Concha"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### ビーチ NGSI-LDの正規化例  
-正規化されたJSON-LD形式のBeachの例を示します。これはオプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### ビーチ NGSI-LD 正規化例  
+以下は、BeachをJSON-LD形式で正規化した例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "accessType": [  
-    "privateVehicle",  
-    "onFoot",  
-    "publicTransport"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Vilagarc\u00eda de Arousa",  
-    "type": "PostalAddress"  
-  },  
-  "beachType": [  
-    "whiteSand",  
-    "urban",  
-    "calmWaters"  
-  ],  
-  "description": "La Playa de A Concha se presenta .....",  
-  "facilities": [  
-    "promenade",  
-    "showers",  
-    "cleaningServices",  
-    "lifeGuard"  
-  ],  
-  "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
-  "length": 450,  
-  "location": {  
-    "coordinates": [  
-      -8.768460000000001,  
-      42.60214472222222  
+    "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
+    "type": "Beach",  
+    "accessType": [  
+        "privateVehicle",  
+        "onFoot",  
+        "publicTransport"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "Playa de a Concha",  
-  "occupationRate": "high",  
-  "source": "http://www.tourspain.es",  
-  "type": "Beach",  
-  "width": 51  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Vilagarc\u00eda de Arousa",  
+        "type": "PostalAddress"  
+    },  
+    "beachType": [  
+        "whiteSand",  
+        "urban",  
+        "calmWaters"  
+    ],  
+    "description": "La Playa de A Concha se presenta .....",  
+    "facilities": [  
+        "promenade",  
+        "showers",  
+        "cleaningServices",  
+        "lifeGuard"  
+    ],  
+    "length": 450,  
+    "location": {  
+        "coordinates": [  
+            -8.768460000000001,  
+            42.60214472222222  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Playa de a Concha",  
+    "occupationRate": "high",  
+    "source": "http://www.tourspain.es",  
+    "width": 51,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+    ]  
 }  
 ```  
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
