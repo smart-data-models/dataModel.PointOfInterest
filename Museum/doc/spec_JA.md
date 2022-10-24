@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 事業体博物館  
-======  
+======<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Museum/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな説明**博物館**  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `artPeriod`: Wikipedia](https://en.wikipedia.org/wiki/Art_periods)で定義されている値。 - アプリケーションが必要とし、上記のリソースで説明されていないその他の拡張値。  - `buildingType`: 博物館を収容する建物の種類。Enum'先史時代の場所, アクロポリス, アルカサバ,水道橋, アルカサル, 円形劇場, アーチ, PolularArchitecture,basilica, 道路, 礼拝堂, cartuja, 貴族住宅, 居城, castro, カタコンベ, 大聖堂, 回廊,修道院、先史時代の洞窟、ドルメン、オフィスビル、住宅、工業ビル、軍事ビル、庵、要塞、彫刻グループ、教会、庭園、魚市場、マシア、マシアフォルティカーダ、ミナレット。修道院、一枚岩、城壁、ネクロポリス、メンヒル、邸宅、宮殿、パンテオン、パゾ、ピラミッド、橋、門、アーケード、城壁区域、聖域、墓、シナゴーグ、タウラスタライオツナベタス、テアトル、寺院、泉、塔。遺跡、大学、墓地、城塞寺院、土木工学、広場、セミナー、闘牛場、公共建築物、町、洞窟・観光鉱山、大聖堂、モスク、サーカス、古墳など  - `contactPoint`: 美術館のお問い合わせ先です。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `facilities`: この博物館が提供するさまざまな施設について説明します。Enum:'elevator, cafeteria, shop, auditory,conferenceRoom, audioguide, cloakRoom, forDisabled, forBabies, guidedTour, restaurant, ramp, reservation'. またはアプリケーションで必要なその他の値です。  - `featuredArtist`: 当館の主な取り扱い作家です。  - `historicalPeriod`: ISO8601の時間間隔。例えば1920年/1940年。間隔の2番目の要素は、'今まで'を表すために空のままにしておくことができる。カンマで区切られた年号のリスト、例えば1620,1625,1718。       - 年号のパターンで表される世紀。たとえば19xxは20世紀に相当します。また、196xは60年代の10年間に対応します。  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `museumType`: 展示内容に応じた美術館の種類。列挙する。応用美術、科学技術、美術、音楽、歴史、神聖美術、考古学、特殊美術、装飾美術、文学、医学・薬学、海事・交通、軍事、蝋人形、大衆美術・伝統、貨幣、ユネスコ、陶芸、嗜好美術。自然科学、先史時代、民族学、鉄道、鉱業、繊維、彫刻、複合芸術、絵画、古生物学、現代芸術、テーマ別、建築、美術館、大聖堂博物館、教区博物館、大学、現代芸術、闘牛'.上記以外の美術館の種類については、[Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum)が考えられる。  - `name`: このアイテムの名称です。  - `openingHoursSpecification`: ある場所の営業時間や、ある場所の中の特定のサービスに関する情報を提供する構造化された値  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refSeeAlso`: 1つまたは複数の関連するエンティティへの参照のリスト。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `touristArea`: この美術館が位置する観光地。正確な意味は、アプリケーションや対象となる国や地域に依存する場合があります。例えば、`Costa del Sol`のようなものです。  - `type`: NGSI エンティティの種類。それは博物館でなければなりません    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `artPeriod[array]`: Wikipedia](https://en.wikipedia.org/wiki/Art_periods)で定義されている値。 - アプリケーションが必要とし、上記のリソースで説明されていないその他の拡張値。  . Model: [https://schema.org/Text.Corresponds to the art period(s) of the exhibitions made by this museum](https://schema.org/Text.Corresponds to the art period(s) of the exhibitions made by this museum)- `buildingType[array]`: 博物館を収容する建物の種類。Enum'先史時代の場所, アクロポリス, アルカサバ,水道橋, アルカサル, 円形劇場, アーチ, PolularArchitecture,basilica, 道路, 礼拝堂, cartuja, 貴族住宅, 居城, castro, カタコンベ, 大聖堂, 回廊,修道院、先史時代の洞窟、ドルメン、オフィスビル、住宅、工業ビル、軍事ビル、庵、要塞、彫刻グループ、教会、庭園、魚市場、マシア、マシアフォルティカーダ、ミナレット。修道院、一枚岩、城壁、ネクロポリス、メンヒル、邸宅、宮殿、パンテオン、パゾ、ピラミッド、橋、門、アーケード、城壁区域、聖域、墓、シナゴーグ、タウラスタライオツナベタス、テアトル、寺院、泉、塔。遺跡、大学、墓地、城塞寺院、土木工学、広場、セミナー、闘牛場、公共建築物、町、洞窟・観光鉱山、大聖堂、モスク、サーカス、古墳など  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: 美術館のお問い合わせ先です。  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `facilities[array]`: この博物館が提供するさまざまな施設について説明します。Enum:'elevator, cafeteria, shop, auditory,conferenceRoom, audioguide, cloakRoom, forDisabled, forBabies, guidedTour, restaurant, ramp, reservation'. またはアプリケーションで必要なその他の値です。  . Model: [https://schema.org/Text](https://schema.org/Text)- `featuredArtist[array]`: 当館の主な取扱作家です。  . Model: [https://schema.org/Person](https://schema.org/Person)- `historicalPeriod[array]`: ISO8601の時間間隔。例えば1920年/1940年。間隔の2番目の要素は、'今まで'を表すために空のままにしておくことができる。カンマで区切られた年号のリスト、例えば1620,1625,1718。       - 年号のパターンで表される世紀。たとえば19xxは20世紀に相当します。また、196xは60年代の10年間に対応します。  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `museumType[array]`: 展示内容に応じた美術館の種類。列挙する。応用美術、科学技術、美術、音楽、歴史、神聖美術、考古学、特殊美術、装飾美術、文学、医学・薬学、海事・交通、軍事、蝋人形、大衆美術・伝統、貨幣、ユネスコ、陶芸、嗜好美術。自然科学、先史時代、民族学、鉄道、鉱業、繊維、彫刻、複合芸術、絵画、古生物学、現代芸術、テーマ別、建築、美術館、大聖堂博物館、教区博物館、大学、現代芸術、闘牛'.上記以外の美術館の種類については、[Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum)が考えられる。  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: このアイテムの名称です。  - `openingHoursSpecification[array]`: 場所の営業時間や場所内の特定のサービスに関する情報を提供する構造化された値  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `refSeeAlso[array]`: 1つまたは複数の関連するエンティティへの参照のリスト。  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `touristArea[string]`: この美術館が位置する観光地。正確な意味は、アプリケーションや対象となる国や地域に依存する場合があります。例えば、`Costa del Sol`のようなものです。  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI エンティティの種類。博物館である必要があります。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `location`  - `name`  - `type`    
+- `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 このエンティティは、美術館の調和された地理的記述を含む。空間データを使用するアプリケーションで使用され、Tourism, Cultural, Smart City の垂直セグメントと関連する IoT アプリケーションに適用可能である。このデータモデルの開発のきっかけとなったいくつかの例を提供してくれた[TURESPAÑA](https://www.tourspain.es/en-us)に特別な謝意を表します。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Museum:    
@@ -571,10 +584,15 @@ Museum:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
 このエンティティタイプは、schema.org で指定され、ドメインが `https://schema.org/Museum` である任意のプロパティをアプリケーションで使用できるように、[https://schema.org/Museum](英語) の拡張として設計されている。  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### 博物館NGSI-v2キーバリューの例  
 MuseumをJSON-LD形式でkey-valuesにした例です。これは、`options=keyValues`を使用した場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返す。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Museum-Barcelona-MACBA-1234",  
@@ -646,8 +664,10 @@ Museum:
   "touristArea": "Barcelona-Capital"  
 }  
 ```  
+</details>  
 #### 博物館 NGSI-v2 正規化例  
 以下は、正規化されたJSON-LD形式の博物館の例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Museum-Barcelona-MACBA-1234",  
@@ -743,8 +763,10 @@ Museum:
   }  
 }  
 ```  
+</details>  
 #### 博物館 NGSI-LDのキー値例  
-MuseumをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+MuseumをJSON-LD形式でkey-valuesにした例です。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
@@ -855,8 +877,10 @@ Museum:
     ]  
 }  
 ```  
+</details>  
 #### 博物館 NGSI-LD 正規化例  
 ここでは、正規化されたJSON-LD形式のミュージアムの例を示す。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
@@ -929,8 +953,17 @@ Museum:
     "touristArea": "Barcelona-Capital",  
     "@context": [  
         "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
