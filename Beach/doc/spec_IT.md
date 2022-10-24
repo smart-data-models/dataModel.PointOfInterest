@@ -1,17 +1,32 @@
-Entità: Spiaggia  
-================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entità: Spiaggia  
+================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Beach/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descrizione globale: **Questa entità contiene una descrizione geografica armonizzata di una spiaggia.  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descrizione globale: **Questa entità contiene una descrizione geografica armonizzata di una spiaggia **.  
+versione: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Elenco delle proprietà  
 
-- `accessType`: Enum:'privateVehicle, boat, onFoot, publicTransport'. Descrive come raggiungere questa spiaggia.  - `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito un servizio o un articolo offerto  - `beachType`: Tipo di spiaggia secondo diversi criteri. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. O qualsiasi altro valore necessario per un'applicazione.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Questo sarà di solito assegnato dalla piattaforma di archiviazione.  - `description`: Una descrizione di questo articolo  - `facilities`: Descrive i diversi servizi offerti da questa spiaggia. Enum:'passeggiata, docce, servizi di pulizia, bagnino, noleggio ombrelloni, noleggio sedie a sdraio, noleggio moto d'acqua, toilette, ufficio turistico, cestini, telefono, area di pratica del surf, accesso per disabili'.  - `id`: Identificatore unico dell'entità  - `length`: Lunghezza di questa spiaggia  - `location`: Riferimento Geojson all'elemento. Può essere Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: Il nome di questo articolo.  - `occupationRate`: Tasso di occupazione tipico di questa spiaggia. Enum:'basso, medio, alto, nessuno'.  - `owner`: Una lista contenente una sequenza di caratteri codificata in JSON che si riferisce agli ID unici dei proprietari  - `peopleOccupancy`: Quantità di persone nel luogo  - `refSeeAlso`: Elenco di riferimenti a una o più entità correlate.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che dà la fonte originale dei dati dell'entità come URL. Si raccomanda di essere il nome di dominio completamente qualificato del fornitore di origine, o l'URL dell'oggetto di origine.  - `type`: Tipo di entità NGSI. Deve essere Beach  - `width`: Larghezza di questa spiaggia    
+<sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
+- `accessType[array]`: Enum:'privateVehicle, boat, onFoot, publicTransport'. Descrive come raggiungere questa spiaggia.  . Model: [https://schema.org/Text](https://schema.org/Text)- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `beachType[array]`: Tipo di spiaggia in base a diversi criteri. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. O qualsiasi altro valore richiesto da un'applicazione.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `facilities[array]`: Descrive i diversi servizi offerti da questa spiaggia. Enum:'passeggiata, docce, servizi di pulizia, bagnino, noleggio ombrelloni, noleggio sdraio, noleggio imbarcazioni, servizi igienici, ufficio turistico, cestini per rifiuti, telefono, area per la pratica del surf, accesso per disabili'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Identificatore univoco dell'entità  - `length[number]`: Lunghezza della spiaggia  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento.  - `occupationRate[string]`: Tasso di occupazione tipico di questa spiaggia. Enum:'basso, medio, alto, nessuno'.  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `peopleOccupancy[number]`: Quantità di persone presenti sul posto  . Model: [https://schema.org/Number](https://schema.org/Number)- `refSeeAlso[array]`: Elenco di riferimenti a una o più entità correlate.  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Tipo di entità NGSI. Deve essere Beach  - `width[number]`: Larghezza della spiaggia  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Proprietà richieste  
-- `id`  - `location`  - `name`  - `type`    
-Viene utilizzato in applicazioni che utilizzano dati spaziali ed è applicabile ai segmenti verticali Turismo, Ambiente e Smart City e alle relative applicazioni IoT. Un ringraziamento speciale a [TURESPAÑA](https://www.tourspain.es/en-us) che ha fornito alcuni esempi che hanno ispirato lo sviluppo di questo modello di dati.  
-## Descrizione del modello di dati delle proprietà  
+- `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+È utilizzato nelle applicazioni che utilizzano dati spaziali ed è applicabile ai segmenti verticali del turismo, dell'ambiente e delle smart city e alle relative applicazioni IoT. Un ringraziamento speciale a [TURESPAÑA] (https://www.tourspain.es/en-us) che ha fornito alcuni esempi che hanno ispirato lo sviluppo di questo modello di dati.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Beach:    
@@ -392,10 +407,15 @@ Beach:
   x-version: 0.0.2    
 ```  
 </details>    
-Questo tipo di entità è stato progettato come estensione di [https://schema.org/Beach](https://schema.org/Beach) in modo che qualsiasi proprietà specificata da schema.org e il cui dominio è `https://schema.org/Beach` possa essere usata dalle applicazioni.  
-## Esempio di payloads  
-#### Beach NGSI-v2 valori chiave Esempio  
-Ecco un esempio di una spiaggia in formato JSON-LD come key-values. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+Questo tipo di entità è stato progettato come estensione di [https://schema.org/Beach](https://schema.org/Beach), in modo che qualsiasi proprietà specificata da schema.org e il cui dominio è `https://schema.org/Beach` possa essere utilizzata dalle applicazioni.  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
+## Esempi di payload  
+#### Beach NGSI-v2 valori-chiave Esempio  
+Ecco un esempio di una spiaggia in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Beach-A-Concha-123456",  
@@ -419,8 +439,10 @@ Beach:
   "source": "http://www.tourspain.es"  
 }  
 ```  
+</details>  
 #### Beach NGSI-v2 normalizzato Esempio  
-Ecco un esempio di una spiaggia in formato JSON-LD normalizzata. Questo è compatibile con NGSI-v2 quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di una spiaggia in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Beach-A-Concha-123456",  
@@ -468,129 +490,141 @@ Beach:
   }  
 }  
 ```  
+</details>  
 #### Beach NGSI-LD valori-chiave Esempio  
-Ecco un esempio di una spiaggia in formato JSON-LD come key-values. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di una spiaggia in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
-  "type": "Beach",  
-  "description": {  
-    "type": "Property",  
-    "value": "La Playa de A Concha se presenta ....."  
-  },  
-  "width": {  
-    "type": "Property",  
-    "value": 51  
-  },  
-  "accessType": {  
-    "type": "Property",  
-    "value": [  
-      "privateVehicle",  
-      "onFoot",  
-      "publicTransport"  
+    "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
+    "type": "Beach",  
+    "accessType": {  
+        "type": "Property",  
+        "value": [  
+            "privateVehicle",  
+            "onFoot",  
+            "publicTransport"  
+        ]  
+    },  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "ES",  
+            "addressLocality": "Vilagarc\u00eda de Arousa",  
+            "type": "PostalAddress"  
+        }  
+    },  
+    "beachType": {  
+        "type": "Property",  
+        "value": [  
+            "whiteSand",  
+            "urban",  
+            "calmWaters"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "La Playa de A Concha se presenta ....."  
+    },  
+    "facilities": {  
+        "type": "Property",  
+        "value": [  
+            "promenade",  
+            "showers",  
+            "cleaningServices",  
+            "lifeGuard"  
+        ]  
+    },  
+    "length": {  
+        "type": "Property",  
+        "value": 450  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.768460000000001,  
+                42.60214472222222  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Playa de a Concha"  
+    },  
+    "occupationRate": {  
+        "type": "Property",  
+        "value": "high"  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.tourspain.es"  
+    },  
+    "width": {  
+        "type": "Property",  
+        "value": 51  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.768460000000001,  
-        42.60214472222222  
-      ]  
-    }  
-  },  
-  "facilities": {  
-    "type": "Property",  
-    "value": [  
-      "promenade",  
-      "showers",  
-      "cleaningServices",  
-      "lifeGuard"  
-    ]  
-  },  
-  "length": {  
-    "type": "Property",  
-    "value": 450  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.tourspain.es"  
-  },  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "ES",  
-      "addressLocality": "Vilagarc\u00eda de Arousa",  
-      "type": "PostalAddress"  
-    }  
-  },  
-  "beachType": {  
-    "type": "Property",  
-    "value": [  
-      "whiteSand",  
-      "urban",  
-      "calmWaters"  
-    ]  
-  },  
-  "occupationRate": {  
-    "type": "Property",  
-    "value": "high"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Playa de a Concha"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### Beach NGSI-LD normalizzato Esempio  
-Ecco un esempio di una spiaggia in formato JSON-LD normalizzata. Questo è compatibile con NGSI-LD quando non usa opzioni e restituisce i dati di contesto di una singola entità.  
+Ecco un esempio di una spiaggia in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano le opzioni e restituisce i dati di contesto di una singola entità.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "accessType": [  
-    "privateVehicle",  
-    "onFoot",  
-    "publicTransport"  
-  ],  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Vilagarc\u00eda de Arousa",  
-    "type": "PostalAddress"  
-  },  
-  "beachType": [  
-    "whiteSand",  
-    "urban",  
-    "calmWaters"  
-  ],  
-  "description": "La Playa de A Concha se presenta .....",  
-  "facilities": [  
-    "promenade",  
-    "showers",  
-    "cleaningServices",  
-    "lifeGuard"  
-  ],  
-  "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
-  "length": 450,  
-  "location": {  
-    "coordinates": [  
-      -8.768460000000001,  
-      42.60214472222222  
+    "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
+    "type": "Beach",  
+    "accessType": [  
+        "privateVehicle",  
+        "onFoot",  
+        "publicTransport"  
     ],  
-    "type": "Point"  
-  },  
-  "name": "Playa de a Concha",  
-  "occupationRate": "high",  
-  "source": "http://www.tourspain.es",  
-  "type": "Beach",  
-  "width": 51  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Vilagarc\u00eda de Arousa",  
+        "type": "PostalAddress"  
+    },  
+    "beachType": [  
+        "whiteSand",  
+        "urban",  
+        "calmWaters"  
+    ],  
+    "description": "La Playa de A Concha se presenta .....",  
+    "facilities": [  
+        "promenade",  
+        "showers",  
+        "cleaningServices",  
+        "lifeGuard"  
+    ],  
+    "length": 450,  
+    "location": {  
+        "coordinates": [  
+            -8.768460000000001,  
+            42.60214472222222  
+        ],  
+        "type": "Point"  
+    },  
+    "name": "Playa de a Concha",  
+    "occupationRate": "high",  
+    "source": "http://www.tourspain.es",  
+    "width": 51,  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+    ]  
 }  
 ```  
-Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per avere una risposta su come trattare le unità di grandezza
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
