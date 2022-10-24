@@ -1,19 +1,32 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entität: Museum  
-===============  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/Museum/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Allgemeine Beschreibung: **Ein Museum**  
 Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `artPeriod`: Erlaubte Werte: - Die in [Wikipedia] (https://en.wikipedia.org/wiki/Art_periods) definierten Werte. - Jeder andere erweiterte Wert, der von einer Anwendung benötigt wird und nicht durch die oben genannte Ressource beschrieben ist.  - `buildingType`: Art des Gebäudes, in dem das Museum untergebracht ist. Enum:'PrähistorischerOrt, Akropolis, Alcazaba, Aquädukt, Alcazar, Amphitheater, Bogen, PolularArchitektur, Basilika, Straße, Kapelle, Cartuja, Adelshaus, Residenz, Burg, Castro, Katakomben, Kathedrale, Kloster, Kloster, prähistorische Höhle, Dolmen, Bürogebäude, Wohnhaus, Industriegebäude, Militärgebäude, Eremitage, Festung, Skulpturengruppen, Kirche, Garten, Fischmarkt, Masia, Masia Fortificada, Minarett, Kloster, Monolith, Mauern, Nekropole, Menhir, Herrenhaus, Palast, Pantheon, Pazo, Pyramide, Brücke, Tor, Arkade, ummauerter Bereich, Heiligtum, Grab, Synagoge, TaulasTalayotsNavetas, Theatrum, Tempel, Quelle, Turm, archäologische Stätte, Universität, Friedhof, befestigter Tempel, Ingenieurbau, Platz, Seminar, Stierkampfarena, öffentliches Gebäude, Stadt, Höhlen und touristische Minen, Kathedrale, Moschee, Zirkus, Grabhügel'  - `contactPoint`: Kontaktstelle für das Museum.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `facilities`: Beschreibt die verschiedenen Einrichtungen, die dieses Museum bietet. Enum:'Aufzug, Cafeteria, Shop, Hörsaal, Konferenzraum, Audioguide, Garderobe, fürBehinderte, fürBabys,Führung, Restaurant, Rampe, Reservierung'. oder jeder andere Wert, der von einer Anwendung benötigt wird.  - `featuredArtist`: Wichtigste(r) Künstler in diesem Museum.  - `historicalPeriod`: Ein ISO8601-Zeitintervall. Zum Beispiel 1920/1940. Das zweite Element des Intervalls kann leer gelassen werden, um "bis jetzt" zu kennzeichnen. Eine durch Komma getrennte Liste von Jahren, z. B. 1620, 1625, 1718.       - Ein Jahrhundert, dargestellt durch ein Jahresmuster, z. B. 19xx würde dem zwanzigsten Jahrhundert entsprechen. Und 196x würde dem Jahrzehnt der sechziger Jahre entsprechen.  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `museumType`: Typ des Museums entsprechend dem ausgestellten Inhalt. Aufzählung:AngewandteKunst,WissenschaftUndTechnik,BildendeKunst,Musik,Geschichte,SakraleKunst,Archäologie,Spezialitäten,DekorativeKunst,Literatur,MedizinUndApotheke,Schifffahrt,Transport,Militär,Wachs,VolkskunstUndTraditionen,Numismatik,Unesco,Keramik,Bekleidungskunst, Naturwissenschaft, Prähistorie, Ethnologie, Eisenbahn, Bergbau, Textil, Bildhauerei, multidisziplinär, Malerei, Paläontologie, moderne Kunst, thematisch, Architektur, Museumshaus, Kathedralenmuseum, Diözesanmuseum, Universität, zeitgenössische Kunst, Stierkampf". Eine weitere mögliche Quelle für oben nicht abgedeckte Museumstypen ist [Wikipedia] (https://en.wikipedia.org/wiki/Category:Types_of_museum).  - `name`: Der Name dieses Artikels.  - `openingHoursSpecification`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refSeeAlso`: Liste von Verweisen auf eine oder mehrere verwandte Entitäten.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `touristArea`: Touristengebiet, in dem sich das Museum befindet. Die genaue Semantik kann von der Anwendung oder dem Zielland oder der Region abhängen. Zum Beispiel `Costa del Sol`.  - `type`: NGSI-Entitätstyp. Es muss Museum sein    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `artPeriod[array]`: Erlaubte Werte: - Die in [Wikipedia] (https://en.wikipedia.org/wiki/Art_periods) definierten Werte. - Jeder andere erweiterte Wert, der von einer Anwendung benötigt wird und nicht durch die oben genannte Ressource beschrieben ist.  . Model: [https://schema.org/Text.Corresponds to the art period(s) of the exhibitions made by this museum](https://schema.org/Text.Corresponds to the art period(s) of the exhibitions made by this museum)- `buildingType[array]`: Art des Gebäudes, in dem das Museum untergebracht ist. Enum:'PrähistorischerOrt, Akropolis, Alcazaba, Aquädukt, Alcazar, Amphitheater, Bogen, PolularArchitektur, Basilika, Straße, Kapelle, Cartuja, Adelshaus, Residenz, Burg, Castro, Katakomben, Kathedrale, Kloster, Kloster, prähistorische Höhle, Dolmen, Bürogebäude, Wohngebäude, Industriegebäude, Militärgebäude, Einsiedelei, Festung, Skulpturengruppen, Kirche, Garten, Fischmarkt, Masia, Masia Fortificada, Minarett, Kloster, Monolith, Mauern, Nekropole, Menhir, Herrenhaus, Palast, Pantheon, Pazo, Pyramide, Brücke, Tor, Arkade, ummauerter Bereich, Heiligtum, Grab, Synagoge, TaulasTalayotsNavetas, Theatrum, Tempel, Quelle, Turm, archäologische Stätte, Universität, Friedhof, befestigter Tempel, Ingenieurbau, Platz, Seminar, Stierkampfarena, öffentliches Gebäude, Stadt, Höhlen und touristische Minen, Kathedrale, Moschee, Zirkus, Grabhügel'  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: Kontaktstelle für das Museum.  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `facilities[array]`: Beschreibt die verschiedenen Einrichtungen, die dieses Museum bietet. Enum:'Aufzug, Cafeteria, Shop, Hörsaal, Konferenzraum, Audioguide, Garderobe, fürBehinderte, fürBabys,Führung, Restaurant, Rampe, Reservierung'. oder jeder andere Wert, der von einer Anwendung benötigt wird.  . Model: [https://schema.org/Text](https://schema.org/Text)- `featuredArtist[array]`: Wichtigste(r) Künstler in diesem Museum.  . Model: [https://schema.org/Person](https://schema.org/Person)- `historicalPeriod[array]`: Ein ISO8601-Zeitintervall. Zum Beispiel 1920/1940. Das zweite Element des Intervalls kann leer gelassen werden, um "bis jetzt" zu kennzeichnen. Eine durch Komma getrennte Liste von Jahren, z. B. 1620, 1625, 1718.       - Ein Jahrhundert, dargestellt durch ein Jahresmuster, z. B. 19xx würde dem zwanzigsten Jahrhundert entsprechen. Und 196x würde dem Jahrzehnt der sechziger Jahre entsprechen.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `museumType[array]`: Typ des Museums entsprechend dem ausgestellten Inhalt. Aufzählung:AngewandteKunst,WissenschaftUndTechnik,BildendeKunst,Musik,Geschichte,SakraleKunst,Archäologie,Spezialitäten,DekorativeKunst,Literatur,MedizinUndApotheke,Schifffahrt,Transport,Militär,Wachs,VolkskunstUndTraditionen,Numismatik,Unesco,Keramik,Bekleidungskunst, Naturwissenschaft, Prähistorie, Ethnologie, Eisenbahn, Bergbau, Textil, Bildhauerei, Multidisziplinär, Malerei, Paläontologie, Moderne Kunst, Thematisch, Architektur, Museumshaus, Kathedralenmuseum, Diözesanmuseum, Universität, Zeitgenössische Kunst, Stierkampf". Eine weitere mögliche Quelle für oben nicht abgedeckte Museumstypen ist [Wikipedia] (https://en.wikipedia.org/wiki/Category:Types_of_museum).  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: Der Name dieses Artikels.  - `openingHoursSpecification[array]`: Ein strukturierter Wert, der Informationen über die Öffnungszeiten eines Ortes oder einer bestimmten Dienstleistung an einem Ort liefert  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refSeeAlso[array]`: Liste von Verweisen auf eine oder mehrere verwandte Entitäten.  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `touristArea[string]`: Touristengebiet, in dem sich das Museum befindet. Die genaue Semantik kann von der Anwendung oder dem Zielland oder der Region abhängen. Zum Beispiel `Costa del Sol`.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: NGSI-Entitätstyp. Es muss Museum sein  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `location`  - `name`  - `type`    
-Diese Entität enthält eine harmonisierte geografische Beschreibung eines Museums. Es wird in Anwendungen verwendet, die räumliche Daten nutzen, und ist für die vertikalen Segmente Tourismus, Kultur und Smart City sowie für damit verbundene IoT-Anwendungen geeignet. Besonderer Dank geht an [TURESPAÑA] (https://www.tourspain.es/en-us), die einige Beispiele zur Verfügung gestellt hat, die die Entwicklung dieses Datenmodells inspiriert haben.  
+- `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+Diese Einheit enthält eine harmonisierte geografische Beschreibung eines Museums. Es wird in Anwendungen verwendet, die räumliche Daten nutzen, und ist für die vertikalen Segmente Tourismus, Kultur und Smart City sowie für damit verbundene IoT-Anwendungen geeignet. Besonderer Dank geht an [TURESPAÑA] (https://www.tourspain.es/en-us), die einige Beispiele zur Verfügung gestellt hat, die die Entwicklung dieses Datenmodells inspiriert haben.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Museum:    
@@ -571,10 +584,15 @@ Museum:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
 Dieser Entitätstyp wurde als Erweiterung von [https://schema.org/Museum](https://schema.org/Museum) entwickelt, so dass jede von schema.org spezifizierte Eigenschaft, deren Domäne `https://schema.org/Museum` ist, von Anwendungen verwendet werden kann.  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### Museum NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für ein Museum im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Museum-Barcelona-MACBA-1234",  
@@ -646,8 +664,10 @@ Museum:
   "touristArea": "Barcelona-Capital"  
 }  
 ```  
+</details>  
 #### Museum NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für ein Museum im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "Museum-Barcelona-MACBA-1234",  
@@ -743,8 +763,10 @@ Museum:
   }  
 }  
 ```  
+</details>  
 #### Museum NGSI-LD key-values Beispiel  
 Hier ist ein Beispiel für ein Museum im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
@@ -855,8 +877,10 @@ Museum:
     ]  
 }  
 ```  
+</details>  
 #### Museum NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für ein Museum im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
     "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
@@ -929,8 +953,17 @@ Museum:
     "touristArea": "Barcelona-Capital",  
     "@context": [  
         "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
