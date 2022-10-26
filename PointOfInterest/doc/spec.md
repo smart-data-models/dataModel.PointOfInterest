@@ -1,17 +1,32 @@
-Entity: PointOfInterest  
-=======================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: PointOfInterest  
+=======================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **This entity contains a harmonised geographic description of a Point of Interest**  
+version: 0.2.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `additionalInfoURL`: URL from which additional information of the subject can be obtained  - `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `category`: Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.  - `contactPoint`: The details to contact with the item.  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refSeeAlso`: List of references to one or more related entities.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be PointOfInterest  - `wardId`: Ward ID of the entity corresponding to this observation.  - `zoneId`: Zone ID of the entity corresponding to this observation.  - `zoneName`: Zone name of the entity corresponding to this observation.    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `additionalInfoURL[*]`: URL from which additional information of the subject can be obtained  - `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: The details to contact with the item.  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refSeeAlso[array]`: List of references to one or more related entities.  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI Entity type. It has to be PointOfInterest  - `wardId[string]`: Ward ID of the entity corresponding to this observation.  - `zoneId[string]`: Zone ID of the entity corresponding to this observation.  - `zoneName[string]`: Zone name of the entity corresponding to this observation.  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `category`  - `id`  - `name`  - `type`    
+- `category`  - `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 This entity is used in applications that use spatial data and is applicable to Automotive, Environment, Industry and Smart City vertical segments and related IoT applications. This data model has been created in cooperation with the GSMA and the members of the [IoT Big Data Project](http://www.gsma.com/iot/iot-big-data/). Created with contributions of IUDX project.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PointOfInterest:    
@@ -365,9 +380,14 @@ PointOfInterest:
   x-version: 0.2.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### PointOfInterest NGSI-v2 key-values Example    
 Here is an example of a PointOfInterest in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:PointOfInterest-A-Concha-123456",  
@@ -398,8 +418,10 @@ PointOfInterest:
   "zoneName": ""  
 }  
 ```  
+</details>  
 #### PointOfInterest NGSI-v2 normalized Example    
 Here is an example of a PointOfInterest in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "PointOfInterest-A-Concha-123456",  
@@ -463,109 +485,121 @@ PointOfInterest:
   }  
 }  
 ```  
+</details>  
 #### PointOfInterest NGSI-LD key-values Example    
 Here is an example of a PointOfInterest in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
-  "type": "PointOfInterest",  
-  "category": [  
-    "113"  
-  ],  
-  "description": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia.",  
-  "refSeeAlso": [  
-    "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
-  ],  
-  "source": "http://www.tourspain.es",  
-  "location": {  
-    "type": "Point",  
-    "coordinates": [  
-      -8.768460000000001,  
-      42.60214472222222  
+    "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
+    "type": "PointOfInterest",  
+    "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
+    "address": {  
+        "addressCountry": "ES",  
+        "addressLocality": "Vilagarcia de Arousa"  
+    },  
+    "category": [  
+        "113"  
+    ],  
+    "description": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia.",  
+    "location": {  
+        "type": "Point",  
+        "coordinates": [  
+            -8.768460000000001,  
+            42.60214472222222  
+        ]  
+    },  
+    "name": "Playa de a Concha",  
+    "refSeeAlso": [  
+        "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
+    ],  
+    "source": "http://www.tourspain.es",  
+    "wardId": "",  
+    "zoneId": "",  
+    "zoneName": "",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
-  },  
-  "address": {  
-    "addressCountry": "ES",  
-    "addressLocality": "Vilagarcia de Arousa"  
-  },  
-  "name": "Playa de a Concha",  
-  "wardId": "",  
-  "zoneId": "",  
-  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
-  "zoneName": "",  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
+</details>  
 #### PointOfInterest NGSI-LD normalized Example    
 Here is an example of a PointOfInterest in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
-  "type": "PointOfInterest",  
-  "address": {  
-    "type": "Property",  
-    "value": {  
-      "addressCountry": "ES",  
-      "addressLocality": "Vilagarcia de Arousa"  
-    }  
-  },  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "113"  
+    "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
+    "type": "PointOfInterest",  
+    "additionalInfoURL": {  
+        "type": "Relationship",  
+        "value": "urn:ngsi-ld:Point:34E4:A234"  
+    },  
+    "address": {  
+        "type": "Property",  
+        "value": {  
+            "addressCountry": "ES",  
+            "addressLocality": "Vilagarcia de Arousa"  
+        }  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "113"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia."  
+    },  
+    "location": {  
+        "type": "GeoProperty",  
+        "value": {  
+            "type": "Point",  
+            "coordinates": [  
+                -8.768460000000001,  
+                42.60214472222222  
+            ]  
+        }  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Playa de a Concha"  
+    },  
+    "refSeeAlso": {  
+        "type": "Property",  
+        "value": [  
+            "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
+        ]  
+    },  
+    "source": {  
+        "type": "Property",  
+        "value": "http://www.tourspain.es"  
+    },  
+    "wardId": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "zoneId": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "zoneName": {  
+        "type": "Property",  
+        "value": ""  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia."  
-  },  
-  "location": {  
-    "type": "GeoProperty",  
-    "value": {  
-      "type": "Point",  
-      "coordinates": [  
-        -8.768460000000001,  
-        42.60214472222222  
-      ]  
-    }  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Playa de a Concha"  
-  },  
-  "refSeeAlso": {  
-    "type": "Property",  
-    "value": [  
-      "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
-    ]  
-  },  
-  "source": {  
-    "type": "Property",  
-    "value": "http://www.tourspain.es"  
-  },  
-   "wardId": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "zoneId": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "additionalInfoURL": {  
-    "type": "Relationship",  
-    "value": "urn:ngsi-ld:Point:34E4:A234"  
-  },  
-  "zoneName": {  
-    "type": "Property",  
-    "value": ""  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
