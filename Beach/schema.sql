@@ -1,0 +1,3 @@
+/* (Beta) Export of data model Beach of the subject dataModel.PointOfInterest for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE occupationRate_type AS ENUM ('high', 'medium', 'low', 'none');CREATE TYPE Beach_type AS ENUM ('Beach');
+CREATE TABLE Beach (accessType json, address json, alternateName text, areaServed text, beachType json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, facilities json, id text, length text, location json, name text, occupationRate occupationRate_type, owner json, peopleOccupancy text, refSeeAlso json, seeAlso json, source text, type Beach_type, width text);
