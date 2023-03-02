@@ -1,5 +1,9 @@
 {
     "@context": {
+        "Beach": "https://smartdatamodels.org/dataModel.PointOfInterest/Beach",
+        "Museum": "https://smartdatamodels.org/dataModel.PointOfInterest/Museum",
+        "PointOfInterest": "https://smartdatamodels.org/dataModel.PointOfInterest/PointOfInterest",
+        "Store": "https://smartdatamodels.org/dataModel.PointOfInterest/Store",
         "accessType": "https://smartdatamodels.org/dataModel.PointOfInterest/accessType",
         "additionalInfoURL": "https://smartdatamodels.org/dataModel.PointOfInterest/additionalInfoURL",
         "address": "https://smartdatamodels.org/address",
