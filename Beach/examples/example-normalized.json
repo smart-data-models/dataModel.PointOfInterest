@@ -2,28 +2,46 @@
   "id": "Beach-A-Concha-123456",
   "type": "Beach",
   "description": {
+    "type": "Text",
     "value": "La Playa de A Concha se presenta ....."
   },
   "width": {
+    "type": "Number",
     "value": 51
   },
   "accessType": {
-    "value": ["privateVehicle", "onFoot", "publicTransport"]
+    "type": "array",
+    "value": [
+      "privateVehicle",
+      "onFoot",
+      "publicTransport"
+    ]
   },
   "location": {
     "type": "geo:json",
     "value": {
       "type": "Point",
-      "coordinates": [-8.768460000000001, 42.60214472222222]
+      "coordinates": [
+        -8.768460000000001,
+        42.60214472222222
+      ]
     }
   },
   "facilities": {
-    "value": ["promenade", "showers", "cleaningServices", "lifeGuard"]
+    "type": "array",
+    "value": [
+      "promenade",
+      "showers",
+      "cleaningServices",
+      "lifeGuard"
+    ]
   },
   "length": {
+    "type": "Number",
     "value": 450
   },
   "source": {
+    "type": "Text",
     "value": "http://www.tourspain.es"
   },
   "address": {
@@ -34,12 +52,19 @@
     }
   },
   "beachType": {
-    "value": ["whiteSand", "urban", "calmWaters"]
+    "type": "array",
+    "value": [
+      "whiteSand",
+      "urban",
+      "calmWaters"
+    ]
   },
   "occupationRate": {
+    "type": "Text",
     "value": "high"
   },
   "name": {
+    "type": "Text",
     "value": "Playa de a Concha"
   }
 }

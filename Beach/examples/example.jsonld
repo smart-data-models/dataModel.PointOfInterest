@@ -1,75 +1,40 @@
 {
-    "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",
-    "type": "Beach",
-    "accessType": {
-        "type": "Property",
-        "value": [
-            "privateVehicle",
-            "onFoot",
-            "publicTransport"
-        ]
-    },
-    "address": {
-        "type": "Property",
-        "value": {
-            "addressCountry": "ES",
-            "addressLocality": "Vilagarc\u00eda de Arousa",
-            "type": "PostalAddress"
-        }
-    },
-    "beachType": {
-        "type": "Property",
-        "value": [
-            "whiteSand",
-            "urban",
-            "calmWaters"
-        ]
-    },
-    "description": {
-        "type": "Property",
-        "value": "La Playa de A Concha se presenta ....."
-    },
-    "facilities": {
-        "type": "Property",
-        "value": [
-            "promenade",
-            "showers",
-            "cleaningServices",
-            "lifeGuard"
-        ]
-    },
-    "length": {
-        "type": "Property",
-        "value": 450
-    },
-    "location": {
-        "type": "GeoProperty",
-        "value": {
-            "type": "Point",
-            "coordinates": [
-                -8.768460000000001,
-                42.60214472222222
-            ]
-        }
-    },
-    "name": {
-        "type": "Property",
-        "value": "Playa de a Concha"
-    },
-    "occupationRate": {
-        "type": "Property",
-        "value": "high"
-    },
-    "source": {
-        "type": "Property",
-        "value": "http://www.tourspain.es"
-    },
-    "width": {
-        "type": "Property",
-        "value": 51
-    },
-    "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
-    ]
+  "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",
+  "type": "Beach",
+  "accessType": [
+    "privateVehicle",
+    "onFoot",
+    "publicTransport"
+  ],
+  "address": {
+    "addressCountry": "ES",
+    "addressLocality": "Vilagarc\u00eda de Arousa",
+  },
+  "beachType": [
+    "whiteSand",
+    "urban",
+    "calmWaters"
+  ],
+  "description": "La Playa de A Concha se presenta .....",
+  "facilities": [
+    "promenade",
+    "showers",
+    "cleaningServices",
+    "lifeGuard"
+  ],
+  "length": 450,
+  "location": {
+    "coordinates": [
+      -8.768460000000001,
+      42.60214472222222
+    ],
+    "type": "Point"
+  },
+  "name": "Playa de a Concha",
+  "occupationRate": "high",
+  "source": "http://www.tourspain.es",
+  "width": 51,
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
+  ]
 }
