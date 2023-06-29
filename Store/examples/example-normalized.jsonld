@@ -1,60 +1,58 @@
 {
-    "id": "urn:ngsi-ld:Store:santander:COM4111",
-    "type": "Store",
-    "category": "GroceryStore",
-    "currenciesAccepted": [
-        "EUR"
-    ],
-    "dataProvider": "http://www.smartsantander.eu/",
-    "description": "Cosmetica natural fabricada en Santander.",
-    "email": "email@example.com",
-    "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",
-    "location": {
-        "type": "Point",
-        "coordinates": [
-            -3.8077562,
-            43.4628255
-        ]
-    },
-    "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",
-    "name": "MARTA KAUFMANN",
-    "openingHoursSpecification": [
-        {
-            "opens": "00:02:00",
-            "closes": "23:59:00",
-            "dayOfWeek": "Monday"
-        },
-        {
-            "opens": "00:01:00",
-            "closes": "23:59:00",
-            "dayOfWeek": "Tuesday"
-        },
-        {
-            "opens": "00:01:00",
-            "closes": "23:59:00",
-            "dayOfWeek": "Wednesday"
-        },
-        {
-            "opens": "00:01:00",
-            "closes": "23:59:00",
-            "dayOfWeek": "Thursday"
-        },
-        {
-            "opens": "00:01:00",
-            "closes": "23:59:00",
-            "dayOfWeek": "Friday"
-        }
-    ],
-    "paymentAccepted:": [
-        "cash",
-        "paypal"
-    ],
-    "source": "https://api.smartsantander.eu/",
-    "telephone": "(+34) 942 123 123",
-    "url": "https://exampleStoreUrl.com",
-    "@context": [
-        "https://smart-data-models.github.io/data-models/context.jsonld",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
+  "id": "urn:ngsi-ld:Store:santander:COM4111",
+  "type": "Store",
+  "category": "GroceryStore",
+  "currenciesAccepted": [
+    "EUR"
+  ],
+  "dataProvider": "http://www.smartsantander.eu/",
+  "description": "Cosmetica natural fabricada en Santander.",
+  "email": "email@example.com",
+  "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      -3.8077562,
+      43.4628255
     ]
+  },
+  "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",
+  "name": "MARTA KAUFMANN",
+  "openingHoursSpecification": [
+    {
+      "opens": "00:02:00",
+      "closes": "23:59:00",
+      "dayOfWeek": "Monday"
+    },
+    {
+      "opens": "00:01:00",
+      "closes": "23:59:00",
+      "dayOfWeek": "Tuesday"
+    },
+    {
+      "opens": "00:01:00",
+      "closes": "23:59:00",
+      "dayOfWeek": "Wednesday"
+    },
+    {
+      "opens": "00:01:00",
+      "closes": "23:59:00",
+      "dayOfWeek": "Thursday"
+    },
+    {
+      "opens": "00:01:00",
+      "closes": "23:59:00",
+      "dayOfWeek": "Friday"
+    }
+  ],
+  "paymentAccepted:": [
+    "cash",
+    "paypal"
+  ],
+  "source": "https://api.smartsantander.eu/",
+  "telephone": "(+34) 942 123 123",
+  "url": "https://exampleStoreUrl.com",
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
+  ]
 }

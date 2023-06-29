@@ -10,6 +10,7 @@
     }
   },
   "alternateName": {
+    "type": "Text",
     "value": "MACBA"
   },
   "artPeriod": {

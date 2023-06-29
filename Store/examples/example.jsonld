@@ -95,8 +95,6 @@
         "value": "https://exampleStoreUrl.com"
     },
     "@context": [
-        "https://smart-data-models.github.io/data-models/context.jsonld",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
     ]
 }
