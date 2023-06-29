@@ -1,57 +1,99 @@
 {
   "id": "urn:ngsi-ld:Store:santander:COM4111",
   "type": "Store",
-  "category": "GroceryStore",
-  "currenciesAccepted": [
-    "EUR"
-  ],
-  "dataProvider": "http://www.smartsantander.eu/",
-  "description": "Cosmetica natural fabricada en Santander.",
-  "email": "email@example.com",
-  "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",
+  "source": {
+    "type": "Property",
+    "value": "https://api.smartsantander.eu/"
+  },
+  "dataProvider": {
+    "type": "Property",
+    "value": "http://www.smartsantander.eu/"
+  },
   "location": {
-    "type": "Point",
-    "coordinates": [
-      -3.8077562,
-      43.4628255
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -3.8077562,
+        43.4628255
+      ]
+    }
+  },
+  "name": {
+    "type": "Property",
+    "value": "MARTA KAUFMANN"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Cosmetica natural fabricada en Santander."
+  },
+  "image": {
+    "type": "Property",
+    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"
+  },
+  "currenciesAccepted": {
+    "type": "Property",
+    "value": [
+      "EUR"
     ]
   },
-  "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",
-  "name": "MARTA KAUFMANN",
-  "openingHoursSpecification": [
-    {
-      "opens": "00:02:00",
-      "closes": "23:59:00",
-      "dayOfWeek": "Monday"
-    },
-    {
-      "opens": "00:01:00",
-      "closes": "23:59:00",
-      "dayOfWeek": "Tuesday"
-    },
-    {
-      "opens": "00:01:00",
-      "closes": "23:59:00",
-      "dayOfWeek": "Wednesday"
-    },
-    {
-      "opens": "00:01:00",
-      "closes": "23:59:00",
-      "dayOfWeek": "Thursday"
-    },
-    {
-      "opens": "00:01:00",
-      "closes": "23:59:00",
-      "dayOfWeek": "Friday"
-    }
-  ],
-  "paymentAccepted:": [
-    "cash",
-    "paypal"
-  ],
-  "source": "https://api.smartsantander.eu/",
-  "telephone": "(+34) 942 123 123",
-  "url": "https://exampleStoreUrl.com",
+  "paymentAccepted:": {
+    "type": "Property",
+    "value": [
+      "cash",
+      "paypal"
+    ]
+  },
+  "openingHoursSpecification": {
+    "type": "Property",
+    "value": [
+      {
+        "opens": "00:02:00",
+        "closes": "23:59:00",
+        "dayOfWeek": "Monday"
+      },
+      {
+        "opens": "00:01:00",
+        "closes": "23:59:00",
+        "dayOfWeek": "Tuesday"
+      },
+      {
+        "opens": "00:01:00",
+        "closes": "23:59:00",
+        "dayOfWeek": "Wednesday"
+      },
+      {
+        "opens": "00:01:00",
+        "closes": "23:59:00",
+        "dayOfWeek": "Thursday"
+      },
+      {
+        "opens": "00:01:00",
+        "closes": "23:59:00",
+        "dayOfWeek": "Friday"
+      }
+    ]
+  },
+  "logo": {
+    "type": "Property",
+    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"
+  },
+  "telephone": {
+    "type": "Property",
+    "value": "(+34) 942 123 123"
+  },
+  "email": {
+    "type": "Property",
+    "value": "email@example.com"
+  },
+  "url": {
+    "type": "Property",
+    "value": "https://exampleStoreUrl.com"
+  },
+  "category": {
+    "type": "Property",
+    "value": "GroceryStore"
+  },
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
   ]

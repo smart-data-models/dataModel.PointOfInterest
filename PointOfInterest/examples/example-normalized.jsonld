@@ -3,7 +3,7 @@
   "type": "PointOfInterest",
   "additionalInfoURL": {
     "type": "Relationship",
-    "value": "urn:ngsi-ld:Point:34E4:A234"
+    "object": "urn:ngsi-ld:Point:34E4:A234"
   },
   "address": {
     "type": "Property",

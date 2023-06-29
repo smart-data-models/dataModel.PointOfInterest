@@ -10,7 +10,7 @@
     "value": "http://www.smartsantander.eu/"
   },
   "location": {
-    "type": "GeoProperty",
+    "type": "geo:json",
     "value": {
       "type": "Point",
       "coordinates": [
@@ -32,13 +32,13 @@
     "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"
   },
   "currenciesAccepted": {
-    "type": "StructuredValue",
+    "type": "array",
     "value": [
       "EUR"
     ]
   },
   "paymentAccepted:": {
-    "type": "StructuredValue",
+    "type": "array",
     "value": [
       "cash",
       "paypal"
@@ -87,11 +87,14 @@
     "value": "email@example.com"
   },
   "url": {
-    "type": "Text",
+    "type": "URL",
     "value": "https://exampleStoreUrl.com"
   },
   "category": {
     "type": "Text",
     "value": "GroceryStore"
-  }
+  },
+  "@context": [
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
+  ]
 }
