@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$schemaVersion": "0.2.0",
+  "$schemaVersion": "0.2.1",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json",
   "title": "Smart Data Models - Point of Interest schema",
@@ -24,7 +24,7 @@
         },
         "category": {
           "type": "array",
-          "description": "Property. Model:'https://schema.org/Text'. Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.",
+          "description": "Property. Model:'https://schema.org/Text'. Category of this point of interest",
           "items": {
             "type": "string"
           },
