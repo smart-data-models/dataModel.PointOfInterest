@@ -11,7 +11,7 @@ PointOfInterest:
         - description: Property. Identifier format of any NGSI entity
           format: uri
           type: string
-      description: URL from which additional information of the subject can be obtained
+      description: Relationship. URL from which additional information of the subject can be obtained
       x-ngsi:
         type: Relationship
     address:
@@ -27,7 +27,7 @@ PointOfInterest:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
           type: string
         district:
-          description: 'A district is a type of administrative division that, in some countries, is managed by the local government.'
+          description: 'Property. A district is a type of administrative division that, in some countries, is managed by the local government'
           type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
@@ -39,7 +39,7 @@ PointOfInterest:
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
           type: string
         streetNr:
-          description: Number identifying a specific property on a public street.
+          description: Property. Number identifying a specific property on a public street
           type: string
       type: object
       x-ngsi:
@@ -57,7 +57,7 @@ PointOfInterest:
         model: https://schema.org/Text
         type: Property
     category:
-      description: 'Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.'
+      description: 'Property. Model:''https://schema.org/Text''. Category of this point of interest'
       items:
         type: string
       minItems: 1
@@ -66,26 +66,26 @@ PointOfInterest:
         model: https://schema.org/Text
         type: Property
     contactPoint:
-      description: The details to contact with the item.
+      description: The details to contact with the item
       properties:
         areaServed:
-          description: Property. The geographic area where a service or offered item is provided. Supersedes serviceArea.
+          description: Property. The geographic area where a service or offered item is provided. Supersedes serviceArea
           type: string
         availabilityRestriction:
           anyOf:
-            - description: Property. Array of identifiers format of any NGSI entity.
+            - description: Property. Array of identifiers format of any NGSI entity
               items:
                 maxLength: 256
                 minLength: 1
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
                 type: string
               type: array
-            - description: Property. Array of identifiers format of any NGSI entity.
+            - description: Property. Array of identifiers format of any NGSI entity
               items:
                 format: uri
                 type: string
               type: array
-          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class.'
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class'
         availableLanguage:
           anyOf:
             - anyOf:
@@ -100,28 +100,28 @@ PointOfInterest:
             - items:
                 type: string
               type: array
-          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).'
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)'
         contactType:
-          description: Property. Contact type of this item.
+          description: Property. Contact type of this item
           type: string
         email:
-          description: Property. Email address of owner.
+          description: Property. Email address of owner
           format: idn-email
           type: string
         faxNumber:
-          description: 'Property. Model:''http://schema.org/Text''. The fax number.'
+          description: 'Property. Model:''http://schema.org/Text''. The fax number'
           type: string
         name:
-          description: Property. The name of this item.
+          description: Property. The name of this item
           type: string
         productSupported:
-          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. "iPhone") or a general category of products or services (e.g. "smartphones").'
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. ''iPhone'') or a general category of products or services (e.g. ''smartphones'')'
           type: string
         telephone:
-          description: Property. Telephone of this contact.
+          description: Property. Telephone of this contact
           type: string
         url:
-          description: Property. URL which provides a description or further information about this item.
+          description: Property. URL which provides a description or further information about this item
           format: uri
           type: string
       type: object
@@ -129,18 +129,18 @@ PointOfInterest:
         model: https://schema.org/ContactPoint
         type: Property
     dataProvider:
-      description: A sequence of characters identifying the provider of the harmonised data entity.
+      description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
     dateCreated:
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.
+      description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
     dateModified:
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
@@ -317,7 +317,7 @@ PointOfInterest:
       x-ngsi:
         type: GeoProperty
     name:
-      description: The name of this item.
+      description: The name of this item
       type: string
       x-ngsi:
         type: Property
@@ -330,7 +330,7 @@ PointOfInterest:
       x-ngsi:
         type: Property
     refSeeAlso:
-      description: List of references to one or more related entities.
+      description: 'Property. Model:''https://schema.org/URL''. List of references to one or more related entities.'
       items:
         anyOf:
           - anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof
@@ -354,29 +354,29 @@ PointOfInterest:
       x-ngsi:
         type: Property
     source:
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
     type:
-      description: NGSI Entity type. It has to be PointOfInterest
+      description: Property. NGSI Entity type. It has to be PointOfInterest
       enum:
         - PointOfInterest
       type: string
       x-ngsi:
         type: Property
     wardId:
-      description: Ward ID of the entity corresponding to this observation.
+      description: Property. Ward ID of the entity corresponding to this observation.
       type: string
       x-ngsi:
         type: Property
     zoneId:
-      description: Zone ID of the entity corresponding to this observation.
+      description: Property. Zone ID of the entity corresponding to this observation.
       type: string
       x-ngsi:
         type: Property
     zoneName:
-      description: Zone name of the entity corresponding to this observation.
+      description: Property. Zone name of the entity corresponding to this observation.
       type: string
       x-ngsi:
         type: Property
@@ -391,4 +391,4 @@ PointOfInterest:
   x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json
   x-model-tags: IUDX
-  x-version: 0.2.0
+  x-version: 0.2.1
