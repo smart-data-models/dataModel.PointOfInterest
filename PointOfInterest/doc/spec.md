@@ -30,23 +30,23 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PointOfInterest:    
-  description: 'This entity contains a harmonised geographic description of a Point of Interest'    
+  description: This entity contains a harmonised geographic description of a Point of Interest    
   properties:    
     additionalInfoURL:    
       anyOf:    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'URL from which additional information of the subject can be obtained'    
+      description: Relationship. URL from which additional information of the subject can be obtained    
       x-ngsi:    
         type: Relationship    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
           description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
@@ -57,6 +57,9 @@ PointOfInterest:
         addressRegion:    
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
+        district:    
+          description: 'Property. A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
         postOfficeBoxNumber:    
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
@@ -66,23 +69,26 @@ PointOfInterest:
         streetAddress:    
           description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
+        streetNr:    
+          description: Property. Number identifying a specific property on a public street    
+          type: string    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     category:    
-      description: 'Category of this point of interest. Allowed values: Those defined by the [Factual taxonomy](https://github.com/Factual/places/blob/master/categories/factual_taxonomy.json) together with the extended categories described by the specification. For instance the value `113` corresponds to beaches, and the value `311` corresponds to museums.'    
+      description: 'Property. Model:''https://schema.org/Text''. Category of this point of interest'    
       items:    
         type: string    
       minItems: 1    
@@ -91,23 +97,62 @@ PointOfInterest:
         model: https://schema.org/Text    
         type: Property    
     contactPoint:    
-      description: 'The details to contact with the item.'    
+      description: The details to contact with the item    
       properties:    
+        areaServed:    
+          description: Property. The geographic area where a service or offered item is provided. Supersedes serviceArea    
+          type: string    
+        availabilityRestriction:    
+          anyOf:    
+            - description: Property. Array of identifiers format of any NGSI entity    
+              items:    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+              type: array    
+            - description: Property. Array of identifiers format of any NGSI entity    
+              items:    
+                format: uri    
+                type: string    
+              type: array    
+          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class'    
+        availableLanguage:    
+          anyOf:    
+            - anyOf:    
+                - type: string    
+                - items:    
+                    type: string    
+                  type: array    
+          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'    
+        contactOption:    
+          anyOf:    
+            - type: string    
+            - items:    
+                type: string    
+              type: array    
+          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)'    
         contactType:    
-          description: 'Property. Contact type of this item.'    
+          description: Property. Contact type of this item    
           type: string    
         email:    
-          description: 'Property. Email address of owner.'    
+          description: Property. Email address of owner    
           format: idn-email    
           type: string    
+        faxNumber:    
+          description: 'Property. Model:''http://schema.org/Text''. The fax number'    
+          type: string    
         name:    
-          description: 'Property. The name of this item.'    
+          description: Property. The name of this item    
+          type: string    
+        productSupported:    
+          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. ''iPhone'') or a general category of products or services (e.g. ''smartphones'')'    
           type: string    
         telephone:    
-          description: 'Property. Telephone of this contact.'    
+          description: Property. Telephone of this contact    
           type: string    
         url:    
-          description: 'Property. URL which provides a description or further information about this item.'    
+          description: Property. URL which provides a description or further information about this item    
           format: uri    
           type: string    
       type: object    
@@ -115,44 +160,44 @@ PointOfInterest:
         model: https://schema.org/ContactPoint    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     id:    
       anyOf: &pointofinterest_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+        - description: Property. Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: GeoProperty. Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -171,9 +216,9 @@ PointOfInterest:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+        - description: GeoProperty. Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -195,9 +240,9 @@ PointOfInterest:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+        - description: GeoProperty. Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -221,9 +266,9 @@ PointOfInterest:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+        - description: GeoProperty. Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -244,9 +289,9 @@ PointOfInterest:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -270,9 +315,9 @@ PointOfInterest:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+        - description: GeoProperty. Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -298,29 +343,29 @@ PointOfInterest:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
         anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        description: Property. Unique identifier of the entity    
       type: array    
       x-ngsi:    
         type: Property    
     refSeeAlso:    
-      description: 'List of references to one or more related entities.'    
+      description: 'Property. Model:''https://schema.org/URL''. List of references to one or more related entities.'    
       items:    
         anyOf:    
           - anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof    
-            description: 'Property. Unique identifier of the entity'    
+            description: Property. Unique identifier of the entity    
       minItems: 1    
       type: array    
       uniqueItems: true    
@@ -328,7 +373,7 @@ PointOfInterest:
         model: https://schema.org/URL    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -340,29 +385,29 @@ PointOfInterest:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be PointOfInterest'    
+      description: Property. NGSI Entity type. It has to be PointOfInterest    
       enum:    
         - PointOfInterest    
       type: string    
       x-ngsi:    
         type: Property    
     wardId:    
-      description: 'Ward ID of the entity corresponding to this observation.'    
+      description: Property. Ward ID of the entity corresponding to this observation.    
       type: string    
       x-ngsi:    
         type: Property    
     zoneId:    
-      description: 'Zone ID of the entity corresponding to this observation.'    
+      description: Property. Zone ID of the entity corresponding to this observation.    
       type: string    
       x-ngsi:    
         type: Property    
     zoneName:    
-      description: 'Zone name of the entity corresponding to this observation.'    
+      description: Property. Zone name of the entity corresponding to this observation.    
       type: string    
       x-ngsi:    
         type: Property    
@@ -373,11 +418,11 @@ PointOfInterest:
     - name    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.2.0    
+  x-version: 0.2.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -491,36 +536,36 @@ PointOfInterest:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
-    "type": "PointOfInterest",  
-    "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
-    "address": {  
-        "addressCountry": "ES",  
-        "addressLocality": "Vilagarcia de Arousa"  
-    },  
-    "category": [  
-        "113"  
-    ],  
-    "description": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia.",  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            -8.768460000000001,  
-            42.60214472222222  
-        ]  
-    },  
-    "name": "Playa de a Concha",  
-    "refSeeAlso": [  
-        "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
-    ],  
-    "source": "http://www.tourspain.es",  
-    "wardId": "",  
-    "zoneId": "",  
-    "zoneName": "",  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
+  "type": "PointOfInterest",  
+  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Vilagarcia de Arousa"  
+  },  
+  "category": [  
+    "113"  
+  ],  
+  "description": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia.",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
     ]  
+  },  
+  "name": "Playa de a Concha",  
+  "refSeeAlso": [  
+    "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
+  ],  
+  "source": "http://www.tourspain.es",  
+  "wardId": "",  
+  "zoneId": "",  
+  "zoneName": "",  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -529,69 +574,68 @@ PointOfInterest:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
-    "type": "PointOfInterest",  
-    "additionalInfoURL": {  
-        "type": "Relationship",  
-        "value": "urn:ngsi-ld:Point:34E4:A234"  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "ES",  
-            "addressLocality": "Vilagarcia de Arousa"  
-        }  
-    },  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "113"  
-        ]  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia."  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -8.768460000000001,  
-                42.60214472222222  
-            ]  
-        }  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Playa de a Concha"  
-    },  
-    "refSeeAlso": {  
-        "type": "Property",  
-        "value": [  
-            "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
-        ]  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "http://www.tourspain.es"  
-    },  
-    "wardId": {  
-        "type": "Property",  
-        "value": ""  
-    },  
-    "zoneId": {  
-        "type": "Property",  
-        "value": ""  
-    },  
-    "zoneName": {  
-        "type": "Property",  
-        "value": ""  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
+  "type": "PointOfInterest",  
+  "additionalInfoURL": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Point:34E4:A234"  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "ES",  
+      "addressLocality": "Vilagarcia de Arousa"  
+    }  
+  },  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "113"  
     ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia."  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.768460000000001,  
+        42.60214472222222  
+      ]  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Playa de a Concha"  
+  },  
+  "refSeeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
+    ]  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.tourspain.es"  
+  },  
+  "wardId": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "zoneId": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "zoneName": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
