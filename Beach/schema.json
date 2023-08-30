@@ -29,7 +29,7 @@
                 },
                 "width": {
                     "type": "number",
-                    "description": "Property. Model:'https://schema.org/width'. Width of this beach. Units:'meter'."
+                    "description": "Property. Model:'https://schema.org/width'. Width of this beach. Units:'meter'"
                 },
                 "length": {
                     "type": "number",
@@ -37,7 +37,7 @@
                 },
                 "beachType": {
                     "type": "array",
-                    "description": "Property. Model:'https://schema.org/Text'. Type of beach according to different criteria. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. Or any other value needed by an application.",
+                    "description": "Property. Model:'https://schema.org/Text'. Type of beach according to different criteria. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. Or any other value needed by an application",
                     "items": {
                         "type": "string",
                         "enum": [
@@ -96,7 +96,7 @@
                 },
                 "accessType": {
                     "type": "array",
-                    "description": "Property. Model:'https://schema.org/Text'. Enum:'privateVehicle, boat, onFoot, publicTransport'. Describes how to get to this beach.",
+                    "description": "Property. Model:'https://schema.org/Text'. Enum:'privateVehicle, boat, onFoot, publicTransport'. Describes how to get to this beach",
                     "items": {
                         "type": "string",
                         "enum": [
@@ -111,7 +111,7 @@
                 },
                 "refSeeAlso": {
                     "type": "array",
-                    "description": "Property. Model:'https://schema.org/URL'. List of references to one or more related entities.",
+                    "description": "Property. Model:'https://schema.org/URL'. List of references to one or more related entities",
                     "items": {
                         "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
                     }
