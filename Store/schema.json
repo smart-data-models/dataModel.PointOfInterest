@@ -217,7 +217,7 @@
                 },
                 "paymentAccepted": {
                     "type": "array",
-                    "description": "Property. Model:'https://schema.org/Text'. Payment method accepted in this store.",
+                    "description": "Property. Model:'https://schema.org/Text'. Payment method accepted in this store",
                     "items": {
                         "type": "string"
                     }
@@ -229,16 +229,16 @@
                 },
                 "telephone": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text'. The telephone number of this store."
+                    "description": "Property. Model:'https://schema.org/Text'. The telephone number of this store"
                 },
                 "email": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/Text'. The email address of this store.",
+                    "description": "Property. Model:'https://schema.org/Text'. The email address of this store",
                     "format": "email"
                 },
                 "url": {
                     "type": "string",
-                    "description": "Property. Model:'https://schema.org/URL'. Website with information about the store.",
+                    "description": "Property. Model:'https://schema.org/URL'. Website with information about the store",
                     "format": "uri"
                 },
                 "category": {
