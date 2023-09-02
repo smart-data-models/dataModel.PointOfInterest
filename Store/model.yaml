@@ -1,90 +1,72 @@
 Store:
-
   description: This entity Type models stores/shops in the city.
-
   properties:
-
     address:
-
       description: The mailing address
-
       properties:
-
         addressCountry:
-          description: The country. For example, Spain
+          description: 'The country. For example, Spain'
           type: string
           x-ngsi:
             model: https://schema.org/addressCountry
             type: Property
-
         addressLocality:
-          description: The locality in which the street address is, and which is in the region
+          description: 'The locality in which the street address is, and which is in the region'
           type: string
           x-ngsi:
             model: https://schema.org/addressLocality
             type: Property
-
         addressRegion:
-          description: The region in which the locality is, and which is in the country
+          description: 'The region in which the locality is, and which is in the country'
           type: string
           x-ngsi:
             model: https://schema.org/addressRegion
             type: Property
-
         district:
-          description: A district is a type of administrative division that, in some countries, is managed by the local government
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
           type: string
           x-ngsi:
             type: Property
-
         postOfficeBoxNumber:
-          description: The post office box number for PO box addresses. For example, 03578
+          description: 'The post office box number for PO box addresses. For example, 03578'
           type: string
           x-ngsi:
             model: https://schema.org/postOfficeBoxNumber
             type: Property
-
         postalCode:
-          description: The postal code. For example, 24004
+          description: 'The postal code. For example, 24004'
           type: string
           x-ngsi:
             model: https://schema.org/https://schema.org/postalCode
             type: Property
-
         streetAddress:
           description: The street address
           type: string
           x-ngsi:
             model: https://schema.org/streetAddress
             type: Property
-
         streetNr:
           description: Number identifying a specific property on a public street
           type: string
           x-ngsi:
             type: Property
-
       type: object
-
       x-ngsi:
         model: https://schema.org/address
         type: Property
-
     alternateName:
       description: An alternative name for this item
       type: string
       x-ngsi:
         type: Property
-
     areaServed:
       description: The geographic area where a service or offered item is provided
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     category:
-      description: Category of the store. Enum:'AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,JewelryStore,LiquorStore,MensClothingStore,MobilePhoneStore,MovieRentalStore,MusicStore,OfficeEquipmentStore,OutletStore,PawnShop,PetStore,ShoeStore,SportingGoodsStore,TireShop,ToyStore,WholesaleStore'
+      description: 'Category of the store. Enum:''AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodsStore,JewelryStore,LiquorStore,MensClothingStore,MobilePhoneStore,MovieRentalStore,MusicStore,OfficeEquipmentStore,OutletStore,PawnShop,PetStore,ShoeStore,SportingGoodsStore,TireShop,ToyStore,WholesaleStore'''
       enum:
         - AutoPartsStore
         - BikeStore
@@ -120,411 +102,218 @@ Store:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     currenciesAccepted:
-
-      description: Enum:'AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Currencies accepted in this store. It uses ISO 4217 currency format (e.g. USD, EUR)
-
+      description: 'Enum:''AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Currencies accepted in this store. It uses ISO 4217 currency format (e.g. USD, EUR)'
       items:
-
         enum:
-
           - AED
-
           - AFN
-
           - ALL
-
           - AMD
-
           - ANG
-
           - AOA
-
           - ARS
-
           - AUD
-
           - AWG
-
           - AZN
-
           - BAM
-
           - BBD
-
           - BDT
-
           - BGN
-
           - BHD
-
           - BIF
-
           - BMD
-
           - BND
-
           - BOB
-
           - BOV
-
           - BRL
-
           - BSD
-
           - BTN
-
           - BWP
-
           - BYN
-
           - BZD
-
           - CAD
-
           - CDF
-
           - CHE
-
           - CHF
-
           - CHW
-
           - CLF
-
           - CLP
-
           - CNY
-
           - COP
-
           - COU
-
           - CRC
-
           - CUC
-
           - CUP
-
           - CVE
-
           - CZK
-
           - DJF
-
           - DKK
-
           - DOP
-
           - DZD
-
           - EGP
-
           - ERN
-
           - ETB
-
           - EUR
-
           - FJD
-
           - FKP
-
           - GBP
-
           - GEL
-
           - GHS
-
           - GIP
-
           - GMD
-
           - GNF
-
           - GTQ
-
           - GYD
-
           - HKD
-
           - HNL
-
           - HRK
-
           - HTG
-
           - HUF
-
           - IDR
-
           - ILS
-
           - INR
-
           - IQD
-
           - IRR
-
           - ISK
-
           - JMD
-
           - JOD
-
           - JPY
-
           - KES
-
           - KGS
-
           - KHR
-
           - KMF
-
           - KPW
-
           - KRW
-
           - KWD
-
           - KYD
-
           - KZT
-
           - LAK
-
           - LBP
-
           - LKR
-
           - LRD
-
           - LSL
-
           - LYD
-
           - MAD
-
           - MDL
-
           - MGA
-
           - MKD
-
           - MMK
-
           - MNT
-
           - MOP
-
           - MRU
-
           - MUR
-
           - MVR
-
           - MWK
-
           - MXN
-
           - MXV
-
           - MYR
-
           - MZN
-
           - NAD
-
           - NGN
-
           - NIO
-
           - NOK
-
           - NPR
-
           - NZD
-
           - OMR
-
           - PAB
-
           - PEN
-
           - PGK
-
           - PHP
-
           - PKR
-
           - PLN
-
           - PYG
-
           - QAR
-
           - RON
-
           - RSD
-
           - RUB
-
           - RWF
-
           - SAR
-
           - SBD
-
           - SCR
-
           - SDG
-
           - SEK
-
           - SGD
-
           - SHP
-
           - SLL
-
           - SOS
-
           - SRD
-
           - SSP
-
           - STN
-
           - SVC
-
           - SYP
-
           - SZL
-
           - THB
-
           - TJS
-
           - TMT
-
           - TND
-
           - TOP
-
           - TRY
-
           - TTD
-
           - TWD
-
           - TZS
-
           - UAH
-
           - UGX
-
           - USD
-
           - USN
-
           - UYI
-
           - UYU
-
           - UYW
-
           - UZS
-
           - VES
-
           - VND
-
           - VUV
-
           - WST
-
           - XAF
-
           - XAG
-
           - XAU
-
           - XBA
-
           - XBB
-
           - XBC
-
           - XBD
-
           - XCD
-
           - XDR
-
           - XOF
-
           - XPD
-
           - XPF
-
           - XPT
-
           - XSU
-
           - XTS
-
           - XUA
-
           - XXX
-
           - YER
-
           - ZAR
-
           - ZMW
-
           - ZWL
-
         type: string
-
       minItems: 1
-
       type: array
-
-      uniqueItems: yes
-
+      uniqueItems: true
       x-ngsi:
         model: https://es.wikipedia.org/wiki/ISO_4217
         type: Property
-
     dataProvider:
       description: A sequence of characters identifying the provider of the harmonised data entity
       type: string
       x-ngsi:
         type: Property
-
     dateCreated:
       description: Entity creation timestamp. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     dateModified:
       description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform
       format: date-time
       type: string
       x-ngsi:
         type: Property
-
     description:
       description: A description of this item
       type: string
       x-ngsi:
         type: Property
-
     email:
       description: The email address of this store
       format: email
@@ -532,7 +321,6 @@ Store:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     endDate:
       description: The end date and time of the item (in ISO 8601 date format).
       format: date-time
@@ -540,7 +328,6 @@ Store:
       x-ngsi:
         model: https://schema.org/endDate
         type: Property
-
     id:
       anyOf:
         - description: Identifier format of any NGSI entity
@@ -558,13 +345,9 @@ Store:
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
-
     location:
-
-      description: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon
-
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-
         - description: Geojson reference to the item. Point
           properties:
             bbox:
@@ -588,7 +371,6 @@ Store:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. LineString
           properties:
             bbox:
@@ -615,7 +397,6 @@ Store:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. Polygon
           properties:
             bbox:
@@ -644,7 +425,6 @@ Store:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
@@ -670,7 +450,6 @@ Store:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -699,7 +478,6 @@ Store:
           type: object
           x-ngsi:
             type: GeoProperty
-
         - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
@@ -730,10 +508,8 @@ Store:
           type: object
           x-ngsi:
             type: GeoProperty
-
       x-ngsi:
         type: GeoProperty
-
     logo:
       description: 'An associated logo for this store. '
       format: uri
@@ -741,35 +517,27 @@ Store:
       x-ngsi:
         model: https://schema.org/URL
         type: Property
-
     name:
       description: The name of this item
       type: string
       x-ngsi:
         type: Property
-
     openingHours:
       description: 'The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas '','' separating each day. Day or time ranges are specified using a hyphen ''-''. Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. Times are specified using 24:00 format. For example, 3pm is specified as 15:00, 10am as 10:00. Here is an example: <time itemprop=''openingHours'' datetime=''Tu,Th 16:00-20:00''>Tuesdays and Thursdays 4-8pm</time>. If a business is open 7 days a week, then it can be specified as <time itemprop=''openingHours'' datetime=''Mo-Su''>Monday through Sunday, all day</time>'
       type: string
       x-ngsi:
         model: https://schema.org/openingHours
         type: Property
-
     openingHoursSpecification:
-
       description: A structured value providing information about the opening hours of a place or a certain service inside a place
-
       items:
-
         properties:
-
           closes:
-            description: " \tThe closing hour of the place or service on the given day(s) of the week"
+            description: ' 	The closing hour of the place or service on the given day(s) of the week'
             format: time
             type: string
             x-ngsi:
               type: Property
-
           dayOfWeek:
             anyOf:
               - description: Array of days of the week
@@ -798,66 +566,58 @@ Store:
                 type: string
                 x-ngsi:
                   type: Property
-            description: The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)
+            description: 'The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)'
             type: string
             x-ngsi:
               model: http://schema.org/dayOfWeek
               type: Property
-
           opens:
             description: The opening hour of the place or service on the given day(s) of the week
             format: time
             type: string
             x-ngsi:
               type: Property
-
           validFrom:
             anyOf:
-              - description: ''
+              - description: ""
                 format: date
                 type: string
                 x-ngsi:
                   model: http://schema.org/Date
                   type: Property
-              - description: ''
+              - description: ""
                 format: date-time
                 type: string
                 x-ngsi:
                   model: http://schema.org/DateTime
                   type: Property
-            description: The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format
+            description: 'The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'
             x-ngsi:
               type: Property
-
           validThrough:
             anyOf:
-              - description: ''
+              - description: ""
                 format: date
                 type: string
                 x-ngsi:
                   model: http://schema.org/Date
                   type: Property
-              - description: ''
+              - description: ""
                 format: date-time
                 type: string
                 x-ngsi:
                   model: http://schema.org/DateTime
                   type: Property
-            description: The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format
+            description: 'The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'
             type: string
             x-ngsi:
               type: Property
-
         type: object
-
       minItems: 1
-
       type: array
-
       x-ngsi:
         model: https://schema.org/openingHoursSpecification
         type: Property
-
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
@@ -880,7 +640,6 @@ Store:
       type: array
       x-ngsi:
         type: Property
-
     paymentAccepted:
       description: Payment method accepted in this store
       items:
@@ -889,7 +648,6 @@ Store:
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     seeAlso:
       description: list of uri pointing to additional resources about the item
       oneOf:
@@ -902,13 +660,11 @@ Store:
           type: string
       x-ngsi:
         type: Property
-
     source:
-      description: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'
       type: string
       x-ngsi:
         type: Property
-
     startDate:
       description: The start date and time of the item (in ISO 8601 date format).
       format: date-time
@@ -916,14 +672,12 @@ Store:
       x-ngsi:
         model: https://schema.org/startDate
         type: Property
-
     telephone:
       description: The telephone number of this store
       type: string
       x-ngsi:
         model: https://schema.org/Text
         type: Property
-
     type:
       description: NGSI Entity type. It has to be Store
       enum:
@@ -931,7 +685,6 @@ Store:
       type: string
       x-ngsi:
         type: Property
-
     url:
       description: Website with information about the store
       format: uri
@@ -939,23 +692,15 @@ Store:
       x-ngsi:
         model: https://schema.org/URL
         type: Property
-
   required:
     - id
     - type
     - name
     - description
-
   type: object
-
-  x-derived-from: ''
-
-  x-disclaimer: Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program
-
+  x-derived-from: ""
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
   x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Store/LICENSE.md
-
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/Store/schema.json
-
-  x-model-tags: ''
-
+  x-model-tags: ""
   x-version: 0.0.1
