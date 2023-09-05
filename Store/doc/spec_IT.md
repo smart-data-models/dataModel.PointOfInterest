@@ -15,7 +15,14 @@
 ## Elenco delle proprietà  
 
 <sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
-- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: Categoria del negozio. Enum:AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodstore,Negozio di gioielli, negozio di liquori, negozio di abbigliamento maschile, negozio di telefoni cellulari, negozio di film, negozio di musica, negozio di articoli per ufficio, negozio di outlet, negozio di pegni, negozio di animali, negozio di scarpe, negozio di articoli sportivi, negozio di pneumatici, negozio di giocattoli, negozio all'ingrosso".  . Model: [https://schema.org/Text](https://schema.org/Text)- `currenciesAccepted[array]`: Enum:'AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Valute accettate in questo negozio. Utilizza il formato di valuta ISO 4217 (ad es. USD, EUR).  . Model: [https://es.wikipedia.org/wiki/ISO_4217](https://es.wikipedia.org/wiki/ISO_4217)- `dataProvider[string]`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated[string]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified[string]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description[string]`: Descrizione dell'articolo  - `email[string]`: L'indirizzo e-mail di questo negozio.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `logo[string]`: Un logo associato per questo negozio.  . Model: [https://schema.org/URL](https://schema.org/URL)- `name[string]`: Il nome di questo elemento.  - `openingHoursSpecification[array]`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `paymentAccepted[array]`: Metodo di pagamento accettato in questo negozio.  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `telephone[string]`: Il numero di telefono di questo negozio.  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo di entità NGSI. Deve essere Store  - `url[string]`: Sito web con informazioni sul negozio.  . Model: [https://schema.org/URL](https://schema.org/URL)<!-- /30-PropertiesList -->  
+- `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale.    
+	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[string]`: Categoria del negozio. Enum:AutoPartsStore,BikeStore,BookStore,ClothingStore,ComputerStore,ConvenienceStore,DepartmentStore,ElectronicsStore,Florist,FurnitureStore,GardenStore,GroceryStore,HardwareStore,HobbyShop,HomeGoodstore,Negozio di gioielli, negozio di liquori, negozio di abbigliamento maschile, negozio di telefoni cellulari, negozio di film, negozio di musica, negozio di articoli per ufficio, negozio di outlet, negozio di pegni, negozio di animali, negozio di scarpe, negozio di articoli sportivi, negozio di pneumatici, negozio di giocattoli, negozio all'ingrosso".  . Model: [https://schema.org/Text](https://schema.org/Text)- `currenciesAccepted[array]`: Enum:'AED, AFN, ALL, AMD, ANG, AOA, ARS, AUD, AWG, AZN, BAM, BBD, BDT, BGN, BHD, BIF, BMD, BND, BOB, BOV, BRL, BSD, BTN, BWP, BYN, BZD, CAD, CDF, CHE, CHF, CHW, CLF, CLP, CNY, COP, COU, CRC, CUC, CUP, CVE, CZK, DJF, DKK, DOP, DZD, EGP, ERN, ETB, EUR, FJD, FKP, GBP, GEL, GHS, GIP, GMD, GNF, GTQ, GYD, HKD, HNL, HRK, HTG, HUF, IDR, ILS, INR, IQD, IRR, ISK, JMD, JOD, JPY, KES, KGS, KHR, KMF, KPW, KRW, KWD, KYD, KZT, LAK, LBP, LKR, LRD, LSL, LYD, MAD, MDL, MGA, MKD, MMK, MNT, MOP, MRU, MUR, MVR, MWK, MXN, MXV, MYR, MZN, NAD, NGN, NIO, NOK, NPR, NZD, OMR, PAB, PEN, PGK, PHP, PKR, PLN, PYG, QAR, RON, RSD, RUB, RWF, SAR, SBD, SCR, SDG, SEK, SGD, SHP, SLL, SOS, SRD, SSP, STN, SVC, SYP, SZL, THB, TJS, TMT, TND, TOP, TRY, TTD, TWD, TZS, UAH, UGX, USD, USN, UYI, UYU, UYW, UZS, VES, VND, VUV, WST, XAF, XAG, XAU, XBA, XBB, XBC, XBD, XCD, XDR, XOF, XPD, XPF, XPT, XSU, XTS, XUA, XXX, YER, ZAR, ZMW, ZWL. Valute accettate in questo negozio. Utilizza il formato di valuta ISO 4217 (ad es. USD, EUR).  . Model: [https://es.wikipedia.org/wiki/ISO_4217](https://es.wikipedia.org/wiki/ISO_4217)- `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Descrizione dell'articolo  - `email[email]`: L'indirizzo e-mail di questo negozio  . Model: [https://schema.org/Text](https://schema.org/Text)- `endDate[date-time]`: La data e l'ora di fine dell'elemento (in formato data ISO 8601).  . Model: [https://schema.org/endDate](https://schema.org/endDate)- `id[*]`: Identificatore univoco dell'entità  - `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `logo[uri]`: Un logo associato per questo negozio.  . Model: [https://schema.org/URL](https://schema.org/URL)- `name[string]`: Il nome di questo elemento  - `openingHours[string]`: Gli orari di apertura generali di un'azienda. Gli orari di apertura possono essere specificati come intervallo di tempo settimanale, iniziando con i giorni e poi con le ore al giorno. È possibile elencare più giorni, separando ogni giorno con una virgola ','. Gli intervalli di giorni o orari sono specificati con un trattino "-". I giorni sono specificati utilizzando le seguenti combinazioni di due lettere: Mo, Tu, We, Th, Fr, Sa, Su. Gli orari sono specificati utilizzando il formato 24:00. Ad esempio, le 15:00 sono specificate come 15:00 e le 10:00 come 10:00. Ecco un esempio: <time itemprop='openingHours' datetime='Tu,Th 16:00-20:00'>Martedì e giovedì 16-20</time>. Se un'attività è aperta 7 giorni su 7, si può specificare <time itemprop='openingHours' datetime='Mo-Su'>Lunedì a domenica, tutto il giorno</time>.  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `openingHoursSpecification[array]`: Un valore strutturato che fornisce informazioni sugli orari di apertura di un luogo o di un determinato servizio all'interno di un luogo.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `paymentAccepted[array]`: Metodo di pagamento accettato in questo negozio  . Model: [https://schema.org/Text](https://schema.org/Text)- `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `startDate[date-time]`: La data e l'ora di inizio dell'elemento (nel formato ISO 8601).  . Model: [https://schema.org/startDate](https://schema.org/startDate)- `telephone[string]`: Il numero di telefono di questo negozio  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo di entità NGSI. Deve essere Store  - `url[uri]`: Sito web con informazioni sul negozio  . Model: [https://schema.org/URL](https://schema.org/URL)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
 - `description`  - `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,40 +37,68 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Store:    
-  description: 'This entity Type models stores/shops in the city.'    
+  description: This entity Type models stores/shops in the city.    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -296,51 +331,62 @@ Store:
         model: https://es.wikipedia.org/wiki/ISO_4217    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     email:    
-      description: 'The email address of this store.'    
+      description: The email address of this store    
       format: email    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    endDate:    
+      description: The end date and time of the item (in ISO 8601 date format).    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/endDate    
+        type: Property    
     id:    
-      anyOf: &store_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -359,9 +405,11 @@ Store:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -383,9 +431,11 @@ Store:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -409,9 +459,11 @@ Store:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -432,9 +484,11 @@ Store:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -458,9 +512,11 @@ Store:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -486,8 +542,10 @@ Store:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     logo:    
@@ -498,21 +556,29 @@ Store:
         model: https://schema.org/URL    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
+    openingHours:    
+      description: 'The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas '','' separating each day. Day or time ranges are specified using a hyphen ''-''. Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su. Times are specified using 24:00 format. For example, 3pm is specified as 15:00, 10am as 10:00. Here is an example: <time itemprop=''openingHours'' datetime=''Tu,Th 16:00-20:00''>Tuesdays and Thursdays 4-8pm</time>. If a business is open 7 days a week, then it can be specified as <time itemprop=''openingHours'' datetime=''Mo-Su''>Monday through Sunday, all day</time>'    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/openingHours    
+        type: Property    
     openingHoursSpecification:    
-      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'    
+      description: A structured value providing information about the opening hours of a place or a certain service inside a place    
       items:    
         properties:    
           closes:    
+            description: ' 	The closing hour of the place or service on the given day(s) of the week'    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
+            x-ngsi:    
+              type: Property    
           dayOfWeek:    
             anyOf:    
-              - description: 'Property. Array of days of the week.'    
+              - description: Array of days of the week    
                 enum:    
                   - Monday    
                   - Tuesday    
@@ -523,7 +589,9 @@ Store:
                   - Sunday    
                   - PublicHolidays    
                 type: string    
-              - description: 'Property. Array of days of the week.'    
+                x-ngsi:    
+                  type: Property    
+              - description: Array of days of the week    
                 enum:    
                   - https://schema.org/Monday    
                   - https://schema.org/Tuesday    
@@ -534,31 +602,54 @@ Store:
                   - https://schema.org/Sunday    
                   - https://schema.org/PublicHolidays    
                 type: string    
-            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
+                x-ngsi:    
+                  type: Property    
+            description: 'The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)'    
             type: string    
+            x-ngsi:    
+              model: http://schema.org/dayOfWeek    
+              type: Property    
           opens:    
+            description: The opening hour of the place or service on the given day(s) of the week    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
+            x-ngsi:    
+              type: Property    
           validFrom:    
             anyOf:    
-              - description: 'Property. Model:''http://schema.org/Date.'    
+              - description: ""    
                 format: date    
                 type: string    
-              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                x-ngsi:    
+                  model: http://schema.org/Date    
+                  type: Property    
+              - description: ""    
                 format: date-time    
                 type: string    
-            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
+                x-ngsi:    
+                  model: http://schema.org/DateTime    
+                  type: Property    
+            description: 'The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'    
+            x-ngsi:    
+              type: Property    
           validThrough:    
             anyOf:    
-              - description: 'Property. Model:''http://schema.org/Date.'    
+              - description: ""    
                 format: date    
                 type: string    
-              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                x-ngsi:    
+                  model: http://schema.org/Date    
+                  type: Property    
+              - description: ""    
                 format: date-time    
                 type: string    
-            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
+                x-ngsi:    
+                  model: http://schema.org/DateTime    
+                  type: Property    
+            description: 'The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       minItems: 1    
       type: array    
@@ -566,15 +657,29 @@ Store:
         model: https://schema.org/openingHoursSpecification    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *store_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     paymentAccepted:    
-      description: 'Payment method accepted in this store.'    
+      description: Payment method accepted in this store    
       items:    
         type: string    
       type: array    
@@ -582,7 +687,7 @@ Store:
         model: https://schema.org/Text    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -594,25 +699,32 @@ Store:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
+    startDate:    
+      description: The start date and time of the item (in ISO 8601 date format).    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/startDate    
+        type: Property    
     telephone:    
-      description: 'The telephone number of this store.'    
+      description: The telephone number of this store    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be Store'    
+      description: NGSI Entity type. It has to be Store    
       enum:    
         - Store    
       type: string    
       x-ngsi:    
         type: Property    
     url:    
-      description: 'Website with information about the store.'    
+      description: Website with information about the store    
       format: uri    
       type: string    
       x-ngsi:    
@@ -625,7 +737,7 @@ Store:
     - description    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Store/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/Store/schema.json    
   x-model-tags: ""    
@@ -698,7 +810,7 @@ Store:
 }  
 ```  
 </details>  
-#### Store NGSI-v2 normalizzato Esempio  
+#### Negozio NGSI-v2 normalizzato Esempio  
 Ecco un esempio di Store in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si usano le opzioni e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
@@ -714,7 +826,7 @@ Store:
     "value": "http://www.smartsantander.eu/"  
   },  
   "location": {  
-    "type": "GeoProperty",  
+    "type": "geo:json",  
     "value": {  
       "type": "Point",  
       "coordinates": [  
@@ -736,13 +848,13 @@ Store:
     "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"  
   },  
   "currenciesAccepted": {  
-    "type": "StructuredValue",  
+    "type": "array",  
     "value": [  
       "EUR"  
     ]  
   },  
   "paymentAccepted:": {  
-    "type": "StructuredValue",  
+    "type": "array",  
     "value": [  
       "cash",  
       "paypal"  
@@ -791,13 +903,16 @@ Store:
     "value": "email@example.com"  
   },  
   "url": {  
-    "type": "Text",  
+    "type": "URL",  
     "value": "https://exampleStoreUrl.com"  
   },  
   "category": {  
     "type": "Text",  
     "value": "GroceryStore"  
-  }  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -806,172 +921,168 @@ Store:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Store:santander:COM4111",  
-    "type": "Store",  
-    "category": {  
-        "type": "Text",  
-        "value": "GroceryStore"  
-    },  
-    "currenciesAccepted": {  
-        "type": "StructuredValue",  
-        "value": [  
-            "EUR"  
-        ]  
-    },  
-    "dataProvider": {  
-        "type": "Text",  
-        "value": "http://www.smartsantander.eu/"  
-    },  
-    "description": {  
-        "type": "Text",  
-        "value": "Cosmetica natural fabricada en Santander."  
-    },  
-    "email": {  
-        "type": "Text",  
-        "value": "email@example.com"  
-    },  
-    "image": {  
-        "type": "Text",  
-        "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -3.8077562,  
-                43.4628255  
-            ]  
-        }  
-    },  
-    "logo": {  
-        "type": "Text",  
-        "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"  
-    },  
-    "name": {  
-        "type": "Text",  
-        "value": "MARTA KAUFMANN"  
-    },  
-    "openingHoursSpecification": {  
-        "type": "StructuredValue",  
-        "value": [  
-            {  
-                "opens": "00:02:00",  
-                "closes": "23:59:00",  
-                "dayOfWeek": "Monday"  
-            },  
-            {  
-                "opens": "00:01:00",  
-                "closes": "23:59:00",  
-                "dayOfWeek": "Tuesday"  
-            },  
-            {  
-                "opens": "00:01:00",  
-                "closes": "23:59:00",  
-                "dayOfWeek": "Wednesday"  
-            },  
-            {  
-                "opens": "00:01:00",  
-                "closes": "23:59:00",  
-                "dayOfWeek": "Thursday"  
-            },  
-            {  
-                "opens": "00:01:00",  
-                "closes": "23:59:00",  
-                "dayOfWeek": "Friday"  
-            }  
-        ]  
-    },  
-    "paymentAccepted:": {  
-        "type": "StructuredValue",  
-        "value": [  
-            "cash",  
-            "paypal"  
-        ]  
-    },  
-    "source": {  
-        "type": "Text",  
-        "value": "https://api.smartsantander.eu/"  
-    },  
-    "telephone": {  
-        "type": "Text",  
-        "value": "(+34) 942 123 123"  
-    },  
-    "url": {  
-        "type": "Text",  
-        "value": "https://exampleStoreUrl.com"  
-    },  
-    "@context": [  
-        "https://smart-data-models.github.io/data-models/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  "id": "urn:ngsi-ld:Store:santander:COM4111",  
+  "type": "Store",  
+  "category": "GroceryStore",  
+  "currenciesAccepted": [  
+    "EUR"  
+  ],  
+  "dataProvider": "http://www.smartsantander.eu/",  
+  "description": "Cosmetica natural fabricada en Santander.",  
+  "email": "email@example.com",  
+  "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -3.8077562,  
+      43.4628255  
     ]  
+  },  
+  "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",  
+  "name": "MARTA KAUFMANN",  
+  "openingHoursSpecification": [  
+    {  
+      "opens": "00:02:00",  
+      "closes": "23:59:00",  
+      "dayOfWeek": "Monday"  
+    },  
+    {  
+      "opens": "00:01:00",  
+      "closes": "23:59:00",  
+      "dayOfWeek": "Tuesday"  
+    },  
+    {  
+      "opens": "00:01:00",  
+      "closes": "23:59:00",  
+      "dayOfWeek": "Wednesday"  
+    },  
+    {  
+      "opens": "00:01:00",  
+      "closes": "23:59:00",  
+      "dayOfWeek": "Thursday"  
+    },  
+    {  
+      "opens": "00:01:00",  
+      "closes": "23:59:00",  
+      "dayOfWeek": "Friday"  
+    }  
+  ],  
+  "paymentAccepted:": [  
+    "cash",  
+    "paypal"  
+  ],  
+  "source": "https://api.smartsantander.eu/",  
+  "telephone": "(+34) 942 123 123",  
+  "url": "https://exampleStoreUrl.com",  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
-#### Memorizzazione NGSI-LD normalizzata Esempio  
-Ecco un esempio di Store in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si usano opzioni e restituisce i dati di contesto di una singola entità.  
+#### Memorizzare NGSI-LD normalizzato Esempio  
+Ecco un esempio di Store in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Store:santander:COM4111",  
-    "type": "Store",  
-    "category": "GroceryStore",  
-    "currenciesAccepted": [  
-        "EUR"  
-    ],  
-    "dataProvider": "http://www.smartsantander.eu/",  
-    "description": "Cosmetica natural fabricada en Santander.",  
-    "email": "email@example.com",  
-    "image": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/",  
-    "location": {  
-        "type": "Point",  
-        "coordinates": [  
-            -3.8077562,  
-            43.4628255  
-        ]  
-    },  
-    "logo": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100",  
-    "name": "MARTA KAUFMANN",  
-    "openingHoursSpecification": [  
-        {  
-            "opens": "00:02:00",  
-            "closes": "23:59:00",  
-            "dayOfWeek": "Monday"  
-        },  
-        {  
-            "opens": "00:01:00",  
-            "closes": "23:59:00",  
-            "dayOfWeek": "Tuesday"  
-        },  
-        {  
-            "opens": "00:01:00",  
-            "closes": "23:59:00",  
-            "dayOfWeek": "Wednesday"  
-        },  
-        {  
-            "opens": "00:01:00",  
-            "closes": "23:59:00",  
-            "dayOfWeek": "Thursday"  
-        },  
-        {  
-            "opens": "00:01:00",  
-            "closes": "23:59:00",  
-            "dayOfWeek": "Friday"  
-        }  
-    ],  
-    "paymentAccepted:": [  
-        "cash",  
-        "paypal"  
-    ],  
-    "source": "https://api.smartsantander.eu/",  
-    "telephone": "(+34) 942 123 123",  
-    "url": "https://exampleStoreUrl.com",  
-    "@context": [  
-        "https://smart-data-models.github.io/data-models/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  "id": "urn:ngsi-ld:Store:santander:COM4111",  
+  "type": "Store",  
+  "source": {  
+    "type": "Property",  
+    "value": "https://api.smartsantander.eu/"  
+  },  
+  "dataProvider": {  
+    "type": "Property",  
+    "value": "http://www.smartsantander.eu/"  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -3.8077562,  
+        43.4628255  
+      ]  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "MARTA KAUFMANN"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Cosmetica natural fabricada en Santander."  
+  },  
+  "image": {  
+    "type": "Property",  
+    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"  
+  },  
+  "currenciesAccepted": {  
+    "type": "Property",  
+    "value": [  
+      "EUR"  
     ]  
+  },  
+  "paymentAccepted:": {  
+    "type": "Property",  
+    "value": [  
+      "cash",  
+      "paypal"  
+    ]  
+  },  
+  "openingHoursSpecification": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "opens": "00:02:00",  
+        "closes": "23:59:00",  
+        "dayOfWeek": "Monday"  
+      },  
+      {  
+        "opens": "00:01:00",  
+        "closes": "23:59:00",  
+        "dayOfWeek": "Tuesday"  
+      },  
+      {  
+        "opens": "00:01:00",  
+        "closes": "23:59:00",  
+        "dayOfWeek": "Wednesday"  
+      },  
+      {  
+        "opens": "00:01:00",  
+        "closes": "23:59:00",  
+        "dayOfWeek": "Thursday"  
+      },  
+      {  
+        "opens": "00:01:00",  
+        "closes": "23:59:00",  
+        "dayOfWeek": "Friday"  
+      }  
+    ]  
+  },  
+  "logo": {  
+    "type": "Property",  
+    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"  
+  },  
+  "telephone": {  
+    "type": "Property",  
+    "value": "(+34) 942 123 123"  
+  },  
+  "email": {  
+    "type": "Property",  
+    "value": "email@example.com"  
+  },  
+  "url": {  
+    "type": "Property",  
+    "value": "https://exampleStoreUrl.com"  
+  },  
+  "category": {  
+    "type": "Property",  
+    "value": "GroceryStore"  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
