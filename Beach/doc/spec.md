@@ -15,7 +15,14 @@
 ## List of properties  
 
 <sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `accessType[array]`: Enum:'privateVehicle, boat, onFoot, publicTransport'. Describes how to get to this beach.  . Model: [https://schema.org/Text](https://schema.org/Text)- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `beachType[array]`: Type of beach according to different criteria. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. Or any other value needed by an application.  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `facilities[array]`: Describes different facilities offered by this beach. Enum:'promenade, showers, cleaningServices, lifeGuard, sunshadeRental, sunLoungerRental, waterCraftRental, toilets, touristOffice, litterBins, telephone,surfPracticeArea, accessforDisabled'  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Unique identifier of the entity  - `length[number]`: Length of this beach  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `occupationRate[string]`: Typical occupation rate of this beach. Enum:'low, medium, high, none'  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleOccupancy[number]`: Amount of people at the location  . Model: [https://schema.org/Number](https://schema.org/Number)- `refSeeAlso[array]`: List of references to one or more related entities.  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI Entity type. It has to be Beach  - `width[number]`: Width of this beach  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
+- `accessType[array]`: Enum:'privateVehicle, boat, onFoot, publicTransport'. Describes how to get to this beach  . Model: [https://schema.org/Text](https://schema.org/Text)- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: The country. For example, Spain  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: The locality in which the street address is, and which is in the region  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: The region in which the locality is, and which is in the country  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: A district is a type of administrative division that, in some countries, is managed by the local government    
+	- `postOfficeBoxNumber[string]`: The post office box number for PO box addresses. For example, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: The postal code. For example, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: The street address  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: An alternative name for this item  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `beachType[array]`: Type of beach according to different criteria. Enum:'whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand'. Or any other value needed by an application  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity  - `dateCreated[date-time]`: Entity creation timestamp. This will usually be allocated by the storage platform  - `dateModified[date-time]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform  - `dateObserved[date-time]`: Date of the observed entity defined by the user  - `description[string]`: A description of this item  - `facilities[array]`: Describes different facilities offered by this beach. Enum:'promenade, showers, cleaningServices, lifeGuard, sunshadeRental, sunLoungerRental, waterCraftRental, toilets, touristOffice, litterBins, telephone,surfPracticeArea, accessforDisabled'  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Unique identifier of the entity  - `length[number]`: Length of this beach  . Model: [https://schema.org/length](https://schema.org/length)- `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item  - `occupationRate[string]`: Typical occupation rate of this beach. Enum:'low, medium, high, none'  . Model: [https://schema.org/Text](https://schema.org/Text)- `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `peopleOccupancy[number]`: Amount of people at the location  . Model: [https://schema.org/Number](https://schema.org/Number)- `refSeeAlso[array]`: List of references to one or more related entities  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object  - `type[string]`: NGSI Entity type. It has to be Beach  - `width[number]`: Width of this beach  . Model: [https://schema.org/width](https://schema.org/width)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Required properties  
 - `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
@@ -30,10 +37,10 @@
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Beach:    
-  description: 'This entity contains a harmonised geographic description of a beach.'    
+  description: This entity contains a harmonised geographic description of a beach.    
   properties:    
     accessType:    
-      description: 'Enum:''privateVehicle, boat, onFoot, publicTransport''. Describes how to get to this beach.'    
+      description: 'Enum:''privateVehicle, boat, onFoot, publicTransport''. Describes how to get to this beach'    
       items:    
         enum:    
           - privateVehicle    
@@ -48,43 +55,71 @@ Beach:
         model: https://schema.org/Text    
         type: Property    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     beachType:    
-      description: 'Type of beach according to different criteria. Enum:''whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand''. Or any other value needed by an application.'    
+      description: 'Type of beach according to different criteria. Enum:''whiteSand, urban, isolated, calmWaters, blueFlag, Q-Quality, strongWaves, windy, blackSand''. Or any other value needed by an application'    
       items:    
         enum:    
           - whiteSand    
@@ -104,24 +139,30 @@ Beach:
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
+      format: date-time    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    dateObserved:    
+      description: Date of the observed entity defined by the user    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -150,20 +191,24 @@ Beach:
         model: https://schema.org/Text    
         type: Property    
     id:    
-      anyOf: &beach_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     length:    
-      description: 'Length of this beach'    
+      description: Length of this beach    
       type: number    
       x-ngsi:    
         model: https://schema.org/length    
@@ -172,7 +217,7 @@ Beach:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -191,9 +236,11 @@ Beach:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -215,9 +262,11 @@ Beach:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -241,9 +290,11 @@ Beach:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -264,9 +315,11 @@ Beach:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -290,9 +343,11 @@ Beach:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -318,12 +373,14 @@ Beach:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
@@ -339,31 +396,59 @@ Beach:
         model: https://schema.org/Text    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *beach_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     peopleOccupancy:    
-      description: 'Amount of people at the location'    
+      description: Amount of people at the location    
       minimum: 0    
       type: number    
       x-ngsi:    
         model: https://schema.org/Number    
         type: Property    
     refSeeAlso:    
-      description: 'List of references to one or more related entities.'    
+      description: List of references to one or more related entities    
       items:    
-        anyOf: *beach_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         model: https://schema.org/URL    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -375,24 +460,24 @@ Beach:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be Beach'    
+      description: NGSI Entity type. It has to be Beach    
       enum:    
         - Beach    
       type: string    
       x-ngsi:    
         type: Property    
     width:    
-      description: 'Width of this beach'    
+      description: Width of this beach    
       type: number    
       x-ngsi:    
         model: https://schema.org/width    
         type: Property    
-        units: meter.    
+        units: meter    
   required:    
     - id    
     - type    
@@ -400,7 +485,7 @@ Beach:
     - name    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Beach/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/Beach/schema.json    
   x-model-tags: ""    
@@ -448,28 +533,46 @@ Beach:
   "id": "Beach-A-Concha-123456",  
   "type": "Beach",  
   "description": {  
+    "type": "Text",  
     "value": "La Playa de A Concha se presenta ....."  
   },  
   "width": {  
+    "type": "Number",  
     "value": 51  
   },  
   "accessType": {  
-    "value": ["privateVehicle", "onFoot", "publicTransport"]  
+    "type": "array",  
+    "value": [  
+      "privateVehicle",  
+      "onFoot",  
+      "publicTransport"  
+    ]  
   },  
   "location": {  
     "type": "geo:json",  
     "value": {  
       "type": "Point",  
-      "coordinates": [-8.768460000000001, 42.60214472222222]  
+      "coordinates": [  
+        -8.768460000000001,  
+        42.60214472222222  
+      ]  
     }  
   },  
   "facilities": {  
-    "value": ["promenade", "showers", "cleaningServices", "lifeGuard"]  
+    "type": "array",  
+    "value": [  
+      "promenade",  
+      "showers",  
+      "cleaningServices",  
+      "lifeGuard"  
+    ]  
   },  
   "length": {  
+    "type": "Number",  
     "value": 450  
   },  
   "source": {  
+    "type": "Text",  
     "value": "http://www.tourspain.es"  
   },  
   "address": {  
@@ -480,12 +583,19 @@ Beach:
     }  
   },  
   "beachType": {  
-    "value": ["whiteSand", "urban", "calmWaters"]  
+    "type": "array",  
+    "value": [  
+      "whiteSand",  
+      "urban",  
+      "calmWaters"  
+    ]  
   },  
   "occupationRate": {  
+    "type": "Text",  
     "value": "high"  
   },  
   "name": {  
+    "type": "Text",  
     "value": "Playa de a Concha"  
   }  
 }  
@@ -496,79 +606,44 @@ Beach:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
-    "type": "Beach",  
-    "accessType": {  
-        "type": "Property",  
-        "value": [  
-            "privateVehicle",  
-            "onFoot",  
-            "publicTransport"  
-        ]  
-    },  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "ES",  
-            "addressLocality": "Vilagarc\u00eda de Arousa",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "beachType": {  
-        "type": "Property",  
-        "value": [  
-            "whiteSand",  
-            "urban",  
-            "calmWaters"  
-        ]  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "La Playa de A Concha se presenta ....."  
-    },  
-    "facilities": {  
-        "type": "Property",  
-        "value": [  
-            "promenade",  
-            "showers",  
-            "cleaningServices",  
-            "lifeGuard"  
-        ]  
-    },  
-    "length": {  
-        "type": "Property",  
-        "value": 450  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                -8.768460000000001,  
-                42.60214472222222  
-            ]  
-        }  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Playa de a Concha"  
-    },  
-    "occupationRate": {  
-        "type": "Property",  
-        "value": "high"  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "http://www.tourspain.es"  
-    },  
-    "width": {  
-        "type": "Property",  
-        "value": 51  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
+  "type": "Beach",  
+  "accessType": [  
+    "privateVehicle",  
+    "onFoot",  
+    "publicTransport"  
+  ],  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Vilagarc\u00eda de Arousa",  
+  },  
+  "beachType": [  
+    "whiteSand",  
+    "urban",  
+    "calmWaters"  
+  ],  
+  "description": "La Playa de A Concha se presenta .....",  
+  "facilities": [  
+    "promenade",  
+    "showers",  
+    "cleaningServices",  
+    "lifeGuard"  
+  ],  
+  "length": 450,  
+  "location": {  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
+    ],  
+    "type": "Point"  
+  },  
+  "name": "Playa de a Concha",  
+  "occupationRate": "high",  
+  "source": "http://www.tourspain.es",  
+  "width": 51,  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -577,46 +652,77 @@ Beach:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
-    "type": "Beach",  
-    "accessType": [  
-        "privateVehicle",  
-        "onFoot",  
-        "publicTransport"  
-    ],  
-    "address": {  
-        "addressCountry": "ES",  
-        "addressLocality": "Vilagarc\u00eda de Arousa",  
-        "type": "PostalAddress"  
-    },  
-    "beachType": [  
-        "whiteSand",  
-        "urban",  
-        "calmWaters"  
-    ],  
-    "description": "La Playa de A Concha se presenta .....",  
-    "facilities": [  
-        "promenade",  
-        "showers",  
-        "cleaningServices",  
-        "lifeGuard"  
-    ],  
-    "length": 450,  
-    "location": {  
-        "coordinates": [  
-            -8.768460000000001,  
-            42.60214472222222  
-        ],  
-        "type": "Point"  
-    },  
-    "name": "Playa de a Concha",  
-    "occupationRate": "high",  
-    "source": "http://www.tourspain.es",  
-    "width": 51,  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  "id": "urn:ngsi-ld:Beach:Beach-A-Concha-123456",  
+  "type": "Beach",  
+  "accessType": {  
+    "type": "Property",  
+    "value": [  
+      "privateVehicle",  
+      "onFoot",  
+      "publicTransport"  
     ]  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "ES",  
+      "addressLocality": "Vilagarc\u00eda de Arousa"  
+    }  
+  },  
+  "beachType": {  
+    "type": "Property",  
+    "value": [  
+      "whiteSand",  
+      "urban",  
+      "calmWaters"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "La Playa de A Concha se presenta ....."  
+  },  
+  "facilities": {  
+    "type": "Property",  
+    "value": [  
+      "promenade",  
+      "showers",  
+      "cleaningServices",  
+      "lifeGuard"  
+    ]  
+  },  
+  "length": {  
+    "type": "Property",  
+    "value": 450  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.768460000000001,  
+        42.60214472222222  
+      ]  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Playa de a Concha"  
+  },  
+  "occupationRate": {  
+    "type": "Property",  
+    "value": "high"  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.tourspain.es"  
+  },  
+  "width": {  
+    "type": "Property",  
+    "value": 51  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
