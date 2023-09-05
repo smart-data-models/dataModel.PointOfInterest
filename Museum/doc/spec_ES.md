@@ -14,62 +14,97 @@
 
 ## Lista de propiedades  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `artPeriod[array]`: Valores permitidos:-Los definidos por [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).- Cualquier otro valor extendido que necesite una aplicación y que no esté descrito por el recurso anterior.  . Model: [https://schema.org/Text.Corresponds to the art period(s) of the exhibitions made by this museum](https://schema.org/Text.Corresponds to the art period(s) of the exhibitions made by this museum)- `buildingType[array]`: Tipo de edificio que alberga el museo. Enum:'lugar prehistórico, acrópolis, alcazaba,acueducto, alcázar, anfiteatro, arco, arquitectura polular,basílica, camino, capilla, cartuja, casa nobiliaria, residencia, castillo, castro, catacumbas, catedral, claustro, convento, cueva prehistórica, dolmen, edificio de oficinas, edificio de viviendas, edificio industrial, edificio militar, ermita, fortaleza, grupos escultóricos, iglesia, jardín, lonja, masía, masía fortificada, alminar, monasterio, monolito, murallas, necrópolis, menhir, mansión, palacio, panteón, pazo, pirámide, puente, puerta, pórtico, recinto amurallado, santuario, tumba, sinagoga, taulasTalayotsNavetas, templo, fuente, torre, sitio arqueológico, universidad, cementerio, templo fortificado, ingeniería civil, plaza, seminario, plaza de toros, edificio público, ciudad, cuevas y minas turísticas, catedral, mezquita, circo, túmulo".  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: Punto de contacto del museo.  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `facilities[array]`: Describe las diferentes instalaciones que ofrece este museo. Enum:'ascensor, cafetería, tienda, auditorio, sala de conferencias, audioguía, guardarropa, para discapacitados, para bebés, visita guiada, restaurante, rampa, reserva'. o cualquier otro valor que necesite una aplicación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `featuredArtist[array]`: Artista(s) principal(es) en este museo.  . Model: [https://schema.org/Person](https://schema.org/Person)- `historicalPeriod[array]`: Un intervalo de tiempo ISO8601. Por ejemplo, 1920/1940. El segundo elemento del intervalo puede dejarse vacío para indicar "hasta ahora". Una lista de años separados por comas, por ejemplo 1620,1625,1718.       - Un siglo, representado por un patrón de años, por ejemplo 19xx correspondería al siglo XX. Y 196x correspondería a la década de los sesenta.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `museumType[array]`: Tipo de museo según el contenido expuesto. Enum:Artes aplicadas, ciencia y tecnología, bellas artes, música, historia, arte sacro, arqueología, especialidades, artes decorativas, literatura, medicina y farmacia, marítimo, transportes, militar, cera, artes populares y tradiciones, numismática, unesco, cerámica, artes suntuarias, ciencias naturales, prehistoria, etnología, ferrocarril, minería, textil, escultura, multidisciplinar, pintura, paleontología, arte moderno, temático, arquitectura, casa-museo, museo catedralicio, museo diocesano, universitario, arte contemporáneo, taurino". Otra posible fuente para los tipos de museos no contemplados anteriormente es [Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum).  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: El nombre de este artículo.  - `openingHoursSpecification[array]`: Un valor estructurado que proporciona información sobre el horario de apertura de un lugar o de un determinado servicio dentro de un lugar  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refSeeAlso[array]`: Lista de referencias a una o más entidades relacionadas.  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `touristArea[string]`: Zona turística en la que se encuentra este museo. La semántica precisa puede depender de la aplicación o del país o región de destino. Por ejemplo, "Costa del Sol".  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo de entidad NGSI. Tiene que ser Museo  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: El país. Por ejemplo, España  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La localidad en la que se encuentra la dirección postal, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La región en la que se encuentra la localidad, y que está en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un distrito es un tipo de división administrativa que, en algunos países, gestiona el gobierno local    
+	- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `artPeriod[array]`: Valores permitidos:-Los definidos por [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).-Cualquier otro valor extendido que necesite una aplicación y que no esté descrito por el recurso anterior.  . Model: [https://schema.org/Text.Corresponds to the art period(s) of the exhibitions made by this museum](https://schema.org/Text.Corresponds to the art period(s) of the exhibitions made by this museum)- `buildingType[array]`: Tipo de edificio que alberga el museo. Enum:'prehistoricPlace, acropolis, alcazaba,aqueduct, alcazar, amphitheatre, arch, polularArchitecture,basilica, road, chapel, cartuja, nobleHouse, residence,castle, castro, catacombs, cathedral, cloister, convento, cueva prehistórica, dolmen, edificio de oficinas, edificio de viviendas, edificio industrial, edificio militar, ermita, fortaleza, grupos escultóricos, iglesia, jardín, lonja, masía, masía fortificada, alminar, monasterio,monolito,muralla,necrópolis,menhir,mansión,palacio,panteón,pazo,pirámide,puente,puerta,soportal,recintoamurallado,santuario,tumba,sinagoga,taulasTalayotsNavetas,theathre,templo,manantial,torre, yacimiento arqueológico, universidad, cementerio, templo fortificado, ingeniería civil, plaza, seminario, plaza de toros, edificio público, ciudad, cuevas y minas turísticas, catedral, mezquita, circo, túmulo".  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: Punto de contacto del museo  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `description[string]`: Descripción de este artículo  - `facilities[array]`: Describe las diferentes instalaciones que ofrece este museo. Enum:'ascensor, cafetería, tienda, auditorio, sala de conferencias, audioguía, guardarropa, para discapacitados, para bebés, visita guiada, restaurante, rampa, reserva'. o cualquier otro valor que necesite una aplicación.  . Model: [https://schema.org/Text](https://schema.org/Text)- `featuredArtist[array]`: Principales artistas de este museo  . Model: [https://schema.org/Person](https://schema.org/Person)- `historicalPeriod[array]`: Un intervalo de tiempo ISO8601. Por ejemplo 1920/1940. El segundo elemento del intervalo puede dejarse vacío para indicar "hasta ahora". Una lista de años separados por comas, por ejemplo 1620,1625,1718.       - Un siglo, representado por un patrón de años, por ejemplo 19xx correspondería al siglo XX. Y 196x correspondería a la década de los sesenta.  . Model: [https://schema.org/Text](https://schema.org/Text)- `id[*]`: Identificador único de la entidad  - `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `museumType[array]`: Tipo de museo según el contenido expuesto. Enum:artes aplicadas, ciencia y tecnología, bellas artes, música, historia, arte sacro, arqueología, especialidades, artes decorativas, literatura, medicina y farmacia, marítimo, transportes, militar, cera, artes populares y tradiciones, numismática, unesco, cerámica, artes suntuarias, ciencias naturales, prehistoria, etnología, ferrocarril, minería, textil, escultura, multidisciplinar, pintura, paleontología, arte moderno, temático, arquitectura, casa museo, museo catedralicio, museo diocesano, universitario, arte contemporáneo, tauromaquia". Otra posible fuente para tipos de museos no contemplados anteriormente es [Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum)  . Model: [https://schema.org/Text](https://schema.org/Text)- `name[string]`: El nombre de este artículo  - `openingHoursSpecification[array]`: Valor estructurado que proporciona información sobre el horario de apertura de un lugar o de un determinado servicio dentro de un lugar.  . Model: [https://schema.org/openingHoursSpecification](https://schema.org/openingHoursSpecification)- `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `refSeeAlso[array]`: Lista de referencias a una o varias entidades relacionadas  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `touristArea[string]`: Zona turística en la que se encuentra este museo. La semántica precisa puede depender de la aplicación o del país o región de destino. Por ejemplo, "Costa del Sol  . Model: [https://schema.org/Text](https://schema.org/Text)- `type[string]`: Tipo de entidad NGSI. Tiene que ser Museo  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `id`  - `location`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Esta entidad contiene una descripción geográfica armonizada de un museo. Se usa en aplicaciones que utilizan datos espaciales y es aplicable a los segmentos verticales de Turismo, Cultura y Ciudades Inteligentes y a las aplicaciones IoT relacionadas. Un agradecimiento especial a [TURESPAÑA](https://www.tourspain.es/en-us) que proporcionó algunos ejemplos que inspiraron el desarrollo de este modelo de datos.  
+Esta entidad contiene una descripción geográfica armonizada de un museo. Se utiliza en aplicaciones que emplean datos espaciales y es aplicable a los segmentos verticales de Turismo, Cultura y Smart City y a las aplicaciones IoT relacionadas. Un agradecimiento especial a [TURESPAÑA](https://www.tourspain.es/en-us) que proporcionó algunos ejemplos que inspiraron el desarrollo de este modelo de datos.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+## Descripción de las propiedades del modelo de datos  
+Ordenados alfabéticamente (pulse para más detalles)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Museum:    
-  description: 'A museum'    
+  description: A museum    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     artPeriod:    
-      description: 'Allowed values:-Those defined by [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).- Any other extended value needed by an application and not described by the above resource.'    
+      description: 'Allowed values:-Those defined by [Wikipedia](https://en.wikipedia.org/wiki/Art_periods).- Any other extended value needed by an application and not described by the above resource'    
       items:    
         type: string    
       minItems: 1    
@@ -162,35 +197,35 @@ Museum:
         model: https://schema.org/Text    
         type: Property    
     contactPoint:    
-      description: 'Contact point for the museum.'    
+      description: Contact point for the museum    
       type: object    
       x-ngsi:    
         model: https://schema.org/ContactPoint    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     facilities:    
-      description: 'Describes different facilities offered by this museum. Enum:''elevator, cafeteria, shop, auditory,conferenceRoom, audioguide, cloakRoom, forDisabled, forBabies,guidedTour, restaurant, ramp, reservation''. or any other value needed by an application.'    
+      description: 'Describes different facilities offered by this museum. Enum:''elevator, cafeteria, shop, auditory,conferenceRoom, audioguide, cloakRoom, forDisabled, forBabies,guidedTour, restaurant, ramp, reservation''. or any other value needed by an application'    
       items:    
         enum:    
           - elevator    
@@ -214,19 +249,25 @@ Museum:
         model: https://schema.org/Text    
         type: Property    
     featuredArtist:    
-      description: 'Main featured artist(s) at this museum.'    
+      description: Main featured artist(s) at this museum    
       items:    
         anyOf:    
-          - anyOf: &museum_-_properties_-_id_-_anyof    
-              - description: 'Property. Identifier format of any NGSI entity'    
+          - anyOf:    
+              - description: Identifier format of any NGSI entity    
                 maxLength: 256    
                 minLength: 1    
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
                 type: string    
-              - description: 'Property. Identifier format of any NGSI entity'    
+                x-ngsi:    
+                  type: Property    
+              - description: Identifier format of any NGSI entity    
                 format: uri    
                 type: string    
-            description: 'Property. Unique identifier of the entity'    
+                x-ngsi:    
+                  type: Property    
+            description: Unique identifier of the entity    
+            x-ngsi:    
+              type: Property    
           - type: string    
       minItems: 1    
       type: array    
@@ -235,7 +276,7 @@ Museum:
         model: https://schema.org/Person    
         type: Property    
     historicalPeriod:    
-      description: 'An ISO8601 time interval. For example 1920/1940. The second element of the interval can be left empty to denote ''till now''. A comma separated list of years, for instance 1620,1625,1718.       -   A century, represented by a year pattern, for instance 19xx would correspond to the twentieth century. And 196x would correspond to the sixties decade.'    
+      description: 'An ISO8601 time interval. For example 1920/1940. The second element of the interval can be left empty to denote ''till now''. A comma separated list of years, for instance 1620,1625,1718.       -   A century, represented by a year pattern, for instance 19xx would correspond to the twentieth century. And 196x would correspond to the sixties decade'    
       items:    
         type: string    
       minItems: 1    
@@ -245,14 +286,26 @@ Museum:
         model: https://schema.org/Text    
         type: Property    
     id:    
-      anyOf: *museum_-_properties_-_id_-_anyof    
-      description: 'Unique identifier of the entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
+          format: uri    
+          type: string    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -271,9 +324,11 @@ Museum:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -295,9 +350,11 @@ Museum:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -321,9 +378,11 @@ Museum:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -344,9 +403,11 @@ Museum:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -370,9 +431,11 @@ Museum:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -398,12 +461,14 @@ Museum:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     museumType:    
-      description: 'Type of museum according to the exhibited content. Enum:''appliedArts, scienceAndTechnology, fineArts,music, history, sacredArt, archaeology, specials,decorativeArts, literature, medicineAndPharmacy, maritime,transports, military, wax, popularArtsAndTraditions,numismatic, unesco, ceramics, sumptuaryArts, naturalScience,prehistoric, ethnology, railway, mining, textile, sculpture,multiDisciplinar, painting, paleonthology, modernArt,thematic, architecture, museumHouse, cathedralMuseum,diocesanMuseum, universitary, contemporaryArt, bullfighting''. Other possible source for museum types not covered above is [Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum).'    
+      description: 'Type of museum according to the exhibited content. Enum:''appliedArts, scienceAndTechnology, fineArts,music, history, sacredArt, archaeology, specials,decorativeArts, literature, medicineAndPharmacy, maritime,transports, military, wax, popularArtsAndTraditions,numismatic, unesco, ceramics, sumptuaryArts, naturalScience,prehistoric, ethnology, railway, mining, textile, sculpture,multiDisciplinar, painting, paleonthology, modernArt,thematic, architecture, museumHouse, cathedralMuseum,diocesanMuseum, universitary, contemporaryArt, bullfighting''. Other possible source for museum types not covered above is [Wikipedia](https://en.wikipedia.org/wiki/Category:Types_of_museum)'    
       items:    
         enum:    
           - appliedArts    
@@ -453,21 +518,23 @@ Museum:
         model: https://schema.org/Text    
         type: Property    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     openingHoursSpecification:    
-      description: 'A structured value providing information about the opening hours of a place or a certain service inside a place'    
+      description: A structured value providing information about the opening hours of a place or a certain service inside a place    
       items:    
         properties:    
           closes:    
+            description: ' 	The closing hour of the place or service on the given day(s) of the week'    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
+            x-ngsi:    
+              type: Property    
           dayOfWeek:    
             anyOf:    
-              - description: 'Property. Array of days of the week.'    
+              - description: Array of days of the week    
                 enum:    
                   - Monday    
                   - Tuesday    
@@ -478,7 +545,9 @@ Museum:
                   - Sunday    
                   - PublicHolidays    
                 type: string    
-              - description: 'Property. Array of days of the week.'    
+                x-ngsi:    
+                  type: Property    
+              - description: Array of days of the week    
                 enum:    
                   - https://schema.org/Monday    
                   - https://schema.org/Tuesday    
@@ -489,31 +558,54 @@ Museum:
                   - https://schema.org/Sunday    
                   - https://schema.org/PublicHolidays    
                 type: string    
-            description: 'Property. Model:''http://schema.org/dayOfWeek''. The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays).'    
+                x-ngsi:    
+                  type: Property    
+            description: 'The day of the week for which these opening hours are valid. URLs from GoodRelations (http://purl.org/goodrelations/v1) are used (for Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday plus a special entry for PublicHolidays)'    
             type: string    
+            x-ngsi:    
+              model: http://schema.org/dayOfWeek    
+              type: Property    
           opens:    
+            description: The opening hour of the place or service on the given day(s) of the week    
             format: time    
-            pattern: ^(2[0-3]|[01][0-9]):?([0-5][0-9]):?([0-5][0-9])(\.[0-9]*)?(Z|[+-](?:2[0-3]|[01][0-9])(?::?(?:[0-5][0-9]))?)$    
             type: string    
+            x-ngsi:    
+              type: Property    
           validFrom:    
             anyOf:    
-              - description: 'Property. Model:''http://schema.org/Date.'    
+              - description: ""    
                 format: date    
                 type: string    
-              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                x-ngsi:    
+                  model: http://schema.org/Date    
+                  type: Property    
+              - description: ""    
                 format: date-time    
                 type: string    
-            description: 'Property. The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
+                x-ngsi:    
+                  model: http://schema.org/DateTime    
+                  type: Property    
+            description: 'The date when the item becomes valid. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'    
+            x-ngsi:    
+              type: Property    
           validThrough:    
             anyOf:    
-              - description: 'Property. Model:''http://schema.org/Date.'    
+              - description: ""    
                 format: date    
                 type: string    
-              - description: 'Property. Model:''http://schema.org/DateTime.'    
+                x-ngsi:    
+                  model: http://schema.org/Date    
+                  type: Property    
+              - description: ""    
                 format: date-time    
                 type: string    
-            description: 'Property. The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format.'    
+                x-ngsi:    
+                  model: http://schema.org/DateTime    
+                  type: Property    
+            description: 'The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours. A date value in the form CCYY-MM-DD or a combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] in ISO 8601 date format'    
             type: string    
+            x-ngsi:    
+              type: Property    
         type: object    
       minItems: 1    
       type: array    
@@ -521,19 +613,47 @@ Museum:
         model: https://schema.org/openingHoursSpecification    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *museum_-_properties_-_id_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     refSeeAlso:    
-      description: 'List of references to one or more related entities.'    
+      description: List of references to one or more related entities    
       items:    
         anyOf:    
-          - anyOf: *museum_-_properties_-_id_-_anyof    
-            description: 'Property. Unique identifier of the entity'    
+          - anyOf:    
+              - description: Identifier format of any NGSI entity    
+                maxLength: 256    
+                minLength: 1    
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+              - description: Identifier format of any NGSI entity    
+                format: uri    
+                type: string    
+                x-ngsi:    
+                  type: Property    
+            description: Unique identifier of the entity    
+            x-ngsi:    
+              type: Property    
       minItems: 1    
       type: array    
       uniqueItems: true    
@@ -541,7 +661,7 @@ Museum:
         model: https://schema.org/URL    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -553,18 +673,18 @@ Museum:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     touristArea:    
-      description: 'Tourist area at which this museum is located. Precise semantics might depend on the application or target country or region. For instance `Costa del Sol`.'    
+      description: Tourist area at which this museum is located. Precise semantics might depend on the application or target country or region. For instance `Costa del Sol`    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     type:    
-      description: 'NGSI Entity type. It has to be Museum'    
+      description: NGSI Entity type. It has to be Museum    
       enum:    
         - Museum    
       type: string    
@@ -577,7 +697,7 @@ Museum:
     - name    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/Museum/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/Museum/schema.json    
   x-model-tags: ""    
@@ -590,8 +710,8 @@ Museum:
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
 ## Ejemplo de carga útil  
-#### Museo NGSI-v2 valores-clave Ejemplo  
-Aquí hay un ejemplo de un Museo en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+#### Museo NGSI-v2 key-values Ejemplo  
+He aquí un ejemplo de un Museo en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -681,6 +801,7 @@ Museum:
     }  
   },  
   "alternateName": {  
+    "type": "Text",  
     "value": "MACBA"  
   },  
   "artPeriod": {  
@@ -765,121 +886,7 @@ Museum:
 ```  
 </details>  
 #### Museo NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un Museo en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
-<details><summary><strong>show/hide example</strong></summary>    
-```json  
-{  
-    "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
-    "type": "Museum",  
-    "address": {  
-        "type": "Property",  
-        "value": {  
-            "addressCountry": "ES",  
-            "addressLocality": "Barcelona",  
-            "streetAddress": "Plaza Dels \u00c0ngels, 1",  
-            "type": "PostalAddress"  
-        }  
-    },  
-    "alternateName": {  
-        "type": "Property",  
-        "value": "MACBA"  
-    },  
-    "artPeriod": {  
-        "type": "Property",  
-        "value": [  
-            "contemporary"  
-        ]  
-    },  
-    "description": {  
-        "type": "Property",  
-        "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."  
-    },  
-    "facilities": {  
-        "type": "Property",  
-        "value": [  
-            "shop",  
-            "cloakRoom",  
-            "guidedTour"  
-        ]  
-    },  
-    "location": {  
-        "type": "GeoProperty",  
-        "value": {  
-            "type": "Point",  
-            "coordinates": [  
-                2.1668771521199393,  
-                41.38302235796602  
-            ]  
-        }  
-    },  
-    "museumType": {  
-        "type": "Property",  
-        "value": [  
-            "fineArts"  
-        ]  
-    },  
-    "name": {  
-        "type": "Property",  
-        "value": "Museo de Arte Contemporaneo de Barcelona"  
-    },  
-    "openingHoursSpecification": {  
-        "type": "Property",  
-        "value": [  
-            {  
-                "dayOfWeek": "Monday",  
-                "closes": "19:30:00",  
-                "opens": "11:00:00"  
-            },  
-            {  
-                "dayOfWeek": "Tuesday",  
-                "closes": "19:30:00",  
-                "opens": "11:00:00"  
-            },  
-            {  
-                "dayOfWeek": "Wednesday",  
-                "closes": "19:30:00",  
-                "opens": "11:00:00"  
-            },  
-            {  
-                "dayOfWeek": "Thurday",  
-                "closes": "19:30:00",  
-                "opens": "11:00:00"  
-            },  
-            {  
-                "dayOfWeek": "Friday",  
-                "closes": "19:30:00",  
-                "opens": "11:00:00"  
-            },  
-            {  
-                "dayOfWeek": "Saturday",  
-                "closes": "21:00:00",  
-                "opens": "10:00:00"  
-            },  
-            {  
-                "dayOfWeek": "Sunday",  
-                "closes": "15:00:00",  
-                "opens": "10:00:00"  
-            }  
-        ]  
-    },  
-    "source": {  
-        "type": "Property",  
-        "value": "http://www.tourspain.es"  
-    },  
-    "touristArea": {  
-        "type": "Property",  
-        "value": "Barcelona-Capital"  
-    },  
-    "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
-    ]  
-}  
-```  
-</details>  
-#### Museo NGSI-LD normalizado Ejemplo  
-He aquí un ejemplo de un Museo en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un Museo en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -889,7 +896,6 @@ Museum:
         "addressCountry": "ES",  
         "addressLocality": "Barcelona",  
         "streetAddress": "Plaza Dels \u00c0ngels, 1",  
-        "type": "PostalAddress"  
     },  
     "alternateName": "MACBA",  
     "artPeriod": [  
@@ -952,17 +958,126 @@ Museum:
     "source": "http://www.tourspain.es",  
     "touristArea": "Barcelona-Capital",  
     "@context": [  
-        "https://raw.githubusercontent.com/smart-data-models/data-models/master/context.jsonld",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
         "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
     ]  
+}  
+```  
+</details>  
+#### Museo NGSI-LD normalizado Ejemplo  
+He aquí un ejemplo de un Museo en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:Museum:Museum-Barcelona-MACBA-1234",  
+  "type": "Museum",  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "ES",  
+      "addressLocality": "Barcelona",  
+      "streetAddress": "Plaza Dels \u00c0ngels, 1"  
+    }  
+  },  
+  "alternateName": {  
+    "type": "Property",  
+    "value": "MACBA"  
+  },  
+  "artPeriod": {  
+    "type": "Property",  
+    "value": [  
+      "contemporary"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."  
+  },  
+  "facilities": {  
+    "type": "Property",  
+    "value": [  
+      "shop",  
+      "cloakRoom",  
+      "guidedTour"  
+    ]  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        2.1668771521199393,  
+        41.38302235796602  
+      ]  
+    }  
+  },  
+  "museumType": {  
+    "type": "Property",  
+    "value": [  
+      "fineArts"  
+    ]  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Museo de Arte Contemporaneo de Barcelona"  
+  },  
+  "openingHoursSpecification": {  
+    "type": "Property",  
+    "value": [  
+      {  
+        "dayOfWeek": "Monday",  
+        "closes": "19:30:00",  
+        "opens": "11:00:00"  
+      },  
+      {  
+        "dayOfWeek": "Tuesday",  
+        "closes": "19:30:00",  
+        "opens": "11:00:00"  
+      },  
+      {  
+        "dayOfWeek": "Wednesday",  
+        "closes": "19:30:00",  
+        "opens": "11:00:00"  
+      },  
+      {  
+        "dayOfWeek": "Thurday",  
+        "closes": "19:30:00",  
+        "opens": "11:00:00"  
+      },  
+      {  
+        "dayOfWeek": "Friday",  
+        "closes": "19:30:00",  
+        "opens": "11:00:00"  
+      },  
+      {  
+        "dayOfWeek": "Saturday",  
+        "closes": "21:00:00",  
+        "opens": "10:00:00"  
+      },  
+      {  
+        "dayOfWeek": "Sunday",  
+        "closes": "15:00:00",  
+        "opens": "10:00:00"  
+      }  
+    ]  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.tourspain.es"  
+  },  
+  "touristArea": {  
+    "type": "Property",  
+    "value": "Barcelona-Capital"  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
