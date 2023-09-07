@@ -2,7 +2,7 @@
   "id": "PointOfInterest-A-Concha-123456",
   "type": "PointOfInterest",
   "category": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "113"
     ]
@@ -12,7 +12,7 @@
     "value": "La Playa de A Concha se presenta como una continuaciin de la Playa de Compostela, una de las mis frecuentadas de Vilagarcia."
   },
   "refSeeAlso": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "Beach-A-Concha-123456"
     ]
@@ -39,14 +39,15 @@
     }
   },
   "municipalityInfo": {
-    "type": "object",
+    "type": "StructureValue",
     "value": {
-        "district": "",
-        "ulbName": "",
-        "cityID": "",
-        "stateName": "Spain",
-        "cityName": "Pontevedra",
-        "zoneID": ""
+      "district":"Bangalore Urban",
+      "ulbName":"BMC",
+      "cityID":"23",
+      "stateName":"Karnataka",
+      "cityName":"Bangalore",
+      "zoneID":"2",
+      "wardNum":4
     }
   },
   "name": {
