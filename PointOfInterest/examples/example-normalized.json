@@ -38,6 +38,17 @@
       "addressLocality": "Vilagarcia de Arousa"
     }
   },
+  "municipalityInfo": {
+    "type": "object",
+    "value": {
+        "district": "",
+        "ulbName": "",
+        "cityID": "",
+        "stateName": "Spain",
+        "cityName": "Pontevedra",
+        "zoneID": ""
+    }
+  },
   "name": {
     "type": "Text",
     "value": "Playa de a Concha"
