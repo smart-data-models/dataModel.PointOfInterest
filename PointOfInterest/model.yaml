@@ -3,44 +3,70 @@ PointOfInterest:
   properties:
     additionalInfoURL:
       anyOf:
-        - description: Property. Identifier format of any NGSI entity
+        - description: Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: Property. Identifier format of any NGSI entity
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
           format: uri
           type: string
-      description: Relationship. URL from which additional information of the subject can be obtained
+          x-ngsi:
+            type: Property
+      description: URL from which additional information of the subject can be obtained
       x-ngsi:
         type: Relationship
     address:
       description: The mailing address
       properties:
         addressCountry:
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''
+          description: 'The country. For example, Spain'
           type: string
+          x-ngsi:
+            model: https://schema.org/addressCountry
+            type: Property
         addressLocality:
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''
+          description: 'The locality in which the street address is, and which is in the region'
           type: string
+          x-ngsi:
+            model: https://schema.org/addressLocality
+            type: Property
         addressRegion:
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
+          description: 'The region in which the locality is, and which is in the country'
           type: string
+          x-ngsi:
+            model: https://schema.org/addressRegion
+            type: Property
         district:
-          description: 'Property. A district is a type of administrative division that, in some countries, is managed by the local government'
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'
           type: string
+          x-ngsi:
+            type: Property
         postOfficeBoxNumber:
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
+          description: 'The post office box number for PO box addresses. For example, 03578'
           type: string
+          x-ngsi:
+            model: https://schema.org/postOfficeBoxNumber
+            type: Property
         postalCode:
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''
+          description: 'The postal code. For example, 24004'
           type: string
+          x-ngsi:
+            model: https://schema.org/https://schema.org/postalCode
+            type: Property
         streetAddress:
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''
+          description: The street address
           type: string
+          x-ngsi:
+            model: https://schema.org/streetAddress
+            type: Property
         streetNr:
-          description: Property. Number identifying a specific property on a public street
+          description: Number identifying a specific property on a public street
           type: string
+          x-ngsi:
+            type: Property
       type: object
       x-ngsi:
         model: https://schema.org/address
@@ -57,7 +83,7 @@ PointOfInterest:
         model: https://schema.org/Text
         type: Property
     category:
-      description: 'Property. Model:''https://schema.org/Text''. Category of this point of interest'
+      description: Category of this point of interest
       items:
         type: string
       minItems: 1
@@ -69,23 +95,32 @@ PointOfInterest:
       description: The details to contact with the item
       properties:
         areaServed:
-          description: Property. The geographic area where a service or offered item is provided. Supersedes serviceArea
+          description: The geographic area where a service or offered item is provided. Supersedes serviceArea
           type: string
+          x-ngsi:
+            type: Property
         availabilityRestriction:
           anyOf:
-            - description: Property. Array of identifiers format of any NGSI entity
+            - description: Array of identifiers format of any NGSI entity
               items:
                 maxLength: 256
                 minLength: 1
                 pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
                 type: string
               type: array
-            - description: Property. Array of identifiers format of any NGSI entity
+              x-ngsi:
+                type: Property
+            - description: Array of identifiers format of any NGSI entity
               items:
                 format: uri
                 type: string
               type: array
-          description: 'Relationship. Model:''http://schema.org/hoursAvailable''. This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class'
+              x-ngsi:
+                type: Property
+          description: This property links a contact point to information about when the contact point is not available. The details are provided using the Opening Hours Specification class
+          x-ngsi:
+            model: http://schema.org/hoursAvailable
+            type: Relationship
         availableLanguage:
           anyOf:
             - anyOf:
@@ -93,37 +128,59 @@ PointOfInterest:
                 - items:
                     type: string
                   type: array
-          description: 'Property. Model:''http://schema.org/availableLanguage''. A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'
+          description: 'A language someone may use with or at the item, service or place. Please use one of the language codes from the IETF BCP 47 standard. It is implemented the Text option but it could be also Language'
+          x-ngsi:
+            model: http://schema.org/availableLanguage
+            type: Property
         contactOption:
           anyOf:
             - type: string
             - items:
                 type: string
               type: array
-          description: 'Property. Model:''http://schema.org/contactOption''. An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)'
+          description: An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers)
+          x-ngsi:
+            model: http://schema.org/contactOption
+            type: Property
         contactType:
-          description: Property. Contact type of this item
+          description: Contact type of this item
           type: string
+          x-ngsi:
+            type: Property
         email:
-          description: Property. Email address of owner
+          description: Email address of owner
           format: idn-email
           type: string
+          x-ngsi:
+            type: Property
         faxNumber:
-          description: 'Property. Model:''http://schema.org/Text''. The fax number'
+          description: The fax number
           type: string
+          x-ngsi:
+            model: http://schema.org/Text
+            type: Property
         name:
-          description: Property. The name of this item
+          description: The name of this item
           type: string
+          x-ngsi:
+            type: Property
         productSupported:
-          description: 'Property. Model:''http://schema.org/Text''. The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. ''iPhone'') or a general category of products or services (e.g. ''smartphones'')'
+          description: The product or service this support contact point is related to (such as product support for a particular product line). This can be a specific product or product line (e.g. 'iPhone') or a general category of products or services (e.g. 'smartphones')
           type: string
+          x-ngsi:
+            model: http://schema.org/Text
+            type: Property
         telephone:
-          description: Property. Telephone of this contact
+          description: Telephone of this contact
           type: string
+          x-ngsi:
+            type: Property
         url:
-          description: Property. URL which provides a description or further information about this item
+          description: URL which provides a description or further information about this item
           format: uri
           type: string
+          x-ngsi:
+            type: Property
       type: object
       x-ngsi:
         model: https://schema.org/ContactPoint
@@ -151,22 +208,26 @@ PointOfInterest:
       x-ngsi:
         type: Property
     id:
-      anyOf: &pointofinterest_-_properties_-_owner_-_items_-_anyof
-        - description: Property. Identifier format of any NGSI entity
+      anyOf:
+        - description: Identifier format of any NGSI entity
           maxLength: 256
           minLength: 1
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
           type: string
-        - description: Property. Identifier format of any NGSI entity
+          x-ngsi:
+            type: Property
+        - description: Identifier format of any NGSI entity
           format: uri
           type: string
+          x-ngsi:
+            type: Property
       description: Unique identifier of the entity
       x-ngsi:
         type: Property
     location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
       oneOf:
-        - description: GeoProperty. Geojson reference to the item. Point
+        - description: Geojson reference to the item. Point
           properties:
             bbox:
               items:
@@ -187,7 +248,9 @@ PointOfInterest:
             - coordinates
           title: GeoJSON Point
           type: object
-        - description: GeoProperty. Geojson reference to the item. LineString
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. LineString
           properties:
             bbox:
               items:
@@ -211,7 +274,9 @@ PointOfInterest:
             - coordinates
           title: GeoJSON LineString
           type: object
-        - description: GeoProperty. Geojson reference to the item. Polygon
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. Polygon
           properties:
             bbox:
               items:
@@ -237,7 +302,9 @@ PointOfInterest:
             - coordinates
           title: GeoJSON Polygon
           type: object
-        - description: GeoProperty. Geojson reference to the item. MultiPoint
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiPoint
           properties:
             bbox:
               items:
@@ -260,7 +327,9 @@ PointOfInterest:
             - coordinates
           title: GeoJSON MultiPoint
           type: object
-        - description: GeoProperty. Geojson reference to the item. MultiLineString
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -286,7 +355,9 @@ PointOfInterest:
             - coordinates
           title: GeoJSON MultiLineString
           type: object
-        - description: GeoProperty. Geojson reference to the item. MultiLineString
+          x-ngsi:
+            type: GeoProperty
+        - description: Geojson reference to the item. MultiLineString
           properties:
             bbox:
               items:
@@ -314,41 +385,73 @@ PointOfInterest:
             - coordinates
           title: GeoJSON MultiPolygon
           type: object
+          x-ngsi:
+            type: GeoProperty
       x-ngsi:
         type: GeoProperty
     municipalityInfo:
-      description: 'Property. Model:''https://schema.org/Text. Municipality information corresponding to this observation.'
+      description: Municipality information corresponding to this observation.
       properties:
         cityID:
-          description: 'Property. Model:''https://schema.org/Text''. City ID corresponding to this observation.'
+          description: City ID corresponding to this observation.
           type: string
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
         cityName:
-          description: 'Property. Model:''https://schema.org/Text''. City name corresponding to this observation'
+          description: City name corresponding to this observation
           type: string
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
         district:
-          description: 'Property. Model:''https://schema.org/Text''. District name corresponding to this observation.'
+          description: District name corresponding to this observation.
           type: string
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
         stateName:
-          description: 'Property. Model:''https://schema.org/Text''. Name of the state corresponding to this observation.'
+          description: Name of the state corresponding to this observation.
           type: string
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
         ulbName:
-          description: 'Property. Model:''https://schema.org/Text''. Name of the Urban Local Body corresponding to this observation.'
+          description: Name of the Urban Local Body corresponding to this observation.
           type: string
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
         wardID:
-          description: 'Property. Model:''https://schema.org/Text''. Ward ID corresponding to this observation.'
+          description: Ward ID corresponding to this observation.
           type: string
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
         wardName:
-          description: 'Property. Model:''https://schema.org/Text''. Ward name corresponding to this observation.'
+          description: Ward name corresponding to this observation.
           type: string
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
         wardNum:
-          description: 'Property. Model:''https://schema.org/Number''. Ward number corresponding to this observation.'
+          description: Ward number corresponding to this observation.
           type: number
+          x-ngsi:
+            model: https://schema.org/Number
+            type: Property
         zoneID:
-          description: 'Property. Model:''https://schema.org/Text''. Zone ID corresponding to this observation.'
+          description: Zone ID corresponding to this observation.
           type: string
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
         zoneName:
-          description: 'Property. Model:''https://schema.org/Text''. Zone name corresponding to this observation.'
+          description: Zone name corresponding to this observation.
           type: string
+          x-ngsi:
+            model: https://schema.org/Text
+            type: Property
       type: object
       x-ngsi:
         model: https://schema.org/Text
@@ -361,17 +464,45 @@ PointOfInterest:
     owner:
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)
       items:
-        anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof
-        description: Property. Unique identifier of the entity
+        anyOf:
+          - description: Identifier format of any NGSI entity
+            maxLength: 256
+            minLength: 1
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+            type: string
+            x-ngsi:
+              type: Property
+          - description: Identifier format of any NGSI entity
+            format: uri
+            type: string
+            x-ngsi:
+              type: Property
+        description: Unique identifier of the entity
+        x-ngsi:
+          type: Property
       type: array
       x-ngsi:
         type: Property
     refSeeAlso:
-      description: 'Property. Model:''https://schema.org/URL''. List of references to one or more related entities'
+      description: List of references to one or more related entities
       items:
         anyOf:
-          - anyOf: *pointofinterest_-_properties_-_owner_-_items_-_anyof
-            description: Property. Unique identifier of the entity
+          - anyOf:
+              - description: Identifier format of any NGSI entity
+                maxLength: 256
+                minLength: 1
+                pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+                type: string
+                x-ngsi:
+                  type: Property
+              - description: Identifier format of any NGSI entity
+                format: uri
+                type: string
+                x-ngsi:
+                  type: Property
+            description: Unique identifier of the entity
+            x-ngsi:
+              type: Property
       minItems: 1
       type: array
       uniqueItems: true
@@ -396,24 +527,24 @@ PointOfInterest:
       x-ngsi:
         type: Property
     type:
-      description: Property. NGSI Entity type. It has to be PointOfInterest
+      description: NGSI Entity type. It has to be PointOfInterest
       enum:
         - PointOfInterest
       type: string
       x-ngsi:
         type: Property
     wardId:
-      description: Property. Ward ID of the entity corresponding to this observation
+      description: Ward ID of the entity corresponding to this observation
       type: string
       x-ngsi:
         type: Property
     zoneId:
-      description: Property. Zone ID of the entity corresponding to this observation
+      description: Zone ID of the entity corresponding to this observation
       type: string
       x-ngsi:
         type: Property
     zoneName:
-      description: Property. Zone name of the entity corresponding to this observation
+      description: Zone name of the entity corresponding to this observation
       type: string
       x-ngsi:
         type: Property
