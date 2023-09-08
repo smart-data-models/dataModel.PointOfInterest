@@ -32,6 +32,18 @@
       ]
     }
   },
+  "municipalityInfo": {
+    "type": "Property",
+    "value": {
+      "district":"Bangalore Urban",
+      "ulbName":"BMC",
+      "cityID":"23",
+      "stateName":"Karnataka",
+      "cityName":"Bangalore",
+      "zoneID":"2",
+      "wardNum":4
+    }
+  },
   "name": {
     "type": "Property",
     "value": "Playa de a Concha"

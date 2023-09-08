@@ -17,6 +17,15 @@
       42.60214472222222
     ]
   },
+  "municipalityInfo":{
+    "district":"Bangalore Urban",
+    "ulbName":"BMC",
+    "cityID":"23",
+    "stateName":"Karnataka",
+    "cityName":"Bangalore",
+    "zoneID":"2",
+    "wardNum":4
+  },
   "source": "http://www.tourspain.es",
   "refSeeAlso": [
     "Beach-A-Concha-123456"

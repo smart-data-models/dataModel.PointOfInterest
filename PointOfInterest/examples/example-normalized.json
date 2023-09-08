@@ -38,6 +38,18 @@
       "addressLocality": "Vilagarcia de Arousa"
     }
   },
+  "municipalityInfo": {
+    "type": "StructureValue",
+    "value": {
+      "district":"Bangalore Urban",
+      "ulbName":"BMC",
+      "cityID":"23",
+      "stateName":"Karnataka",
+      "cityName":"Bangalore",
+      "zoneID":"2",
+      "wardNum":4
+    }
+  },
   "name": {
     "type": "Text",
     "value": "Playa de a Concha"
