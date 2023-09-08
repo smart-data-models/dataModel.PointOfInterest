@@ -2,7 +2,7 @@
   "id": "PointOfInterest-A-Concha-123456",
   "type": "PointOfInterest",
   "category": {
-    "type": "StructuredValue",
+    "type": "array",
     "value": [
       "113"
     ]
@@ -12,7 +12,7 @@
     "value": "La Playa de A Concha se presenta como una continuaciin de la Playa de Compostela, una de las mis frecuentadas de Vilagarcia."
   },
   "refSeeAlso": {
-    "type": "StructuredValue",
+    "type": "array",
     "value": [
       "Beach-A-Concha-123456"
     ]
