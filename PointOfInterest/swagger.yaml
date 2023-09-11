@@ -6,7 +6,7 @@
 components:
   schemas: 
     PointOfInterest: 
-      $ref: "https://smart-data-models.github.io/dataModel.PointofInterest/PointOfInterest/model.yaml#/PointOfInterest"
+      $ref: "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/model.yaml#/PointOfInterest"
 info:
   description:  |
     This entity contains a harmonised geographic description of a Point of Interest
@@ -37,12 +37,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.PointofInterest/PointOfInterest/examples/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.PointofInterest/PointOfInterest/examples/example-normalized.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/examples/example-normalized.jsonld"
           description: OK
       tags: 
         - ngsi-ld
