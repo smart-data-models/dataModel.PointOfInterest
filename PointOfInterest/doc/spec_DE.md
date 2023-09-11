@@ -3,21 +3,50 @@
 Entität: PointOfInterest  
 ========================<!-- /10-Header -->  
 <!-- 15-License -->  
-[Offene Lizenz](https://github.com/smart-data-models//dataModel.PointofInterest/blob/master/PointOfInterest/LICENSE.md)  
+[Offene Lizenz](https://github.com/smart-data-models//dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
+Globale Beschreibung: **Diese Einheit enthält eine harmonisierte geografische Beschreibung eines Sonderziels**  
+Version: 0.3.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
 <sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
-<!-- /30-PropertiesList -->  
+- `additionalInfoURL[*]`: URL, unter der zusätzliche Informationen zum Thema abgerufen werden können  - `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.    
+	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Kategorie dieses Punktes von Interesse  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: Die Angaben zur Kontaktaufnahme mit dem Artikel  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird. Ersetzt serviceArea    
+	- `availabilityRestriction[*]`: Diese Eigenschaft verknüpft eine Kontaktstelle mit Informationen darüber, wann die Kontaktstelle nicht erreichbar ist. Die Angaben werden über die Klasse Spezifikation der Öffnungszeiten bereitgestellt  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
+	- `availableLanguage[*]`: Eine Sprache, die jemand mit oder an dem Gegenstand, der Dienstleistung oder dem Ort verwenden kann. Bitte verwenden Sie einen der Sprachcodes aus dem IETF BCP 47 Standard. Es ist die Option Text implementiert, aber es könnte auch Sprache sein  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
+	- `contactOption[*]`: Eine unter dieser Kontaktstelle verfügbare Option (z. B. eine gebührenfreie Nummer oder Unterstützung für hörgeschädigte Anrufer)  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
+	- `contactType[string]`: Kontaktart dieses Artikels    
+	- `email[idn-email]`: E-Mail Adresse des Eigentümers    
+	- `faxNumber[string]`: Die Faxnummer  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `name[string]`: Der Name dieses Artikels    
+	- `productSupported[string]`: Das Produkt oder die Dienstleistung, auf die sich diese Support-Kontaktstelle bezieht (z. B. Produktsupport für eine bestimmte Produktlinie). Dies kann ein bestimmtes Produkt oder eine Produktlinie (z. B. "iPhone") oder eine allgemeine Kategorie von Produkten oder Dienstleistungen (z. B. "Smartphones") sein.  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `telephone[string]`: Telefon dieser Kontaktperson    
+- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `municipalityInfo[object]`: Informationen der Gemeinde zu dieser Beobachtung.  . Model: [https://schema.org/Text](https://schema.org/Text)	- `cityID[string]`: ID der Stadt, die dieser Beobachtung entspricht.  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `cityName[string]`: Name der Stadt, die dieser Beobachtung entspricht  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `district[string]`: Name des Bezirks, der dieser Beobachtung entspricht.  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `stateName[string]`: Name des Staates, der dieser Beobachtung entspricht.  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `ulbName[string]`: Name der lokalen Gebietskörperschaft, die dieser Beobachtung entspricht.  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `wardID[string]`: Stations-ID, die dieser Beobachtung entspricht.  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `wardName[string]`: Stationsname entsprechend dieser Beobachtung.  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `wardNum[number]`: Stationsnummer, die dieser Beobachtung entspricht.  . Model: [https://schema.org/Number](https://schema.org/Number)  
+	- `zoneID[string]`: Zonen-ID, die dieser Beobachtung entspricht.  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refSeeAlso[array]`: Liste der Verweise auf eine oder mehrere verbundene Einrichtungen  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI-Entitätstyp. Es muss PointOfInterest sein  - `wardId[string]`: Stations-ID der Einrichtung, die dieser Beobachtung entspricht  - `zoneId[string]`: Zonen-ID der Einheit, die dieser Beobachtung entspricht  - `zoneName[string]`: Zonenname der Entität, die dieser Beobachtung entspricht  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- Keine erforderlichen Eigenschaften  <!-- /35-RequiredProperties -->  
+- `category`  - `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
+Diese Entität wird in Anwendungen verwendet, die räumliche Daten nutzen, und ist für die vertikalen Segmente Automotive, Umwelt, Industrie und Smart City sowie damit verbundene IoT-Anwendungen anwendbar. Dieses Datenmodell wurde in Zusammenarbeit mit der GSMA und den Mitgliedern des [IoT Big Data Project] (http://www.gsma.com/iot/iot-big-data/) erstellt. Erstellt mit Beiträgen des IUDX-Projekts.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
 ## Datenmodell Beschreibung der Eigenschaften  
@@ -584,7 +613,7 @@ PointOfInterest:
   type: object    
   x-derived-from: ""    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
-  x-license-url: https://github.com/smart-data-models/dataModel.PointofInterest/blob/master/PointOfInterest/LICENSE.md    
+  x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json    
   x-model-tags: IUDX    
   x-version: 0.3.0    
@@ -597,13 +626,255 @@ PointOfInterest:
 ## Beispiel-Nutzlasten  
 #### PointOfInterest NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für einen PointOfInterest im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:PointOfInterest-A-Concha-123456",  
+  "type": "PointOfInterest",  
+  "name": "Playa de a Concha",  
+  "description": "La Playa de A Concha se presenta como una continuación de la Playa de Compostela, una de las más frecuentadas de Vilagarcía.",  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Vilagarcía de Arousa"  
+  },  
+  "category": [  
+    "113"  
+  ],  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
+    ]  
+  },  
+  "municipalityInfo":{  
+    "district":"Bangalore Urban",  
+    "ulbName":"BMC",  
+    "cityID":"23",  
+    "stateName":"Karnataka",  
+    "cityName":"Bangalore",  
+    "zoneID":"2",  
+    "wardNum":4  
+  },  
+  "source": "http://www.tourspain.es",  
+  "refSeeAlso": [  
+    "Beach-A-Concha-123456"  
+  ],  
+  "wardId": "",  
+  "zoneId": "",  
+  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
+  "zoneName": ""  
+}  
+```  
+</details>  
 #### PointOfInterest NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für einen PointOfInterest im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "PointOfInterest-A-Concha-123456",  
+  "type": "PointOfInterest",  
+  "category": {  
+    "type": "array",  
+    "value": [  
+      "113"  
+    ]  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "La Playa de A Concha se presenta como una continuaciin de la Playa de Compostela, una de las mis frecuentadas de Vilagarcia."  
+  },  
+  "refSeeAlso": {  
+    "type": "array",  
+    "value": [  
+      "Beach-A-Concha-123456"  
+    ]  
+  },  
+  "source": {  
+    "type": "Text",  
+    "value": "http://www.tourspain.es"  
+  },  
+  "location": {  
+    "type": "geo:json",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.768460000000001,  
+        42.60214472222222  
+      ]  
+    }  
+  },  
+  "address": {  
+    "type": "PostalAddress",  
+    "value": {  
+      "addressCountry": "ES",  
+      "addressLocality": "Vilagarcia de Arousa"  
+    }  
+  },  
+  "municipalityInfo": {  
+    "type": "StructureValue",  
+    "value": {  
+      "district":"Bangalore Urban",  
+      "ulbName":"BMC",  
+      "cityID":"23",  
+      "stateName":"Karnataka",  
+      "cityName":"Bangalore",  
+      "zoneID":"2",  
+      "wardNum":4  
+    }  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "Playa de a Concha"  
+  },  
+  "wardId": {  
+    "type": "Text",  
+    "value": ""  
+  },  
+  "zoneId": {  
+    "type": "Text",  
+    "value": ""  
+  },  
+  "additionalInfoURL": {  
+    "type": "Relationship",  
+    "value": "urn:ngsi-ld:Point:34E4:A234"  
+  },  
+  "zoneName": {  
+    "type": "Text",  
+    "value": ""  
+  }  
+}  
+```  
+</details>  
 #### PointOfInterest NGSI-LD key-values Beispiel  
 Hier ist ein Beispiel für einen PointOfInterest im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
+  "type": "PointOfInterest",  
+  "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
+  "address": {  
+    "addressCountry": "ES",  
+    "addressLocality": "Vilagarcia de Arousa"  
+  },  
+  "category": [  
+    "113"  
+  ],  
+  "description": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia.",  
+  "location": {  
+    "type": "Point",  
+    "coordinates": [  
+      -8.768460000000001,  
+      42.60214472222222  
+    ]  
+  },  
+  "municipalityInfo":{  
+    "district":"Bangalore Urban",  
+    "ulbName":"BMC",  
+    "cityID":"23",  
+    "stateName":"Karnataka",  
+    "cityName":"Bangalore",  
+    "zoneID":"2",  
+    "wardNum":4  
+  },  
+  "name": "Playa de a Concha",  
+  "refSeeAlso": [  
+    "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
+  ],  
+  "source": "http://www.tourspain.es",  
+  "wardId": "",  
+  "zoneId": "",  
+  "zoneName": "",  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
+}  
+```  
+</details>  
 #### PointOfInterest NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für einen PointOfInterest im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
-<!-- /80-Examples -->  
+<details><summary><strong>show/hide example</strong></summary>    
+```json  
+{  
+  "id": "urn:ngsi-ld:PointOfInterest:PointOfInterest-A-Concha-123456",  
+  "type": "PointOfInterest",  
+  "additionalInfoURL": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:Point:34E4:A234"  
+  },  
+  "address": {  
+    "type": "Property",  
+    "value": {  
+      "addressCountry": "ES",  
+      "addressLocality": "Vilagarcia de Arousa"  
+    }  
+  },  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "113"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "La Playa de A Concha se presenta como una continuacion de la Playa de Compostela, una de las mas frecuentadas de Vilagarcia."  
+  },  
+  "location": {  
+    "type": "GeoProperty",  
+    "value": {  
+      "type": "Point",  
+      "coordinates": [  
+        -8.768460000000001,  
+        42.60214472222222  
+      ]  
+    }  
+  },  
+  "municipalityInfo": {  
+    "type": "Property",  
+    "value": {  
+      "district":"Bangalore Urban",  
+      "ulbName":"BMC",  
+      "cityID":"23",  
+      "stateName":"Karnataka",  
+      "cityName":"Bangalore",  
+      "zoneID":"2",  
+      "wardNum":4  
+    }  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Playa de a Concha"  
+  },  
+  "refSeeAlso": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456"  
+    ]  
+  },  
+  "source": {  
+    "type": "Property",  
+    "value": "http://www.tourspain.es"  
+  },  
+  "wardId": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "zoneId": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "zoneName": {  
+    "type": "Property",  
+    "value": ""  
+  },  
+  "@context": [  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
+  ]  
+}  
+```  
+</details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
