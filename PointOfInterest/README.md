@@ -1,5 +1,6 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
-# PointOfInterest
+
+# PointOfInterest
 Version: 0.3.0
 
 ## Description 
@@ -41,3 +42,4 @@ Link to the [Generator](https://smartdatamodels.org/extra/geojson_features_gener
 ### Contribution
 
  If you have any issue on this data model you can raise an [issue](https://github.com/smart-data-models/dataModel.PointOfInterest/issues)  or contribute with a [PR](https://github.com/smart-data-models/dataModel.PointOfInterest/pulls)
+
