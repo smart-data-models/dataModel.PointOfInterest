@@ -556,7 +556,7 @@ PointOfInterest:
   type: object
   x-derived-from: ""
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'
-  x-license-url: https://github.com/smart-data-models/dataModel.PointofInterest/blob/master/PointOfInterest/LICENSE.md
+  x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json
   x-model-tags: IUDX
   x-version: 0.3.0
