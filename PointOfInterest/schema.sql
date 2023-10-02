@@ -1,3 +1,3 @@
-/* (Beta) Export of data model PointOfInterest of the subject dataModel.PointOfInterest for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model PointOfInterest of the subject dataModel.PointOfInterest for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE PointOfInterest_type AS ENUM ('PointOfInterest');
-CREATE TABLE PointOfInterest (additionalInfoURL text, address json, alternateName text, areaServed text, category json, contactPoint json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, location json, municipalityInfo json, name text, owner json, refSeeAlso json, seeAlso json, source text, type PointOfInterest_type, wardId text, zoneId text, zoneName text);
+CREATE TABLE PointOfInterest (address JSON, alternateName TEXT, areaServed TEXT, category JSON, contactPoint JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, municipalityInfo JSON, name TEXT, owner JSON, refSeeAlso JSON, source TEXT, type PointOfInterest_type, wardId TEXT, zoneId TEXT, zoneName TEXT);
