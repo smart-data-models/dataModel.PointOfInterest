@@ -2,7 +2,7 @@
   "id": "Museum-Barcelona-MACBA-1234",
   "type": "Museum",
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressCountry": "ES",
       "addressLocality": "Barcelona",
@@ -14,14 +14,17 @@
     "value": "MACBA"
   },
   "artPeriod": {
+    "type": "StructuredValue",
     "value": [
       "contemporary"
     ]
   },
   "description": {
+    "type": "Text",
     "value": "The MACBA was designed by the American architect Richard Meier and inaugurated in 1995."
   },
   "facilities": {
+    "type": "StructuredValue",
     "value": [
       "shop",
       "cloakRoom",
@@ -39,14 +42,17 @@
     }
   },
   "museumType": {
+    "type": "StructuredValue",
     "value": [
       "fineArts"
     ]
   },
   "name": {
+    "type": "Text",
     "value": "Museo de Arte Contemporaneo de Barcelona"
   },
   "openingHoursSpecification": {
+    "type": "StructuredValue",
     "value": [
       {
         "dayOfWeek": "Monday",
@@ -86,9 +92,11 @@
     ]
   },
   "source": {
+    "type": "Text",
     "value": "http://www.tourspain.es"
   },
   "touristArea": {
+    "type": "Text",
     "value": "Barcelona-Capital"
   }
 }
