@@ -10,7 +10,7 @@
     "value": 51
   },
   "accessType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "privateVehicle",
       "onFoot",
@@ -28,7 +28,7 @@
     }
   },
   "facilities": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "promenade",
       "showers",
@@ -45,14 +45,14 @@
     "value": "http://www.tourspain.es"
   },
   "address": {
-    "type": "PostalAddress",
+    "type": "StructuredValue",
     "value": {
       "addressCountry": "ES",
       "addressLocality": "Vilagarc\u00eda de Arousa"
     }
   },
   "beachType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "whiteSand",
       "urban",
