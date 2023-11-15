@@ -2,10 +2,10 @@
   "id": "urn:ngsi-ld:PointOfInterest-A-Concha-123456",
   "type": "PointOfInterest",
   "name": "Playa de a Concha",
-  "description": "La Playa de A Concha se presenta como una continuación de la Playa de Compostela, una de las más frecuentadas de Vilagarcía.",
+  "description": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda.",
   "address": {
     "addressCountry": "ES",
-    "addressLocality": "Vilagarcía de Arousa"
+    "addressLocality": "Vilagarc\u00eda de Arousa"
   },
   "category": [
     "113"
@@ -17,14 +17,14 @@
       42.60214472222222
     ]
   },
-  "municipalityInfo":{
-    "district":"Bangalore Urban",
-    "ulbName":"BMC",
-    "cityID":"23",
-    "stateName":"Karnataka",
-    "cityName":"Bangalore",
-    "zoneID":"2",
-    "wardNum":4
+  "municipalityInfo": {
+    "district": "Bangalore Urban",
+    "ulbName": "BMC",
+    "cityID": "23",
+    "stateName": "Karnataka",
+    "cityName": "Bangalore",
+    "zoneID": "2",
+    "wardNum": 4
   },
   "source": "http://www.tourspain.es",
   "refSeeAlso": [
