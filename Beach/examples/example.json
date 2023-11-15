@@ -5,15 +5,31 @@
   "description": "La Playa de A Concha se presenta .....",
   "address": {
     "addressCountry": "ES",
-    "addressLocality": "Vilagarcía de Arousa"
+    "addressLocality": "Vilagarc\u00eda de Arousa"
   },
-  "beachType": ["whiteSand", "urban", "calmWaters"],
+  "beachType": [
+    "whiteSand",
+    "urban",
+    "calmWaters"
+  ],
   "occupationRate": "high",
-  "facilities": ["promenade", "showers", "cleaningServices", "lifeGuard"],
-  "accessType": ["privateVehicle", "onFoot", "publicTransport"],
+  "facilities": [
+    "promenade",
+    "showers",
+    "cleaningServices",
+    "lifeGuard"
+  ],
+  "accessType": [
+    "privateVehicle",
+    "onFoot",
+    "publicTransport"
+  ],
   "location": {
     "type": "Point",
-    "coordinates": [-8.768460000000001, 42.60214472222222]
+    "coordinates": [
+      -8.768460000000001,
+      42.60214472222222
+    ]
   },
   "width": 51,
   "length": 450,
