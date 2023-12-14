@@ -16,7 +16,7 @@
   "currenciesAccepted": [
     "EUR"
   ],
-  "paymentAccepted:": [
+  "paymentAccepted": [
     "cash",
     "paypal"
   ],
