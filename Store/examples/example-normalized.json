@@ -37,7 +37,7 @@
       "EUR"
     ]
   },
-  "paymentAccepted:": {
+  "paymentAccepted": {
     "type": "StructuredValue",
     "value": [
       "cash",
