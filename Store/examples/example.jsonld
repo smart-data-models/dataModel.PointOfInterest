@@ -45,7 +45,7 @@
       "dayOfWeek": "Friday"
     }
   ],
-  "paymentAccepted:": [
+  "paymentAccepted": [
     "cash",
     "paypal"
   ],
