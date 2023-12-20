@@ -27,10 +27,6 @@
     "type": "Property",
     "value": "Cosmetica natural fabricada en Santander."
   },
-  "image": {
-    "type": "Property",
-    "value": "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC.jpg/resize/50/100/"
-  },
   "currenciesAccepted": {
     "type": "Property",
     "value": [
