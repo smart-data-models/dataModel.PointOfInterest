@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Museum"
 subject = "dataModel.PointOfInterest"
-artPeriod = {'type': 'Property', 'value': ['contemporary']}
+artPeriod = ['contemporary']
 attribute = "artPeriod"
 value = artPeriod
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-facilities = {'type': 'Property', 'value': ['shop', 'cloakRoom', 'guidedTour']}
+facilities = ['shop', 'cloakRoom', 'guidedTour']
 attribute = "facilities"
 value = facilities
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-museumType = {'type': 'Property', 'value': ['fineArts']}
+museumType = ['fineArts']
 attribute = "museumType"
 value = museumType
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-openingHoursSpecification = {'type': 'Property', 'value': [{'dayOfWeek': 'Monday', 'closes': '19:30:00', 'opens': '11:00:00'}, {'dayOfWeek': 'Tuesday', 'closes': '19:30:00', 'opens': '11:00:00'}, {'dayOfWeek': 'Wednesday', 'closes': '19:30:00', 'opens': '11:00:00'}, {'dayOfWeek': 'Thursday', 'closes': '19:30:00', 'opens': '11:00:00'}, {'dayOfWeek': 'Friday', 'closes': '19:30:00', 'opens': '11:00:00'}, {'dayOfWeek': 'Saturday', 'closes': '21:00:00', 'opens': '10:00:00'}, {'dayOfWeek': 'Sunday', 'closes': '15:00:00', 'opens': '10:00:00'}]}
+openingHoursSpecification = [{'closes': '19:30:00', 'dayOfWeek': 'Monday', 'opens': '11:00:00'}, {'closes': '19:30:00', 'dayOfWeek': 'Tuesday', 'opens': '11:00:00'}, {'closes': '19:30:00', 'dayOfWeek': 'Wednesday', 'opens': '11:00:00'}, {'closes': '19:30:00', 'dayOfWeek': 'Thursday', 'opens': '11:00:00'}, {'closes': '19:30:00', 'dayOfWeek': 'Friday', 'opens': '11:00:00'}, {'closes': '21:00:00', 'dayOfWeek': 'Saturday', 'opens': '10:00:00'}, {'closes': '15:00:00', 'dayOfWeek': 'Sunday', 'opens': '10:00:00'}]
 attribute = "openingHoursSpecification"
 value = openingHoursSpecification
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
