@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "PointOfInterest"
 subject = "dataModel.PointOfInterest"
-additionalInfoURL = "{'type': 'Relationship', 'object': 'urn:ngsi-ld:Point:34E4:A234'}"
+additionalInfoURL = "urn:ngsi-ld:Point:34E4:A234"
 attribute = "additionalInfoURL"
 value = additionalInfoURL
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-category = {'type': 'Property', 'value': ['113']}
+category = ['113']
 attribute = "category"
 value = category
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-municipalityInfo = {'type': 'Property', 'value': {'district': 'Bangalore Urban', 'ulbName': 'BMC', 'cityID': '23', 'stateName': 'Karnataka', 'cityName': 'Bangalore', 'zoneID': '2', 'wardNum': 4}}
+municipalityInfo = {'district': 'Bangalore Urban', 'ulbName': 'BMC', 'cityID': '23', 'stateName': 'Karnataka', 'cityName': 'Bangalore', 'zoneID': '2', 'wardNum': 4}
 attribute = "municipalityInfo"
 value = municipalityInfo
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-refSeeAlso = {'type': 'Property', 'value': ['urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456']}
+refSeeAlso = ['urn:ngsi-ld:SeeAlso:Beach-A-Concha-123456']
 attribute = "refSeeAlso"
 value = refSeeAlso
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
