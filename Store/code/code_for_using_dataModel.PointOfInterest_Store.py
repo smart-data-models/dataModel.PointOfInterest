@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Store"
 subject = "dataModel.PointOfInterest"
-currenciesAccepted = {'type': 'Property', 'value': ['EUR']}
+category = "GroceryStore"
+attribute = "category"
+value = category
+# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
+print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
+
+currenciesAccepted = ['EUR']
 attribute = "currenciesAccepted"
 value = currenciesAccepted
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-paymentAccepted = {'type': 'Property', 'value': ['cash', 'paypal']}
-attribute = "paymentAccepted"
-value = paymentAccepted
+email = "email@example.com"
+attribute = "email"
+value = email
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-openingHoursSpecification = {'type': 'Property', 'value': [{'opens': '00:02:00', 'closes': '23:59:00', 'dayOfWeek': 'Monday'}, {'opens': '00:01:00', 'closes': '23:59:00', 'dayOfWeek': 'Tuesday'}, {'opens': '00:01:00', 'closes': '23:59:00', 'dayOfWeek': 'Wednesday'}, {'opens': '00:01:00', 'closes': '23:59:00', 'dayOfWeek': 'Thursday'}, {'opens': '00:01:00', 'closes': '23:59:00', 'dayOfWeek': 'Friday'}]}
-attribute = "openingHoursSpecification"
-value = openingHoursSpecification
-# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
-print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
-
-logo = "{'type': 'Property', 'value': 'http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100'}"
+logo = "http://www.comerciosantander.com/imagenes/Comercios/124F214A-CE55-5A33-A77D-679C0F848FFC_logo.jpg/resize/50/100"
 attribute = "logo"
 value = logo
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
