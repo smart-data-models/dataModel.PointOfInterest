@@ -1,6 +1,6 @@
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)
 # PointOfInterest
-Version: 0.3.0
+Version: 0.3.1
 
 ## Description 
 
