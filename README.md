@@ -15,7 +15,7 @@ The following entity types are available:
 
 
 ### Contributors
-[Link](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/CONTRIBUTORS.yaml) to the 11 current contributors of the data models of this Subject.
+[Link](https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/CONTRIBUTORS.yaml) to the 12 current contributors of the data models of this Subject.
 
 
 ### Contribution
