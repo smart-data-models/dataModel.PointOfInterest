@@ -27,8 +27,7 @@
           "description": "Property. Model:'https://schema.org/Text'. Category of this point of interest",
           "items": {
             "type": "string"
-          },
-          "minItems": 1
+          }
         },
         "contactPoint": {
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Contact-Commons/properties/contactPoint"
@@ -142,7 +141,7 @@
         },
         "occupancy": {
           "type": "number",
-        "description": "Property. The count of people in the queue. The unit of measure is number of people. This metric is updated every five minutes"
+        "description": "Property. The count of people in the in the point of Interest. It has to be smaller than capacity"
         }
       }
     }
@@ -150,7 +149,6 @@
   "required": [
     "id",
     "type",
-    "category",
     "name"
   ]
 }
