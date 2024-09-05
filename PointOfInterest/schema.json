@@ -131,9 +131,9 @@
         "image": {
           "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/PhysicalObject-Commons/properties/image"
         },
-        "price": {
-          "type": "number",
-          "description": "Property. Price of the access to the point of Interest"
+        "priceRange": {
+          "type": "string",
+          "description": "Property. String describing the range of prices of the access to the Point of Interest"
         },
         "capacity": {
           "type": "number",
@@ -141,7 +141,7 @@
         },
         "occupancy": {
           "type": "number",
-        "description": "Property. The count of people in the in the point of Interest. It has to be smaller than capacity"
+        "description": "Property. The count of people in the in the point of Interest. It should be smaller than capacity"
         }
       }
     }
