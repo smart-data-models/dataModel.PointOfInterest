@@ -69,5 +69,29 @@
   "zoneName": {
     "type": "Text",
     "value": ""
+  },
+  "title": {
+    "type": "Text",
+    "value": "Cusamè"
+  },
+  "relevance": {
+    "type": "Number",
+    "value": 1
+  },
+  "image": {
+    "type": "URL",
+    "value": "https://smartdatamodels.org/extra/cusame.png"
+  },
+  "priceRange": {
+    "type": "Text",
+    "value": "25-150€"
+  },
+  "capacity": {
+    "type": "Number",
+    "value": 55
+  },
+  "occupancy": {
+    "type": "Number",
+    "value": 50
   }
 }

@@ -1,5 +1,12 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
+- name: David
+  surname: Campo
+  mail: david.campo@fiware.org
+  organization: FIWARE Foundation
+  project:
+  comments:
+  year: 2024
 - name: Jose M.
   surname: Cantera
   mail: jmcanterafonseca4github@gmail.com

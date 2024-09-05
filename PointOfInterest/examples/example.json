@@ -33,5 +33,11 @@
   "wardId": "",
   "zoneId": "",
   "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",
-  "zoneName": ""
+  "zoneName": "",
+  "title": "Cusamè",
+  "relevance": 1,
+  "image": "https://smartdatamodels.org/extra/cusame.png",
+  "priceRange": "25-150€",
+  "capacity": 55,
+  "occupancy": 50
 }

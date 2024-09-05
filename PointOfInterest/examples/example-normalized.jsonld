@@ -70,6 +70,30 @@
     "type": "Property",
     "value": ""
   },
+  "title": {
+    "type": "Property",
+    "value": "Cusamè"
+  },
+  "relevance": {
+    "type": "Property",
+    "value": 1
+  },
+  "image": {
+    "type": "Property",
+    "value": "https://smartdatamodels.org/extra/cusame.png"
+  },
+  "priceRange": {
+    "type": "Property",
+    "value": "25-150€"
+  },
+  "capacity": {
+    "type": "Property",
+    "value": 55
+  },
+  "occupancy": {
+    "type": "Property",
+    "value": 50
+  }
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
   ]
