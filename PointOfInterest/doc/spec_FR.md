@@ -8,7 +8,7 @@
 <!-- /15-License -->  
 <!-- 20-Description -->  
 Description globale : **Cette entité contient une description géographique harmonisée d'un point d'intérêt**  
-version : 0.3.0  
+version : 0.3.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
@@ -22,17 +22,19 @@
 	- `postOfficeBoxNumber[string]`: Le numéro de la boîte postale pour les adresses de boîtes postales. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
-- `alternateName[string]`: Un nom alternatif pour ce poste  - `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `category[array]`: Catégorie de ce point d'intérêt  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: Les coordonnées à contacter avec l'article  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: Zone géographique dans laquelle un service ou un article est proposé. Remplace serviceArea    
+	- `streetNr[string]`: Numéro identifiant une propriété spécifique sur une voie publique    
+- `alternateName[string]`: Un nom alternatif pour ce poste  - `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `capacity[number]`: Le nombre total de personnes pouvant être affectées en même temps  - `category[array]`: Catégorie de ce point d'intérêt  . Model: [https://schema.org/Text](https://schema.org/Text)- `contactPoint[object]`: Les coordonnées à contacter avec l'article  . Model: [https://schema.org/ContactPoint](https://schema.org/ContactPoint)	- `areaServed[string]`: Zone géographique dans laquelle un service ou un article est proposé. Remplace serviceArea    
 	- `availabilityRestriction[*]`: Cette propriété relie un point de contact à des informations sur les cas où le point de contact n'est pas disponible. Les détails sont fournis à l'aide de la classe de spécification des heures d'ouverture.  . Model: [http://schema.org/hoursAvailable](http://schema.org/hoursAvailable)  
 	- `availableLanguage[*]`: Langue que quelqu'un peut utiliser avec ou dans l'article, le service ou le lieu. Veuillez utiliser l'un des codes de langue de la norme IETF BCP 47. L'option Texte est mise en œuvre, mais il peut s'agir également de l'option Langue.  . Model: [http://schema.org/availableLanguage](http://schema.org/availableLanguage)  
 	- `contactOption[*]`: Une option disponible sur ce point de contact (par exemple, un numéro gratuit ou une assistance pour les malentendants).  . Model: [http://schema.org/contactOption](http://schema.org/contactOption)  
 	- `contactType[string]`: Type de contact de cet article    
 	- `email[idn-email]`: Adresse électronique du propriétaire    
-	- `faxNumber[string]`: Le numéro de fax  . Model: [http://schema.org/Text](http://schema.org/Text)  
+	- `faxNumber[string]`: Le numéro de fax de l'article  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `name[string]`: Le nom de cet élément    
 	- `productSupported[string]`: Le produit ou le service auquel se rapporte ce point de contact d'assistance (par exemple, l'assistance produit pour une ligne de produits particulière). Il peut s'agir d'un produit ou d'une ligne de produits spécifique (par exemple "iPhone") ou d'une catégorie générale de produits ou de services (par exemple "smartphones").  . Model: [http://schema.org/Text](http://schema.org/Text)  
 	- `telephone[string]`: Téléphone de ce contact    
-- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Une description de l'article  - `id[*]`: Identifiant unique de l'entité  - `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `municipalityInfo[object]`: Informations sur la municipalité correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)	- `cityID[string]`: ID de la ville correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)  
+	- `url[uri]`: URL qui fournit une description ou des informations complémentaires sur cet élément    
+- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Une description de l'article  - `id[*]`: Identifiant unique de l'entité  - `image[uri]`: Une image de l'objet  . Model: [https://schema.org/URL](https://schema.org/URL)- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `municipalityInfo[object]`: Informations sur la municipalité correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)	- `cityID[string]`: ID de la ville correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)  
 	- `cityName[string]`: Nom de la ville correspondant à cette observation  . Model: [https://schema.org/Text](https://schema.org/Text)  
 	- `district[string]`: Nom du district correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)  
 	- `stateName[string]`: Nom de l'état correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)  
@@ -41,13 +43,14 @@
 	- `wardName[string]`: Nom du service correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)  
 	- `wardNum[number]`: Numéro du service correspondant à cette observation.  . Model: [https://schema.org/Number](https://schema.org/Number)  
 	- `zoneID[string]`: ID de la zone correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)  
-- `name[string]`: Le nom de cet élément  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `refSeeAlso[array]`: Liste de références à une ou plusieurs entités apparentées  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI. Il doit s'agir de PointOfInterest  - `wardId[string]`: ID de l'entité correspondant à cette observation  - `zoneId[string]`: ID de la zone de l'entité correspondant à cette observation  - `zoneName[string]`: Nom de la zone de l'entité correspondant à cette observation  <!-- /30-PropertiesList -->  
+	- `zoneName[string]`: Nom de la zone correspondant à cette observation.  . Model: [https://schema.org/Text](https://schema.org/Text)  
+- `name[string]`: Le nom de cet élément  - `occupancy[number]`: Le nombre de personnes présentes dans le centre d'intérêt. Il doit être inférieur à la capacité  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `priceRange[string]`: Chaîne décrivant la fourchette de prix de l'accès au point d'intérêt  - `refSeeAlso[array]`: Liste de références à une ou plusieurs entités apparentées  . Model: [https://schema.org/URL](https://schema.org/URL)- `relevance[number]`: Pertinence du point d'intérêt pour qu'il soit présenté à différents niveaux de zoom. 0 est la meilleure valeur. Plus la valeur est élevée, plus la pertinence est faible.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `title[string]`: Cette propriété contient un nom donné au point d'intérêt au-delà d'un nom spécifique.  - `type[string]`: Type d'entité NGSI. Il doit s'agir de PointOfInterest  - `wardId[string]`: ID de l'entité correspondant à cette observation  - `zoneId[string]`: ID de la zone de l'entité correspondant à cette observation  - `zoneName[string]`: Nom de la zone de l'entité correspondant à cette observation  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
-- `category`  - `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
-<!-- 40-RequiredProperties -->  
+- `id`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-NotesYaml -->  
 Cette entité est utilisée dans les applications qui utilisent des données spatiales et s'applique aux segments verticaux de l'automobile, de l'environnement, de l'industrie et de la ville intelligente, ainsi qu'aux applications IoT connexes. Ce modèle de données a été créé en coopération avec la GSMA et les membres du [IoT Big Data Project] (http://www.gsma.com/iot/iot-big-data/). Créé avec les contributions du projet IUDX.  
-<!-- /40-RequiredProperties -->  
+<!-- /40-NotesYaml -->  
 <!-- 50-DataModelHeader -->  
 ## Modèle de données description des propriétés  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
@@ -139,11 +142,15 @@ PointOfInterest:
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
+    capacity:    
+      description: The total number of people which can be allocated at the same time    
+      type: number    
+      x-ngsi:    
+        type: Property    
     category:    
       description: Category of this point of interest    
       items:    
         type: string    
-      minItems: 1    
       type: array    
       x-ngsi:    
         model: https://schema.org/Text    
@@ -211,7 +218,7 @@ PointOfInterest:
           x-ngsi:    
             type: Property    
         faxNumber:    
-          description: The fax number    
+          description: The fax number of the item    
           type: string    
           x-ngsi:    
             model: http://schema.org/Text    
@@ -280,6 +287,13 @@ PointOfInterest:
             type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
+        type: Property    
+    image:    
+      description: An image of the item    
+      format: uri    
+      type: string    
+      x-ngsi:    
+        model: https://schema.org/URL    
         type: Property    
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
@@ -518,6 +532,11 @@ PointOfInterest:
       type: string    
       x-ngsi:    
         type: Property    
+    occupancy:    
+      description: The count of people in the in the point of Interest. It should be smaller than capacity    
+      type: number    
+      x-ngsi:    
+        type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
@@ -538,6 +557,11 @@ PointOfInterest:
         x-ngsi:    
           type: Property    
       type: array    
+      x-ngsi:    
+        type: Property    
+    priceRange:    
+      description: String describing the range of prices of the access to the Point of Interest    
+      type: string    
       x-ngsi:    
         type: Property    
     refSeeAlso:    
@@ -566,6 +590,11 @@ PointOfInterest:
       x-ngsi:    
         model: https://schema.org/URL    
         type: Property    
+    relevance:    
+      description: Relevance of the point of interest in order to be presented in different zoom levels. 0 is best larger values means lower relevance    
+      type: number    
+      x-ngsi:    
+        type: Property    
     seeAlso:    
       description: list of uri pointing to additional resources about the item    
       oneOf:    
@@ -580,6 +609,11 @@ PointOfInterest:
         type: Property    
     source:    
       description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
+      type: string    
+      x-ngsi:    
+        type: Property    
+    title:    
+      description: This property contains a name given to the Point of interest beyond specific name.    
       type: string    
       x-ngsi:    
         type: Property    
@@ -608,15 +642,14 @@ PointOfInterest:
   required:    
     - id    
     - type    
-    - category    
     - name    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2024 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.PointOfInterest/blob/master/PointOfInterest/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json    
   x-model-tags: IUDX    
-  x-version: 0.3.0    
+  x-version: 0.3.1    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -632,10 +665,10 @@ PointOfInterest:
   "id": "urn:ngsi-ld:PointOfInterest-A-Concha-123456",  
   "type": "PointOfInterest",  
   "name": "Playa de a Concha",  
-  "description": "La Playa de A Concha se presenta como una continuación de la Playa de Compostela, una de las más frecuentadas de Vilagarcía.",  
+  "description": "La Playa de A Concha se presenta como una continuaci\u00f3n de la Playa de Compostela, una de las m\u00e1s frecuentadas de Vilagarc\u00eda.",  
   "address": {  
     "addressCountry": "ES",  
-    "addressLocality": "Vilagarcía de Arousa"  
+    "addressLocality": "Vilagarc\u00eda de Arousa"  
   },  
   "category": [  
     "113"  
@@ -647,14 +680,14 @@ PointOfInterest:
       42.60214472222222  
     ]  
   },  
-  "municipalityInfo":{  
-    "district":"Bangalore Urban",  
-    "ulbName":"BMC",  
-    "cityID":"23",  
-    "stateName":"Karnataka",  
-    "cityName":"Bangalore",  
-    "zoneID":"2",  
-    "wardNum":4  
+  "municipalityInfo": {  
+    "district": "Bangalore Urban",  
+    "ulbName": "BMC",  
+    "cityID": "23",  
+    "stateName": "Karnataka",  
+    "cityName": "Bangalore",  
+    "zoneID": "2",  
+    "wardNum": 4  
   },  
   "source": "http://www.tourspain.es",  
   "refSeeAlso": [  
@@ -663,7 +696,13 @@ PointOfInterest:
   "wardId": "",  
   "zoneId": "",  
   "additionalInfoURL": "urn:ngsi-ld:Point:34E4:A234",  
-  "zoneName": ""  
+  "zoneName": "",  
+  "title": "Cusamè",  
+  "relevance": 1,  
+  "image": "https://smartdatamodels.org/extra/cusame.png",  
+  "priceRange": "25-150€",  
+  "capacity": 55,  
+  "occupancy": 50  
 }  
 ```  
 </details>  
@@ -675,7 +714,7 @@ PointOfInterest:
   "id": "PointOfInterest-A-Concha-123456",  
   "type": "PointOfInterest",  
   "category": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "113"  
     ]  
@@ -685,7 +724,7 @@ PointOfInterest:
     "value": "La Playa de A Concha se presenta como una continuaciin de la Playa de Compostela, una de las mis frecuentadas de Vilagarcia."  
   },  
   "refSeeAlso": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "Beach-A-Concha-123456"  
     ]  
@@ -705,22 +744,22 @@ PointOfInterest:
     }  
   },  
   "address": {  
-    "type": "PostalAddress",  
+    "type": "StructuredValue",  
     "value": {  
       "addressCountry": "ES",  
       "addressLocality": "Vilagarcia de Arousa"  
     }  
   },  
   "municipalityInfo": {  
-    "type": "StructureValue",  
+    "type": "StructuredValue",  
     "value": {  
-      "district":"Bangalore Urban",  
-      "ulbName":"BMC",  
-      "cityID":"23",  
-      "stateName":"Karnataka",  
-      "cityName":"Bangalore",  
-      "zoneID":"2",  
-      "wardNum":4  
+      "district": "Bangalore Urban",  
+      "ulbName": "BMC",  
+      "cityID": "23",  
+      "stateName": "Karnataka",  
+      "cityName": "Bangalore",  
+      "zoneID": "2",  
+      "wardNum": 4  
     }  
   },  
   "name": {  
@@ -736,12 +775,36 @@ PointOfInterest:
     "value": ""  
   },  
   "additionalInfoURL": {  
-    "type": "Relationship",  
+    "type": "Text",  
     "value": "urn:ngsi-ld:Point:34E4:A234"  
   },  
   "zoneName": {  
     "type": "Text",  
     "value": ""  
+  },  
+  "title": {  
+    "type": "Text",  
+    "value": "Cusamè"  
+  },  
+  "relevance": {  
+    "type": "Number",  
+    "value": 1  
+  },  
+  "image": {  
+    "type": "URL",  
+    "value": "https://smartdatamodels.org/extra/cusame.png"  
+  },  
+  "priceRange": {  
+    "type": "Text",  
+    "value": "25-150€"  
+  },  
+  "capacity": {  
+    "type": "Number",  
+    "value": 55  
+  },  
+  "occupancy": {  
+    "type": "Number",  
+    "value": 50  
   }  
 }  
 ```  
@@ -769,14 +832,14 @@ PointOfInterest:
       42.60214472222222  
     ]  
   },  
-  "municipalityInfo":{  
-    "district":"Bangalore Urban",  
-    "ulbName":"BMC",  
-    "cityID":"23",  
-    "stateName":"Karnataka",  
-    "cityName":"Bangalore",  
-    "zoneID":"2",  
-    "wardNum":4  
+  "municipalityInfo": {  
+    "district": "Bangalore Urban",  
+    "ulbName": "BMC",  
+    "cityID": "23",  
+    "stateName": "Karnataka",  
+    "cityName": "Bangalore",  
+    "zoneID": "2",  
+    "wardNum": 4  
   },  
   "name": "Playa de a Concha",  
   "refSeeAlso": [  
@@ -786,6 +849,12 @@ PointOfInterest:
   "wardId": "",  
   "zoneId": "",  
   "zoneName": "",  
+  "title": "Cusamè",  
+  "relevance": 1,  
+  "image": "https://smartdatamodels.org/extra/cusame.png",  
+  "priceRange": "25-150€",  
+  "capacity": 55,  
+  "occupancy": 50  
   "@context": [  
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
@@ -869,6 +938,30 @@ PointOfInterest:
     "type": "Property",  
     "value": ""  
   },  
+  "title": {  
+    "type": "Property",  
+    "value": "Cusamè"  
+  },  
+  "relevance": {  
+    "type": "Property",  
+    "value": 1  
+  },  
+  "image": {  
+    "type": "Property",  
+    "value": "https://smartdatamodels.org/extra/cusame.png"  
+  },  
+  "priceRange": {  
+    "type": "Property",  
+    "value": "25-150€"  
+  },  
+  "capacity": {  
+    "type": "Property",  
+    "value": 55  
+  },  
+  "occupancy": {  
+    "type": "Property",  
+    "value": 50  
+  }  
   "@context": [  
     "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"  
   ]  
