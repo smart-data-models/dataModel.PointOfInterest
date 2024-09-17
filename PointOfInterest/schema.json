@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$schemaVersion": "0.3.1",
   "modelTags": "IUDX",
   "$id": "https://smart-data-models.github.io/dataModel.PointOfInterest/PointOfInterest/schema.json",
@@ -141,7 +141,7 @@
         },
         "occupancy": {
           "type": "number",
-        "description": "Property. The count of people in the in the point of Interest. It should be smaller than capacity"
+          "description": "Property. The count of people in the in the point of Interest. It should be smaller than capacity"
         }
       }
     }
