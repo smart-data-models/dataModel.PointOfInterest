@@ -17,7 +17,7 @@
         "availableLanguage": "https://smartdatamodels.org/availableLanguage",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "beachType": "https://smartdatamodels.org/dataModel.PointOfInterest/beachType",
         "buildingType": "https://smartdatamodels.org/dataModel.PointOfInterest/buildingType",
@@ -31,7 +31,7 @@
         "contactType": "https://smartdatamodels.org/contactType",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "currenciesAccepted": "https://smartdatamodels.org/dataModel.PointOfInterest/currenciesAccepted",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
@@ -50,7 +50,7 @@
         "id": "@id",
         "image": "https://smartdatamodels.org/image",
         "length": "https://smartdatamodels.org/dataModel.PointOfInterest/length",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "logo": "https://smartdatamodels.org/dataModel.PointOfInterest/logo",
         "municipalityInfo": "https://smartdatamodels.org/dataModel.PointOfInterest/municipalityInfo",
         "museumType": "https://smartdatamodels.org/dataModel.PointOfInterest/museumType",
