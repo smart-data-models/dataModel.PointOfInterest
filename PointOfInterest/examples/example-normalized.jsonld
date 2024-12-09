@@ -93,7 +93,7 @@
   "occupancy": {
     "type": "Property",
     "value": 50
-  }
+  },
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
   ]
