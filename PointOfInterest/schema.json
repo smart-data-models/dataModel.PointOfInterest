@@ -14,6 +14,9 @@
       "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
     },
     {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons"
+    },
+    {
       "properties": {
         "type": {
           "type": "string",
@@ -142,6 +145,13 @@
         "occupancy": {
           "type": "number",
           "description": "Property. The count of people in the in the point of Interest. It should be smaller than capacity"
+        },
+        "openingHours": {
+          "type": "string",
+          "description": "Property. Text describing the opening hours of the point of interest."
+        },
+        "openingHoursSpecification": {
+          "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/DateTime-Commons/properties/openingHoursSpecification"
         }
       }
     }

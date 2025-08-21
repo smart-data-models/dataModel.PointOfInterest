@@ -94,6 +94,57 @@
     "type": "Property",
     "value": 50
   },
+  "openingHours": {
+    "type": "Property",
+    "value": "Mo-Su 00:00-23:59"
+  },
+  "openingHoursSpecification": {
+    "type": "Property",
+    "value": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "http://schema.org/Monday",
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "http://schema.org/Tuesday",
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "http://schema.org/Wednesday",
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "http://schema.org/Thursday",
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "http://schema.org/Friday",
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "http://schema.org/Saturday",
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "http://schema.org/Sunday",
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    ]
+  },
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInterest/master/context.jsonld"
   ]
