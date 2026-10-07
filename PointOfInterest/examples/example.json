@@ -40,48 +40,42 @@
   "priceRange": "25-150€",
   "capacity": 55,
   "occupancy": 50,
-  "openingHours": {
-    "type": "Property",
-    "value": "Mo-Su 00:00-23:59"
-  },
-  "openingHoursSpecification": {
-    "type": "Property",
-    "value": [
-      {
-        "dayOfWeek": "http://schema.org/Monday",
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      {
-        "dayOfWeek": "http://schema.org/Tuesday",
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      {
-        "dayOfWeek": "http://schema.org/Wednesday",
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      {
-        "dayOfWeek": "http://schema.org/Thursday",
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      {
-        "dayOfWeek": "http://schema.org/Friday",
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      {
-        "dayOfWeek": "http://schema.org/Saturday",
-        "opens": "00:00",
-        "closes": "23:59"
-      },
-      {
-        "dayOfWeek": "http://schema.org/Sunday",
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    ]
-  }
+  "openingHours": "Mo-Su 00:00-23:59",
+  "openingHoursSpecification": [
+    {
+      "dayOfWeek": "Monday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Tuesday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Wednesday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Thursday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Friday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Saturday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Sunday",
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ]
 }
