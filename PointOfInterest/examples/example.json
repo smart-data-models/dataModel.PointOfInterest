@@ -39,5 +39,43 @@
   "image": "https://smartdatamodels.org/extra/cusame.png",
   "priceRange": "25-150€",
   "capacity": 55,
-  "occupancy": 50
+  "occupancy": 50,
+  "openingHours": "Mo-Su 00:00-23:59",
+  "openingHoursSpecification": [
+    {
+      "dayOfWeek": "Monday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Tuesday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Wednesday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Thursday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Friday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Saturday",
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    {
+      "dayOfWeek": "Sunday",
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ]
 }
