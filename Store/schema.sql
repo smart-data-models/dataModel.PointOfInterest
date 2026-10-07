@@ -1,11 +1,11 @@
 /* (Beta) Export of data model Store of the subject dataModel.PointOfInterest for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE category_type AS ENUM ('AutoPartsStore', 'BikeStore', 'BookStore', 'ClothingStore', 'ComputerStore', 'ConvenienceStore', 'DepartmentStore', 'ElectronicsStore', 'Florist', 'FurnitureStore', 'GardenStore', 'GroceryStore', 'HardwareStore', 'HobbyShop', 'HomeGoodsStore', 'JewelryStore', 'LiquorStore', 'MensClothingStore', 'MobilePhoneStore', 'MovieRentalStore', 'MusicStore', 'OfficeEquipmentStore', 'OutletStore', 'PawnShop', 'PetStore', 'ShoeStore', 'SportingGoodsStore', 'TireShop', 'ToyStore', 'WholesaleStore');
+CREATE TYPE Store_category_type AS ENUM ('AutoPartsStore', 'BikeStore', 'BookStore', 'ClothingStore', 'ComputerStore', 'ConvenienceStore', 'DepartmentStore', 'ElectronicsStore', 'Florist', 'FurnitureStore', 'GardenStore', 'GroceryStore', 'HardwareStore', 'HobbyShop', 'HomeGoodsStore', 'JewelryStore', 'LiquorStore', 'MensClothingStore', 'MobilePhoneStore', 'MovieRentalStore', 'MusicStore', 'OfficeEquipmentStore', 'OutletStore', 'PawnShop', 'PetStore', 'ShoeStore', 'SportingGoodsStore', 'TireShop', 'ToyStore', 'WholesaleStore');
 CREATE TYPE Store_type AS ENUM ('Store');
 CREATE TABLE Store (
   "address" JSON,
   "alternateName" TEXT,
   "areaServed" TEXT,
-  "category" category_type,
+  "category" Store_category_type,
   "currenciesAccepted" JSON,
   "dataProvider" TEXT,
   "dateCreated" TIMESTAMP,
